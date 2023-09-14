@@ -9,6 +9,7 @@ learning objectives:
     
 facilitators: 
     name: 'Leanne Fan'
+    name: 'Sam O'Hana'
     description: 'Here is a short bio.'
 
 estimated time:
