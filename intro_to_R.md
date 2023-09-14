@@ -9,7 +9,6 @@ learning objectives:
     
 facilitators: 
     name: 'Leanne Fan'
-    name: "Sam O'Hana"
     description: 'Here is a short bio.'
 
 estimated time:
@@ -42,7 +41,7 @@ ethical considerations:
 projects:
     description: "Projects that use the skills you'll learn in this workshop:"
     The Fossil Fuel Non-Proliferation Tracker:
-        description: The data presented here is based on the Fossil-Fuel Non-Proliferation Database which semi-automatically searches the internet to identify existing climate change supply-side policies. We also rely on data from the Global Fossil Fuel Divestment Commitments Database (managed by Stand.Earth), CAIT Climate Data Explorer, ourworldindata.org, Carbon Brief, Go Fossil Free, The Fossil Fuel Registry, BP Statistical Review of World Energy, Shift Data Project, and reference other available data sources such as the “Fossil Fuel Supply Cuts Database“ beside others. The data used in this Tracker is updated from various sources on a rolling basis.
+        description: The data presented here is based on the Fossil-Fuel Non-Proliferation Database which semi-automatically searches the internet to identify existing climate change supply-side policies. We also rely on data from the Global Fossil Fuel Divestment Commitments Database (managed by Stand.Earth), CAIT Climate Data Explorer, ourworldindata.org, Carbon Brief, Go Fossil Free, The Fossil Fuel Registry, BP Statistical Review of World Energy, Shift Data Project, and reference other available data sources such as the “Fossil Fuel Supply Cuts Database“ beside others. The data used in this Tracker is updated from various sources on a rolling basis. test test test 
         link: https://fossilfueltracker.org/app/ffnpt
 
         
