@@ -118,7 +118,8 @@ Try adding paraentheses - does it change the answer?
   <summary>Example</summary>
 
   ```
-  long console output here
+does this work??
+
   ```
 </details>
 
