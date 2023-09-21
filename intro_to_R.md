@@ -85,15 +85,11 @@ With that said, let's get started!
 
 ## A Little Math
 
-Let's try a little math in the R prompt. In the R environment below <span style = "color:green">(shown in green text)</span>, hit <kbd>run</kbd> or <kbd>return</kbd>. A code editor (really just a mini R engine) will pop up and you can start playing around!
+Let's try a little math in the R prompt. When you hit "Run Code," a code editor (really just a mini R engine) will pop up and you can start playing around! The top part is the code and the bottom part is the output.
 
 
 <CodeEditor>
     1+1
-</CodeEditor>
-
-<CodeEditor>
-    1+2
 </CodeEditor>
 
 ## First Puzzle
@@ -102,21 +98,22 @@ You see the following series of numbers and the end result of 8. Play with the c
 
 10 [ ] 5 [ ] 6 [ ] 4 = 8
 
-Replace the [ ] with
-- "*"
-- "/"
-- "+"
-- "-"
+Replace the _ with some combination of the following operators in the code editor:
+- *
+- /
+- +
+- -
 
 <CodeEditor>
-10 [ ] 5 [ ] 6 [ ] 4
+10 _ 5 _ 6 _ 4
 </CodeEditor>
 
->!10/5*6-4
+>! 10/5*6-4
 
 Try adding paraentheses - does it change the answer?
 
->!(10/5)*6-4
+>! (10/5)*6-4
+
 
 ## Getting used Boolean operations
 
