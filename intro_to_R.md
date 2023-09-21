@@ -99,10 +99,10 @@ You see the following series of numbers and the end result of 8. Play with the c
 10 [ ] 5 [ ] 6 [ ] 4 = 8
 
 Replace the _ with some combination of the following operators in the code editor:
-- *
-- /
-- +
-- -
+- "\*"
+- "\/"
+- "\+"
+- "\-"
 
 <CodeEditor>
 10 _ 5 _ 6 _ 4
