@@ -114,8 +114,19 @@ Try adding paraentheses - does it change the answer?
 
 >! (10/5)*6-4
 
+<details>
+  <summary>Example</summary>
+
+  ```
+  long console output here
+  ```
+</details>
 
 ## Getting used Boolean operations
+
+== is a comparison operator. Equal to operator. This returns true only if the two values are equal.
+
+What do you predict will happen when we hit run code?
 
 <CodeEditor>
 
