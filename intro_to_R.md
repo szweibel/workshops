@@ -63,38 +63,29 @@ goals:
 # Intended Audience
 Are you a student in academic fields like humanities, social sciences, or various science programs where R isn't typically taught? This workshop isn't about diving deep into data wrangling or how to use R to run statistial models; instead, it lays the foundation for you to appreciate R's functionality, syntax and logic. While you don't need to install R or R Studio (more on these later) to get started, by the end of the workshop, you will be able to get started with those. 
 
-We'll start with math puzzles and practical challenges to provide you with rapid feedback and tangible outcomes. 
+We'll start with interactive exercises and practical challenges to provide you with rapid feedback and tangible outcomes. 
 
 # Why Learn R?
 
-R has become a standard language for statistical computing and data analysis, especially in academia. It is open-source, contributing to its widespread adoption and increasing role as a standard for writing reproducible code. 
+R is a versatile, open source programming/scripting language that’s useful both for statistics but also data science. It has become a standard language for statistical computing and data analysis, especially in academia. Its open source nature has contributed to its widespread adoption and increasing role as a standard for writing reproducible code.
+
+ - Open source software under GPL.
+ - R has over 7,000 user contributed packages at this time. It’s widely used both in academia and industry.
+ - Available on all platforms.
+ - Not just for statistics, but also general purpose programming.
+ - For people who have experience in programmming: R is both an object-oriented and a so-called functional language
+ - Large and growing community of peers.
+ - You can use R as it is but combining it with the RStudio interface will help with organization and also provide us with extra options.
 
 # Interacting With R
 
-This workshop is meant to be __interactive__--it intends to immediately engage you with the concepts you are learning. To that end, all of the R programming you will learn about can be done here, __directly in your browser__. Throughout the workshop, you will encounter several designated code sections in which you can write and run your R code. These emulators are meant to allow you quick and easy access to coding principles. However, there are many ways to interact with R, and you will also learn about how to interact with your R installation locally on your machine. 
-
-test test test
+This workshop is meant to be __interactive__--it intends to immediately engage you with the concepts you are learning. To that end, all of the R programming you will learn about can be done here, __directly in your browser__. Throughout the workshop, you will encounter several designated code sections in which you can write and run your R code. These emulators are meant to allow you quick and easy access to coding in R. However, there are many ways to interact with R - the last section of the workshop will be learning how to install R onto your computer. 
 
 With that said, let's get started!
 
-## The Interactive Session
-
-One of the most basic ways to interact with R is through an "interactive session."  This is a special space that allows us to run little one-line bits of R, experimenting and exploring what it can do, without having to save it. Think of this interactive space as a playground. Later on, we will be working with R in a more robust way, executing longer R scripts.
-
-
-
-```r
-2+3
-
-```
-
-```
-32 +3
-```
-
 ## A Little Math
 
-Let's try a little math in the R prompt. In the R REPL environment below <span style = "color:green">(shown in green text)</span>, type the following mathematical operations after the Python prompt (the `>>>`), and hit <kbd>enter</kbd> or <kbd>return</kbd> after each operation.
+Let's try a little math in the R prompt. In the R environment below <span style = "color:green">(shown in green text)</span>, hit <kbd>run</kbd> or <kbd>return</kbd>. A code editor (really just a mini R engine) will pop up and you can start playing around!
 
 
 <CodeEditor>
@@ -108,17 +99,24 @@ Let's try a little math in the R prompt. In the R REPL environment below <span s
 ## First Puzzle
 
 You see the following series of numbers and the end result of 8. Play with the code editor to come up with the right arithamtic operations to end up with 8!
-(does up arrow give you previous line?)
 
-10 [] 5 [] 6 [] 4 = 8
+10 [ ] 5 [ ] 6 [ ] 4 = 8
 
+Replace the [ ] with
+- "*"
+- "/"
+- "+"
+- "-"
 
 <CodeEditor>
-    1+1
+10 [ ] 5 [ ] 6 [ ] 4
 </CodeEditor>
 
-10/5*6-4
-(10/5)*6-4
+>!10/5*6-4
+
+Try adding paraentheses - does it change the answer?
+
+>!(10/5)*6-4
 
 ## Getting used Boolean operations
 
