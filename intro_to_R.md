@@ -108,20 +108,18 @@ Replace the _ with some combination of the following operators in the code edito
 10 _ 5 _ 6 _ 4
 </CodeEditor>
 
->! 10/5*6-4
-
-Try adding paraentheses - does it change the answer?
-
->! (10/5)*6-4
-
 <details>
   <summary>Example</summary>
 
   ```
-does this work??
+>! 10/5*6-4
 
   ```
 </details>
+
+
+Try adding paraentheses - does it change the answer?
+
 
 ## Getting used Boolean operations
 
