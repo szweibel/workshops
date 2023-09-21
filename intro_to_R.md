@@ -108,14 +108,8 @@ Replace the _ with some combination of the following operators in the code edito
 10 _ 5 _ 6 _ 4
 </CodeEditor>
 
-<details>
-  <summary>Example</summary>
+<Secret>The exponent operator is two asterisks. For example, the number 3 to the power of 2 would be expressed as 3**2.</Secret>
 
-  ```
-10/5*6-4
-
-  ```
-</details>
 
 
 Try adding paraentheses - does it change the answer?
