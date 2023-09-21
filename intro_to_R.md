@@ -112,7 +112,7 @@ Replace the _ with some combination of the following operators in the code edito
   <summary>Example</summary>
 
   ```
->! 10/5*6-4
+10/5*6-4
 
   ```
 </details>
