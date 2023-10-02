@@ -25,10 +25,10 @@ prerequisites:
         recommended: true
 
 teachers: 
-    - 'Stephen Zweibel'
-        description: 'Here is a short bio.'
-    - 'Leanne Fan'
-        description: 'Here is another bio.'
+    - 'Stephen Zweibel':
+        - 'Here is a short bio.'
+    - 'Leanne Fan':
+        - 'Here is another bio.'
 
 authors:
     - 'Kalle Westerling'
