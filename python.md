@@ -2,7 +2,9 @@
 title: Introduction to Python
 cover title: Python
 description: Python is a general-purpose programming language suitable for a wide variety of tasks in the digital humanities. Learning Python fundamentals is a gateway to analyzing data, creating visualizations, composing interactive websites, scraping the internet, and engaging in the distant reading of texts. This workshop first introduces participants to core programming concepts such as data types, variables, and functions. Participants will then learn about basic control flow by writing small programs with loops and conditional statements. They will also learn to problem solve, and practice searching for answers and debugging scripts. The workshop wraps up by exposing participants to intermediate tools for further exploration.
+
 programming_language: python
+
 learning objectives:
     - Understand what Python is and, in general terms, what it can do.
     - Run Python programs, both by interacting directly with the interpreter and by preparing and running scripts.
@@ -10,10 +12,6 @@ learning objectives:
     - Become familiar with core programming concepts, including variables, loops, and conditionals.
     - Engage with error output and use the internet and documentation to independently research language features.
     - Learn how to find and import code from external sources to solve more complex problems.
-    
-facilitators: 
-    name: 'Stephen Zweibel'
-    description: 'Here is a short bio.'
 
 estimated time:
     - 3 - 4 hours
@@ -25,6 +23,12 @@ prerequisites:
     - data ethics: 
         description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
         recommended: true
+
+teachers: 
+    - 'Stephen Zweibel'
+        description: 'Here is a short bio.'
+    - 'Leanne Fan'
+        description: 'Here is another bio.'
 
 authors:
     - 'Kalle Westerling'
