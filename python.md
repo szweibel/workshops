@@ -24,7 +24,7 @@ prerequisites:
         description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
         recommended: true
 
-teachers: 
+instructors: 
     - 'Stephen Zweibel'
     - 'Leanne Fan'
 
