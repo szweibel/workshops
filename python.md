@@ -885,7 +885,7 @@ What are different ways for describing what a "for loop" can do?
 - for each item in a list, multiply it against itself.*
 - print the contents of a list.*
 - add a new item to a list.
-- loop through characters in a string.
+- loop through characters in a string.*
 </Quiz>
 
 ### Keywords
