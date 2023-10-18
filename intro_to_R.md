@@ -97,7 +97,7 @@ Let's try a little math in the R prompt. When you hit "Run Code," a code editor 
 
 You see the following series of numbers and the end result of 8. Play with the code editor to come up with the right arithamtic operations to end up with 8!
 
-10 [ ] 5 [ ] 6 [ ] 4 = 8
+10 __ 5 __ 6 __ 4 = 8
 
 Replace the _ with some combination of the following operators in the code editor:
 - "\*"
@@ -107,13 +107,15 @@ Replace the _ with some combination of the following operators in the code edito
 
 <CodeEditor>
 
-10 _ 5 _ 6 _ 4
+10 [] 5 [] 6 [] 4
 
 </CodeEditor>
 
-<Secret>The exponent operator is two asterisks. For example, the number 3 to the power of 2 would be expressed as 3**2.</Secret>
+<Secret>
 
+10 / 5 * 6 - 4
 
+</Secret>
 
 Try adding paraentheses - does it change the answer?
 
@@ -134,7 +136,6 @@ What do you predict will happen when we hit run code?
 
 Why might something like this be useful...these statements are obviously true or false!
 
-
 # Data types
 
 Data type are classifications associated with specific data that let the computer know how to interpret the value and how a programmer intends to use a piece of data. We've already encoutered a data type, integers, in the previous section when we tried the expression 3 + 3. Data types are common in many programming language, and each data type has its own unique properties. In R, certain functions can only take specific data types, and attempts at using a different data type can result in errors.
@@ -147,7 +148,7 @@ Here is a list of some of the data types you might use:
 
  - chr stands for character vectors, or strings.
 
-There are data types but these are the basic ones to get us started.
+There are other data types but these are the basic ones to get us started.
 
 ## typeof()
 
@@ -172,7 +173,9 @@ This is where we leave simple calculator land and enter...computer language!
 Let's look at the difference between:
 
 <CodeEditor>
+    
 2 / 3
+
 </CodeEditor>
 
 and...
@@ -188,6 +191,8 @@ The format is name <- value.
 The value on the right is assigned to the object on the left.
 
 This statement can be interpreted as “2/3 goes into head_size”. For historical reasons, you can also use = for assignments, but not in every context. Because = can throw unexpected results in some situations, it is good practice to always use <- for assignments.
+
+Objects can be given any name such as x, body_size, or signal_length. You want your object names to be explicit and not too long. They cannot start with a number (2x is not valid, but x2 is). R is case sensitive (e.g., weight_kg is different from Weight_kg).
 
 Which of the following object names is invalid?
 
@@ -214,7 +219,22 @@ head_size # prints output if you've already assigned a value to the object
 
 Important aside: The comments written to the right of the hash mark don’t get run as code. Using informative comments is good coding practice. Clear comments are essential for when you want someone else to run your code and be able to interpret what you’re typing.
 
+Let's do something with head_size - how do we multiply by 2?
 
+## What is a vector?
+
+
+<CodeEditor>
+
+num_vector <- c(44, 6, 323, 4, 6462, 2455, 875, 24, 5993)
+
+#print the vector
+num_vector
+length(num_vector)
+
+</CodeEditor>
+
+Vectors are one-dimensional. Adding another dimension (e.g. a 2 x 2 grid) makes it a matrix. Since they’re one-dimensional, you can count the number of elements in a vector with the length() function.
 
 
 
