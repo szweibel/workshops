@@ -1312,12 +1312,12 @@ while condition:
 We are going to use `while` loops to get Python to repeat loops over and over again. This involves adding a new variable to use as a condition, and a `while` statement. The code should look like this, and it goes right after the `library` list and before your `input` statement.
 
 ```python
-user_exit = False
-while user_exit == False:
+keep_going = True
+while keep_going == True:
     ...
 ```
 
-Make sure that everything under `while True:` is indented (this creates a "code block," or a group of lines that will be executed together). The `while` loop will keep running until the `user_exit` condition is no longer `False`. Our plan is to make it so that when the user types `exit`, the `user_exit` condition will be `True`, and the loop will stop running.
+Make sure that everything under `while True:` is indented (this creates a "code block," or a group of lines that will be executed together). The `while` loop will keep running while the `keep_going` condition is `True`. Our plan is to make it so that when the user types `exit`, the `keep_going` condition will be `False`, and the loop will stop running.
 
 Give it a shot! Try adding the condition and `while` loop to the program below:
 
@@ -1349,9 +1349,9 @@ Here's how you would include a `while` statement in our library application:
 <Secret>
 <CodeEditor>
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
-user_exit = False
-while user_exit == False:
-    response = input("What do you want to do with your books today? ")
+keep_going = True
+while keep_going == True:
+    response = input("What do you want to do with your books today? (sort, add, remove, exit)")
     response = response.lower()
     if response == "sort":
         library.sort()
@@ -1364,7 +1364,7 @@ while user_exit == False:
         print(library)
     elif response == "exit":
         print(library)
-        user_exit = True
+        keep_going = False
     else:
         print("I don't know what you want me to do!")
 </CodeEditor>
