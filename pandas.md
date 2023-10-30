@@ -1,7 +1,9 @@
 ---
 title: 'Introduction to Data Wrangling, Cleaning, and Analysis with Python and Pandas'
-excerpt: 'In this workshop, we are going to learn some basic commands in [Pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/overview.html), an expansive Python library for working with tabular data like CSV files. You can think of Pandas as a more powerful version of Excel that operates within the Python environment, where you can wrangle, clean, analyze, and visualize data. Knowing how to use Pandas is important if you plan on working with datasets that include qualitative and/or quantitative data points.'
-cover_image: '/images/workshops/img7.jpg'
+cover title: Pandas
+description: 'In this workshop, we are going to learn some basic commands in [Pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/overview.html), an expansive Python library for working with tabular data like CSV files. You can think of Pandas as a more powerful version of Excel that operates within the Python environment, where you can wrangle, clean, analyze, and visualize data. Knowing how to use Pandas is important if you plan on working with datasets that include qualitative and/or quantitative data points.'
+
+programming_language: 'jupyter'
 
 learning objectives:
     - Import Pandas and read in a CSV file as a DataFrame
@@ -17,24 +19,23 @@ learning objectives:
 estimated time:
     - 4 hours
 
-dependencies:
-    workshop prerequisites:
-        python:
-            excerpt: (required) This workshop relies heavily on concepts from the Python workshop, and having a basic understanding of how to use the commands discussed in the workshop will be central for anyone who wants to learn about data analysis with Python and Pandas.
-            required: true
-        command-line:
-            excerpt: (recommended) This workshop makes some reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about text analysis with Python and Pandas.
-            recommended: true
-    installations:
-        pythonguide: 
-            excerpt: (Required) You can use any installation of Python (but make sure it is of version 3). For our purposes, Anaconda will provide everything necessary for all the workshops that are part of the DHRI curriculum.
-            required: true
-        pandas:
-            excerpt: (required) You will need to install the Pandas package into your Python packages for the purposes of this workshop. This guide will help you along the way.
-            required: true
-    insights:
-        jupyter-notebooks:
-            excerpt: (recommended) This workshop uses Jupyter Notebooks to process the Python commands in a clear and visual way. Anyone who wants to follow along in the workshop on data analysis with Python and Pandas should read this very short introduction to how to use Notebooks.
+prerequisites:
+    python:
+        excerpt: (required) This workshop relies heavily on concepts from the Python workshop, and having a basic understanding of how to use the commands discussed in the workshop will be central for anyone who wants to learn about data analysis with Python and Pandas.
+        required: true
+    command-line:
+        excerpt: (recommended) This workshop makes some reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about text analysis with Python and Pandas.
+        recommended: true
+installations:
+    pythonguide: 
+        excerpt: (Required) You can use any installation of Python (but make sure it is of version 3). For our purposes, Anaconda will provide everything necessary for all the workshops that are part of the DHRI curriculum.
+        required: true
+    pandas:
+        excerpt: (required) You will need to install the Pandas package into your Python packages for the purposes of this workshop. This guide will help you along the way.
+        required: true
+insights:
+    jupyter-notebooks:
+        excerpt: (recommended) This workshop uses Jupyter Notebooks to process the Python commands in a clear and visual way. Anyone who wants to follow along in the workshop on data analysis with Python and Pandas should read this very short introduction to how to use Notebooks.
 
 readings:
     - "[A Beginner’s Tutorial to Jupyter Notebooks](https://towardsdatascience.com/a-beginners-tutorial-to-jupyter-notebooks-1b2f8705888a)"
