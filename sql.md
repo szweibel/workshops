@@ -1,4 +1,3 @@
-
 ---
 title: Databases and SQL
 cover title: SQL
