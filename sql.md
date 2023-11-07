@@ -124,7 +124,7 @@ Congratulations! You've successfully created and accessed your database on the c
 
 By the way, if you ever want to quit out of sqlite, the command is:
 
-```sqlite
+```sql
 .quit
 ```
 
