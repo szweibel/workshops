@@ -3,7 +3,7 @@ title: Databases and SQL
 cover title: SQL
 description: Introduction to databases and SQL
 
-programming_language: "sql"
+programming_language: "jupyter"
 published: false
 
 learning objectives:
