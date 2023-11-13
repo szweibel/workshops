@@ -64,16 +64,6 @@ resources:
         description: See the Digital Fellows’ Python Cheat Sheet for handy commands that we cover in this workshop.
         link: https://curriculum.dhinstitutes.org/shortcuts/workshop/python
 
-goals:
-# Can customize intro sentence here
-    - description: 'In this workshop, you will learn to:'
-    - Become familiar with core programming concepts, including variables, loops, and conditionals.
-    - Distinguish among five core data types—integers, floats, strings, booleans, and lists.
-    - Engage with error output and use the internet and documentation to independently research language features.
-    - Learn how to find and import code from external sources to solve more complex problems.
-    - Run Python programs, both by interacting directly with the interpreter and by preparing and running scripts.
-    - Understand what Python is and, in general terms, what it can do.
-
 ---
 
 <!---
