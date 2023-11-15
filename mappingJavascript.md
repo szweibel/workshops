@@ -3,8 +3,6 @@ title: Mapping With Javascript
 description: 'In this course, we will learn how to use JavaScript to create interactive maps on the web. We will use the Leaflet library to create maps and add interactivity to them. We will also learn how to use jQuery to add buttons and other controls to our maps.'
 long_pages: true
 readings:
-    - [The JavaScripting English Major (Moacir P. de Sá Pereira)](https://the-javascripting-english-major.org/v1/contents/01-introduction.html)
-    - [Eloquent JavaScript (Marijn Haverbeke)](https://eloquentjavascript.net/)
     - A great mapping tutorial from [Maptime Boston](https://maptimeboston.github.io/leaflet-intro/).
 goals:
     - description: 'In this workshop, you will learn to:'
