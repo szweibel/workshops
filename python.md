@@ -312,6 +312,12 @@ So far, you've interacted with Python one line at a time in the REPL. This is wh
 
 For the rest of this session, we're going to expand beyond the REPL to write and execute longer programs. To do this, we will begin to work with a code editor, where we write out lengthier Python scripts.
 
+## Copying and Pasting Code
+
+You may be tempted to copy and paste code from this workshop into your code editor. It's important to remember that you will learn more by typing out the code yourself. Typing out the code will help you remember it better, and it will help you learn the syntax of Python. There is a kind of muscle memory that comes with typing out code, and it's important to develop that muscle memory as you learn to program.
+
+In the case of large blocks of code, you may copy and paste, but make sure you understand what the code is doing before you do so.
+
 ## Your First Script
 
 To open the code editor, click the Open Editor button below. Then, type the following line into the code editor and click the RUN button in the slide-out panel:
@@ -373,11 +379,15 @@ Do you remember the glossary terms from this section?
 
 # Functions
 
-Broadly defined, a function is a block of reusable code that performs a specific task. Often, a function takes an input, transforms the input, and returns an output. Imagine, for instance, a [penny press](https://en.wikipedia.org/wiki/Elongated_coin) at a popular tourist attraction that accepts a penny (the input), flattens and embosses the penny (the transformation), and spits out an elongated coin with a new design, perhaps an image of the Statue of Liberty (the output)! Or, for those of you who remember high school algebra, the function `f(x) = x + 1` means that given an input `x`, the function will return `x + 1`. For example, if I substituted `2` for `x`, my function would read `f(2) = 2 + 1`, or `f(2) = 3`. In this case, my input was `2`, the transformation was to add `1`, and the output was `3`. These are the basic concepts that make up a function in Python as well! 
+Broadly defined, a function is a block of reusable code that performs a specific task. Often, a function takes an input, transforms the input, and returns an output. Imagine, for instance, a [penny press](https://en.wikipedia.org/wiki/Elongated_coin) at a popular tourist attraction that accepts a penny (the input), flattens and embosses the penny (the transformation), and spits out an elongated coin with a new design, perhaps an image of the Statue of Liberty (the output)! 
+
+### Math!
+
+Or, for those of you who remember high school algebra, the function `f(x) = x + 1` means that given an input `x`, the function will return `x + 1`. For example, if I substituted `2` for `x`, my function would read `f(2) = 2 + 1`, or `f(2) = 3`. In this case, my input was `2`, the transformation was to add `1`, and the output was `3`. Pick the analogy that works best for you, but the important thing to remember is that a function takes an input, performs an operation, and returns an output.
 
 ## Writing your first function
 
-Let's write a Python function that prints the output from our algebraic equation `f(x) = x + 1` before. Try running the code in the editor below.
+Let's write a Python function that prints the output from our algebraic equation `f(x) = x + 1` before. Try running the code below into the editor, and remember not to copy and paste.
 
 <CodeEditor>
 def add_one(x):
@@ -394,7 +404,11 @@ def add_one(x):
   print(x + 1)
 ```
  
-When creating a function, we begin by writing `def` before our chosen function name. The function name is typically descriptive in nature. We named the above function `add_one` following [Python naming conventions](https://www.python.org/dev/peps/pep-0008/#function-and-variable-names), as the function will be ADDING 1 to our inputted integer. We always need a closed parentheses `()` after our function name, which in this case, takes one argument (or input), which we will temporarily call `x` (we can name this parameter whatever we want, as long as we use the same name within the body of the function). Then, we end the first line with a `:`, return, and indent by 2 spaces to write code describing what this function should "do." In this case, we want the function to `print` the result of adding `1` to our input, or `x`. Remember, we need parentheses every time we print something!
+When creating a function:
+- We write `def` (short for `define`) before our chosen function name. 
+- We choose a descriptive function name following [Python naming conventions](https://www.python.org/dev/peps/pep-0008/#function-and-variable-names), such as `add_one` in this case. 
+- We always need a closed parentheses `()` after our function name, indicating the input parameters which in this case we are calling `x`. We can name this parameter whatever we want, as long as we use the same name within the body of the function. 
+- Then, we end the first line with a `:`, and indent by 2 spaces for the body of the function. In this case, we want the function to `print` the result of adding `1` to our input, or `x`. Remember, we need parentheses every time we print something!
 
 Next, if we want to __call__ our function, we will need to actually pass in an argument to see a result. To do so, we write the following line of code below our function (making sure this next line _isn't_ indented):
 
