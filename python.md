@@ -387,13 +387,13 @@ Or, for those of you who remember high school algebra, the function `f(x) = x + 
 
 ## Writing your first function
 
-Let's write a Python function that prints the output from our algebraic equation `f(x) = x + 1` before. Try running the code below into the editor, and remember not to copy and paste.
+Let's write a Python function that prints the output from our algebraic equation `f(x) = x + 1` before. Try writing the code below into the editor, and remember not to copy and paste.
 
-<CodeEditor>
+```python
 def add_one(x):
   print(x + 1) 
 add_one(2)
-</CodeEditor>
+```
 
 As output, you should get the number `3`. Let's break this code down to understand how it works.
 
@@ -427,11 +427,6 @@ add_one(155)
 add_one(5)
 add_one(-1)
 ```
-
-<CodeEditor>
-def add_one(x):
-  print(x + 1) 
-</CodeEditor>
 
 Do you notice how the function printed the sum of each of these numbers plus one? Writing this function helped us to automate this simple process of addition for each given input! Granted, creating a whole function just to add "one" to something may seem unnecessarily complicated, but once you have learned the basics of function-writing, the possibilities are powerful and limitless!
 
