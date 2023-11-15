@@ -47,7 +47,7 @@ readings:
 
 ethical considerations:
     - Python works by reducing data to portable units and presenting them in a way that prioritizes readability. These units are known as "data types" and include strings (words/letters), integers (numbers), booleans (true or false statements), and lists (groups of strings). The python grammar, which dictates how python statements ought to be ordered, values simplicity, efficiency, and concision. You can read more about Python values at [the Zen of Python](https://www.python.org/dev/peps/pep-0020/).
-    - As we learn about the Python data types and grammar, keep in mind that working within any digital format requires making seemingly neutral choices that carry ethical consequences. When using python, be aware of the ways the ways that data is transformed into computable form. What choices are you making about your data? What is being included, and what is left out? What are reductions and assumptions necessary to encode your data? If you are more interested in thinking further about data types and our choices in relation to data, you should have a look at our [Data Literacies workshop](https://www.github.com/DHRI-Curriculum/data-literacies).
+    - As we learn about the Python data types and grammar, keep in mind that working within any digital format requires making seemingly neutral choices that carry ethical consequences. When using Python, be aware of the ways the ways that data is transformed into computable form. What choices are you making about your data? What is being included, and what is left out? What are reductions and assumptions necessary to encode your data? If you are more interested in thinking further about data types and our choices in relation to data, you should have a look at our [Data Literacies workshop](https://www.github.com/DHRI-Curriculum/data-literacies).
 
 projects:
     - The NEH Impact Index:
@@ -873,25 +873,34 @@ else:
     print("I don't know what field you're talking about! I'm just a little program...")
 ```
 
-Variable Assignment:
+First, we set a variable field to the string "Media Studies", representing the chosen field of study.
 
-- Set a variable field to the string "Media Studies", representing the chosen field of study.
+Let's break down the `if` statement:
 
-Conditional Statement:
-
-- Use the if statement to check if the field is equal to "Media Studies."
+- Check to see if the variable `field` is equivalent to the string "Media Studies".
 - If true, execute the code block and print the string "Grammophone, Film, Typewriter".
 - If false, print a default message.
 
-It's important to note at this point the use of the double equals sign `==` in `if` statements. The double equals is an _equality_ operator, and it checks to see if the two values on either side are equivalent. Contrast this with the single equals that you've already seen, `=`, which is an _assignment_ operator, that assigns a value to a variable. In the line `field = "Media Studies"`, you are using the assignment operator `=` to set the variable's value to "Media Studies", (a string) while in the `if` statement, you're using the equality operator `==` to check if the field is equivalent to "Media Studies".
+### Equality
+
+- It's important to note at this point the use of the double equals sign `==` in `if` statements. The double equals is an _equality_ operator, and it checks to see if the two values on either side are equivalent. 
+- Contrast this with the single equals that you've already seen, `=`, which is an _assignment_ operator, that assigns a value to a variable. 
+
+In the line `field = "Media Studies"`, you are using the assignment operator `=` to set the variable's value to "Media Studies", (a string) while in the `if` statement, you're using the equality operator `==` to check if the field is equivalent to "Media Studies".
+
+### Else
 
 You'll also notice the inclusion of a new line, the `else` statement. The `else` statement handles any inputs that aren't "Media Studies", and the program merely prints out that it doesn't know what you should bring. You can think of `else` like a fail-safe that catches variables not directly accounted for.
 
 Try this script out both with the variable set to "Media studies" and the variable set to some other value, representing another field of study.
 
+### Elif
+
 What if we want our program to handle more fields of study, giving different messages for each one? Other cases after the first `if` statement are handled with `elif`, which is a shortened version of `else if`. Add the following code into the editor:
 
 ```python
+field = "Media Studies"
+
 if field == "Media Studies":
     print("Grammophone, Film, Typewriter")
 elif field == "Critical University Studies":
@@ -899,12 +908,8 @@ elif field == "Critical University Studies":
 elif field == "Textual Scholarship":
     print("Radiant Textuality")
 else:
-    print("I don't know what field you're talking about! I'm just a little program...")\
+    print("I don't know what field you're talking about! I'm just a little program...")
 ```
-
-<CodeEditor>
-field = "Media Studies"
-</CodeEditor>
 
 Now, if you were to change the `field` variable, you could run other blocks of code. You can add as many `elif` statements as you need, meaning that conditionals in Python have one `if` statement, any number of `elif` statements, and one `else` statement that catches any input not covered by `if` or `elif`. Over the next sections, we'll work on improving this little application, making it able to handle user input directly.
 
@@ -964,10 +969,6 @@ Do you remember the glossary terms from this section?
 
 # Working With Input
 
-<Info>
-If you're using your terminal and text editor to get through the workshop (instead of the built-in emulator in the browser) and are using Python 2.7, replace all `input()` functions in the code below with `raw_input()`. You can check your version by running `python --version` in the command line.
-</Info>
-
 ### Taking Input
 
 Python allows you to take input directly from the user using the `input()` function.
@@ -986,19 +987,11 @@ Next, write `greeting` into the REPL. You should see something like the followin
 
 ```pycon
 >>> greeting = input()
-greeting
+>>> greeting
 hey you!
 ```
 
 Python has saved your input text to the variable `greeting`. When you type in `greeting`, it will print out that input text. Pretty nifty, right?
-
-```pycon
->>> greeting = input()
-hey you!
-
->>> greeting
-'hey you!'
-```
 
 You can play around with `input()` by adding some prompt text within the parenthesis. Whatever you put inside the parenthesis, enclosed by quotes, will prompt the user to type in their text, which is then assigned to the variable set to `input()`. Sounds complicated, so give it some practice with the REPL. 
 
@@ -1008,12 +1001,10 @@ For instance, if we were to type the following:
 >>> feelings = input('How are you feeling today? ')
 ```
 
-We can answer with `like a rollercoaster of emotions`. Then, when we type in our variable `feelings` and press enter, we'll get our input printed back at us. Note that there's a little space after the question mark and before the closing quotation mark, which is to improve readability.
+We can answer with `like a rollercoaster of emotions`. Then, when we type in our variable `feelings` and press enter, we'll get our input printed back at us.
 
 ```pycon
->>> feelings = input('How are you feeling today? ')
-How are you feeling today? like a rollercoaster of emotions
-
+>>> feelings = input('How are you feeling today?')
 >>> feelings
 'like a rollercoaster of emotions'
 ```
@@ -1072,15 +1063,13 @@ Do you remember the glossary terms from this section?
 
 # Doing Things to Lists
 
-Okay. Let's make our little book application a little more robust. We are going to create a list of books (remember lists?) that we can then manipulate in all sorts of ways.
+Let's make our little book application a little more robust. We are going to create a list of books (remember lists?) that we can then manipulate in all sorts of ways.
 
 First, create a new list in the code editor with at least three books that are important to your research right now. Shorten the titles to one or two words if need be. Let's call this list our `library`. Remember the proper syntax for creating a list includes square brackets with commas separating the list items. Because the items are strings, they should also be inside quotes. For instance, your code might look something like:
 
 ```python
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 ```
-
-<CodeEditor></CodeEditor>
 
 Next, let's sort our `library` in alphabetical order. There's a handy method called `sort()` for doing just this kind of thing. What's a _method_, you might ask? Well, _methods_ are very similar to _functions_, and you'll remember that functions are ways of doing things, like `print()` and `type()`. Methods are also ways of doing things, but these things are attached to what we call _objects_ in Python. Objects are part of object-oriented-programming, and that's definitely not necessary to learn right now. Suffice it to say that methods are just like functions, that is, they are ways of doing things to your data.
 
@@ -1094,8 +1083,9 @@ print(library)
 What happened here? Let's take it line by line. First, we created a list `library` with three items attached to it. Then, we applied the `sort()` method to the library list. Finally, we printed the `library`, which is now sorted in alphabetical order.
 
 You'll see that we have a couple of new things happening with symbols.
+
 - First, the period `.` which is an _operator_ in Python. The period operator is another part of object-oriented-programming, and it basically means that we are applying a task to whatever precedes the period. In this case, we are applying the `sort()` method to our `library` list. It's kind of like attaching a function to our `library`.
-- Second, we have the parenthesis `()` after `sort`. When you get more comfortable with programming, you'll often use the parentheses to include what we call _arguments_ that allows us to do more complex things to data. Let's see how an argument works with the `append()` method.
+- Second, we have the parenthesis `()` after `sort`. You'll often use the parentheses to include what we call _arguments_ that allow us to do more complex things to data. Let's see how an argument works with the `append()` method.
 
 What if we want to add items to the list? We can use the `append()` method for that. For instance, try the following:
 
@@ -1123,21 +1113,21 @@ The last item that you added to your list should be missing from the `library` w
 
 Remember the `input()` function from the last lesson? This challenge uses that function in combination with what you know about list methods to create a little library app. You will play around with the input button, asking the user what kinds of things they want to do with their library, and writing some code that does those things and prints out the results.
 
-First, create a new file called `library.py`. Save it to your current working folder.
-
-Second, create a list of `library` books, with at least three books (you can use the same ones as before).
+- Create a list of `library` books, with at least three books (you can use the same ones as before).
 
 ```python
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 ```
 
-Then, add an input statement that will save the user's response to a variable, like `response`.
+- Then, add an input statement that will save the user's response to a variable, like `response`.
 
 ```python
 response = input("What do you want to do with your books today? ")
 ```
 
-Now, create a conditional statement that matches the user's response to series of options for doing things to the `library` list. We'll let them sort the library (`sort()`), add new items (`append()`), and remove the last item (`pop()`). I'll do the first one, `sort()`, for you:
+- Now, create a conditional statement that matches the user's response to series of options for doing things to the `library` list. We'll let them sort the library (`sort()`), add new items (`append()`), and remove the last item (`pop()`).
+
+I'll do the first one, `sort()`, for you:
 
 <CodeEditor>
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
@@ -1151,7 +1141,7 @@ else:
 
 See how the order of statements build on each other toward the final product? First, we create a library of books. Then, we set the user's response about what to do with those books. Then, we create a conditional statement that matches the response to specific tasks. The first condition checks to see if the user wants to "sort" the books, then sorts them, then prints the final result.
 
-Next, add `pop()` and `append()` to the program. 
+Next, make your program `pop()` and `append()` in response to user input. 
 
 After adding a few more conditions, test out your code! You should have a little library app that sorts, adds, and removes books from your list.
 
@@ -1185,8 +1175,6 @@ Select the following statements that truly describe `sort()`, `append()`, and `p
 - `append()` always takes an argument.*
 - `pop()` can be applied to a string.
 </Quiz>
-
-&nbsp;
 
 __Advanced question:__ If you `sort()` the library in between adding and popping a book, you'll end up with a different list than if you didn't run `sort()` in between `append()` and `pop()`. Can you guess why?
 
@@ -1225,9 +1213,7 @@ But this is a lot of work, and it's a pretty ugly solution. If we wanted to add 
 
 Even if you're a super rad Python programmer, you're not going to remember every function name or how to do things you might not have touched in awhile. One thing programmers get very good at is googling for answers. In fact, this is arguably the most important skill in modern-day programming. So, let's use Google to find out how to convert strings to lower case.
 
-Let's try the search term [make string lowercase](http://lmgtfy.com/?q=make+string+lowercase+Python):
-
-![make string lower case Python Google search](/images/python/google_search.png)
+Let's try the search term [make string lowercase](http://lmgtfy.com/?q=make+string+lowercase+Python).
 
 While Google searches change over time, some of your results likely come from a site called Stack Overflow. This is a questions and answers site for programmers that usually has strong answers to questions about Python.
 
@@ -1237,7 +1223,7 @@ On [this _Stack Overflow_ page](https://stackoverflow.com/questions/6797984/how-
 
 ## Implementing Our Answer
 
-According to this answer, we can make a string lowercase by adding `.lower()` to the end of it, like this:
+According to one answer, we can make a string lowercase by adding `.lower()` to the end of it, like this:
 
 ```pycon
 >>> "SORT".lower()
@@ -1400,11 +1386,13 @@ First we need to __import__ the module.  In the code editor below, write the fol
 `print(random.choice(motivational_phrases))`
 
 <CodeEditor>
+import random
 motivational_phrases = [
         "Importing modules is easy!",
         "Programming! Yay!",
         "You write lists like a pro!",
     ]
+print(random.choice(motivational_phrases))
 </CodeEditor>
 
 Now, each time you run the code, you should see a different motivational phrase as output. The `random.choice` function chooses a random item from a list and returns it. The `.` syntax indicates that the function is coming from the `random` library.
@@ -1418,6 +1406,8 @@ Think of something you're interested in doing (statistics, text analysis, web sc
 > working with html python library
 
 > html parser python library
+
+These libraries are usually installed with a tool called `pip`. You can read more about `pip` [here](https://packaging.python.org/tutorials/installing-packages/).
 
 In your research, you may also want to look at the libraries that come with Python. You can find a list of libraries in these libraries [here](https://docs.python.org/3/py-modindex.html).
 
