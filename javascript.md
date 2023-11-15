@@ -5,8 +5,8 @@ description: This is a basic introduction to JavaScript, which is the programmin
 
 long_pages: true
 readings:
-    - [The JavaScripting English Major (Moacir P. de Sá Pereira)](https://the-javascripting-english-major.org/v1/contents/01-introduction.html)
-    - [Eloquent JavaScript (Marijn Haverbeke)](https://eloquentjavascript.net/)
+    - 'Our inspiration: [The JavaScripting English Major (Moacir P. de Sá Pereira)](https://the-javascripting-english-major.org/v1/contents/01-introduction.html)'
+    - 'Another great book: [Eloquent JavaScript (Marijn Haverbeke)](https://eloquentjavascript.net/)'
 goals:
     - description: 'In this workshop, you will learn to:'
     - Gain capacity to read and write JavaScript at a beginner level.
