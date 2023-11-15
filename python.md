@@ -214,7 +214,7 @@ Open your web browser, and google the phrase "python function." Skim through the
 ### Solution
 
 <Secret>
-When you google "python function," you may see some phrases that look unfamiliar, like "return value" or "pass parameters." These are advanced terms for inputting and outputting data from a function. It's important to become familiar with the Python's terminology about functions, as it will be helpful later on when you start working with these components.
+When you google "python function," you may see some phrases that look unfamiliar, like "return value" or "pass parameters." These are advanced terms for inputting and outputting data from a function. It's important to become familiar with Python's terminology about functions, as it will be helpful later on when you start working with these components.
 </Secret>
 
 ## Evaluation
@@ -400,6 +400,113 @@ Do you remember the glossary terms from this section?
 - [Scripts](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/scripts.md)
 - [print()](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/print.md)
 
+
+# Functions
+
+Broadly defined, a function is a block of reusable code that performs a specific task. Often, a function takes an input, transforms the input, and returns an output. Imagine, for instance, a [penny press](https://en.wikipedia.org/wiki/Elongated_coin) at a popular tourist attraction that accepts a penny (the input), flattens and embosses the penny (the transformation), and spits out an elongated coin with a new design, perhaps an image of the Statue of Liberty (the output)! Or, for those of you who remember high school algebra, the function `f(x) = x + 1` means that given an input `x`, the function will return `x + 1`. For example, if I substituted `2` for `x`, my function would read `f(2) = 2 + 1`, or `f(2) = 3`. In this case, my input was `2`, the transformation was to add `1`, and the output was `3`. These are the basic concepts that make up a function in Python as well! 
+
+## Writing your first function
+
+Let's write a Python function that prints the output from our algebraic equation `f(x) = x + 1` before. Try running the code in the editor below.
+
+<CodeEditor>
+def add_one(x):
+  print(x + 1) 
+add_one(2)
+</CodeEditor>
+
+As output, you should get the number `3`. Let's break this code down to understand how it works.
+
+First, we create a function:
+
+```python
+def add_one(x):
+  print(x + 1)
+```
+ 
+When creating a function, we begin by writing `def` before our chosen function name. The function name is typically descriptive in nature. We named the above function `add_one` following [Python naming conventions](https://www.python.org/dev/peps/pep-0008/#function-and-variable-names), as the function will be ADDING 1 to our inputted integer. We always need a closed parentheses `()` after our function name, which in this case, takes one argument (or input), which we will temporarily call `x` (we can name this parameter whatever we want, as long as we use the same name within the body of the function). Then, we end the first line with a `:`, return, and indent by 2 spaces to write code describing what this function should "do." In this case, we want the function to `print` the result of adding `1` to our input, or `x`. Remember, we need parentheses every time we print something!
+
+Next, if we want to __call__ our function, we will need to actually pass in an argument to see a result. To do so, we write the following line of code below our function (making sure this next line _isn't_ indented):
+
+```python
+add_one(2)
+```
+
+Here, we are calling our function and telling the computer to pass in `2` to see if we get our expected output of `3`.
+
+### Optional 
+
+To see the magic of the function in action, try adding extra lines of code that call the function with different arguments in the code editor, like the following:
+
+```python
+add_one(155)
+add_one(5)
+add_one(-1)
+```
+
+<CodeEditor>
+def add_one(x):
+  print(x + 1) 
+</CodeEditor>
+
+Do you notice how the function printed the sum of each of these numbers plus one? Writing this function helped us to automate this simple process of addition for each given input! Granted, creating a whole function just to add "one" to something may seem unnecessarily complicated, but once you have learned the basics of function-writing, the possibilities are powerful and limitless!
+
+### Advanced
+Note that writing a function this way only prints the result, but does not actually `return` it. Read more about the difference between `print` and `return` [here](https://pythonprinciples.com/blog/print-vs-return/). If we wanted our function to actually perform the operation AND print it, we could revise our code as follows:
+
+```python
+def add_one(x):
+  return x + 1
+
+print(add_one(2))
+```
+
+## Writing your second function
+
+Our functions do not have to be "mathematical" in nature. Let's say that I wanted to say a friendly hello, but didn't want to type out a long sentence every time I wanted to do so. We could automate this process with a function. In the code editor, write the following lines:
+
+```python
+def greet():
+    print("Hello! How are you today?")`  
+greet()
+```
+
+<CodeEditor></CodeEditor>
+
+First we define our `greet()` function, and add a line to print to the screen. Lastly, we call the function so it will run. You might have noticed that this time, we didn't pass in an argument! Note that a function doesn't have to take an input (or argument), or it can take several arguments! There is a lot of flexibility involved in writing your own functions, which you can craft carefully to do exactly what you want them to! Read more about some of the many things you can do with functions on the online web tutorial [W3Schools](https://www.w3schools.com/python/python_functions.asp).
+
+## Challenge
+
+How could we change our greeting function to say hello to a specific person? Hint: your print statement will need to use string interpolation. We did this in the "Variables" section when we assigned y to "hello" `y = "hello"`, and then added `y + " and goodbye"`, which yielded the result `"hello and goodbye"`.
+
+<CodeEditor></CodeEditor>
+
+### Solution
+<Secret>
+<CodeEditor>
+def greet(person):
+  print("Hello " + person + "! How are you today?")
+greet("Sarah")
+</CodeEditor>
+</Secret>
+As you can see, the result of calling this function prints `"Hello Sarah! How are you today?"`
+
+## Evaluation
+
+Which of the following are not true about a function?:
+
+<Quiz>
+- A function can be reused
+- A function can take any number of arguments (including no arguments)
+- A function needs to be called in order to run
+- A function can only perform mathematical operations*
+</Quiz>
+
+### Keywords
+- [argument](https://www.w3schools.com/python/python_functions.asp)
+- [parameter](https://www.w3schools.com/python/python_functions.asp) 
+- [function](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/function.md)
+
 # Errors in Python
 
 Our usual response when seeing an error on a computer screen is a stress response. Our heart rate elevates and, if we cannot do what we were asking the computer to do, our frustration mounts. This is because many errors when interacting with programs are not useful or informative, and because we often have no capability to fix the program in front of us.
@@ -418,11 +525,11 @@ As an example, type the following in the Python REPL below:
 
 <PythonREPL/>
 
-You should receive an error:  `SyntaxError: EOL while scanning string literal`, which points out that our line has faulty syntax. Note the caret (`^`) underneath the mismatched quote, helpfully pointing out where the error lies. Similarly, if this error happened when running a script, Python would tell us the filename and the line number for the line on which the error occurs.
+You should receive an error:  `SyntaxError: unterminated string literal`, which points out that our line has faulty syntax. Note the caret (`^`) underneath the mismatched quote, helpfully pointing out where the error lies. Similarly, if this error happened when running a script, Python would tell us the filename and the line number for the line on which the error occurs.
 
 **Traceback errors**: These errors occur during the execution of a Python program when the program finds itself in an untenable state and must stop. Traceback errors are often logical inconsistencies in a program that is valid Python code. A common traceback error is referring to a variable that hasn't been defined, as below.
 
-As an example, type the following in the Python REPL below:
+As an example, type the following in the Python REPL:
 
 `print(not_a_variable)`
 
@@ -536,112 +643,6 @@ Do you remember the glossary terms from this section?
 
 - [Syntax Errors](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/syntax_error.md)
 - [Traceback Errors](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/traceback_error.md)
-
-# Functions
-
-Broadly defined, a function is a block of reusable code that performs a specific task. Often, a function takes an input, transforms the input, and returns an output. Imagine, for instance, a [penny press](https://en.wikipedia.org/wiki/Elongated_coin) at a popular tourist attraction that accepts a penny (the input), flattens and embosses the penny (the transformation), and spits out an elongated coin with a new design, perhaps an image of the Statue of Liberty (the output)! Or, for those of you who remember high school algebra, the function `f(x) = x + 1` means that given an input `x`, the function will return `x + 1`. For example, if I substituted `2` for `x`, my function would read `f(2) = 2 + 1`, or `f(2) = 3`. In this case, my input was `2`, the transformation was to add `1`, and the output was `3`. These are the basic concepts that make up a function in Python as well! 
-
-## Writing your first function
-
-Let's write a Python function that prints the output from our algebraic equation `f(x) = x + 1` before. Try running the code in the editor below.
-
-<CodeEditor>
-def add_one(x):
-  print(x + 1) 
-add_one(2)
-</CodeEditor>
-
-As output, you should get the number `3`. Let's break this code down to understand how it works.
-
-First, we create a function:
-
-```python
-def add_one(x):
-  print(x + 1)
-```
- 
-When creating a function, we begin by writing `def` before our chosen function name. The function name is typically descriptive in nature. We named the above function `add_one` following [Python naming conventions](https://www.python.org/dev/peps/pep-0008/#function-and-variable-names), as the function will be ADDING 1 to our inputted integer. We always need a closed parentheses `()` after our function name, which in this case, takes one argument (or input), which we will temporarily call `x` (we can name this parameter whatever we want, as long as we use the same name within the body of the function). Then, we end the first line with a `:`, return, and indent by 2 spaces to write code describing what this function should "do." In this case, we want the function to `print` the result of adding `1` to our input, or `x`. Remember, we need parentheses every time we print something!
-
-Next, if we want to __call__ our function, we will need to actually pass in an argument to see a result. To do so, we write the following line of code below our function (making sure this next line _isn't_ indented):
-
-```python
-add_one(2)
-```
-
-Here, we are calling our function and telling the computer to pass in `2` to see if we get our expected output of `3`.
-
-### Optional 
-
-To see the magic of the function in action, try adding extra lines of code that call the function with different arguments in the code editor, like the following:
-
-```python
-add_one(155)
-add_one(5)
-add_one(-1)
-```
-
-<CodeEditor>
-def add_one(x):
-  print(x + 1) 
-</CodeEditor>
-
-Do you notice how the function printed the sum of each of these numbers plus one? Writing this function helped us to automate this simple process of addition for each given input! Granted, creating a whole function just to add "one" to something may seem unnecessarily complicated, but once you have learned the basics of function-writing, the possibilities are powerful and limitless!
-
-### Advanced
-Note that writing a function this way only prints the result, but does not actually `return` it. Read more about the difference between `print` and `return` [here](https://pythonprinciples.com/blog/print-vs-return/). If we wanted our function to actually perform the operation AND print it, we could revise our code as follows:
-
-```python
-def add_one(x):
-  return x + 1
-
-print(add_one(2))
-```
-
-## Writing your second function
-
-Our functions do not have to be "mathematical" in nature. Let's say that I wanted to say a friendly hello, but didn't want to type out a long sentence every time I wanted to do so. We could automate this process with a function. In the code editor, write the following lines:
-
-```python
-def greet():
-    print("Hello! How are you today?")`  
-greet()
-```
-
-<CodeEditor></CodeEditor>
-
-First we define our `greet()` function, and add a line to print to the screen. Lastly, we call the function so it will run. You might have noticed that this time, we didn't pass in an argument! Note that a function doesn't have to take an input (or argument), or it can take several arguments! There is a lot of flexibility involved in writing your own functions, which you can craft carefully to do exactly what you want them to! Read more about some of the many things you can do with functions on the online web tutorial [W3Schools](https://www.w3schools.com/python/python_functions.asp).
-
-## Challenge
-
-How could we change our greeting function to say hello to a specific person? Hint: your print statement will need to use string interpolation. We did this in the "Variables" section when we assigned y to "hello" `y = "hello"`, and then added `y + " and goodbye"`, which yielded the result `"hello and goodbye"`.
-
-<CodeEditor></CodeEditor>
-
-### Solution
-<Secret>
-<CodeEditor>
-def greet(person):
-  print("Hello " + person + "! How are you today?")
-greet("Sarah")
-</CodeEditor>
-</Secret>
-As you can see, the result of calling this function prints `"Hello Sarah! How are you today?"`
-
-## Evaluation
-
-Which of the following are not true about a function?:
-
-<Quiz>
-- A function can be reused
-- A function can take any number of arguments (including no arguments)
-- A function needs to be called in order to run
-- A function can only perform mathematical operations*
-</Quiz>
-
-### Keywords
-- [argument](https://www.w3schools.com/python/python_functions.asp)
-- [parameter](https://www.w3schools.com/python/python_functions.asp) 
-- [function](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/function.md)
 
 # Lists
 
