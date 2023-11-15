@@ -327,36 +327,6 @@ You should see the text `Hello World!` appear in the output below the code edito
 
 Congratulations! You've written your first script. That's a big deal!
 
-## Running A Script Locally with the Terminal and a Text Editor
-
-While we have provided you with a code editor to work with here in the browser, when programming your own projects you will likely be working with a text editor and the terminal installed locally on your machine. First, let's begin with the text editor. Open your text editor of choice (such as Visual Studio Code) and create a new file with this line:
-
-```python
-print("Hello world!")
-```
-
-Save it with the name `hello.py` to a known location, such as your desktop. Open your terminal and move to the desktop directory:
-
-```console
-$ cd Desktop
-```
-
-Once you're in the folder with your `hello.py` file, move to the terminal. Do *not* enter the Python Interactive Mode (the REPL), which is unnecessary to run python scripts. Instead, lookout for the `$` symbol that lets you know you're in the terminal. (If you find yourself in the Interactive mode (`>>>`), then try exiting it with <kbd>control</kbd> + <kbd>d</kbd>. You should see the `$` symbol, letting you know you're back in the terminal. If you still do not see the `$` symbol, type `exit()` followed by <kbd>enter</kbd> after the Python prompt, `>>>`.)
-
-Now that you're in the terminal, type the following, and press enter:
-
-```console
-$ python hello.py
-```
-
-You should see the text `Hello world!` appear as output in the terminal.
-
-<Info>You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.</Info>
-
-## A Note on Text
-
-Fundamentally, Python programs are just text files. You can write them in any text editor, like Visual Studio Code or Notepad on Windows. When you pass the text file to Python, it runs the code in the file one line at a time. There's nothing special about `.py` files—they're just regular text files. This makes them work well with command line tools like Git. The tools you can learn through the DHRI Curriculum—the command line, Git, markdown, grep—are all designed to work well together, and the medium through which they all work is plain text.
-
 ## Challenge
 
 Rewrite your program so that you assign the "Hello World!" message to a variable, then print the variable. This will make your program two lines instead of one. There's a fancy programmer word for rewriting your code without changing its behavior—"refactoring."
@@ -1580,7 +1550,37 @@ Congratulations on completing the Intro to Python workshop! So far, you've learn
 suggested introduction to [Python libraries](https://digitalfellows.commons.gc.cuny.edu/2018/02/13/python_libraries/), or trying some of the tutorials or projects listed below. Maybe you want to learn how to
 clean text with [Regex](https://automatetheboringstuff.com/2e/chapter7/), or want to dig into web scraping with the Python library [`requests`](https://requests.readthedocs.io/en/master/). Or, if you are interested in strengthening your foundational skills, read one of the most suggested (and free!) beginner Python book,  [How to Think Like a Computer Scientist - Python Edition](https://runestone.academy/runestone/books/published/thinkcspy/index.html). See a full list of our suggestions below. 
 
-### Review Your Knowledge: 10 Questions from the Lessons
+## Running A Script Locally with the Terminal and a Text Editor
+
+While we have provided you with a code editor to work with here in the browser, when programming your own projects you will likely be working with a text editor and the terminal installed locally on your machine. First, let's begin with the text editor. Open your text editor of choice (such as Visual Studio Code) and create a new file with this line:
+
+```python
+print("Hello world!")
+```
+
+Save it with the name `hello.py` to a known location, such as your desktop. Open your terminal and move to the desktop directory:
+
+```console
+$ cd Desktop
+```
+
+Once you're in the folder with your `hello.py` file, move to the terminal. Do *not* enter the Python Interactive Mode (the REPL), which is unnecessary to run python scripts. Instead, lookout for the `$` symbol that lets you know you're in the terminal. (If you find yourself in the Interactive mode (`>>>`), then try exiting it with <kbd>control</kbd> + <kbd>d</kbd>. You should see the `$` symbol, letting you know you're back in the terminal. If you still do not see the `$` symbol, type `exit()` followed by <kbd>enter</kbd> after the Python prompt, `>>>`.)
+
+Now that you're in the terminal, type the following, and press enter:
+
+```console
+$ python hello.py
+```
+
+You should see the text `Hello world!` appear as output in the terminal.
+
+<Info>You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.</Info>
+
+## A Note on Text
+
+Fundamentally, Python programs are just text files. You can write them in any text editor, like Visual Studio Code or Notepad on Windows. When you pass the text file to Python, it runs the code in the file one line at a time. There's nothing special about `.py` files—they're just regular text files. This makes them work well with command line tools like Git. The tools you can learn through the DHRI Curriculum—the command line, Git, markdown, grep—are all designed to work well together, and the medium through which they all work is plain text.
+
+## Review Your Knowledge: 10 Questions from the Lessons
 
 __1. Which of the following is not true about a function? (Select one):__
 
@@ -1699,7 +1699,7 @@ Revisit the [Objects in Python](/workshops/python/?page=2) lesson to learn more.
 
 Hannah Aizenman, a former Digital Fellow, wrote up a great blog post introducing python "libraries," or collections of python code, for various project types, from creating a website, to getting, exploring, and visualizing data, and working with images, video, spreadsheets, among other ideas. Check out her suggestions in [How Do I Solve [insert problem here] With Python?](https://digitalfellows.commons.gc.cuny.edu/2018/02/13/python_libraries/) 
 
-### Other Tutorials
+## Other Tutorials
 
 - If you feel like you're ready for more tutorials, you should check out [Google's Python Class](https://developers.google.com/edu/python), a solid introduction that also begins to explore intermediate concepts and modules. 
 - To begin using Python for manipulating and analyzing text based data, check out [Python Programming for the Humanities](https://www.karsdorp.io/python-course/), and jump straight into chapter 2.
@@ -1707,7 +1707,7 @@ Hannah Aizenman, a former Digital Fellow, wrote up a great blog post introducing
 - If you learn best by watching videos, Paul Vierthaler’s recorded and uploaded his DH class, [Hacking the Humanities](https://www.youtube.com/playlist?list=PL6kqrM2i6BPIpEF5yHPNkYhjHm-FYWh17), to Youtube. Includes a general introduction to coding principles, introduction to python, with emphasis on text analysis, data manipulation, and web scraping.
 - If you learn best by copying and practicing, [Learn Python the Hard Way](https://learnpythonthehardway.org/book/), by Zed A. Shaw, is an excellent a hands-on resource. Although the online and print book versions cost money, you can test out a sample for free. 
 
-### Projects or Challenges to Try
+## Projects or Challenges to Try
 
 - [Automate the Boring Stuff](https://automatetheboringstuff.com/) contains many little projects for strengthening beginner and intermediate python skills. You might [play around with *regular expressions*](https://automatetheboringstuff.com/2e/chapter7/) (or *regex*), which is a method for locating and manipulating certain patterns of text (think of it like a high powered `ctrl-F`). Once you feel more comfortable with regex, you might write a program that [organizes or renames the files on your computer](https://automatetheboringstuff.com/2e/chapter10/). Just be sure to practice with a sample folder & files before moving on to your own documents!
 - Interested in web scraping (aka grabbing information from the web)?
