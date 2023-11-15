@@ -1591,7 +1591,7 @@ __1. Which of the following is not true about a function? (Select one):__
 - A function needs to be called in order to run.
 </Quiz>
 
-Revisit the `Functions` lesson to learn more.
+Revisit the <Link workshop='python' page='20'>`Functions`</Link> lesson to learn more.
 
 __2. What are the differences between the terminal, REPL, and text editor? Select the correct statement from the options below.__
 
@@ -1602,7 +1602,7 @@ __2. What are the differences between the terminal, REPL, and text editor? Selec
 - The REPL doesn’t allow you to test code on the fly.
 </Quiz>
 
-Revisit the `Running Scripts` lesson to learn more.
+Revisit the <Link workshop='python' page='16'>`Running Scripts`</Link> lesson to learn more.
 
 __3. If we wanted to calculate the length of an input using len(), how would we write that expression? (Select one):__
 
@@ -1613,7 +1613,7 @@ __3. If we wanted to calculate the length of an input using len(), how would we 
 - len(input()) = length_of_response
 </Quiz>
 
-Revisit the `Input` lesson to learn more.
+Revisit the <Link workshop='python' page='42'>`Input`</Link> lesson to learn more.
 
 __4. What is the difference between the double equals (==) and single equals (=)? (Select all that apply):__
 
@@ -1624,7 +1624,7 @@ __4. What is the difference between the double equals (==) and single equals (=)
 - The single equals checks to see if one value is equivalent to the other, as in 2 = 2.
 </Quiz>
 
-Revisit the `Conditionals` lesson to learn more.
+Revisit the <Link workshop='python' page='39'>`Conditionals`</Link> lesson to learn more.
 
 __5. Select all the variable expressions that are allowed in Python. (Select all that apply):__
 
@@ -1635,7 +1635,7 @@ __5. Select all the variable expressions that are allowed in Python. (Select all
 - $$$ = "dollar_signs"
 </Quiz>
 
-Revisit the `Variables` lesson to learn more.
+Revisit the <Link workshop='python' page='13'>`Variables`</Link> lesson to learn more.
 
 __6. Select all the following that accurately describe the data type categories. (Select all that apply):__
 
@@ -1648,7 +1648,7 @@ __6. Select all the following that accurately describe the data type categories.
 - Lists can contain strings, like ['banana', 'coffee', 'eggs'].*
 </Quiz>
 
-Revisit the `Data Types` lesson to learn more.
+Revisit the <Link workshop='python' page='8'>`Data Types`</Link> lesson to learn more.
  
 __7. What are different ways for describing what a “for loop” can do? (Select all that apply):__
 
@@ -1659,7 +1659,7 @@ __7. What are different ways for describing what a “for loop” can do? (Selec
 - loop through characters in a string.*
 </Quiz>
 
-Revisit the `Loops` lesson to learn more.
+Revisit the <Link workshop='python' page='35'>`Loops`</Link> lesson to learn more.
 
 __8. Select the following statements that truly describe sort(), append(), and pop(). (Select all that apply):__
 
@@ -1671,7 +1671,7 @@ __8. Select the following statements that truly describe sort(), append(), and p
 - sort(), append(), and pop() are methods.*
 </Quiz>
 
-Revisit the `Doing Things to Lists` lesson to learn more.
+Revisit the <Link workshop='python' page='45'>`Doing Things to Lists`</Link> lesson to learn more.
 
 __9. What are the characteristics of the REPL? (Select all that apply):__
 
@@ -1682,7 +1682,7 @@ __9. What are the characteristics of the REPL? (Select all that apply):__
 - The REPL and the terminal are the same thing.
 </Quiz>
 
-Revisit the `Interacting With Python` lesson to learn more.
+Revisit the <Link workshop='python' page='2'>`Interacting With Python`</Link> lesson to learn more.
 
 __10. Why would someone use dir()? (Select all that apply):__
 
