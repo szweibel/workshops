@@ -418,7 +418,7 @@ add_one(2)
 
 Here, we are calling our function and telling the computer to pass in `2` to see if we get our expected output of `3`.
 
-### Optional 
+## Use and Reuse 
 
 To see the magic of the function in action, try adding extra lines of code that call the function with different arguments in the code editor, like the following:
 
@@ -430,7 +430,8 @@ add_one(-1)
 
 Do you notice how the function printed the sum of each of these numbers plus one? Writing this function helped us to automate this simple process of addition for each given input! Granted, creating a whole function just to add "one" to something may seem unnecessarily complicated, but once you have learned the basics of function-writing, the possibilities are powerful and limitless!
 
-### Advanced
+### Returning
+
 Note that writing a function this way only prints the result, but does not actually `return` it. Read more about the difference between `print` and `return` [here](https://pythonprinciples.com/blog/print-vs-return/). If we wanted our function to actually perform the operation AND print it, we could revise our code as follows:
 
 ```python
@@ -450,9 +451,7 @@ def greet():
 greet()
 ```
 
-<CodeEditor></CodeEditor>
-
-First we define our `greet()` function, and add a line to print to the screen. Lastly, we call the function so it will run. You might have noticed that this time, we didn't pass in an argument! Note that a function doesn't have to take an input (or argument), or it can take several arguments! There is a lot of flexibility involved in writing your own functions, which you can craft carefully to do exactly what you want them to! Read more about some of the many things you can do with functions on the online web tutorial [W3Schools](https://www.w3schools.com/python/python_functions.asp).
+First we define our `greet()` function, and add a line to print to the screen. Lastly, we call the function so it will run. You might have noticed that this time, we didn't pass in an argument! Note that a function can take zero inputs (or arguments), or it can take several arguments. There is a lot of flexibility involved in writing your own functions, which you can craft carefully to do exactly what you want them to! Read more about some of the many things you can do with functions on the online web tutorial [W3Schools](https://www.w3schools.com/python/python_functions.asp).
 
 ## Challenge
 
@@ -472,7 +471,7 @@ As you can see, the result of calling this function prints `"Hello Sarah! How ar
 
 ## Evaluation
 
-Which of the following are not true about a function?:
+Which of the following are __not__ true about a function?:
 
 <Quiz>
 - A function can be reused
@@ -628,7 +627,7 @@ Do you remember the glossary terms from this section?
 Remember lists? They look like this:
 
 ```python
-books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
+books = [1, '57', True]
 ```
 
 Let's create a list together and print it out. In the code editor, write the following lines:
@@ -672,14 +671,10 @@ A useful property of a list is the list index. This allows you to pick out an it
 For instance, add the following lines of code to the program below:
 
 ```python
+books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
 print(books[0]) # Gender Trouble
 print(books[1]) # Cruising Utopia
 ```
-
-<CodeEditor>
-books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
-print(books)
-</CodeEditor>
 
 Indexing lets us get at individual items from a particular list. Note that the first item in the list is `item[0]`. The second item is `item[1]`. That's because counting in Python, and in almost all programming languages, starts from `0`.
 
@@ -698,12 +693,9 @@ There are many things you can do with list indexing, like _slicing_. Slicing con
 The slice syntax consists of square brackets, start point and end point, and a colon to indicate the gap in between. This should print out the first two items of your list.  Go ahead and add the following line to the code below to see slicing in action:
 
 ```python
+books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
 print(books[0:2])
 ```
-
-<CodeEditor>
-books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
-</CodeEditor>
 
 Note a couple of things. First, the start point is *inclusive*, meaning that Python will include the `[0]` item in your range, and the end point is _exclusive_, so Python won't print the `[2]` item. Instead, it will print everything _up until_ that `[2]` item.
 
@@ -725,9 +717,7 @@ With a list that contains three items total, list slicing might not seem very im
 
 ## Challenge
 
-In the REPL below, create a new list of books with at least 5 books in your list. Make sure the total number of books in the list is an **odd** number. How do you get python to print out the book in the middle of the list? What about the three books in the middle? Remember that the first value in a slice is _inclusive_, and the final value is _exclusive_.
-
-<PythonREPL/>
+In the editor, make a list of books with at least 5 books. Make sure the total number of books in the list is an **odd** number. How do you get python to print out the book in the middle of the list? What about the three books in the middle? Remember that the first value in a slice is _inclusive_, and the final value is _exclusive_.
 
 ### Solution
 
@@ -764,16 +754,13 @@ Do you remember the glossary terms from this section?
 
 What if we want to print out each item in the list separately? For that, we'll need something called a _loop_.
 
-Add the following lines of code to the editor below:
+Add the following lines of code to the editor:
 
 ```python
+books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
 for book in books:
     print("My favorite book is " + book)
 ```
-
-<CodeEditor>
-books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
-</CodeEditor>
 
 What's happening here? This kind of loop is called a "for loop", and tells Python: "for each item in the list, do something." Let's break it down:
 
@@ -790,8 +777,6 @@ You can also loop through items within a string. Type the following code into th
 for letter in "hello":
     print(letter)
 ```
-
-<CodeEditor></CodeEditor>
 
 The result should print out each letter of the string `hello`, one by one.
 
@@ -816,9 +801,9 @@ When variable names accurately reflect what they represent, and are therefore me
 
 1. Here's a list of numbers:
 
-<CodeEditor>
+```python
 prime_numbers = [2, 3, 5, 7, 11]
-</CodeEditor>
+```
 
 Write some code to print out the square of each of these numbers. Remember that the square of a number is that number times itself. The solution is below, but you're not allowed to look at it until you've tried to solve it yourself for 3.5 minutes. (Seriously! That's 210 seconds.)
 
@@ -877,7 +862,7 @@ Do you remember the glossary terms from this section?
 
 # Conditionals
 
-Conditionals allow programs to change their behavior based on whether some statement is true or false. Let's try this out by writing a script that will give different outputs (consisting of book titles) based on the specified field of study. Type the following into the code editor below:
+Conditionals allow programs to change their behavior based on whether some statement is true or false. Let's try this out by writing a script that will give different outputs (book titles) based on a specified field of study. Type the following into the code editor:
 
 ```python
 field = "Media Studies"
@@ -888,9 +873,15 @@ else:
     print("I don't know what field you're talking about! I'm just a little program...")
 ```
 
-<CodeEditor></CodeEditor>
+Variable Assignment:
 
-In our first line, we set a variable `field` to the string `"Media Studies"`, representing our chosen field of study. The `if` statement checks whether the field is set to the string "Media Studies". If it is, the code in the block beneath is executed, so the string `"Grammophone, Film, Typewriter"` will be printed.
+- Set a variable field to the string "Media Studies", representing the chosen field of study.
+
+Conditional Statement:
+
+- Use the if statement to check if the field is equal to "Media Studies."
+- If true, execute the code block and print the string "Grammophone, Film, Typewriter".
+- If false, print a default message.
 
 It's important to note at this point the use of the double equals sign `==` in `if` statements. The double equals is an _equality_ operator, and it checks to see if the two values on either side are equivalent. Contrast this with the single equals that you've already seen, `=`, which is an _assignment_ operator, that assigns a value to a variable. In the line `field = "Media Studies"`, you are using the assignment operator `=` to set the variable's value to "Media Studies", (a string) while in the `if` statement, you're using the equality operator `==` to check if the field is equivalent to "Media Studies".
 
@@ -898,7 +889,7 @@ You'll also notice the inclusion of a new line, the `else` statement. The `else`
 
 Try this script out both with the variable set to "Media studies" and the variable set to some other value, representing another field of study.
 
-What if we want our program to handle more fields of study, giving different messages for each one? Other cases after the first `if` statement are handled with `elif`, which is a shortened version of `else if`. Add the following code into the editor below:
+What if we want our program to handle more fields of study, giving different messages for each one? Other cases after the first `if` statement are handled with `elif`, which is a shortened version of `else if`. Add the following code into the editor:
 
 ```python
 if field == "Media Studies":
