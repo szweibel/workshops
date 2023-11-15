@@ -1693,7 +1693,7 @@ __10. Why would someone use dir()? (Select all that apply):__
 - to examine a particular method, like sort().
 </Quiz>
 
-Revisit the <Link workshop='python' page='56'>`Objects in Python`<link> lesson to learn more.
+Revisit the <Link workshop='python' page='56'>`Objects in Python`</Link> lesson to learn more.
 
 ## Suggested Further Readings and Tutorials
 
