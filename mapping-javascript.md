@@ -18,35 +18,18 @@ prerequisites:
     - data ethics: 
         description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
         recommended: true
-instructors: 
-    - 'Stephen Zweibel'
-    - 'Leanne Fan'
 
 authors:
-    - 'Kalle Westerling'
-    - 'Di Yoong'
-    - 'Lisa Rhody'
-    - 'Jojo Karlin'
+    - 'Zach Lloyd'
     - 'Stephen Zweibel'
-    - 'Patrick Smyth'
 
 editors:
-    - 'Di Yoong'
-    - 'Lisa Rhody' 
+    - 'Zach Lloyd'
     - 'Stephen Zweibel'
 
 ethical considerations:
-    - Python works by reducing data to portable units and presenting them in a way that prioritizes readability. These units are known as "data types" and include strings (words/letters), integers (numbers), booleans (true or false statements), and lists (groups of strings). The python grammar, which dictates how python statements ought to be ordered, values simplicity, efficiency, and concision. You can read more about Python values at [the Zen of Python](https://www.python.org/dev/peps/pep-0020/).
-    - As we learn about the Python data types and grammar, keep in mind that working within any digital format requires making seemingly neutral choices that carry ethical consequences. When using Python, be aware of the ways the ways that data is transformed into computable form. What choices are you making about your data? What is being included, and what is left out? What are reductions and assumptions necessary to encode your data? If you are more interested in thinking further about data types and our choices in relation to data, you should have a look at our [Data Literacies workshop](https://www.github.com/DHRI-Curriculum/data-literacies).
+    - Data visualizations can be used to mislead or misrepresent data.
 
-projects:
-    - Mapping the Republic of Letters:
-        description: "This project maps the correspondence of early modern scholars."
-        link: https://republicofletters.stanford.edu/
-    - Mapping the Catalogue of Ships:
-        description: "This project maps the locations of the ships in Homer's _Iliad_."
-        link: https://www.mappingtheshipsoftheiliad.com/
-        
 resources:
     - Leaflet:
         link: https://leafletjs.com/
