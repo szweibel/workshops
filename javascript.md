@@ -7,8 +7,7 @@ long_pages: true
 readings:
     - 'Our inspiration: [The JavaScripting English Major (Moacir P. de Sá Pereira)](https://the-javascripting-english-major.org/v1/contents/01-introduction.html)'
     - 'Another great book: [Eloquent JavaScript (Marijn Haverbeke)](https://eloquentjavascript.net/)'
-goals:
-    - description: 'In this workshop, you will learn to:'
+learning objectives:
     - Gain capacity to read and write JavaScript at a beginner level.
     - Understand the core programming concepts, including variables, loops, and conditionals.
     - Distinguish among five core data types—integers, floats, strings, booleans, and arrays.
@@ -16,6 +15,31 @@ goals:
     - Be familiar with JS libraries like JQuery.
     - Be ready for further classes that require JavaScript knowledge.
 programming_language: 'JavaScript'
+estimated time:
+    - 3 - 4 hours
+prerequisites: 
+    - command line: 
+        description: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about programming with Python.
+        required: true
+    - data ethics: 
+        description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
+        recommended: true
+
+authors:
+    - 'Zach Lloyd'
+    - 'Stephen Zweibel'
+
+editors:
+    - 'Zach Lloyd'
+    - 'Stephen Zweibel'
+
+ethical considerations:
+    - 'Javascript is a programming language that is used to create interactive websites.
+It is important to consider the ethical implications of the websites you create.'
+    - If you are creating a website that collects data from users, consider how you will store and protect that data.
+    - When creating a website for a wide audience, consider accessibility issues.
+    - For websites used by people from different cultures, consider making it accessible to speakers of various languages.
+        
 ---
 
 # Introduction
