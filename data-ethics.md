@@ -370,7 +370,7 @@ Sustainable formats are generally unencrypted, uncompressed, and follow an open 
     </tr>
 </table> -->
 <!-- recreate the above in markdown table format -->
-------------------
+
 | Types | Examples | Common file extensions |
 | --- | --- | --- |
 | **Images** | [TIFF](https://www.lifewire.com/tif-tiff-file-2622393) (Tagged Image File Format) | `.tiff`, `.tif` |
