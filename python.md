@@ -1391,6 +1391,7 @@ First we need to __import__ the module.  In the code editor below, write the fol
 `print(random.choice(motivational_phrases))`
 
 <CodeEditor>
+```
 import random
 motivational_phrases = [
         "Importing modules is easy!",
@@ -1398,6 +1399,7 @@ motivational_phrases = [
         "You write lists like a pro!",
     ]
 print(random.choice(motivational_phrases))
+```
 </CodeEditor>
 
 Now, each time you run the code, you should see a different motivational phrase as output. The `random.choice` function chooses a random item from a list and returns it. The `.` syntax indicates that the function is coming from the `random` library.
@@ -1500,12 +1502,14 @@ In this final challenge, we will work more with the `random` library. We'll use 
 Take a look at the following code:
 
 <CodeEditor>
+```
 import random
 # create a 'roll' function to return a random # between 1-6
 def roll():
     return random.randint(1, 6)
 # roll the die and print the results
 print(f'You rolled a {roll()}.')
+```
 </CodeEditor>
 
 First, we `import` the random library into our program. Then, we create a `roll` function that returns a random number between 1 and 6. We'll use the `randint` function from the random library to generate a random number. The `randint` function takes two arguments, the minimum and maximum number that can be returned. We'll use `1` and `6` for the minimum and maximum numbers to create a standard die. To get at our result, we `return` the outcome of the function. 
@@ -1522,6 +1526,7 @@ Starting with the code above, roll the die twice, storing each result. Using bot
 
 <Secret>
 <CodeEditor>
+```
 import random
 # create a 'roll' function to return a random # between 1-6
 def roll():
@@ -1536,13 +1541,13 @@ elif die2 > die1:
     print('Second roll wins!')
 else:
     print('Tie!')
+```
 </CodeEditor>
 </Secret>
 
 # Theory to Practice
 
-Congratulations on completing the Intro to Python workshop! So far, you've learned quite a bit about variables, functions, loops, modules, and other foundational concepts to further your Python journey. For next steps, consider our
-suggested introduction to [Python libraries](https://digitalfellows.commons.gc.cuny.edu/2018/02/13/python_libraries/), or trying some of the tutorials or projects listed below. Maybe you want to learn how to
+Congratulations on completing the Intro to Python workshop! So far, you've learned quite a bit about variables, functions, loops, modules, and other foundational concepts to further your Python journey. For next steps, consider our suggested introduction to [Python libraries](https://digitalfellows.commons.gc.cuny.edu/2018/02/13/python_libraries/), or trying some of the tutorials or projects listed below. Maybe you want to learn how to
 clean text with [Regex](https://automatetheboringstuff.com/2e/chapter7/), or want to dig into web scraping with the Python library [`requests`](https://requests.readthedocs.io/en/master/). Or, if you are interested in strengthening your foundational skills, read one of the most suggested (and free!) beginner Python book,  [How to Think Like a Computer Scientist - Python Edition](https://runestone.academy/runestone/books/published/thinkcspy/index.html). See a full list of our suggestions below. 
 
 ## Running A Script Locally with the Terminal and a Text Editor
@@ -1705,10 +1710,7 @@ Hannah Aizenman, a former Digital Fellow, wrote up a great blog post introducing
 ## Projects or Challenges to Try
 
 - [Automate the Boring Stuff](https://automatetheboringstuff.com/) contains many little projects for strengthening beginner and intermediate python skills. You might [play around with *regular expressions*](https://automatetheboringstuff.com/2e/chapter7/) (or *regex*), which is a method for locating and manipulating certain patterns of text (think of it like a high powered `ctrl-F`). Once you feel more comfortable with regex, you might write a program that [organizes or renames the files on your computer](https://automatetheboringstuff.com/2e/chapter10/). Just be sure to practice with a sample folder & files before moving on to your own documents!
-- Interested in web scraping (aka grabbing information from the web)?
-  The python library
-  [`requests`](https://requests.readthedocs.io/en/master/) handles
-  requests over the internet. See this handy step-by-step [tutorial on
+- Interested in web scraping (aka grabbing information from the web)? The python library [`requests`](https://requests.readthedocs.io/en/master/) handles requests over the internet. See this handy step-by-step [tutorial on
   Real Python](https://realpython.com/python-requests/). 
 - *Advanced Challenge*: This is more complicated stuff, but if you're
   interested in working with CSV data and visualization techniques,
