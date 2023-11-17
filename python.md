@@ -145,12 +145,12 @@ The exponent operator is two asterisks. For example, the number 3 to the power o
 
 What are the characteristics of the REPL? Select all that apply.
 
-<Quiz>
+:::quiz
 - The REPL has a prompt that begins with `$`.
 - The REPL has a prompt that begins with `>>>`.*
 - The REPL and the terminal are the same thing.
 - The REPL can be used to evaluate mathematical expressions like `2 + 2`.*
-</Quiz>
+:::
 
 ### Keywords
 
