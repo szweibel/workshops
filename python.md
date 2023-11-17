@@ -137,7 +137,7 @@ One operator (math symbol) we didn't learn is the exponent—e.g., "x raised to 
 
 <Secret>The exponent operator is two asterisks. For example, the number 3 to the power of 2 would be expressed as 3**2.</Secret>
 
-::: secret
+:::spoiler
 The exponent operator is two asterisks. For example, the number 3 to the power of 2 would be expressed as 3**2.
 :::
 
