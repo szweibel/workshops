@@ -77,7 +77,10 @@ goals:
 
 This workshop is meant to be _interactive_--it intends to immediately engage you with the concepts you are learning. To that end, all of the Python programming you will learn about can be done here, __directly in your browser__. Throughout the workshop, you will encounter several designated code sections in which you can write and run your Python code. These emulators are meant to allow you quick and easy access to coding principles. However, there are many ways to interact with Python, and you will also learn about how to interact with your Python installation locally on your machine. 
 
-With that said, let's get started!
+With that said, let's get started![^1]
+
+[^1]: Big note.
+
 
 ## The Interactive Session
 
