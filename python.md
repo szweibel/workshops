@@ -109,7 +109,7 @@ Let's try a little math in the Python prompt. In the Python REPL environment bel
 
 <PythonREPL/>
 
-:::pythonREPL
+:pythonREPL
 
 The first four operations above are addition, subtraction, multiplication, and division, respectively. The last operation is _modulo_, or mod, which returns the remainder after division.
 
