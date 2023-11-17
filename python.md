@@ -1390,8 +1390,7 @@ First we need to __import__ the module.  In the code editor below, write the fol
 
 `print(random.choice(motivational_phrases))`
 
-<CodeEditor>
-```
+```python
 import random
 motivational_phrases = [
         "Importing modules is easy!",
@@ -1400,7 +1399,6 @@ motivational_phrases = [
     ]
 print(random.choice(motivational_phrases))
 ```
-</CodeEditor>
 
 Now, each time you run the code, you should see a different motivational phrase as output. The `random.choice` function chooses a random item from a list and returns it. The `.` syntax indicates that the function is coming from the `random` library.
 
@@ -1501,8 +1499,7 @@ In this final challenge, we will work more with the `random` library. We'll use 
 
 Take a look at the following code:
 
-<CodeEditor>
-```
+```python
 import random
 # create a 'roll' function to return a random # between 1-6
 def roll():
@@ -1510,7 +1507,6 @@ def roll():
 # roll the die and print the results
 print(f'You rolled a {roll()}.')
 ```
-</CodeEditor>
 
 First, we `import` the random library into our program. Then, we create a `roll` function that returns a random number between 1 and 6. We'll use the `randint` function from the random library to generate a random number. The `randint` function takes two arguments, the minimum and maximum number that can be returned. We'll use `1` and `6` for the minimum and maximum numbers to create a standard die. To get at our result, we `return` the outcome of the function. 
 
@@ -1525,8 +1521,8 @@ Starting with the code above, roll the die twice, storing each result. Using bot
 ### Solution
 
 <Secret>
-<CodeEditor>
-```
+
+```python
 import random
 # create a 'roll' function to return a random # between 1-6
 def roll():
@@ -1542,7 +1538,7 @@ elif die2 > die1:
 else:
     print('Tie!')
 ```
-</CodeEditor>
+
 </Secret>
 
 # Theory to Practice
