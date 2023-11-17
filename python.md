@@ -1408,9 +1408,9 @@ The real point of this section is to learn `import`, which is where Python reall
 
 Think of something you're interested in doing (statistics, text analysis, web scraping, quantitative analysis, processing Excel/PDF/image files) and search google "<_thing you are interested in_> python library". You're almost certain to find some useful results. For example, if you wanted to find Python libraries for dealing with cleaning up HTML files, you might search one of these:
 
-> working with html python library
+*working with html python library*
 
-> html parser python library
+*html parser python library*
 
 These libraries are usually installed with a tool called `pip`. You can read more about `pip` [here](https://packaging.python.org/tutorials/installing-packages/).
 
