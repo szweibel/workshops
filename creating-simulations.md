@@ -7,19 +7,18 @@ programming_language: 'jupyter'
 
 learning objectives:
     - 'Become familiar with core programming concepts, including classes, functions, and methods.'
-    - 'Understand the interplay between functions in a larger program.'
-    - 'Create objects with custom attributes.'
+    - 'Understand the interplay between functions and methods in a larger program.'
+    - 'Create objects with custom attributes and functionality.'
     
 facilitators: 
     name: 'Zachary Lloyd'
-    description: 'Here is a short bio.'
 
 estimated time:
     - 3 hours
 
 prerequisites: 
     - intro to python: 
-        description: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about programming with Python.
+        description: (required) This workshop relies heavily on concepts from the Python workshop, and having a basic understanding of how to use the commands discussed in the workshop will be central for anyone who wants to learn about higher-level Python concepts.
         required: true
     - data ethics: 
         description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
@@ -59,7 +58,12 @@ goals:
 
 A simulation is a model of a real-world system or process. Simulations are used to predict the behavior of a system, to test various conditions, or to analyze the effects of different variables. Simulations are often used in scientific research, but they can also be used to model social, economic, or political systems. For instance, during the Covid-19 pandemic, researchers used simulations to model the spread of the virus and to predict the effects of various public health measures. While the simulations we will create today will be very basic, they follow the same underlying logic as more complex simulations. 
 
-In this workshop, you will learn how to create very basic simulations using Jupyter notebooks and the Python programming language. The workshop will employ the logic of Python's "object-oriented" methodology to create two small simulations:  a dice rolling simulation and a Critter simulation that tracks the population growth of an imaginary species of critter based on a variety of factors. Object-oriented programming is a programming paradigm that uses objects and their interactions to design applications and computer programs. It is based on the concept of objects, which can contain data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods). In this workshop, we will use Python's object-oriented methodology and Jupyter notebook to create objects that represent our dice and critters, and we will use methods to define the actions that our objects can take. In general, these exercises will expose you to some of the higher-level concepts integral to Python programming.
+In this workshop, you will learn how to create very basic simulations using Jupyter notebook and the Python programming language. The workshop will employ the logic of Python's "object-oriented" methodology to create two small simulations:  a dice rolling simulation and a Critter simulation that tracks the population growth of an imaginary species of critter based on a variety of factors. 
+
+<Info>[Object-oriented programming](https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior.) is a programming paradigm that uses objects and their interactions to design applications and computer programs. It is based on the concept of objects, which can contain data in the form of fields (often known as attributes or properties), and code in the form of procedures (often known as methods).
+</Info>
+
+In this workshop, we will use Python's object-oriented methodology and Jupyter notebook to create objects that represent our dice and critters, and we will use methods to define the actions that our objects can take. In general, these exercises will expose you to some of the higher-level concepts integral to Python programming.
 
 # Part 1 - Throwing Some Dice
 
@@ -67,7 +71,7 @@ First, let's create our dice rolling simulation. We will create a program that a
 
 The general outline and goals for this part of the workshop are as follows:
 
-1) Create a simple dice rolling function to demonstrate classes and objects on a basic level.
+__1)__ Create a simple dice rolling function to demonstrate classes and objects on a basic level.
 
 Concepts we'll focus on:
 - Class declaration and naming conventions
@@ -75,7 +79,7 @@ Concepts we'll focus on:
 - Methods (functions within classes)
 - Objects and instantiation
 
-2) Run the simulation by rolling the dice as many times as we want, and evaluate the results.
+__2)__ Run the simulation by rolling the dice as many times as we want, and evaluate the results.
 
 Concepts we'll focus on:
 - Passing methods as arguments into other classes/functions
@@ -92,7 +96,10 @@ import random
 import statistics as stats
 ```
 
-This import will allow us to use Python's `random` module. _Note: If you have used other programming languages you might be familiar of the concept of [seeding](https://www.w3schools.com/python/ref_random_seed.asp).  For our purposes, we do not need to explicitly seed random number generation when using Python's random library, as it will use either current system time or OS random resources by default._
+This import will allow us to use Python's `random` module. Remember to press <kbd>shift</kbd> + <kbd>enter</kbd> to run the cell.
+
+<Info>If you have used other programming languages you might be familiar with the concept of [seeding](https://www.w3schools.com/python/ref_random_seed.asp). For our purposes, we do not need to explicitly seed random number generation when using Python's random library, as it will use either current system time or OS random resources by default.
+</Info>
 
 Because we will be referencing the statistics library a few times in our code, we can `import` it `as stats`, just to shorten what we have to type every time.
 
@@ -102,7 +109,7 @@ Next, let's create a `class` to represent our die object.  You can think of a cl
 
 For example, if we were to define a `Car` class, we might consider what attributes a car has:  brand, mileage, top speed, diesel or gas, stick or auto, 2-door or 4-door, etc. We could begin defining these characteristics as part of the overall class `Car` using variables. Variables particular to a class are called __data members__. We could then consider what actions a car can perform:  e.g., drive, brake, refuel, etc., and begin to write some functions in our `Car` class that describe these actions. Generally, functions that are specific to a certain class are called __methods__.  Unlike functions, methods use __.__ (dot) notation in order to be called--you'll see exactly what that means here shortly.
 
-Because we are creating a dice simulator here, let's go ahead and create a new class `Die`:
+Because we are creating a dice simulator here, let's go ahead and create a new class `Die`. In a new cell in your Jupyter notebook, type the following:
 
 ```python
 # create a new die class
@@ -111,17 +118,17 @@ class Die:
         self.sides = sides
 ```
 
-We begin by defining our class. By convention, class names in Python are always _uppercase_. We then initialize our class using the `__init__` method.  
+We begin by defining our class. By convention, class names in Python are always Uppercase. We then initialize our class using the `__init__` method.  
 
-The `__init__` method is a special method that Python runs automatically whenever we create a new "instance" (a new object) of a class. This method has two leading underscores and two trailing underscores, a convention that helps prevent Python’s default method names from conflicting with your own method names. The `self` parameter is required in the method definition, and it must come first before any other parameters. It _must_ be included in the definition because whenever we call this method later, the method call will automatically pass the `self` argument. Every method call associated with an object (in this case, our die object) automatically passes `self`, which is a reference to the object itself; it gives the individual instance access to the attributes and methods in the class.
+The `__init__` method is a special method that Python runs automatically whenever we create a new "instance" (a new object) of a class. This method has two leading underscores and two trailing underscores, a convention that helps prevent Python’s default method names from conflicting with your own method names. The `self` parameter is required in the method definition, and it must come first before any other parameters. It _must_ be included in the definition because whenever we call this method later, the method call will automatically pass the `self` argument. Every method call associated with an object (in this case, our die object) automatically passes `self`, which is a reference to the object itself; it gives the individual instance access to the attributes and methods in the class. If this still seems a bit confusing, don't worry--we'll see how this works in practice throughout the workshop.
 
 Our other parameter is `sides`. We include this in our `__init__` because every die object that is created will have a certain number of sides (typically 6) as an attribute. In short, your `__init__` parameters should always include characteristics that you want _every newly created object in your class_ to have.  
 
-Next, we define our parameters, prefixed with `self`. Any variable prefixed with `self` is available to every method in the class, and we’ll also be able to access these variables through any instance created from the class. The line `self.sides`, for instance, takes the value associated with the parameter `sides` and assigns it to the local variable `sides`, which is then attached to the instance being created.
+Next, we define our parameters, prefixed with `self`. Any variable prefixed with `self` is available to every method in the class, and we’ll also be able to access these variables through any instance created from the class. The line `self.sides`, for instance, takes the value associated with the parameter `sides` and assigns it to the local variable `sides`, which is then attached to the object being created.
 
 ## Creating Our Method
 
-Next, let's create a __method__ that allows us to roll our die object. Make sure you are indenting the method so that it is _within_ our die class.
+Next, let's create a __method__ that allows us to roll our die object. Because methods are a part of a class, make sure you are indenting the method so that it is _within_ our overall `Die` class, in the same cell.
 
 ```python
     # create a 'roll' method to return a random # between 1-6
@@ -129,28 +136,29 @@ Next, let's create a __method__ that allows us to roll our die object. Make sure
         return random.randint(1, self.sides)
 ```
 
-We first define (`def`) our method, and pass in the parameter `self`, which allows us to access the data members of our class. Next, we generate a random number using the `random` library. The `randint` function returns an integer in a range between the first value (1) and the second (self.sides). We will then `return` the value from the method so we can check the results.
+We first define (`def`) our method, and pass in the parameter `self`, which allows us to access the data members of our class. Next, we generate a random number using the `random` library. The `randint` method returns an integer in a range between the first value (`1`) and the second (`self.sides`). We also `return` the value from the method so we can check the results.
 
 ## Displaying Results
 
-Now that we have our class and our method set up, we can create (or _instantiate_) a new die object and give it a roll:
+Now that we have our class and our method set up, we can create (or _instantiate_) a new die object and give it a roll. In a new cell, type the following:
 
 ```python
 die = Die(6)   
 print(die.roll())
 ```
 
-To create a new object, you begin as you would with any variable definition. Here we indicate that our `die` (lowercase) object will belong to our class `Die`. Because we also need to pass in a value for how many sides our object has, we will give it a value of `6`.
+To create a new object, you begin as you would with any variable definition. Here we indicate that our `die` (lowercase!) object will belong to our class `Die`. Because we also need to pass in a value for how many sides our object has, we will give it a value of `6`.
 
 Next, we use a `print` statement to display the results of our roll method. To call our roll method, we must use our die object and __.__ (dot) notation--recall that methods _need to act upon an object or instance of the class_ in order to be called.
 
-And that's it! You have successfully created a new die object that can be rolled.  If you check the results in your terminal, you should see your roll displayed.
+And that's it! You have successfully created a new die object that can be rolled.  If you run the cell, you should see your roll displayed. Additionally, each time you run the cell, you should see a new random number between 1 and 6.
 
-### Challenge!
+## Challenge!
 
 If the user rolls a six, tell them that they're a winner and get a prize. If they didn't roll a 6, display that they're a loser.
 
-__Solution__: Create a new variable that stores a roll. Then, use an `if else` statement to generate a message:
+<Secret>
+Create a new variable that stores a roll. Then, use an `if` statement to check if the roll is equal to 6.
 
 ```python
 r = die.roll()
@@ -159,14 +167,33 @@ if r == 6:
 else:
     print(f"You rolled a {r}, not nearly as cool as a 6...")
 ```
+</Secret>
+
+## Evaluation
+
+How are methods called?
+
+<Quiz>
+- `method_name()`
+- `method_name.method()`
+- `object.method_name()`*
+- `object.method_name.method()`
+</Quiz>
 
 # The Dice Simulator
 
+Now that we have our basic die object, let's create a dice rolling simulator. We will create a program that allows us to simulate our die roll `x` number of times and analyze the overall results. 
+
+In particular, let's say that we wanted to throw our die object 1000 times (instead of just once) and analyze the results of *all* the rolls. We can simulate this process by creating a new class devoted specifically to this task, so let's go ahead and make it now.
+
 ## Creating a New Class
 
-Let's say that we wanted to throw our die object 1000 times (instead of just once) and analyze the results of all the rolls. We can simulate this process by creating a new class.
+Let's call our class `DiceSim`. What we want this class to do is to roll our die an x amount of times, and print the results. Thinking this through, we will likely want two methods:
 
-Let's call our class `DiceSim`. What we want this class to do is to roll our die an x amount of times, and print the results. Thinking this through, we will likely want two methods:  1) a method that utilizes our `roll()` method we've already created above and runs it 1000 times, and 2) a method that analyzes the results of those 1000 rolls.  Let's do just that:
+1. A method that utilizes our `roll()` method we've already created above and runs it 1000 times.
+2. A method that analyzes the results of those 1000 rolls.  
+
+So, let's do just that:
 
 ```python
 class DiceSim:
@@ -184,11 +211,11 @@ class DiceSim:
         self.run()
 ```
 
-We will pass in our two parameters for the class, one for our roll method and the other for the number of iterations we want the simulator to run. Like before, we prefix each variable with `self` so that we can access the values from anywhere within our class. We also create a new empty list `results`, so that we have a place to store the results of our dice rolls. We also have one method call, `run()`. Calling a method in the initializer area like this means that it will run every time a new object of the `DiceSim` class is created.
+We will pass in our two parameters for the class, one for our roll method we created previously and the other for the number of iterations we want the simulator to run. Like before, we prefix each data member with `self` so that we can access the values from anywhere within our class. We also create a new empty list `results`, so that we have a place to store the results of our dice rolls. We also have one method call, `run()`. Calling a method in the initializer area like this means that it will run every time a new object of the `DiceSim` class is created.
 
 ## Creating Our Class Methods
 
-Next, let's create the methods for our simulator class. We will want one to run our roll method, and one to analyze and print our results:
+Next, let's define the methods for our simulator class. We will want one to run our roll method, and one to analyze and print our results:
 
 ```python
     # run our die roll method and store the results
@@ -197,8 +224,14 @@ Next, let's create the methods for our simulator class. We will want one to run 
             result = self.dice_method()
             self.results.append(result)
         self.report()
+```
 
-    # report the results of the analysis
+In our `run()` method, we use a `for` loop to cycle through by the number of iterations we will set. We then store the results of the die roll method in a local variable `result`, and `append()` that result to our `results` list. Again, because we have called the `run()` method in our class initializer, it will run every time a new object of the `DiceSim` class is created. You can also see that we are running the `report()` method at the end of our `run()` method, so that we have a chain of events that will occur every time a new object is created.
+
+We then want to define our next method, `report()`, to analyze the results from `run()`.
+
+```python
+    # analyze and report the results
     def report(self):
         max_num = max(self.results)
         min_num = min(self.results)
@@ -219,28 +252,65 @@ Next, let's create the methods for our simulator class. We will want one to run 
         )
 ```
 
-In our `run()` method, we use a `for` loop to cycle through by the number of iterations we will set. We then store the results of the die roll method in a local variable `result`, and `append()` that result to our `results` list. We then call our next method, `report()`, to analyze the results.
+Our `report()` method uses Python's built-in `max()` and `min()` functions to catch the highest and lowest roll in the list. Using the `stats` library, we also check the mean, median, mode, standard deviation, and variance of the results and print it to the terminal.
 
-The `report()` method uses Python's built-in `max()` and `min()` functions to catch the highest and lowest roll in the list. Using the `stats` library, we also check the mean, median, mode, standard deviation, and variance of the results and print it to the terminal.
-
-Our last step is to create a new instance of our simulator class:
+Our last step is to create a new instance of our simulator class in a new cell, like we did before:
 
 ```python
 die1 = Die(6)
 sim = DiceSim(die1.roll, 1000)
 ```
+
 First, we create a new instance of our `Die` class (remember, you can create as many new objects of a class as you'd like!) and give it 6 sides. Then, we create a new `sim` object. As parameters, we pass in our roll method and 1000, for the number of iterations to run.
 
-And that's it! If you run the program in your terminal, you should see a report of the results of the simulation.
+And that's it! If you run the final cell, you should see a report of the results of the simulation.
 
-## Key Terms
+## Evaluation
+
+What are some differences between a function and a method?
+
+
+:::spoiler    
+__Definition:__
+_Function_: A function is a self-contained block of code that performs a specific task and can be defined independently of any class or object. It takes input arguments, processes them, and returns a result.
+_Method_: A method is a function that is associated with an object or class. It is called on an object and can access the data within that object.
+
+__Usage:__
+_Function_: Functions are standalone entities and can be called from anywhere in the code, provided they are in the scope.
+_Method_: Methods are associated with objects or classes and are called on instances of those objects or the class itself.
+
+__Syntax:__
+_Function_: Functions are defined using the `def` keyword and can be called using the function name.
+_Method_: Methods also use the def keyword but are defined within a class and are accessed using dot notation (`object.method()` or `class.method()`).
+
+Here's a simple example in Python to illustrate the differences:
+
+```python
+    # function
+    def add(a, b):
+        return a + b
+
+    # method
+    class Math:
+        def add(self, a, b):
+            return a + b
+
+    # function call
+    add(1, 2)
+
+    # method call
+    Math().add(1, 2)
+```
+:::
+
+### Key Terms
 
 - __class__: Classes allow us to create new types of software objects, with their own attributes and functionalities.
 - __method__: Methods are functions that belong to a class. They are called using __.__ (dot) notation.
 - __self__: The keyword self represents an instance of a class and binds its attributes with the given arguments.
 - __return__: The return statement allows you to access a value once a given function or method has finished running.
 
-# Part 2 - Critter Simulator
+# Part 2 - The Critter Simulator
 
 __Goal:__  Create a simulation that tracks the population growth of a proposed (imaginary) species of Critter, taking into account a variety of biological and environmental factors.
 
@@ -261,7 +331,7 @@ __Concepts to focus on:__
 
 ## Getting Started
 
-Create a new Python file called `CritterSim.py`. Because we will be using a lot of random values in our program, we'll first want to `import` the `random` module at the beginning of the file, like so:
+Create a new Python file called `CritterSim`. Because we will be using a lot of random values in our program, we'll first want to `import` the `random` module at the beginning of the file, like we did in the previous section:
 
 ```python
 import random
@@ -300,8 +370,6 @@ As you can see, each variable is commented to give some context for its use. The
 `fertility_x` constitutes the lowest possible age at which a critter can give birth (so they're not too young). Let's be optimistic with these critters and propose they can live for a rather long time (perhaps 50 years or so), and set the low fertility level to 10.
 
 `fertility_y` constitutes the highest possible age at which a critter can give birth (so they're not too old). To start, let's keep the fertility period rather short and set the maximum age to 20 (we can always adjust it later).
-
-
 
 `critterList` is a list that will contain the entire population of our critters. We will access and modify this list continuously in order to assess our total population growth.
 
