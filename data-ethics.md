@@ -305,7 +305,7 @@ A small detour to discuss data formats. Open data formats are usually available 
 Sustainable formats are generally unencrypted, uncompressed, and follow an open standard. 
 
 <br />
-<table>
+<!-- <table>
     <caption><strong>A small list of open multimedia formats (more information of each file format is linked in their entries):</strong></caption>
     <tr>
         <th>Types</th>
@@ -368,7 +368,27 @@ Sustainable formats are generally unencrypted, uncompressed, and follow an open 
     <tr>
         <th colspan="3"> For a list of file formats, consider the Library of Congress' list of <a href="https://www.loc.gov/preservation/digital/formats/fdd/browse_list.shtml#"> Sustainability of Digital Formats</a>.</th>
     </tr>
-</table>
+</table> -->
+<!-- recreate the above in markdown table format -->
+------------------
+| Types | Examples | Common file extensions |
+| --- | --- | --- |
+| **Images** | [TIFF](https://www.lifewire.com/tif-tiff-file-2622393) (Tagged Image File Format) | `.tiff`, `.tif` |
+| | [JPEG2000](https://en.wikipedia.org/wiki/JPEG_2000) | `.jp2`, `.jpf`, `.jpx` |
+| | [PNG](http://www.libpng.org/pub/png/pngintro.html) (Portable Network Graphics) | `.png` |
+| **Text** | [ASCII](https://help.ceda.ac.uk/article/4429-ascii-formats)  (American Standard Code for Information Interchange) | `.ascii`, `.dat`, `.txt` |
+| | [PDF](https://en.wikipedia.org/wiki/PDF) (Portable Document Format) | `.pdf` |
+| | [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) (Comma-Separated Values | `.csv` |
+| **Audio** | [FLAC](https://xiph.org/flac/index.html) (Free Lossless Audio Codec) | `.flac` |
+| | [ogg](https://xiph.org/ogg/) | `.ogg` |
+| **Video** | [MPEG-4](https://www.lifewire.com/mp4-file-2622024) | `.mp4` |
+| **Others** | [XML](https://www.w3schools.com/xml/xml_whatis.asp) (Extensible Markup Language) | `.xml` |
+| | [JSON](https://www.json.org/json-en.html) (JavaScript Object Notation | `.json` |
+| | [STL](https://www.3dsystems.com/quickparts/learning-center/what-is-stl-file) (STereoLithography file format—used in 3D modeling) | `.stl` |
+| **For a list of file formats, consider the Library of Congress' list of [Sustainability of Digital Formats](https://www.loc.gov/preservation/digital/formats/fdd/browse_list.shtml#).** |
+
+<br />
+
 
 ## Evaluation
 
