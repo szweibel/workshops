@@ -770,11 +770,11 @@ for book in books:
 What's happening here? This kind of loop is called a "for loop", and tells Python: "for each item in the list, do something." Let's break it down:
 
 ```python
-for <variable name> in <list name>:
-    <do something>
+for variable name in list name:
+    do something
 ```
 
-Indented code like this is known as a "code block." Python will run the `<do something>` code in the code block once for each item in the list. You can also refer to `<variable name>` in the `<do something>` block.
+Indented code like this is known as a "code block." Python will run the `\<do something\>` code in the code block once for each item in the list. You can also refer to `\<variable name\>` in the `\<do something\>` block.
 
 You can also loop through items within a string. Type the following code into the editor to see the result:
 
