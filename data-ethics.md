@@ -305,71 +305,6 @@ A small detour to discuss data formats. Open data formats are usually available 
 Sustainable formats are generally unencrypted, uncompressed, and follow an open standard. 
 
 <br />
-<!-- <table>
-    <caption><strong>A small list of open multimedia formats (more information of each file format is linked in their entries):</strong></caption>
-    <tr>
-        <th>Types</th>
-        <th>Examples</th>
-        <th>Common file extensions</th>
-    </tr>
-    <tr>
-        <th rowspan="3">Images</th>
-        <td><a href="https://www.lifewire.com/tif-tiff-file-2622393">TIFF</a> (Tagged Image File Format) </td>
-        <td>`.tiff`, `.tif`</td>
-    </tr>
-    <tr>
-        <td><a href="https://en.wikipedia.org/wiki/JPEG_2000">JPEG2000</a></td>
-        <td>`.jp2`, `.jpf`, `.jpx`</td>
-    </tr>
-    <tr>
-        <td><a href="http://www.libpng.org/pub/png/pngintro.html">PNG</a> (Portable Network Graphics)</td>
-        <td>`.png`</td>
-    </tr>
-    <tr>
-        <th rowspan="3">Text</th>
-        <td><a href="https://help.ceda.ac.uk/article/4429-ascii-formats">ASCII</a>  (American Standard Code for Information Interchange)</td>
-        <td>`.ascii`, `.dat`, `.txt`</td>
-    </tr>
-    <tr>
-        <td><a href="https://en.wikipedia.org/wiki/PDF">PDF</a> (Portable Document Format)</td>
-        <td>`.pdf`</td>
-    </tr>
-    <tr>
-        <td><a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> (Comma-Separated Values</td>
-        <td>`.csv`</td>
-    </tr>
-    <tr>
-        <th rowspan="2">Audio</th>
-        <td><a href="https://xiph.org/flac/index.html">FLAC</a> (Free Lossless Audio Codec)</td>
-        <td>`.flac`</td>
-    </tr>
-    <tr>
-        <td><a href="https://xiph.org/ogg/">ogg</a></td>
-        <td>`.ogg`</td>
-    </tr>
-    <tr>
-        <th rowspan="1">Video</th>
-        <td><a href="https://www.lifewire.com/mp4-file-2622024">MPEG-4</a></td>
-        <td>`.mp4`</td>
-    </tr>
-    <tr>
-        <th rowspan="3">Others</th>
-        <td><a href="https://www.w3schools.com/xml/xml_whatis.asp">XML</a> (Extensible Markup Language)</td>
-        <td>`.xml`</td>
-    </tr>
-    <tr>
-        <td><a href="https://www.json.org/json-en.html">JSON</a> (JavaScript Object Notation</td>
-        <td>`.json`</td>
-    </tr>
-    <tr>
-        <td><a href="https://www.3dsystems.com/quickparts/learning-center/what-is-stl-file">STL</a> (STereoLithography file format—used in 3D modeling)</td>
-        <td>`.stl`</td>
-    </tr>
-    <tr>
-        <th colspan="3"> For a list of file formats, consider the Library of Congress' list of <a href="https://www.loc.gov/preservation/digital/formats/fdd/browse_list.shtml#"> Sustainability of Digital Formats</a>.</th>
-    </tr>
-</table> -->
-<!-- recreate the above in markdown table format -->
 
 | Types | Examples | Common file extensions |
 | --- | --- | --- |
@@ -650,82 +585,25 @@ Do you remember the glossary terms from this section?
 Visualizing your data helps you tell a story and construct a narrative that guides your audience in understanding your interpretation of a collected, cleaned, and analyzed dataset. Depending on the type of analysis you ran, different kinds of visualization can be more effective than others. In the table below are some examples of data visualization that can help you convey the message of your data.
 
 ### Examples of Data Visualization
-<table>
-    <tr>
-        <th>Types of Analysis</th>
-        <th>Types of Visualization</th>
-         <th>When to Use</th>
-        <th>Example of Visualization</th>
-    </tr>
-    <tr>
-        <th rowspan="3">Comparisons</th>
-         <td>Bar charts</td>
-         <td>Comparison across distinct categories</td>
-        <td><img src="/images/data-ethics/D4PG_bar.png" alt="Bar Chart"><figcaption>From <a href="https://dataforgood.commons.gc.cuny.edu/report-on-covid-19s-impact-on-cuny-students/" target="_blank">The Data for Public Good</a> at the Graduate Center.</figcaption></td>
-    </tr>
-    <tr>
-        <td>Histograms</td>
-        <td>Comparison across continuous variable</td>
-        <td><img src="/images/data-ethics/PolicyViz_histogram.png" alt="Histogram"><figcaption>From <a href="https://policyviz.com/2018/11/27/histogram-design-decisions/" target="_blank">Policy Viz.</a></figcaption></td>
-    </tr>
-    <tr>
-        <td>Scatter plots</td>
-        <td>Useful to check for correlation (not causation!)</td>
-        <td><img src="/images/data-ethics/538_scatter.png" alt="Scatter plot"><figcaption>From <a href="https://fivethirtyeight.com/features/the-gops-primary-rules-might-doom-carson-and-cruz/" target="_blank">FiveThirtyEight.</a></figcaption></td>
-    </tr>
-    <tr>
-        <th rowspan="3">Time</th>
-        <td>Stacked area charts</td>
-        <td>Evolution of value across different groups</td>
-        <td><img src="/images/data-ethics/DatatoViz_stackedarea.png" alt="Stacked area chart"><figcaption>From <a href="https://www.data-to-viz.com/graph/stackedarea.html" target="_blank">Data to Viz.</a></figcaption></td>
-    </tr>
-    <tr>
-        <td>Sankey Diagrams</td>
-        <td>Displaying flows of changes</td>
-        <td><img src="/images/data-ethics/DatatoViz_sankey.png" alt="Sankey"><figcaption>From <a href="https://www.data-to-viz.com/graph/sankey.html" target="_blank">Data to Viz.</a></figcaption></td>
-    </tr>
-   <tr>
-        <td>Line graphs</td>
-        <td>Tracking changes over time</td>
-        <td><img src="/images/data-ethics/D4PG_line.jpg" alt="Line Graph"><figcaption>From <a href="https://dataforgood.commons.gc.cuny.edu/report-on-covid-19s-impact-on-cuny-students/" target="_blank">The Data for Public Good</a> at the Graduate Center.</figcaption></td>
-    </tr>
-    <tr>
-        <th rowspan="2">Small numbers/percentages</th>
-        <td>Pie charts</td>
-        <td>Demonstrate proportions between categories</td>
-        <td><img src="/images/data-ethics/DB_pie.jpg" alt="Pie chart"><figcaption>From <a href="https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic" target="_blank">The Library of Congress.</a></figcaption></td>
-    </tr>
-    <tr>
-        <td>Tree maps</td>
-        <td>Demonstrate hierarchy and proportion</td>
-        <td><img src="/images/data-ethics/DataViz_treemap.png" alt="Tree map"><figcaption>From <a href="https://datavizcatalogue.com/methods/treemap.html" target="_blank">The Data Visualization Catalogue.</a></figcaption></td>
-    </tr>
-    <tr>
-        <th rowspan="2">Survey responses</th>
-        <td>Stacked bar charts</td>
-        <td>Compares total amount across each group (e.g. plotting Likert scale)</td>
-        <td><img src="/images/data-ethics/DB_stackedbar.jpg" alt="Stacked bar charts"><figcaption>From <a href="https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic" target="_blank">The Library of Congress.</a></figcaption></td>
-    </tr>
-    <tr>
-        <td>Nested area graphs</td>
-        <td>Visualize branching/nested questions</td>
-        <td><img src="/images/data-ethics/evergreen_nestedarea.jpg" alt="Nested area graph"><figcaption>From <a href="https://stephanieevergreen.com/nested-area-graph/" target="_blank">Evergreen Data.</a></figcaption></td>
-    </tr>
-    <tr>
-        <th rowspan="2">Place</th>
-        <td>Choropleth maps</td>
-        <td>Visualize values over a geographic area to demonstrate pattern</td>
-        <td><img src="/images/data-ethics/DB_choropleth.jpg" alt="Choropleth map"><figcaption>From <a href="https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic" target="_blank">The Library of Congress.</a></figcaption></td>
-    </tr>
-    <tr>
-        <td>Hex(bin) or Tile maps</td>
-        <td>Similar to Choropleth with the hexbin/tile representing regions equally rather than by geographic size</td>
-        <td><img src="/images/data-ethics/rgraph_hexbin.png" alt="Hexbin graph"><figcaption>From <a href="https://www.r-graph-gallery.com/328-hexbin-map-of-the-usa.html" target="_blank">R Graph Gallery.</a></figcaption></td>
-    </tr>
-    <tr>
-        <th colspan="4"> Adapted from <a href="https://us.sagepub.com/en-us/nam/effective-data-visualization/book265203_"> Stephanie D. Evergreen (2019) Effective data visualization : The right chart for the right data</a>, <a href="https://datavizcatalogue.com/">The Data Visualization Catalogue</a>, and <a href="https://www.data-to-viz.com/">From Data to Viz</a></th>
-    <tr>
-</table>
+
+| Types of Analysis | Types of Visualization | When to Use | Example of Visualization |
+| --- | --- | --- | --- |
+| **Comparisons** | Bar charts | Comparison across distinct categories | ![Bar Chart](/images/data-ethics/D4PG_bar.png) From [The Data for Public Good](https://dataforgood.commons.gc.cuny.edu/report-on-covid-19s-impact-on-cuny-students/) at the Graduate Center. |
+| | Histograms | Comparison across continuous variable | ![Histogram](/images/data-ethics/PolicyViz_histogram.png) From [Policy Viz](https://policyviz.com/2018/11/27/histogram-design-decisions/) |
+| | Scatter plots | Useful to check for correlation (not causation!) | ![Scatter plot](/images/data-ethics/538_scatter.png) From [FiveThirtyEight](https://fivethirtyeight.com/features/the-gops-primary-rules-might-doom-carson-and-cruz/) |
+| **Time** | Stacked area charts | Evolution of value across different groups | ![Stacked area chart](/images/data-ethics/DatatoViz_stackedarea.png) From [Data to Viz](https://www.data-to-viz.com/graph/stackedarea.html) |
+| | Sankey Diagrams | Displaying flows of changes | ![Sankey](/images/data-ethics/DatatoViz_sankey.png) From [Data to Viz](https://www.data-to-viz.com/graph/sankey.html) |
+| | Line graphs | Tracking changes over time | ![Line Graph](/images/data-ethics/D4PG_line.jpg) From [The Data for Public Good](https://dataforgood.commons.gc.cuny.edu/report-on-covid-19s-impact-on-cuny-students/) at the Graduate Center. |
+| **Small numbers/percentages** | Pie charts | Demonstrate proportions between categories | ![Pie chart](/images/data-ethics/DB_pie.jpg) From [The Library of Congress](https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic) |
+| | Tree maps | Demonstrate hierarchy and proportion | ![Tree map](/images/data-ethics/DataViz_treemap.png) From [The Data Visualization Catalogue](https://datavizcatalogue.com/methods/treemap.html) |
+| **Survey responses** | Stacked bar charts | Compares total amount across each group (e.g. plotting Likert scale) | ![Stacked bar charts](/images/data-ethics/DB_stackedbar.jpg) From [The Library of Congress](https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic) |
+| | Nested area graphs | Visualize branching/nested questions | ![Nested area graph](/images/data-ethics/evergreen_nestedarea.jpg) From [Evergreen Data](https://stephanieevergreen.com/nested-area-graph/) |
+| **Place** | Choropleth maps | Visualize values over a geographic area to demonstrate pattern | ![Choropleth map](/images/data-ethics/DB_choropleth.jpg) From [The Library of Congress](https://www.loc.gov/pictures/search/?q=%22lot%2011931%22%20NOT%20medal&st=grid&co=anedub&loclr=blogpic) |
+| | Hex(bin) or Tile maps | Similar to Choropleth with the hexbin/tile representing regions equally rather than by geographic size | ![Hexbin graph](/images/data-ethics/rgraph_hexbin.png) From [R Graph Gallery](https://www.r-graph-gallery.com/328-hexbin-map-of-the-usa.html) |
+
+
+Adapted from [Stephanie D. Evergreen (2019) Effective data visualization : The right chart for the right data](https://us.sagepub.com/en-us/nam/effective-data-visualization/book265203_), [The Data Visualization Catalogue](https://datavizcatalogue.com/), and [From Data to Viz](https://www.data-to-viz.com/)
+
 
 This table is a teaser for the many possibilities of what data visualization can be. Creating a visual for your data is an art form and you can sometimes find yourself spending a significant amount of time looking for the best ways to visualize your data.
 
