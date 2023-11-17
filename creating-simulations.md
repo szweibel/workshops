@@ -98,8 +98,9 @@ import statistics as stats
 
 This import will allow us to use Python's `random` module. Remember to press <kbd>shift</kbd> + <kbd>enter</kbd> to run the cell.
 
-<Info>If you have used other programming languages you might be familiar with the concept of [seeding](https://www.w3schools.com/python/ref_random_seed.asp). For our purposes, we do not need to explicitly seed random number generation when using Python's random library, as it will use either current system time or OS random resources by default.
-</Info>
+:::info
+If you have used other programming languages you might be familiar with the concept of [seeding](https://www.w3schools.com/python/ref_random_seed.asp). For our purposes, we do not need to explicitly seed random number generation when using Python's random library, as it will use either current system time or OS random resources by default.
+:::
 
 Because we will be referencing the statistics library a few times in our code, we can `import` it `as stats`, just to shorten what we have to type every time.
 

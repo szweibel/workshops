@@ -1576,7 +1576,9 @@ $ python hello.py
 
 You should see the text `Hello world!` appear as output in the terminal.
 
-<Info>You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.</Info>
+:::info
+You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.
+:::
 
 ## A Note on Text
 
