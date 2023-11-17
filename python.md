@@ -109,6 +109,8 @@ Let's try a little math in the Python prompt. In the Python REPL environment bel
 
 <PythonREPL/>
 
+:::pythonREPL
+
 The first four operations above are addition, subtraction, multiplication, and division, respectively. The last operation is _modulo_, or mod, which returns the remainder after division.
 
 Note the way you interact with Python at the prompt. After entering an expression such as `2 + 3`, Python "evaluates" it to a simpler form, `5`, and then prints out the answer for you. **This process is what is meant by the Read Eval Print Loop, or REPL**. Reading takes commands from you, the input is evaluated or run, the result is printed out, and the prompt is shown again to wait for more input.
