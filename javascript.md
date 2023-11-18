@@ -2002,7 +2002,9 @@ Up to this point we have been working entirely in the browser and our work has f
 
 Click this button to download a couple of files we'll be needing. Unzip the folder and add the files to your working folder.
 
-<Download files='index.html, script.js'><br />
+<!-- <Download files='index.html, script.js'><br /> -->
+::download{files='index.html, script.js'}
+
 
 Next, we'll want to get our coding environment set up. This will be the main focus of this particular lesson. We'll first install the VSCode code editor, and then learn how to set up and use a GitHub repository.
 
