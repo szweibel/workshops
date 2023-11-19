@@ -202,115 +202,31 @@ Strings can also utilize the `+` operator to __concatenate__, or join, separate 
 
 ## Comparisons
 
-In the table below, you can see more of the various operators available to you as a JS programmer when working with data types. Many of the most useful operators deal in terms of comparison: seeing if one value is equal to, greater than, or lesser than another value. Each of these comparisons will evaluate to either `true` or `false`. It is important to understand how these operators work, so try inputting some of the examples you might be unclear with into the JS console to check out the results for yourself. In the `"5" \=\= "5"` example below, each 5 is actually considered a _string_, rather than a number, because they are enclosed in quotation marks.
+In the table below, you can see more of the various operators available to you as a JS programmer when working with data types. Many of the most useful operators deal in terms of comparison: seeing if one value is equal to, greater than, or lesser than another value. Each of these comparisons will evaluate to either `true` or `false`. It is important to understand how these operators work, so try inputting some of the examples you might be unclear with into the JS console to check out the results for yourself. In the `"5" == "5"` example below, each 5 is actually considered a _string_, rather than a number, because they are enclosed in quotation marks.
 
-<table>
-    <caption><strong>Comparison Operators</strong></caption>
-    <tr>
-        <th>Operator</th>
-        <th>Meaning</th>
-        <th>Example</th>
-        <th>Evaluation</th>
-    </tr>
-    <tr>
-        <th rowspan = "2"> < </th>
-        <td> less than? </td>
-        <td> `5 < 5` </td>
-        <td>false</td>
-    </tr>
-   <tr>
-        <td> less than? </td>
-        <td> `5 < 6` </td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <th rowspan = "2"> > </th>
-        <td> greater than? </td>
-        <td> `5 > 5` </td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td> greater than? </td>
-        <td> `5 > 4` </td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <th rowspan = "2"><=</th>
-        <td> less than or equal to? </td>
-        <td> `5 <= 5` </td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <td> less than or equal to? </td>
-        <td> `5 <= 4` </td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <th rowspan = "2">>=</th>
-        <td> greater than or equal to? </td>
-        <td> `5 >= 5` </td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <td> greater than or equal to? </td>
-        <td> `5 >= 6` </td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <th rowspan = "3">==</th>
-        <td> equal to? </td>
-        <td> `5 == 5` </td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <td> equal to? </td>
-        <td> `5 == 4` </td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td> equal to? </td>
-        <td> `5 == "5"` </td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <th rowspan = "3">!=</th>
-        <td> not equal to? </td>
-        <td> `5 != 5` </td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td> not equal to? </td>
-        <td> `5 != 4` </td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <td> not equal to? </td>
-        <td> `5 != "5"` </td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <th rowspan = "2">===</th>
-        <td> "strict" equal to (includes type)? </td>
-        <td> `5 === "5"` </td>
-        <td>false</td>
-    </tr>
-    <tr>
-        <td> "strict equal" to (includes type)? </td>
-        <td> `5 === 5` </td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <th rowspan = "2">!==</th>
-        <td> "strict" not equal to (includes type)? </td>
-        <td> `5 !== "5"` </td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <td> "strict" not equal to (includes type)? </td>
-        <td> `5 !== 5` </td>
-        <td>false</td>
-    </tr>
-</table>
+| Operator | Meaning | Example | Evaluation |
+| --- | --- | --- | --- |
+| < | less than? | `5 < 5` | false |
+| < | less than? | `5 < 6` | true |
+| > | greater than? | `5 > 5` | false |
+| > | greater than? | `5 > 4` | true |
+| <= | less than or equal to? | `5 <= 5` | true |
+| <= | less than or equal to? | `5 <= 4` | false |
+| >= | greater than or equal to? | `5 >= 5` | true |
+| >= | greater than or equal to? | `5 >= 6` | false |
+| == | equal to? | `5 == 5` | true |
+| == | equal to? | `5 == 4` | false |
+| == | equal to? | `5 == "5"` | true |
+| != | not equal to? | `5 != 5` | false |
+| != | not equal to? | `5 != 4` | true |
+| != | not equal to? | `5 != "5"` | false |
+| === | "strict" equal to (includes type)? | `5 === "5"` | false |
+| === | "strict equal" to (includes type)? | `5 === 5` | true |
+| !== | "strict" not equal to (includes type)? | `5 !== "5"` | true |
+| !== | "strict" not equal to (includes type)? | `5 !== 5` | false |
+
+
+
 
 <JSTerminal />
 
