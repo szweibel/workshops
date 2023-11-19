@@ -79,6 +79,12 @@ This workshop is meant to be _interactive_--it intends to immediately engage you
 
 With that said, let's get started![^1]
 
+<Keywords>
+- REPL
+- Function
+- Method
+</Keywords>
+
 [^1]: Big note.
 
 
