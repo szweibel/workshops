@@ -215,103 +215,102 @@ In the table below, you can see more of the various operators available to you a
     <tr>
         <th rowspan = "2"> < </th>
         <td> less than? </td>
-        <td> 5 < 5 </td>
+        <td> `5 < 5` </td>
         <td>false</td>
     </tr>
    <tr>
         <td> less than? </td>
-        <td> 5 < 6 </td>
+        <td> `5 < 6` </td>
         <td>true</td>
     </tr>
     <tr>
         <th rowspan = "2"> > </th>
         <td> greater than? </td>
-        <td> 5 > 5 </td>
+        <td> `5 > 5` </td>
         <td>false</td>
     </tr>
     <tr>
         <td> greater than? </td>
-        <td> 5 > 4 </td>
+        <td> `5 > 4` </td>
         <td>true</td>
     </tr>
     <tr>
         <th rowspan = "2"><=</th>
         <td> less than or equal to? </td>
-        <td> 5 <= 5 </td>
+        <td> `5 <= 5` </td>
         <td>true</td>
     </tr>
     <tr>
         <td> less than or equal to? </td>
-        <td> 5 <= 4 </td>
+        <td> `5 <= 4` </td>
         <td>false</td>
     </tr>
     <tr>
         <th rowspan = "2">>=</th>
         <td> greater than or equal to? </td>
-        <td> 5 >= 5 </td>
+        <td> `5 >= 5` </td>
         <td>true</td>
     </tr>
     <tr>
         <td> greater than or equal to? </td>
-        <td> 5 >= 6 </td>
+        <td> `5 >= 6` </td>
         <td>false</td>
     </tr>
     <tr>
         <th rowspan = "3">==</th>
         <td> equal to? </td>
-        <td> 5 == 5 </td>
+        <td> `5 == 5` </td>
         <td>true</td>
     </tr>
     <tr>
         <td> equal to? </td>
-        <td> 5 == 4 </td>
+        <td> `5 == 4` </td>
         <td>false</td>
     </tr>
     <tr>
         <td> equal to? </td>
-        <td> 5 == "5" </td>
+        <td> `5 == "5"` </td>
         <td>true</td>
     </tr>
     <tr>
         <th rowspan = "3">!=</th>
         <td> not equal to? </td>
-        <td> 5 != 5 </td>
+        <td> `5 != 5` </td>
         <td>false</td>
     </tr>
     <tr>
         <td> not equal to? </td>
-        <td> 5 != 4 </td>
+        <td> `5 != 4` </td>
         <td>true</td>
     </tr>
     <tr>
         <td> not equal to? </td>
-        <td> 5 != "5" </td>
+        <td> `5 != "5"` </td>
         <td>false</td>
     </tr>
     <tr>
         <th rowspan = "2">===</th>
         <td> "strict" equal to (includes type)? </td>
-        <td> 5 === "5" </td>
+        <td> `5 === "5"` </td>
         <td>false</td>
     </tr>
     <tr>
         <td> "strict equal" to (includes type)? </td>
-        <td> 5 === 5 </td>
+        <td> `5 === 5` </td>
         <td>true</td>
     </tr>
     <tr>
         <th rowspan = "2">!==</th>
         <td> "strict" not equal to (includes type)? </td>
-        <td> 5 !== "5" </td>
+        <td> `5 !== "5"` </td>
         <td>true</td>
     </tr>
     <tr>
         <td> "strict" not equal to (includes type)? </td>
-        <td> 5 !== 5 </td>
+        <td> `5 !== 5` </td>
         <td>false</td>
     </tr>
 </table>
-<br />
 
 <JSTerminal />
 
