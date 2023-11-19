@@ -77,16 +77,7 @@ goals:
 
 This workshop is meant to be _interactive_--it intends to immediately engage you with the concepts you are learning. To that end, all of the Python programming you will learn about can be done here, __directly in your browser__. Throughout the workshop, you will encounter several designated code sections in which you can write and run your Python code. These emulators are meant to allow you quick and easy access to coding principles. However, there are many ways to interact with Python, and you will also learn about how to interact with your Python installation locally on your machine. 
 
-With that said, let's get started![^1]
-
-<Keywords>
-- REPL
-- Function
-- Method
-</Keywords>
-
-[^1]: Big note.
-
+With that said, let's get started!
 
 ## The Interactive Session
 
@@ -202,11 +193,8 @@ Using the Python REPL, find __1)__ the type of `("12")`, and __2)__ the type of 
 ### Solution
 
 <Secret>
-
-- 1: Writing type("12") will return the type of string. While 12 is an integer, enclosing a number within quotation marks will result in a type of string. 
-
-- 2: Writing type(["dog", 13, 3.0]) will result in a list. Individually, while dog is a string, 13 is an integer, and 3.0 is a float, putting these elements together in brackets results in a list object being returned. As you can see, a list can contain items of different types.
-
+1: Writing type("12") will return the type of string. While 12 is an integer, enclosing a number within quotation marks will result in a type of string. 
+2: Writing type(["dog", 13, 3.0]) will result in a list. Individually, while dog is a string, 13 is an integer, and 3.0 is a float, putting these elements together in brackets results in a list object being returned. As you can see, a list can contain items of different types.
 </Secret>
 
 ## What's the deal with type()?
@@ -734,7 +722,6 @@ In the editor, make a list of books with at least 5 books. Make sure the total n
 ### Solution
 
 <Secret>
-
 ```pycon
 >>> books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life', 'Radiant Textuality', 'The Undercommons']
 
@@ -742,7 +729,6 @@ In the editor, make a list of books with at least 5 books. Make sure the total n
 
 >>> books[1:4] # ['Cruising Utopia', 'Living a Feminist Life', 'Radiant Textuality']
 ```
-
 </Secret>
 
 ## Evaluation
@@ -779,11 +765,11 @@ for book in books:
 What's happening here? This kind of loop is called a "for loop", and tells Python: "for each item in the list, do something." Let's break it down:
 
 ```python
-for variable name in list name:
-    do something
+for <variable name> in <list name>:
+    <do something>
 ```
 
-Indented code like this is known as a "code block." Python will run the `\<do something\>` code in the code block once for each item in the list. You can also refer to `\<variable name\>` in the `\<do something\>` block.
+Indented code like this is known as a "code block." Python will run the `<do something>` code in the code block once for each item in the list. You can also refer to `<variable name>` in the `<do something>` block.
 
 You can also loop through items within a string. Type the following code into the editor to see the result:
 
@@ -1399,7 +1385,7 @@ First we need to __import__ the module.  In the code editor below, write the fol
 
 `print(random.choice(motivational_phrases))`
 
-```python
+<CodeEditor>
 import random
 motivational_phrases = [
         "Importing modules is easy!",
@@ -1407,7 +1393,7 @@ motivational_phrases = [
         "You write lists like a pro!",
     ]
 print(random.choice(motivational_phrases))
-```
+</CodeEditor>
 
 Now, each time you run the code, you should see a different motivational phrase as output. The `random.choice` function chooses a random item from a list and returns it. The `.` syntax indicates that the function is coming from the `random` library.
 
@@ -1415,11 +1401,11 @@ Now, each time you run the code, you should see a different motivational phrase 
 
 The real point of this section is to learn `import`, which is where Python really starts to get interesting. Python comes with many libraries (importable collections of code), written by others that can be pulled into your program, allowing you to use that functionality. In this challenge, do a little research on Python libraries that might solve a problem for you or address a domain that you're interested in.
 
-Think of something you're interested in doing (statistics, text analysis, web scraping, quantitative analysis, processing Excel/PDF/image files) and search google "_thing you are interested in_ python library". You're almost certain to find some useful results. For example, if you wanted to find Python libraries for dealing with cleaning up HTML files, you might search one of these:
+Think of something you're interested in doing (statistics, text analysis, web scraping, quantitative analysis, processing Excel/PDF/image files) and search google "<_thing you are interested in_> python library". You're almost certain to find some useful results. For example, if you wanted to find Python libraries for dealing with cleaning up HTML files, you might search one of these:
 
-*working with html python library*
+> working with html python library
 
-*html parser python library*
+> html parser python library
 
 These libraries are usually installed with a tool called `pip`. You can read more about `pip` [here](https://packaging.python.org/tutorials/installing-packages/).
 
@@ -1508,14 +1494,14 @@ In this final challenge, we will work more with the `random` library. We'll use 
 
 Take a look at the following code:
 
-```python
+<CodeEditor>
 import random
 # create a 'roll' function to return a random # between 1-6
 def roll():
     return random.randint(1, 6)
 # roll the die and print the results
 print(f'You rolled a {roll()}.')
-```
+</CodeEditor>
 
 First, we `import` the random library into our program. Then, we create a `roll` function that returns a random number between 1 and 6. We'll use the `randint` function from the random library to generate a random number. The `randint` function takes two arguments, the minimum and maximum number that can be returned. We'll use `1` and `6` for the minimum and maximum numbers to create a standard die. To get at our result, we `return` the outcome of the function. 
 
@@ -1530,8 +1516,7 @@ Starting with the code above, roll the die twice, storing each result. Using bot
 ### Solution
 
 <Secret>
-
-```python
+<CodeEditor>
 import random
 # create a 'roll' function to return a random # between 1-6
 def roll():
@@ -1546,13 +1531,13 @@ elif die2 > die1:
     print('Second roll wins!')
 else:
     print('Tie!')
-```
-
+</CodeEditor>
 </Secret>
 
 # Theory to Practice
 
-Congratulations on completing the Intro to Python workshop! So far, you've learned quite a bit about variables, functions, loops, modules, and other foundational concepts to further your Python journey. For next steps, consider our suggested introduction to [Python libraries](https://digitalfellows.commons.gc.cuny.edu/2018/02/13/python_libraries/), or trying some of the tutorials or projects listed below. Maybe you want to learn how to
+Congratulations on completing the Intro to Python workshop! So far, you've learned quite a bit about variables, functions, loops, modules, and other foundational concepts to further your Python journey. For next steps, consider our
+suggested introduction to [Python libraries](https://digitalfellows.commons.gc.cuny.edu/2018/02/13/python_libraries/), or trying some of the tutorials or projects listed below. Maybe you want to learn how to
 clean text with [Regex](https://automatetheboringstuff.com/2e/chapter7/), or want to dig into web scraping with the Python library [`requests`](https://requests.readthedocs.io/en/master/). Or, if you are interested in strengthening your foundational skills, read one of the most suggested (and free!) beginner Python book,  [How to Think Like a Computer Scientist - Python Edition](https://runestone.academy/runestone/books/published/thinkcspy/index.html). See a full list of our suggestions below. 
 
 ## Running A Script Locally with the Terminal and a Text Editor
@@ -1579,9 +1564,7 @@ $ python hello.py
 
 You should see the text `Hello world!` appear as output in the terminal.
 
-<Info>
-You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.
-</Info>
+<Info>You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.</Info>
 
 ## A Note on Text
 
@@ -1717,7 +1700,10 @@ Hannah Aizenman, a former Digital Fellow, wrote up a great blog post introducing
 ## Projects or Challenges to Try
 
 - [Automate the Boring Stuff](https://automatetheboringstuff.com/) contains many little projects for strengthening beginner and intermediate python skills. You might [play around with *regular expressions*](https://automatetheboringstuff.com/2e/chapter7/) (or *regex*), which is a method for locating and manipulating certain patterns of text (think of it like a high powered `ctrl-F`). Once you feel more comfortable with regex, you might write a program that [organizes or renames the files on your computer](https://automatetheboringstuff.com/2e/chapter10/). Just be sure to practice with a sample folder & files before moving on to your own documents!
-- Interested in web scraping (aka grabbing information from the web)? The python library [`requests`](https://requests.readthedocs.io/en/master/) handles requests over the internet. See this handy step-by-step [tutorial on
+- Interested in web scraping (aka grabbing information from the web)?
+  The python library
+  [`requests`](https://requests.readthedocs.io/en/master/) handles
+  requests over the internet. See this handy step-by-step [tutorial on
   Real Python](https://realpython.com/python-requests/). 
 - *Advanced Challenge*: This is more complicated stuff, but if you're
   interested in working with CSV data and visualization techniques,
