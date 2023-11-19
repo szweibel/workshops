@@ -108,22 +108,13 @@ There are several components you can incorporate into your lessons, including:
 
 <PythonREPL/>
 
-2. The Python Editor: You can embed the Python Editor into your lessons by using the following tags below:
-
-<CodeEditor>
-greeting = "Hello World!"
-print(greeting)
-</CodeEditor>
-
-<!--- Anything between the tags will be displayed as runnable code in the editor, except for the command line and Jupyter. --->
-
-1. A download button: If you have files you'd like the participant to download, you can add a download button to your lessons with the appropriate files by using the following syntax:
+2. A download button: If you have files you'd like the participant to download, you can add a download button to your lessons with the appropriate files by using the following syntax:
 
 <Download files='your_file1.csv, your_file2.md'>
 
 Here, `your_file1` and `your_file2` are the two files to download (you can add as many as you'd like, just separate them with commas). The break tag at the end is just to add some space after the button. NOTE: You must include copies of the files indicated in the `uploads` folder.
 
-2. An info box: Use <Info> to highlight interesting additional information.
+3. An info box: Use <Info> to highlight interesting additional information.
 
 <Info>
 Here's an interesting aside! 
@@ -160,8 +151,7 @@ What are the characteristics of the REPL? Select all that apply.
 
 <!--- For quizzes, each list item in the <Quiz> tags is a potential answer. To indicate correct answers, place an asterisk at the end. --->
 
-Each section end should have a collection of key words related to the lesson, like so:
-
+<!-- Each section end should have a collection of key words related to the lesson, like so: -->
 <Keywords>
 First Term
 : This is the definition of the first term.
@@ -170,6 +160,8 @@ Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
 </Keywords>
+
+<!--- Keywords are a good way to reinforce the key concepts of the lesson. Definitions cannot be multiple paragraphs. --->
 
 # Section 2
 
