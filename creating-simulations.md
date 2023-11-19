@@ -98,9 +98,9 @@ import statistics as stats
 
 This import will allow us to use Python's `random` module. Remember to press <kbd>shift</kbd> + <kbd>enter</kbd> to run the cell.
 
-:::info
+<Info>
 If you have used other programming languages you might be familiar with the concept of [seeding](https://www.w3schools.com/python/ref_random_seed.asp). For our purposes, we do not need to explicitly seed random number generation when using Python's random library, as it will use either current system time or OS random resources by default.
-:::
+</Info>
 
 Because we will be referencing the statistics library a few times in our code, we can `import` it `as stats`, just to shorten what we have to type every time.
 
@@ -271,7 +271,7 @@ And that's it! If you run the final cell, you should see a report of the results
 What are some differences between a function and a method?
 
 
-:::spoiler    
+<Secret>   
 __Definition:__
 _Function_: A function is a self-contained block of code that performs a specific task and can be defined independently of any class or object. It takes input arguments, processes them, and returns a result.
 _Method_: A method is a function that is associated with an object or class. It is called on an object and can access the data within that object.
@@ -302,7 +302,7 @@ Here's a simple example in Python to illustrate the differences:
     # method call
     Math().add(1, 2)
 ```
-:::
+</Secret>
 
 ### Key Terms
 
