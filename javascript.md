@@ -1917,7 +1917,7 @@ Up to this point we have been working entirely in the browser and our work has f
 
 Click this button to download a couple of files we'll be needing. Unzip the folder and add the files to your working folder.
 
-<!-- <Download files='index.html, script.js'><br /> -->
+<Download files='index.html, script.js'>
 ::download{files='index.html, script.js'}
 
 
