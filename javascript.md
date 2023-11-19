@@ -510,7 +510,7 @@ The first `if` statement checks to see if the user is old enough to vote. If the
 Along with testing as many conditions as you want, you can also run as many lines of code as you want in each block. You can even chain together a series of `if/else` statements. This is called __nesting__. For example:
 
 ```JavaScript
-if (condition1){
+if (condition1)\{
     // code to run if condition1 is true
     if (condition2){
         // code to run if condition2 is true
