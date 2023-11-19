@@ -112,8 +112,6 @@ Let's try a little math in the Python prompt. In the Python REPL environment bel
 
 <PythonREPL/>
 
-::pythonrepl
-
 The first four operations above are addition, subtraction, multiplication, and division, respectively. The last operation is _modulo_, or mod, which returns the remainder after division.
 
 Note the way you interact with Python at the prompt. After entering an expression such as `2 + 3`, Python "evaluates" it to a simpler form, `5`, and then prints out the answer for you. **This process is what is meant by the Read Eval Print Loop, or REPL**. Reading takes commands from you, the input is evaluated or run, the result is printed out, and the prompt is shown again to wait for more input.
@@ -140,20 +138,16 @@ One operator (math symbol) we didn't learn is the exponent—e.g., "x raised to 
 
 <Secret>The exponent operator is two asterisks. For example, the number 3 to the power of 2 would be expressed as 3**2.</Secret>
 
-:::spoiler
-The exponent operator is two asterisks. For example, the number 3 to the power of 2 would be expressed as 3**2.
-:::
-
 ## Evaluation
 
 What are the characteristics of the REPL? Select all that apply.
 
-:::quiz
+<Quiz>
 - The REPL has a prompt that begins with `$`.
 - The REPL has a prompt that begins with `>>>`.*
 - The REPL and the terminal are the same thing.
 - The REPL can be used to evaluate mathematical expressions like `2 + 2`.*
-:::
+</Quiz>
 
 ### Keywords
 
@@ -1579,9 +1573,9 @@ $ python hello.py
 
 You should see the text `Hello world!` appear as output in the terminal.
 
-:::info
+<Info>
 You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.
-:::
+</Info>
 
 ## A Note on Text
 
