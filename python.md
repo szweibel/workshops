@@ -216,6 +216,12 @@ Using the Python REPL, find __1)__ the type of `("12")`, and __2)__ the type of 
 
 These are all valid ways of thinking about functions. We'll be learning more about functions in later sections.
 
+<Keywords>
+- REPL
+- Function
+- Method
+</Keywords>
+
 ## Challenge
 
 Open your web browser, and google the phrase "python function." Skim through the first few results. What words do you recognize, and which ones look unfamiliar? What do you think the unfamiliar ones mean? Try to rephrase some of this new language, and guess what they mean in your own words.
