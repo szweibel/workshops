@@ -152,6 +152,15 @@ Do you remember the glossary terms from this section?
 
 - [REPL](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/REPL.md)
 
+<Keywords>
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+</Keywords>
+
 # Types
 
 Types are classifications that let the computer know how a programmer intends to use a piece of data. You can just think of them as, well, types of data.

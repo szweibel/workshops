@@ -123,6 +123,18 @@ print(greeting)
 
 Here, `your_file1` and `your_file2` are the two files to download (you can add as many as you'd like, just separate them with commas). The break tag at the end is just to add some space after the button. NOTE: You must include copies of the files indicated in the `uploads` folder.
 
+2. An info box: Use <Info> to highlight interesting additional information.
+
+<Info>
+Here's an interesting aside! 
+</Info>
+
+3. A way to link internally to other workshops.
+
+<Link workshop='python' page=5 />
+
+This is necessary when linking to another workshop page. 'workshop' is the workshop file name, and the 'page' can be found in the URL query string, for instance:   `?user=dhri-curriculum&repo=workshops&file=command-line&**page=15**&instUser=dhri-curriculum&instRepo=dhrift-site-template` 
+
 <!--- Most workshop lessons should include some form of a challenge, a solution, and an evaluation. See below for an example of each. --->
 
 ## Challenge
@@ -147,6 +159,17 @@ What are the characteristics of the REPL? Select all that apply.
 </Quiz>
 
 <!--- For quizzes, each list item in the <Quiz> tags is a potential answer. To indicate correct answers, place an asterisk at the end. --->
+
+Each section end should have a collection of key words related to the lesson, like so:
+
+<Keywords>
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+</Keywords>
 
 # Section 2
 
