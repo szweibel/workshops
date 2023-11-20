@@ -122,7 +122,7 @@ Here's an interesting aside!
 
 3. A way to link internally to other workshops.
 
-<Link workshop='python' page=5 />
+<Link workshop='python' page='56'>`Objects in Python`</Link>
 
 This is necessary when linking to another workshop page. 'workshop' is the workshop file name, and the 'page' can be found in the URL query string, for instance:   `?user=dhri-curriculum&repo=workshops&file=command-line&**page=15**&instUser=dhri-curriculum&instRepo=dhrift-site-template` 
 
