@@ -210,8 +210,13 @@ These are all valid ways of thinking about functions. We'll be learning more abo
 
 <Keywords>
 - REPL
+The REPL is an interactive environment for writing and running Python code. It stands for Read-Evaluate-Print Loop.
+
 - Function
+Functions are a way of doing something in Python. They can be used to save code for reuse, or to take an input, transform that input, and return an output.
+
 - Method
+Methods are functions that are attached to a specific object. For example, the string method `upper()` is attached to the string `"hello"`, and can be called by writing `"hello".upper()`.
 </Keywords>
 
 ## Challenge
