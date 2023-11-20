@@ -98,7 +98,7 @@ The metadata you are currently seeing above is just an example, which you can us
 
 Welcome to my workshop! This is the first page (the first lesson).
 
-<!--- Each h1 markdown header (the #) indicates the beginning of a new page. Use them to structure lessons in your workshops. --->
+<!--- Each h1 and h2 markdown header (the #) indicates the beginning of a new page. Use them to structure lessons in your workshops. --->
 
 To add a lesson, simply type your lesson content below the header. You can use typical markdown styles to format your text.
 
@@ -153,12 +153,11 @@ What are the characteristics of the REPL? Select all that apply.
 
 <!-- Each section end should have a collection of key words related to the lesson, like so: -->
 <Keywords>
-First Term
-: This is the definition of the first term.
+- keyword 1
+definition 1
 
-Second Term
-: This is one definition of the second term.
-: This is another definition of the second term.
+- keyword 2
+definition 2
 </Keywords>
 
 <!--- Keywords are a good way to reinforce the key concepts of the lesson. Definitions cannot be multiple paragraphs. --->
