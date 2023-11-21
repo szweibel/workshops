@@ -150,8 +150,23 @@ What are the characteristics of the REPL? Select all that apply.
 
 Do you remember the glossary terms from this section?
 
+<Keywords>
 - [REPL](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/REPL.md)
+REPL stands for Read, Eval, Print, Loop. It is also known as the Python Interpreter or Interactive Shell, and it refers to a Python environment that processes your code as soon as you press enter. First, it **Reads** your code, then **Evaluates** what you wrote, then **Prints** the result (if there is a result), and finally **Loops** back to the initial prompt, allowing the user to start the loop again. 
 
+The REPL is useful for testing code on the fly, seeing if it works or what will happen. Since the REPL doesn't save your data after each session, though, you need a text editor to write and save longer scripts. Think of the REPL as a sandbox or playpen for exploring Python commands and expressions in the moment. 
+
+To use the REPL, just type `python` into your interpreter. You'll know you're there when you see the three `>>>`. To get out of the REPL, press `control-d` or type `quit()`.
+</Keywords>
+
+# Tutorial
+
+See this beginner's tutorial on the [REPL](https://pythonprogramminglanguage.com/repl/) from Learn Python.
+
+# Readings
+
+Check out this intermediate article on the [REPL](https://codewith.mu/en/tutorials/1.0/repl) and what it can do on Code With Mu.
+</Keywords>
 
 # Types
 
@@ -297,7 +312,7 @@ Only one way to find out. Try giving weird names to variables and see if you can
 <Secret>
 When creating variable statements in Python, you have to follow specific rules. Python processes code from left to right, and the order of elements is important.
 
-- avoid starting a variable name with numbers or special characters. For instance, names like 1_book, 1book, or those with special characters like @, #, $, etc., are not permitted in Python. Always initiate a variable with a letter and refrain from using special characters.
+- Avoid starting a variable name with numbers or special characters. For instance, names like 1_book, 1book, or those with special characters like @, #, $, etc., are not permitted in Python. Always initiate a variable with a letter and refrain from using special characters.
 
 - After starting with a letter, you can include numbers in the variable name, like book_1 or b1. However, the use of special characters at any point in the variable name is not allowed.
 
@@ -502,9 +517,9 @@ Which of the following are __not__ true about a function?:
 
 # Errors in Python
 
-Our usual response when seeing an error on a computer screen is a stress response. Our heart rate elevates and, if we cannot do what we were asking the computer to do, our frustration mounts. This is because many errors when interacting with programs are not useful or informative, and because we often have no capability to fix the program in front of us.
+Our usual response when seeing an error on a computer screen is a stress response. Our heart rate elevates and our frustration mounts. This is because many error messages are not useful or informative, and because we often have no capability to fix the program in front of us.
 
-In Python, errors are our friends. This might be hard to accept initially, but the errors you see when running Python scripts generally do a good job of pointing you to what's going wrong in your program. When you see an error in Python, therefore, try not to fall into the stress response you may be used to when interacting with your computer normally.
+In Python specifically, and programming in general, errors are our friends. This might be hard to accept initially, but the errors you see when running Python scripts generally do a good job of pointing you to what's going wrong in your program. When you see an error in Python, therefore, rejoice! Errors are a sign that you are learning.
 
 ## Two Kinds of Errors
 
@@ -681,7 +696,7 @@ Notice that when you run the code above, you don't see the `books` list printed 
 
 ## List Indexing
 
-A useful property of a list is the list index. This allows you to pick out an item from within the list by a number starting from zero:
+A useful property of a list is the list **index**. This allows you to pick out an item from within the list by a number starting from zero:
 
 For instance, add the following lines of code to the program below:
 
@@ -1013,7 +1028,7 @@ You can play around with `input()` by adding some prompt text within the parenth
 For instance, if we were to type the following:
 
 ```pycon
->>> feelings = input('How are you feeling today? ')
+>>> feelings = input('How are you feeling today?')
 ```
 
 We can answer with `like a rollercoaster of emotions`. Then, when we type in our variable `feelings` and press enter, we'll get our input printed back at us.
@@ -1046,7 +1061,7 @@ Now, that we understand a bit about how `input()` works, let's use it to improve
 
 <Secret>
 ```python
-field = input("Which field of study do you want to read about today? ")
+field = input("Which field of study do you want to read about today?")
 
 if field == "Media Studies":
     print("Grammophone, Film, Typewriter")
@@ -1137,7 +1152,7 @@ library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 - Then, add an input statement that will save the user's response to a variable, like `response`.
 
 ```python
-response = input("What do you want to do with your books today? ")
+response = input("What do you want to do with your books today?")
 ```
 
 - Now, create a conditional statement that matches the user's response to series of options for doing things to the `library` list. We'll let them sort the library (`sort()`), add new items (`append()`), and remove the last item (`pop()`).
@@ -1165,7 +1180,7 @@ After adding a few more conditions, test out your code! You should have a little
 <Secret>
 ```python
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
-response = input("What do you want to do with your books today? ")
+response = input("What do you want to do with your books today?")
 if response == "sort":
     library.sort()
     print(library)
@@ -1249,7 +1264,7 @@ Let's incorporate this transformation into our library app:
 
 <CodeEditor>
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
-response = input("What do you want to do with your books today? ")
+response = input("What do you want to do with your books today?")
 response = response.lower()
 if response == "sort":
     library.sort()
@@ -1296,7 +1311,7 @@ Give it a shot! Try adding the condition and `while` loop to the program below:
 <CodeEditor>
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 # add a new variable condition and while loop here
-response = input("What do you want to do with your books today? ")
+response = input("What do you want to do with your books today?")
 response = response.lower()
 if response == "sort":
     library.sort()
