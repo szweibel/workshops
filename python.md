@@ -295,10 +295,13 @@ Only one way to find out. Try giving weird names to variables and see if you can
 ### Solution
 
 <Secret>
-There are a few rules regarding the way that you write the variable statement. This is because Python reads everything left to right, and needs things to be in a certain order.
-First, you cannot use any numbers or special characters to start a variable name. So 1_book, 1book, or any variable that contains special characters @, #, $, $, etc, wouldn't be acceptable in Python. You must start the variable with a letter and avoid using special characters.
-You can incorporate numbers after you've started with a letter. So book_1 or b1 is acceptable, though you cannot use special characters at any point in the variable name.
-Second, you might also notice that variable syntax requires you to write the variable name first, followed by an equal sign =, and then the value, or data. You cannot start the variable statement with the data value, because Python always recognizes the first thing written as the thing to be assigned. The thing that comes after the = is the data that becomes attached to the preceding variable.
+When creating variable statements in Python, you have to follow specific rules. Python processes code from left to right, and the order of elements is important.
+
+- avoid starting a variable name with numbers or special characters. For instance, names like 1_book, 1book, or those with special characters like @, #, $, etc., are not permitted in Python. Always initiate a variable with a letter and refrain from using special characters.
+
+- After starting with a letter, you can include numbers in the variable name, like book_1 or b1. However, the use of special characters at any point in the variable name is not allowed.
+
+- Remember that the syntax for a variable mandates writing the variable name first, followed by an equal sign (=), and then the value or data. Starting the variable statement with the data value is not allowed. Python interprets the first item written as the one to be assigned, and the data after the equal sign is what becomes attached to the preceding variable.
 </Secret>
 
 ## Evaluation
