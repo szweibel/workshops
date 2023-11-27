@@ -165,6 +165,8 @@ Types are classifications that let the computer know how a programmer intends to
 
 We've already seen one type in the last section with our math examples: the integer. In this section, we'll learn four more: the floating point number, the string, the boolean, and the list.
 
+![Time Series](/images/pandas/time_series.png)
+
 In the Python REPL environment below, write the following commands one line at a time, hitting <kbd>enter</kbd> after each to see the result.
 
 ```pycon
