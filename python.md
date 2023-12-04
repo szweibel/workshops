@@ -1240,6 +1240,8 @@ While Google searches change over time, some of your results likely come from a 
 
 ![Google search results with stack overflow answer on top](/images/python/google_result.png)
 
+<img src="/images/python/google_result.png" alt="Stack Overflow answer" width="600" />
+
 On [this _Stack Overflow_ page](https://stackoverflow.com/questions/6797984/how-do-i-lowercase-a-string-in-python), take a quick look at the question to make sure it's relevant to your problem. Then scroll down to the answers to find what we're looking for. You may also notice snarky debates—another "feature" of _Stack Overflow_.
 
 ## Implementing Our Answer
