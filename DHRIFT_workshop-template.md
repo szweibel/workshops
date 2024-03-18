@@ -1,44 +1,48 @@
 ---
-title: Workshop Template
-excerpt: The excerpt is a short description of what your workshop is and what it will cover.
-cover_image: /images/workshops/img2.jpg
+title: This is the title
+cover title: short title!
+description: A description of the workshop.
+
+programming_language: "choices are: jupyter, python, javascript, computer (for command line), or none"
+
 learning objectives:
-    - Here's one learning objective.
-    - Here's another learning objective.
-    - And another learning objective.
+    - Understand what Python is and, in general terms, what it can do.
+    - Run Python programs, both by interacting directly with the interpreter and by preparing and running scripts.
+    - Distinguish among five core data types—integers, floats, strings, booleans, and lists.
+    - Become familiar with core programming concepts, including variables, loops, and conditionals.
+    - Engage with error output and use the internet and documentation to independently research language features.
+    - Learn how to find and import code from external sources to solve more complex problems.
 
 estimated time:
     - 3 - 4 hours
 
-dependencies: 
-    # all dependencies should correspond to the exact file name of the appropriate workshop/guide (without the .md extension)
-    workshop prerequisites: 
-        command-line: 
-            excerpt: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about programming with Python.
-            required: true
-        data-ethics: 
-            excerpt: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
-            recommended: true
-    installations:
-        pythonguide: 
-            excerpt: You can use any installation of Python (but make sure it is of version 3). For our purposes, Anaconda will provide everything necessary for all the workshops that are part of the DRI curriculum.
-            recommended: true
-        visual-studio-code: 
-            excerpt: (Recommended) You can use any plain text editor, but for our purposes Visual Studio Code ("VS Code") will be used.
-            recommended: true
+# has to be formatted like this!
+prerequisites: 
+    - command line: 
+        description: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about programming with Python.
+        required: true
+    - data ethics: 
+        description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
+        recommended: true
 
-# example authors and editors
+instructors: 
+    - 'Stephen Zweibel'
+    - 'Leanne Fan'
+
 authors:
-    current: 'Zach Lloyd'
-    past: 'Lisa Rhody'
-    # authors/editors should correspond to the 'title' in the YAML (metadata) of the file in the authors folder. You can create a new author file for yourself in the authors folder as well. 
+    - 'Kalle Westerling'
+    - 'Di Yoong'
+    - 'Lisa Rhody'
+    - 'Jojo Karlin'
+    - 'Stephen Zweibel'
+    - 'Patrick Smyth'
 
 editors:
-    current: 'Di Yoong'
-    past: 'Stephen Zweibel'
+    - 'Di Yoong'
+    - 'Lisa Rhody' 
+    - 'Stephen Zweibel'
 
 readings:
-    # some example readings with a link plus a short description of what they are about
     - Want to learn programming, but not convinced that the Python language is the right language? Check out [Five Reasons Why Learning Python Is The Best Decision](https://medium.com/datadriveninvestor/)
     - "Some concrete ideas for how to use Python: [What Can I Do With Python?](https://realpython.com/what-can-i-do-with-python/)"
 
@@ -47,26 +51,19 @@ ethical considerations:
     - As we learn about the Python data types and grammar, keep in mind that working within any digital format requires making seemingly neutral choices that carry ethical consequences. When using python, be aware of the ways the ways that data is transformed into computable form. What choices are you making about your data? What is being included, and what is left out? What are reductions and assumptions necessary to encode your data? If you are more interested in thinking further about data types and our choices in relation to data, you should have a look at our [Data Literacies workshop](https://www.github.com/DHRI-Curriculum/data-literacies).
 
 projects:
-    description: "Projects that use the skills you'll learn in this workshop:"
-    The NEH Impact Index:
-        excerpt: Built by former Digital Fellow Patrick Smyth, The NEH Impact Index makes visible the distribution of funds by National Endowment for the Humanities across the United States. The website uses python to map projects, communities, and cultural institutions who have received NEH support. You can check out the code on Github.
+# Title and then description and link
+    - The NEH Impact Index:
+        description: Built by former Digital Fellow Patrick Smyth, The NEH Impact Index makes visible the distribution of funds by National Endowment for the Humanities across the United States. The website uses python to map projects, communities, and cultural institutions who have received NEH support. You can check out the code on Github.
         link: http://www.nehimpact.org/about
-    Mapping Arts NYC: 
-        excerpt: Mapping Arts NYC, created in 2019 by the Graduate Center’s Data for Public Good fellows, “is a project that explores the geography and representation of arts and culture in New York City over time.” It includes a number of Python scripts written to clean and make sense of all the data.
+    - Mapping Arts NYC: 
+        description: Mapping Arts NYC, created in 2019 by the Graduate Center’s Data for Public Good fellows, “is a project that explores the geography and representation of arts and culture in New York City over time.” It includes a number of Python scripts written to clean and make sense of all the data.
         link: http://gcdiprojects.org/MappingArtsNYC/
+        
 resources:
-    Digital Fellows’ Python Cheat Sheet: 
-        excerpt: See the Digital Fellows’ Python Cheat Sheet for handy commands that we cover in this workshop.
+    - Digital Fellows’ Python Cheat Sheet: 
+        description: See the Digital Fellows’ Python Cheat Sheet for handy commands that we cover in this workshop.
         link: https://curriculum.dhinstitutes.org/shortcuts/workshop/python
 
-goals:
-    - description: "In this workshop, you will learn to:"
-    - Become familiar with core programming concepts, including variables, loops, and conditionals.
-    - Distinguish among five core data types—integers, floats, strings, booleans, and lists.
-    - Engage with error output and use the internet and documentation to independently research language features.
-    - Learn how to find and import code from external sources to solve more complex problems.
-    - Run Python programs, both by interacting directly with the interpreter and by preparing and running scripts.
-    - Understand what Python is and, in general terms, what it can do.
 ---
 
 <!---
@@ -94,14 +91,14 @@ For the metadata, you should typically include some or all of the following:
 - The resources, which should be a list of resources that are relevant to the workshop
 - The goals, which should be a list of goals that are relevant to the workshop
 
-The metadata you are currently seeing above is just an example, which you can use as a template for your own workshop. Make sure to follow the syntax exactly (or you will likely create errors), and to modify/delete any metadata that is not relevant to your workshop. When adding dependencies to other workshops, make sure to use the exact name of the workshop or guide file (without the .md extension).
+The metadata you are currently seeing above is just an example, which you can use as a template for your own workshop. Make sure to follow the syntax exactly (or you will likely create errors), and to modify/delete any metadata that is not relevant to your workshop.
 ---> 
 
 # Page 1
 
 Welcome to my workshop! This is the first page (the first lesson).
 
-<!--- Each h1 markdown header (the #) indicates the beginning of a new page. Use them to structure lessons in your workshops. --->
+<!--- Each h1 and h2 markdown header (the #) indicates the beginning of a new page. Use them to structure lessons in your workshops. --->
 
 To add a lesson, simply type your lesson content below the header. You can use typical markdown styles to format your text.
 
@@ -111,20 +108,23 @@ There are several components you can incorporate into your lessons, including:
 
 <PythonREPL/>
 
-2. The Python Editor: You can embed the Python Editor into your lessons by using the following tags below:
+2. A download button: If you have files you'd like the participant to download, you can add a download button to your lessons with the appropriate files by using the following syntax:
 
-<CodeEditor>
-greeting = "Hello World!"
-print(greeting)
-</CodeEditor>
-
-<!--- Anything between the tags will be displayed as runnable Python code in the editor. --->
-
-3. A download button: If you have files you'd like the participant to download, you can add a download button to your lessons with the appropriate files by using the following syntax:
-
-<Download files='your_file1, your_file2'><br/>
+<Download files='your_file1.csv, your_file2.md'>
 
 Here, `your_file1` and `your_file2` are the two files to download (you can add as many as you'd like, just separate them with commas). The break tag at the end is just to add some space after the button. NOTE: You must include copies of the files indicated in the `uploads` folder.
+
+3. An info box: Use <Info> to highlight interesting additional information.
+
+<Info>
+Here's an interesting aside! 
+</Info>
+
+3. A way to link internally to other workshops.
+
+<Link workshop='python' page='56'>`Objects in Python`</Link>
+
+This is necessary when linking to another workshop page. 'workshop' is the workshop file name, and the 'page' can be found in the URL query string, for instance:   `?user=dhri-curriculum&repo=workshops&file=command-line&**page=15**&instUser=dhri-curriculum&instRepo=dhrift-site-template` 
 
 <!--- Most workshop lessons should include some form of a challenge, a solution, and an evaluation. See below for an example of each. --->
 
@@ -151,12 +151,23 @@ What are the characteristics of the REPL? Select all that apply.
 
 <!--- For quizzes, each list item in the <Quiz> tags is a potential answer. To indicate correct answers, place an asterisk at the end. --->
 
-# Page 2
+<!-- Each section end should have a collection of key words related to the lesson, like so: -->
+<Keywords>
+- keyword 1
+definition 1
 
-This is the second page (the second lesson) of the workshop. Provide as many pages as you'd like.
+- keyword 2
+definition 2
+</Keywords>
 
-# Page 3
+<!--- Keywords are a good way to reinforce the key concepts of the lesson. Definitions cannot be multiple paragraphs. --->
 
-# Page 4
+# Section 2
 
-# Page etc.
+This is the second section (the second lesson) of the workshop. Provide as many pages as you'd like.
+
+# Section 3
+
+# Section 4
+
+# Section etc.
