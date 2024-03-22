@@ -124,7 +124,6 @@ DHRIFT workshops may also include quizzes to test your knowledge and understandi
 
 A common quiz type you'll encounter is the multiple-choice question, which looks like this:
 
-<Quiz>
 What front-end technology does DHRIFT use to build its user interfaces?
 
 <Quiz>
