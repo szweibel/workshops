@@ -124,6 +124,8 @@ DHRIFT workshops may also include quizzes to test your knowledge and understandi
 
 A common quiz type you'll encounter is the multiple-choice question, which looks like this:
 
+### Evaluation
+
 What front-end technology does DHRIFT use to build its user interfaces?
 
 <Quiz>
@@ -157,7 +159,7 @@ To reveal the solution to the challenge, simply click on the Reveal button.
 
 DHRIFT workshops may also include interactive code editors that allow you to write and run code directly in your browser. These code editors are powered by WebAssembly, which allows you to run code snippets in a secure and sandboxed environment.
 
-For demonstration purposes, this workshop includes a simple code editor that allows you to write and run Python code. To use the code editor, simply click the Open Code Editor button near the top-right corner of the screen. This will open the code editor in a slide-out panel on the right-hand side of the screen.
+For demonstration purposes, this workshop includes a simple code editor that allows you to write and run Python code. To use the code editor, simply click the Open Code Editor button near the top-right corner of the screen. This will open the code editor in a slide-out panel on the right-hand side of the page.
 
 Let's try running a simple Python code snippet. Click the Open Code Editor button to open the code editor, then type the following code into the editor window:
 
@@ -219,7 +221,23 @@ TODO: image of downloadable materials
 
 Each workshop typically ends with a Theory to Practice section, which provides an opportunity to apply what you have learned in the workshop to a real-world scenario. This section may include case studies, projects, or reflection exercises.
 
+TODO: image of Theory to Practice section
+
 ## Pedagogical Philosophy
+
+### Overview
+
+DHRIFT is designed with a learner-focused pedagogical philosophy that emphasizes accessibility, interactivity, and engagement. The platform is built to be inclusive and welcoming to learners of all backgrounds and skill levels, from beginners to experts. 
+
+DHRIFT has been developed in conversation with an extensive community of DH graduate students, faculty, administrators, librarians, curators, and independent scholars, and our advisory board is drawn from a cross section of DH practitioners at institutional types such as community colleges, liberal arts colleges, regional colleges, and Historically Black Colleges and Universities (HBCUs).
+
+### Workshops
+
+Our curricula reflect the pedagogical values of humanities instruction, drawing from years of feedback and iteration. Both textual and visual in design, workshops accommodate different learning styles and are written with remote, in-person, and self-instruction modalities in mind. By embedding a technical interface in the curricula, DHRIFT streamlines the learning environment for both instructors and learners and reduces confusion caused by context switching. DHRIFT workshops emphasize practical coding through a humanities lens, providing learners tools to extend their skills into new domains relevant to their research.
+
+DHRIFT workshops are also designed to be accessible to learners with disabilities. The platform is built with accessibility in mind, following best practices for web accessibility and usability. DHRIFT workshops are designed to be screen reader-friendly, keyboard navigable, and color contrast compliant.
+
+
 
 
 
