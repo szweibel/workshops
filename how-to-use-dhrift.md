@@ -238,10 +238,172 @@ Our curricula reflect the pedagogical values of humanities instruction, drawing 
 DHRIFT workshops are also designed to be accessible to learners with disabilities. The platform is built with accessibility in mind, following best practices for web accessibility and usability. DHRIFT workshops are designed to be screen reader-friendly, keyboard navigable, and color contrast compliant.
 
 
+# Creating and Modifying DHRIFT Sites
+
+TODO: write this section
 
 
+# Creating New DHRIFT Workshops
 
+So far, you have seen how to navigate and interact with existing DHRIFT workshops on the platform, including using the wizard to set up your own DHRIFT site and repository with options from among our core curriculum.
 
+However, DHRIFT is also meant to be a platform for easily creating and publishing your own workshops, so you can better meet the needs of your particular audience or institution. In this section, then, you will learn how to create your own workshops to publish with the DHRIFT platform. You'll learn how to write workshop markdown files, add images and other assets, configure workshop metadata using YAML, and incorporate interactive features like quizzes, challenges, and code editors.
 
+Let's get started!
 
+## Getting Started
 
+To create a new workshop, you will need to follow a few general key steps:
+
+1. Create a new GitHub repository to house your workshops (or use an existing one)
+2. Configure your workshop metadata using YAML
+3. Write your workshop content in Markdown
+4. Add images, downloads (e.g., datasets) and other assets to your workshop, if needed
+5. Incorporate interactive features like quizzes, challenges, and code editors, if desired
+6. Build and deploy your workshop using GitHub Actions
+
+Depending on what you want to achieve with your workshop, you may need to follow additional steps or best practices. We'll cover these in more detail as we go along.
+
+### Additional Resources
+
+Keep in mind that we have provided a template workshop that you can use as a starting point for creating your own workshops. The template workshop includes examples of how to structure your workshop content, configure your workshop metadata, and incorporate interactive features. You can find the template workshop here:  TODO: link to template workshop, or maybe just a download for the md file?
+
+We also have a detailed style guide on how to write workshops for the DHRIFT platform. While this guide is meant to be a reference for those wishing to publish workshops with the wider DHRIFT community, it can also be useful for those creating their own workshops for personal or professional use. You can access the style guide here: TODO: link to style guide
+
+## Setting up Your Workshop Repository
+
+The first step in creating a new workshop is to set up a GitHub repository to house your workshop content. You can create a new repository from scratch or use an existing repository if you prefer. 
+
+Considering we have already set up a DHRIFT site and repository using the wizard, we can simply use that repository to house our new workshop and subsequently add it to the available workshops on our site.
+
+In general, you should be aware that the DHRIFT platform generates workshops by pointing to a specific repository that contains your workshop files. 
+
+For instance, in the following URL: https://app.dhrift.org/inst/?instUser=dhri-curriculum&instRepo=dhrift-site-template
+
+...the `instUser` parameter specifies the GitHub user or organization that owns the repository, and the `instRepo` parameter specifies the name of the repository. You can use these parameters to point to your own repository and display your workshops on your DHRIFT site. DHRIFT will automatically detect the workshops (markdown files) in your repository and display them on the workshops page.
+
+## Configuring Workshop Metadata
+
+Once you have set up your workshop repository, you will need to configure your workshop metadata using [YAML](https://yaml.org/)." In terms of your workshop, the YAML language allows you to specify metadata such as the workshop title, author, description, learning objectives, estimated time, and more.
+
+Here is an example of a simple YAML configuration for an Intro to Python workshop:
+
+```yaml
+---
+title: Introduction to Python
+cover title: Introduction to Python
+description: "This workshop is designed for beginners who want to learn the basics of Python programming. By the end of this workshop, you will be able to write simple Python programs, work with variables, and use control structures like loops and conditionals."
+
+programming_language: 'python'
+
+learning objectives:
+    - Understand the basic syntax and structure of Python
+    - Learn how to work with variables and data types
+    - Understand control structures like loops and conditionals
+
+estimated time:
+    - 2 hours
+
+authors: 
+    - 'Jimmy Pesto'
+    - 'Bob Belcher'
+
+facilitators:
+    - 'Jimmy Pesto'
+
+ethical considerations:
+    - "Learners should be aware of the potential ethical implications of using Python for data analysis and machine learning. For example, it is important to consider issues of bias, privacy, and security when working with data in Python."
+
+---
+```
+
+First, you'll notice the three dashes at the beginning and end of the YAML configuration. This is a standard way to indicate the start and end of a YAML document. You will always want to enclose your metadata in these dashes at the start of your markdown file.
+
+The metadata will comprise the information to display on your workshop's front page. Here's a breakdown of the metadata fields shown above:
+
+- `title` specifies the title of the workshop, which will be displayed on the workshop's front page.
+- `cover title` specifies the title of the workshop that will be displayed in the image gallery of all workshops. Unless it is a very long title that may not display well in terms of the image, it is often the same as the title.
+- `description` provides a brief overview of the workshop content and objectives.
+- `programming_language` specifies which code editor to use for the workshop (e.g., Python, Jupyter, JavaScript, R, command line, etc). See below for a list of supported programming languages and the associated metadata field.
+- `learning objectives` lists the main learning objectives of the workshop.
+- `estimated time` specifies the estimated time needed to complete the workshop.
+- `authors` lists the authors of the workshop.
+- `facilitators` lists the facilitators, or instructors, of the workshop.
+
+These are, at bare minimum, the fields you will likely want to include in your workshop metadata.
+
+You can also add additional metadata fields as needed for your workshop. For example, you might want to include a list of prerequisites, projects, additional resources or tutorials, etc. You can follow the same format as the `ethical considerations` field shown above for these additional fields.
+
+### Supported Programming Languages
+
+You can include the other code editors supported by DHRIFT in the `programming_language` field. Here is a list of supported programming languages and their associated metadata fields:
+
+- Python: `'python'`
+- Jupyter Notebooks: `'jupyter'`
+- JavaScript: `'javascript'`
+- R: `'r'`
+- Command Line: `'command_line'`
+- HTML and CSS: `'html_css'`
+
+TODO: make into a table
+
+It will be up to you to decide which code editor (if any) is most appropriate for your workshop content.
+
+## Writing Workshop Content
+
+Once you have set up your workshop repository and YAML, you can start writing your workshop content in markdown. Markdown is a lightweight markup language that is fairly easy to read and write. It allows you to format text, add images, and create links without having to write HTML.
+
+DHRIFT uses standard markdown syntax for formatting text, including headings, lists, links, images, and more. You can find a comprehensive guide to markdown syntax here: [Markdown Syntax Guide](https://www.markdownguide.org/basic-syntax/).
+
+Beyond that, DHRIFT also supports a few custom markdown extensions that allow you to include interactive features like quizzes, challenges, and code editors in your workshop content. We'll cover these extensions in more detail in the following sections.
+
+### General Structure
+
+A typical DHRIFT workshop is divided into sections and subsections, each with its own content. You will want to separate your content into logical sections that follow the flow you envision for your workshop. For major sections, you can use level 1 markdown headings (`#`), and for subsections, you can use level 2 headings (`##`). For instance, in this workshop, we have used level 1 headings for major over-arching sections like "Introduction to DHRIFT" and level 2 headings for subsections like "What is DHRIFT?", "Underlying Technologies", etc.
+
+For the most part, you can structure your workshop content as you see fit, but it is generally a good idea to follow a pedagogically conscientious progression from introduction to conclusion. Separating out your content effectively can help learners navigate through the material more easily and tackle the lessons in digestible chunks.
+
+## Adding Images
+
+In addition to text content, you can also add images to your workshop. Images can help illustrate concepts, provide visual interest, and make your workshop more engaging.
+
+To add an image to your workshop, you can use standard markdown syntax for images. Here is an example:
+
+```markdown
+![Alt text](path/to/image.jpg)
+```
+
+In this syntax, `Alt text` is the alternative text for the image, which is displayed if the image fails to load. `path/to/image.jpg` is the path to the image file in your repository. Typically, you will want to store your images in a subdirectory of your repository, such as `images/`, to keep your files organized. You can also use a URL to an external image if needed.
+
+## Code Snippets
+
+DHRIFT workshops may also include code snippets to demonstrate programming concepts, provide examples, and guide learners through exercises. You can include code snippets in your workshop using standard markdown syntax for code blocks. 
+
+To create something like the following:
+
+```python
+print("Hello, world!")
+```
+
+...you can use three backticks (```) to start and end the code block, followed by the language identifier (e.g., `python`) to specify the language of the code snippet.
+
+In this example, `python` specifies the language of the code snippet, which helps DHRIFT format the code block correctly. You can replace `python` with other supported languages like `javascript`, `html`, `console`, etc., as needed.
+
+## Incorporating Interactive Features
+
+DHRIFT workshops can include a variety of interactive features to engage learners and reinforce learning. To create a quiz, for example, you can use the following syntax:
+
+```markdown
+### Evaluation
+
+What front-end technology does DHRIFT use to build its user interfaces?
+
+<Quiz>
+- React*
+- Angular
+- Vue
+- Ember
+</Quiz>
+```
+
+In this example, the `Evaluation` section introduces a multiple-choice quiz question, and the `<Quiz>` tag creates the interactive quiz. Learners can select an answer from the list, and DHRIFT will provide feedback on whether the answer is correct or incorrect. To specify a correct answer (or answers), mark it with an asterisk (`*`).
