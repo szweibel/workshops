@@ -3,7 +3,7 @@ title: How to Use DHRIFT
 cover title: How to Use DHRIFT
 description: "This workshop is designed for those who are interested in learning and teaching with DHRIFT, including those who want to create and customize their own DHRIFT site, those who would like to write their own workshops to publish with the DHRIFT platform, and for workshop facilitators and developers who would like to make use of DHRIFT’s minimal computing environment to create their own DH curricula." 
 
-programming_language: 'python'
+programming_language: 'jupyter'
 
 learning objectives:
     - Understand the basic features and affordances of the DHRIFT platform to create and manage curricula
@@ -159,15 +159,17 @@ To reveal the solution to the challenge, simply click on the Reveal button.
 
 DHRIFT workshops may also include interactive code editors that allow you to write and run code directly in your browser. These code editors are powered by WebAssembly, which allows you to run code snippets in a secure and sandboxed environment.
 
-For demonstration purposes, this workshop includes a simple code editor that allows you to write and run Python code. To use the code editor, simply click the Open Code Editor button near the top-right corner of the screen. This will open the code editor in a slide-out panel on the right-hand side of the page.
+For demonstration purposes, this workshop includes a JupyterLite notebook that allows you to write and run multiple coding languages. To use the notebook, simply click the Open Code Editor button near the top-right corner of the screen. This will open the code editor in a slide-out panel on the right-hand side of the page.
 
-Let's try running a simple Python code snippet. Click the Open Code Editor button to open the code editor, then type the following code into the editor window:
+Let's try running a simple Python code snippet. Click the Open Code Editor button to open the code editor, then create a new Python file by clicking the Python (Pyodide) button. If it prompts you to choose a kernel, select Python(Pyodide).
+
+Next, type the following code into the first cell of the notebook:
 
 ```python
 print("Hello, world!")
 ```
 
-When finished, click the Run button to execute the code. The output of the code will then be displayed in the shell.
+When finished, press <kbd>shift<kbd> + <kbd>enter</kbd> to execute the code. The output of the code will then be displayed in the cell below.
 
 You can also resize the width of the code editor by dragging the left-hand side frame of the editor window. This allows you to see more or less of the code editor, depending on your needs.
 
@@ -175,13 +177,13 @@ To close the code editor, simply click the Close Code Editor button at the top o
 
 ## Additional Code Editors
 
-DHRIFT workshops may also include code editors for other programming languages, such as JavaScript, R, and more. These code editors work in a similar way to the Python code editor, allowing you to write and run code directly in your browser. Currently, there is support for the following:
+DHRIFT workshops may also include code editors for other programming languages, such as JavaScript, R, and more. These code editors work in a similar way to the Jupyter notebook editor, allowing you to write and run code directly in your browser. Currently, there is support for the following:
 
 __Python and Jupyter Notebooks__
 
-You have already seen the Python code editor in action. DHRIFT also supports Jupyter Notebooks, which allow you to write and run Python code in a notebook-style format. Jupyter Notebooks are commonly used for data analysis, visualization, and machine learning.
+You have already seen the JupyterLite notebook in action. DHRIFT also supports a standard Python editor, which allows you to write and run Python code in a basic script-style code editor.
 
-TODO: image of Jupyter Notebook editor
+TODO: image of Python editor
 
 In addition, DHRIFT also provides a dedicated REPL (Read-Eval-Print Loop) for Python, which allows you to write and run simple Python commands.
 
@@ -189,19 +191,19 @@ TODO: image of Python REPL
 
 __JavaScript__
 
-DHRIFT supports JavaScript code editors, which allow you to write and run JavaScript code directly in your browser. JavaScript is a popular programming language for building interactive web applications and games.
+DHRIFT supports a JavaScript code editor, which allow you to write and run JavaScript code directly in your browser. JavaScript is a popular programming language for building interactive web applications, games, and more.
 
 TODO: image of JavaScript editor
 
 __R__
 
-DHRIFT supports R code editors, which allow you to write and run R code directly in your browser. R is a popular programming language for statistical computing and data analysis.
+DHRIFT supports an R code editor, which allow you to write and run R code directly in your browser. R is a popular programming language for statistical computing and data analysis.
 
 TODO: image of R editor
 
 __Command Line__
 
-DHRIFT supports command line code editors, which allow you to run shell commands directly in your browser. This is useful for working with files, directories, and other system-related tasks.
+DHRIFT supports command line code editors, which allow you to run shell commands directly in your browser. This is useful for working with files, directories, and other system-related tasks. _Note that the command line editor is an emulated terminal and will not have access to your local system._
 
 TODO: image of command line editor
 
@@ -215,7 +217,11 @@ TODO: image of HTML and CSS editor
 
 DHRIFT workshops may also include downloadable materials, such as PDFs, slides, datasets, and more. These materials are typically provided to help you follow along with the workshop content, complete exercises, and refer back to the material later.
 
-TODO: image of downloadable materials
+Here's an example of how downloadable materials might be presented in a workshop:
+
+### Downloadable Materials
+
+TODO: add download button with something
 
 ## Workshop Completion
 
@@ -227,7 +233,7 @@ TODO: image of Theory to Practice section
 
 ### Overview
 
-DHRIFT is designed with a learner-focused pedagogical philosophy that emphasizes accessibility, interactivity, and engagement. The platform is built to be inclusive and welcoming to learners of all backgrounds and skill levels, from beginners to experts. 
+DHRIFT is designed with a learner-focused pedagogical philosophy that emphasizes accessibility, interactivity, and engagement. The platform is built to be inclusive and welcoming to learners of all backgrounds and skill levels, from beginners to more advanced users. 
 
 DHRIFT has been developed in conversation with an extensive community of DH graduate students, faculty, administrators, librarians, curators, and independent scholars, and our advisory board is drawn from a cross section of DH practitioners at institutional types such as community colleges, liberal arts colleges, regional colleges, and Historically Black Colleges and Universities (HBCUs).
 
@@ -247,7 +253,7 @@ TODO: write this section
 
 So far, you have seen how to navigate and interact with existing DHRIFT workshops on the platform, including using the wizard to set up your own DHRIFT site and repository with options from among our core curriculum.
 
-However, DHRIFT is also meant to be a platform for easily creating and publishing your own workshops, so you can better meet the needs of your particular audience or institution. In this section, then, you will learn how to create your own workshops to publish with the DHRIFT platform. You'll learn how to write workshop markdown files, add images and other assets, configure workshop metadata using YAML, and incorporate interactive features like quizzes, challenges, and code editors.
+However, DHRIFT is also meant to be a platform for easily creating and publishing your own workshops, so you can better meet the needs of your particular audience or institution. In this section, then, you will learn how to create your own workshops to publish with the DHRIFT platform. You'll learn how to write workshop markdown files, configure workshop metadata using YAML, add images and other assets, and incorporate interactive features like quizzes, challenges, and code editors.
 
 Let's get started!
 
@@ -330,9 +336,15 @@ The metadata will comprise the information to display on your workshop's front p
 - `authors` lists the authors of the workshop.
 - `facilitators` lists the facilitators, or instructors, of the workshop.
 
-These are, at bare minimum, the fields you will likely want to include in your workshop metadata.
+These are, at bare minimum, the fields you will likely want to include in your workshop metadata. However, it should be noted that the only truly required fields are `title`, `cover title`, and `description`. The other fields are optional but highly recommended for providing a complete and informative workshop experience.
 
-You can also add additional metadata fields as needed for your workshop. For example, you might want to include a list of prerequisites, projects, additional resources or tutorials, etc. You can follow the same format as the `ethical considerations` field shown above for these additional fields.
+You can also add additional metadata fields as needed for your workshop. For example, you might want to include a list of prerequisites, projects, additional resources or tutorials, etc. You can follow the same format as the `ethical considerations` field shown above for these additional fields, e.g.,
+
+```yaml
+prerequisites:
+    - "No prior programming experience is required."
+    - "A basic understanding of computer science concepts is helpful but not necessary."
+```
 
 ### Supported Programming Languages
 
@@ -351,15 +363,15 @@ It will be up to you to decide which code editor (if any) is most appropriate fo
 
 ## Writing Workshop Content
 
-Once you have set up your workshop repository and YAML, you can start writing your workshop content in markdown. Markdown is a lightweight markup language that is fairly easy to read and write. It allows you to format text, add images, and create links without having to write HTML.
+Once you have set up your workshop repository and YAML, you can start writing your workshop content in markdown. Markdown is a lightweight markup language that is fairly easy to read and write, once you understand the basic syntax. It allows you to format text, add images, and create links without having to write HTML.
 
-DHRIFT uses standard markdown syntax for formatting text, including headings, lists, links, images, and more. You can find a comprehensive guide to markdown syntax here: [Markdown Syntax Guide](https://www.markdownguide.org/basic-syntax/).
+DHRIFT uses standard markdown syntax for formatting text, including headings, lists, links, images, and more. You can find a comprehensive guide to standard markdown syntax here: [Markdown Syntax Guide](https://www.markdownguide.org/basic-syntax/).
 
 Beyond that, DHRIFT also supports a few custom markdown extensions that allow you to include interactive features like quizzes, challenges, and code editors in your workshop content. We'll cover these extensions in more detail in the following sections.
 
 ### General Structure
 
-A typical DHRIFT workshop is divided into sections and subsections, each with its own content. You will want to separate your content into logical sections that follow the flow you envision for your workshop. For major sections, you can use level 1 markdown headings (`#`), and for subsections, you can use level 2 headings (`##`). For instance, in this workshop, we have used level 1 headings for major over-arching sections like "Introduction to DHRIFT" and level 2 headings for subsections like "What is DHRIFT?", "Underlying Technologies", etc.
+A typical DHRIFT workshop is divided into sections and subsections, each with its own content. You will want to separate your content into logical sections that follow the flow you envision for your workshop. For major sections, you can use level 1 markdown headings (`#`), and for subsections, you can use level 2 headings (`##`). For instance, in this workshop, we have used level 1 headings for major over-arching sections like "Introduction to DHRIFT" and level 2 headings for subsections like "What is DHRIFT?", "Underlying Technologies", etc. In general, note that both level 1 and level 2 headings will create a new page. DHRIFT will then automatically generate a table of contents for your workshop based on the headings you use.
 
 For the most part, you can structure your workshop content as you see fit, but it is generally a good idea to follow a pedagogically conscientious progression from introduction to conclusion. Separating out your content effectively can help learners navigate through the material more easily and tackle the lessons in digestible chunks.
 
@@ -373,7 +385,7 @@ To add an image to your workshop, you can use standard markdown syntax for image
 ![Alt text](path/to/image.jpg)
 ```
 
-In this syntax, `Alt text` is the alternative text for the image, which is displayed if the image fails to load. `path/to/image.jpg` is the path to the image file in your repository. Typically, you will want to store your images in a subdirectory of your repository, such as `images/`, to keep your files organized. You can also use a URL to an external image if needed.
+In this syntax, `Alt text` is the alternative text for the image, which is displayed if the image fails to load. `path/to/image.jpg` is the path to the image file in your repository. Typically, you will want to store your images in a subdirectory of your repository, such as `images/`, to keep your files organized. Even better would be to store the images in a designated folder for the workshop, e.g., `images/your-workshop`. Just make sure your folder title follows the exact name of your workshop so DHRIFT knows where to look for it. You can also use a URL to an external image if needed.
 
 ## Code Snippets
 
@@ -385,13 +397,13 @@ To create something like the following:
 print("Hello, world!")
 ```
 
-...you can use three backticks (```) to start and end the code block, followed by the language identifier (e.g., `python`) to specify the language of the code snippet.
+...you can use three backticks ````(```)```` to start and end the code block, followed by the language identifier (e.g., `python`) to specify the language of the code snippet.
 
 In this example, `python` specifies the language of the code snippet, which helps DHRIFT format the code block correctly. You can replace `python` with other supported languages like `javascript`, `html`, `console`, etc., as needed.
 
 ## Incorporating Interactive Features
 
-DHRIFT workshops can include a variety of interactive features to engage learners and reinforce learning. To create a quiz, for example, you can use the following syntax:
+DHRIFT workshops can include a variety of interactive features to engage learners and reinforce learning. To create a quiz, for example, you can use the following markdown syntax:
 
 ```markdown
 ### Evaluation
@@ -406,4 +418,45 @@ What front-end technology does DHRIFT use to build its user interfaces?
 </Quiz>
 ```
 
-In this example, the `Evaluation` section introduces a multiple-choice quiz question, and the `<Quiz>` tag creates the interactive quiz. Learners can select an answer from the list, and DHRIFT will provide feedback on whether the answer is correct or incorrect. To specify a correct answer (or answers), mark it with an asterisk (`*`).
+In this example, the (optional heading) `Evaluation` section introduces a multiple-choice quiz question, and the `<Quiz>` tag creates the interactive quiz. Learners can select an answer from the list, and DHRIFT will provide feedback on whether the answer is correct or incorrect. To specify a correct answer (or answers), mark it with an asterisk (`*`).
+
+To create a challenge with a solution that you can show/hide, you can use the following markdown syntax:
+
+```markdown
+### Challenge
+
+Where are DHRIFT workshops stored?
+
+### Solution
+
+<Secret>
+In a GitHub repository.
+</Secret>
+```
+
+In this example, the (optional heading) `Challenge` section poses a question or problem, and the `<Secret>` tag creates a hidden solution that learners can reveal by clicking a button. This allows learners to attempt the challenge on their own before checking the solution.
+
+## Adding Your Workshop to Your DHRIFT Site
+
+Once you have reached a point where you are satisfied with your workshop content, you can add your workshop to your DHRIFT site. To do this, you will need to push your workshop markdown file to your GitHub repository. DHRIFT will automatically detect the new workshop file and display it on your site.
+
+To ensure that your workshop is displayed correctly, keep in mind these checks:
+
+- Check that your workshop metadata is correctly configured in the YAML front matter.
+- Make sure your workshop markdown files are correctly formatted and free of errors.
+- Prepare all necessary assets (images, downloads, etc.) to be placed in a designated folder in your repository.
+
+If everything looks good, there are a few ways you can add your workshop to your repository. If you are familiar with Git and GitHub, you can push your changes directly to your repository using Git commands. 
+
+For instance, you can add your files to the staging area, commit your changes, and push them to your repository:
+
+```bash
+git add -A
+git commit -m "Add new workshop"
+git push
+```
+
+VSCode also has a built-in Git interface that you can use to stage, commit, and push your changes.
+
+If you are less familiar with Git, you can use the GitHub web interface to upload your files directly to your repository. Simply navigate to your repository on GitHub, click the "Add file" button, and select "Upload files" to add your workshop markdown file. Make sure you are also adding any images or other assets to the correct folder in your repository.
+
