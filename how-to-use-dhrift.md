@@ -62,7 +62,7 @@ Let's begin by exploring what DHRIFT is and how you can use it to learn and teac
 
 ## What is DHRIFT?
 
-To start, DHRIFT is the platform you are currently using to access this workshop!
+To start with, DHRIFT is the platform you are currently using to access this workshop!
 
 To be more specific, DHRIFT (Digital Humanities Resource Infrastructure for Teaching Technology) is an open educational resource (OER) and publication platform for DH workshops. Designed by humanities scholars for humanities scholars, DHRIFT provides a minimal computing, accessibility-aware, and interactive environment for teaching fundamental DH concepts. 
 
@@ -246,7 +246,23 @@ DHRIFT workshops are also designed to be accessible to learners with disabilitie
 
 # Creating and Modifying DHRIFT Sites
 
-TODO: write this section
+In this section, you will learn how to create and modify DHRIFT sites to host your own workshops and digital research institutes. You will learn how to use the wizard to create a sample institute based on your community’s needs and how to customize your DHRIFT site to display your own branding and content.
+
+Our wizard is meant to be a tool that allows you to create a new DHRIFT site with a few simple steps. You will be able to choose workshops from among our core curriculum, customize your site with your institute name, logo, and more, and generate a new standalone DHRIFT site that you can further customize to suit your preferences. 
+
+Let's get started!
+
+## Using the Wizard
+
+Let's use the wizard to create a new DHRIFT site. The wizard is a simple form that will guide you through the process of setting up your site, choosing workshops, and customizing your site's appearance.
+
+TODO: To access the wizard, click on the Create New Institute button in the header menu. This will take you to the wizard page, where you can begin setting up your new DHRIFT site.
+
+### How Does the Wizard Work?
+
+Once you have completed the form and submitted your choices, the wizard will generate a new DHRIFT site for you based on your selections. The site will include the workshops you chose, along with your institute name, logo, and other customizations. It will automatically deploy your site to a new GitHub repository under your username, which you can then further customize and publish.
+
+
 
 
 # Creating New DHRIFT Workshops
@@ -290,7 +306,11 @@ For instance, in the following URL: https://app.dhrift.org/inst/?instUser=dhri-c
 
 ## Configuring Workshop Metadata
 
-Once you have set up your workshop repository, you will need to configure your workshop metadata using [YAML](https://yaml.org/)." In terms of your workshop, the YAML language allows you to specify metadata such as the workshop title, author, description, learning objectives, estimated time, and more.
+Once you have set up your workshop repository, you will want to create a new markdown file for your workshop. You can name this file anything you like, but it is a good idea to use a descriptive name that reflects the content of your workshop. For example, if you are creating a workshop on Python programming, you might name your file `intro-to-python.md`.
+
+You can create and edit markdown files locally using a text editor like [Visual Studio Code](https://code.visualstudio.com/) or utilize the Jupyter Notebook code editor here in the browser. Markdown files typically have a `.md` extension, so make sure to save your file with the `.md` extension.
+
+The first thing you will need to do in your workshop markdown file is configure your workshop metadata using [YAML](https://yaml.org/)." In terms of your workshop, the YAML language allows you to specify metadata such as the workshop title, author, description, learning objectives, estimated time, and more.
 
 Here is an example of a simple YAML configuration for an Intro to Python workshop:
 
@@ -357,13 +377,11 @@ You can include the other code editors supported by DHRIFT in the `programming_l
 - Command Line: `'command_line'`
 - HTML and CSS: `'html_css'`
 
-TODO: make into a table
-
 It will be up to you to decide which code editor (if any) is most appropriate for your workshop content.
 
 ## Writing Workshop Content
 
-Once you have set up your workshop repository and YAML, you can start writing your workshop content in markdown. Markdown is a lightweight markup language that is fairly easy to read and write, once you understand the basic syntax. It allows you to format text, add images, and create links without having to write HTML.
+Once you have set up your workshop repository and YAML, you can start writing your workshop content in markdown. Markdown is a lightweight markup language that is fairly straightforward to read and write, once you understand the basic syntax. It allows you to format text, add images, and create links without having to write HTML (although it supports many basic HTML features such as text styling and table creation as well).
 
 DHRIFT uses standard markdown syntax for formatting text, including headings, lists, links, images, and more. You can find a comprehensive guide to standard markdown syntax here: [Markdown Syntax Guide](https://www.markdownguide.org/basic-syntax/).
 
@@ -375,6 +393,46 @@ A typical DHRIFT workshop is divided into sections and subsections, each with it
 
 For the most part, you can structure your workshop content as you see fit, but it is generally a good idea to follow a pedagogically conscientious progression from introduction to conclusion. Separating out your content effectively can help learners navigate through the material more easily and tackle the lessons in digestible chunks.
 
+Here is an example of how you might structure the beginning of a workshop using markdown headings:
+
+```markdown
+# Introduction
+
+This section provides a short introduction to the workshop. 
+
+## Overview
+
+This subsection provides an overview of the workshop and what learners can expect to gain from it.
+
+## Learning Objectives
+
+This subsection lists the main learning objectives of the workshop.
+
+# Getting Started
+
+This creates a new main section for the workshop.
+
+## Setting up Your Environment
+
+This subsection covers how to set up the necessary tools and resources to follow along with the workshop.
+
+### Installing Python
+
+This (sub)subsection provides instructions on how to install Python on your computer.
+
+## Writing Your First Program
+
+This subsection introduces learners to the basics of programming and writing their first program.
+
+### Hello, World!
+
+This (sub)subsection covers how to write a simple "Hello, world!" program in Python.
+```
+
+As you can see, we are utilizing level 1 headings for major sections like "Introduction" and "Getting Started" and level 2 headings for subsections like "Overview", "Learning Objectives", "Setting up Your Environment", etc. This structure helps to organize the content and make it easier for learners to follow along. 
+
+Furthermore, we are using level 3 headings for additional (sub)subsections like "Installing Python" and "Hello, World!" to further break down the content. Note that level 3 headings will be displayed _on the same page_ as the level 1 or 2 heading they are nested under, and will not appear in the table of contents. This can be useful for breaking down content into smaller, more manageable sections without cluttering the table of contents or creating new pages.
+
 ## Adding Images
 
 In addition to text content, you can also add images to your workshop. Images can help illustrate concepts, provide visual interest, and make your workshop more engaging.
@@ -385,7 +443,7 @@ To add an image to your workshop, you can use standard markdown syntax for image
 ![Alt text](path/to/image.jpg)
 ```
 
-In this syntax, `Alt text` is the alternative text for the image, which is displayed if the image fails to load. `path/to/image.jpg` is the path to the image file in your repository. Typically, you will want to store your images in a subdirectory of your repository, such as `images/`, to keep your files organized. Even better would be to store the images in a designated folder for the workshop, e.g., `images/your-workshop`. Just make sure your folder title follows the exact name of your workshop so DHRIFT knows where to look for it. You can also use a URL to an external image if needed.
+In this syntax, `Alt text` is the alternative text for the image, which is displayed if the image fails to load (this should comprise a short description of the image for accessibility purposes). `path/to/image.jpg` is the path to the image file in your repository. Typically, you will want to store your images in a subdirectory of your repository, such as `images/`, to keep your files organized. Even better would be to store the images in a designated folder for the workshop, e.g., `images/your-workshop`. Just make sure your folder title follows the exact name of your workshop so DHRIFT knows where to look for it. You can also use a URL to an external image if needed.
 
 ## Code Snippets
 
@@ -399,11 +457,15 @@ print("Hello, world!")
 
 ...you can use three backticks ````(```)```` to start and end the code block, followed by the language identifier (e.g., `python`) to specify the language of the code snippet.
 
-In this example, `python` specifies the language of the code snippet, which helps DHRIFT format the code block correctly. You can replace `python` with other supported languages like `javascript`, `html`, `console`, etc., as needed.
+In this example, `python` specifies the language of the code snippet, which helps DHRIFT format the code block correctly. You can replace `python` with other supported languages like `javascript`, `html`, `console`, etc., as needed. 
 
 ## Incorporating Interactive Features
 
-DHRIFT workshops can include a variety of interactive features to engage learners and reinforce learning. To create a quiz, for example, you can use the following markdown syntax:
+DHRIFT workshops can include a variety of interactive features to engage learners and reinforce learning. 
+
+### Quizzes
+
+To create a quiz, you can use the following markdown syntax:
 
 ```markdown
 ### Evaluation
@@ -419,6 +481,8 @@ What front-end technology does DHRIFT use to build its user interfaces?
 ```
 
 In this example, the (optional heading) `Evaluation` section introduces a multiple-choice quiz question, and the `<Quiz>` tag creates the interactive quiz. Learners can select an answer from the list, and DHRIFT will provide feedback on whether the answer is correct or incorrect. To specify a correct answer (or answers), mark it with an asterisk (`*`).
+
+### Challenges
 
 To create a challenge with a solution that you can show/hide, you can use the following markdown syntax:
 
@@ -443,12 +507,12 @@ Once you have reached a point where you are satisfied with your workshop content
 To ensure that your workshop is displayed correctly, keep in mind these checks:
 
 - Check that your workshop metadata is correctly configured in the YAML front matter.
-- Make sure your workshop markdown files are correctly formatted and free of errors.
-- Prepare all necessary assets (images, downloads, etc.) to be placed in a designated folder in your repository.
+- Make sure your workshop markdown files are correctly formatted and free of syntactical errors.
+- Prepare all necessary assets (images, downloads, etc.) to be placed in designated folders in your repository.
 
 If everything looks good, there are a few ways you can add your workshop to your repository. If you are familiar with Git and GitHub, you can push your changes directly to your repository using Git commands. 
 
-For instance, you can add your files to the staging area, commit your changes, and push them to your repository:
+For instance, you can add your files to the staging area, commit your changes, and push them to your repository using the following commands:
 
 ```bash
 git add -A
@@ -458,5 +522,21 @@ git push
 
 VSCode also has a built-in Git interface that you can use to stage, commit, and push your changes.
 
-If you are less familiar with Git, you can use the GitHub web interface to upload your files directly to your repository. Simply navigate to your repository on GitHub, click the "Add file" button, and select "Upload files" to add your workshop markdown file. Make sure you are also adding any images or other assets to the correct folder in your repository.
+If you are less familiar with Git or are not using VSCode, you can also use the GitHub web interface to upload your files directly to your repository. Simply navigate to your repository on GitHub, click the "Add file" button, and select "Upload files" to add your workshop markdown file. Make sure you are also adding any images or other assets to the correct folders in your repository.
+
+# Cloning A DHRIFT Instance
+
+In this section, you will learn how to clone an existing DHRIFT instance. Cloning an instance allows you to create a copy of an existing DHRIFT site and modify it to suit your needs. You can use this feature to create a new DHRIFT site based on an existing site, customize the content and appearance of the site, and publish it for your own use.
+
+Let's get started!
+
+## Cloning an Instance
+
+To clone an existing DHRIFT instance, you will need to follow a few steps:
+
+1. Identify the DHRIFT site you want to clone.
+2. Fork the repository of the DHRIFT site.
+3. Modify the content and appearance of the site to suit your needs.
+4. Publish the modified site for your own use.
+
 
