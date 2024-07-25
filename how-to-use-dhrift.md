@@ -44,21 +44,9 @@ This workshop is meant as a starting point for utilizing the DHRIFT platform. We
 
 - The DHRIFT informational website, which provides more information about the DHRIFT project, its team, and news/updates: [DHRIFT Website](https://dhrift.org)
 
-## Workshop Overview
+# Learning with DHRIFT
 
-The general overview of the How to Use DHRIFT workshop is as follows:
-
-**1) Introduction to DHRIFT**: We will introduce the DHRIFT platform, its directory of available workshops, interactive features, and pedagogical philosophy.
-
-**2) Creating a DHRIFT Site**: You will learn to build your own DHRIFT website for a mock institute, including modifying and customizing existing DHRIFT content.
-
-**3) Creating New Workshops**: You will learn how to create new workshops to publish with the DHRIFT platform.
-
-**4) Cloning A DHRIFT Instance**: You will learn how to clone an existing DHRIFT instance and modify it to suit your needs.
-
-# Introduction to DHRIFT
-
-Let's begin by exploring what DHRIFT is and how you can use it to learn and teach digital humanities concepts. We'll cover the platform's features, underlying technologies, and how to navigate and interact with DHRIFT workshops.
+Let's begin by exploring what DHRIFT is and how you can use it to learn digital humanities concepts.
 
 ## What is DHRIFT?
 
@@ -87,6 +75,14 @@ DHRIFT is built on a few key technologies that make it easy to create, manage, a
 - **GitHub Actions**: DHRIFT uses GitHub Actions to automate the process of building and deploying workshop content. When you make changes to your workshop content, GitHub Actions will automatically build and deploy the changes to your DHRIFT site.
 
 We'll be exploring these technologies in more detail throughout the workshop, so don't worry if you're not familiar with them yet!
+
+## The Learning Experience
+
+DHRIFT is designed to be an interactive and engaging platform for learning digital humanities concepts. Let's explore some of the features and affordances of the DHRIFT platform, including interactive quizzes, challenges, and code editors. We'll also discuss how DHRIFT workshops are structured and how you can navigate and interact with them.
+
+It should be noted that DHRIFT can be used in a variety of settings, including remote, in-person, and self-instructional modalities. The platform is designed to be accessible to learners of all backgrounds and skill levels, from beginners to more advanced users. Whether you're new to digital humanities or an experienced practitioner, DHRIFT has something to offer you.
+
+Let's dive into the platform and see what it has to offer!
 
 ## Using the DHRIFT Platform
 
@@ -125,7 +121,7 @@ To answer a multiple-choice question, simply click on the answer you think is co
 
 DHRIFT workshops may also include challenges to test your skills and understanding of the material. Like quizzes, challenges can take many forms, including coding exercises, short answer questions, and more.
 
-While we will always provide a solution to the challenge, we always encourage folks to try the challenge on their own first before looking at the solution. Therefore, we initially hide a solution and provide a button to reveal it, like so:
+While we will always provide a solution to the challenge, we encourage folks to try the challenge on their own first before looking at the solution. Therefore, we initially hide a solution and provide a button to reveal it, like so:
 
 ### Challenge
 
@@ -233,25 +229,37 @@ TODO: image of Theory to Practice section
 
 In general, these sections are intended to offer learners a chance to extend their understanding beyond the workshop and apply their new skills and knowledge in practical ways. For instance, you might be asked to analyze a dataset, create a visualization, or build a simple web application based on the concepts you have learned in the workshop.
 
-## Pedagogical Philosophy
+# Teaching with DHRIFT
 
-### Overview
+### Pedagogical Philosophy
 
-DHRIFT is designed with a learner-focused pedagogical philosophy that emphasizes accessibility, interactivity, and engagement. The platform is built to be inclusive and welcoming to learners of all backgrounds and skill levels, from beginners to more advanced users. 
-
-DHRIFT has been developed in conversation with an extensive community of DH graduate students, faculty, administrators, librarians, curators, and independent scholars, and our advisory board is drawn from a cross section of DH practitioners at institutional types such as community colleges, liberal arts colleges, regional colleges, and Historically Black Colleges and Universities (HBCUs). By engaging with this diverse community, we have been able to develop a platform that meets the needs of a wide range of learners and instructors.
+DHRIFT is designed with a learner-focused pedagogical philosophy that emphasizes accessibility, interactivity, and engagement. The platform has been developed in conversation with an extensive community of DH graduate students, faculty, administrators, librarians, curators, and independent scholars, and our advisory board is drawn from a cross section of DH practitioners at institutional types such as community colleges, liberal arts colleges, regional colleges, and Historically Black Colleges and Universities (HBCUs). By engaging with this diverse community, we have been able to develop a platform that meets the needs of a wide range of learners and instructors.
 
 Additionally, DHRIFT values the principles of open education and open access. All workshop content on the platform is freely available to anyone who wishes to use it, and all workshops are licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. This means that you are free to use, share, and adapt the content for non-commercial purposes, as long as you provide attribution to the original authors and share any derivative works under the same license.
 
-### Workshop Philosophy
+## Workshop Philosophy
 
-Our curricula reflect the pedagogical values of humanities instruction, drawing from years of feedback and iteration. Both textual and visual in design, workshops accommodate different learning styles and are written with remote, in-person, and self-instruction modalities in mind. By embedding a technical interface in the curricula, DHRIFT streamlines the learning environment for both instructors and learners and reduces confusion caused by context switching. DHRIFT workshops emphasize practical coding through a humanities lens, providing learners tools to extend their skills into new domains relevant to their research.
+Our curricula reflect the pedagogical values of humanities instruction, drawing from years of feedback and iteration. Both textual and visual in design, workshops attempt to accommodate different learning styles. By embedding a technical interface in the curricula, DHRIFT streamlines the learning environment for both instructors and learners and reduces confusion caused by context switching. DHRIFT workshops emphasize practical coding through a humanities lens, providing learners tools to extend their skills into new domains relevant to their research.
 
 DHRIFT workshops are also designed to be accessible to learners with disabilities. The platform is built with accessibility in mind, following best practices for web accessibility and usability. DHRIFT workshops are designed to be screen reader-friendly, keyboard navigable, and color contrast compliant.
 
-### Community Engagement
+Let's look at some best practices for teaching with DHRIFT.
 
-DHRIFT is committed to fostering a community of practice around digital humanities pedagogy. We encourage instructors, learners, and developers to engage with the platform, share their experiences, and contribute to the ongoing development of the platform. We welcome feedback, suggestions, and contributions from the community and are always looking for ways to improve the platform and make it more useful for our users.
+## Best Practices
+
+When teaching with DHRIFT, there are a few best practices you can follow to ensure a positive and engaging learning experience for your students. Here are some tips to keep in mind:
+
+- **Set Clear Learning Objectives**: Clearly present the learning objectives for each workshop and communicate them to your students at the outset. This will help students understand what they will be learning and why it is important.
+- **Provide Context**: Provide context for the material you are teaching and explain how it relates to the broader field of digital humanities. This will help students see the relevance of the material and how it fits into the larger picture. Additionally, consider ethical considerations and implications of the material you are teaching.
+- **Encourage Active Learning**: Encourage students to actively engage with the material by asking questions, participating in discussions, and completing exercises. This will help reinforce their learning and make the material more memorable.
+- **Use a Variety of Teaching Methods**: Use a variety of teaching methods to keep students engaged and accommodate different learning styles. This could include different forms of group work in which students attempt to solve a problem together, or individual work in which students complete a task on their own.
+- **Provide Feedback**: Provide feedback to students on their progress as the workshop unfolds. This could include feedback on quizzes, challenges, and exercises, as well as general feedback on their understanding of the material. Reiterate key concepts to bolser understanding.
+
+While DHRIFT tries to accommodate these best practices in terms of its design and content, it is, as always, up to the instructor to ensure that these practices are implemented effectively in the classroom.
+
+## Teaching and Community Engagement
+
+Additionally, DHRIFT is committed to fostering a community of practice around digital humanities pedagogy. We encourage instructors, learners, and developers to engage with the platform, share their experiences, and contribute to the ongoing development of the platform. We welcome feedback, suggestions, and contributions from the community and are always looking for ways to improve the platform and make it more useful for our users.
 
 Furthermore, we invite users to create and share with us their own workshops, curricula, and institutes. By contributing to the wider curricula available to learners, you can help build a rich and diverse collection of resources that benefit the wider DH community.
 
