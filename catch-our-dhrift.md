@@ -184,9 +184,13 @@ So far, we've learned how interactive features like quizzing and challenges incr
 
 The majority of DHRIFT workshops include interactive code editors that allow you to write and run code directly in your browser. These code editors are powered by WebAssembly, which allows you to run code snippets in a secure and sandboxed environment.
 
+<!--revise the paragraph above to be a little more learner focused and less teaching focused. In other words, rather than introducing "WebAssembly" right away, maybe explain what a sandbox is and why it's useful for learning-->
+
 For demonstration purposes, this workshop includes a JupyterLite notebook that allows you to write and run multiple coding languages. To use the notebook, simply click the Open Code Editor button near the top-right corner of the screen. This will open the code editor in a slide-out panel on the right-hand side of the page.
 
 Let's try running a simple Python code snippet. Click the Open Code Editor button to open the Jupyter code editor, then create a new Python file by clicking the Python (Pyodide) button. If it prompts you to choose a kernel, select Python(Pyodide).
+
+<!-- an animated gif might be helpful here. animated gifs are fine if the action performed in the gif is thoroughly described in the body of the text.-->
 
 Next, type the following code into the first cell of the notebook:
 
@@ -202,13 +206,18 @@ You can also resize the width of the code editor by dragging the left-hand side 
 
 To close the code editor, simply click the Close Code Editor button at the top of the code editor panel.
 
+<!--The key in the "learning" section is to explain why this feature is helpful while you're learning. For example, if you're learning on a small screen, or if you are having trouble seeing your code and want to go back and forth between the descriptive text and the code editor.-->
+
 ## Additional Code Editors
+<!-- Not sure that this needs to be a whole separate page. Also, some of this content may be moved to the "teaching" section. The key at this stage seems to be to explain why each of these code editors are useful for learning as opposed to, say, learning R in R Studio. -->
 
 DHRIFT workshops may also include code editors for other programming languages, such as JavaScript, R, and more. These code editors work in a similar way to the Jupyter notebook editor, allowing you to write and run code directly in your browser. Currently, there is support for the following:
 
 ### Python and Jupyter Notebooks
 
 You have already seen the JupyterLite notebook in action. DHRIFT also supports a standard Python editor, which allows you to write and run Python code in a basic script-style code editor.
+
+<!--Ok, so let's think about why it's good to learn using the REPL. Perhaps it's because not everything we do in Python is something we'd use a Jupyter notebook for, like maybe using Python to create a website or a web app. What's a practical application that a beginner might need to understand as to why this feature can be useful?-->
 
 ![Python Code Editor](/images/catch-our-dhrift/python-editor.png)
 
@@ -225,6 +234,8 @@ DHRIFT supports a JavaScript code editor, which allow you to write and run JavaS
 ### R
 
 DHRIFT supports an R code editor, which allow you to write and run R code directly in your browser. R is a popular programming language for statistical computing and data analysis.
+
+<!-- Again, what's the learning use?-->
 
 ### Command Line
 
@@ -246,7 +257,9 @@ Clicking the button should import a .ipynb notebook file into Jupyter. You can s
 
 ## Glossary
 
-Often, DHRIFT workshops will use specific terms or concepts that may be unfamiliar. In this case, we provide a Key Terms section that defines and explains these terms, like so:
+Often, DHRIFT workshops will use specific terms or concepts that may be unfamiliar. In this case, we provide a Key Terms section that defines and explains these terms, l
+
+<!--Why is a glossary useful and important to a student / learner? For example, Most learning environments, like Jupyter Notebooks or R Studio don't come with explaner text... more importantly, the definitions are not shared across lessons. The advantage to DHRIFT is that it shares a vocabulary across lessons and helps learners, especially those who feel excluded or frustrated by the inaccessibility of technical terms, to build their vocabulary and to connect that vocabulary across workshops and lessons.-->
 
 <Keywords>
 - DHRIFT
@@ -275,6 +288,8 @@ In general, these sections are intended to offer learners a chance to extend the
 DHRIFT is designed with a learner-focused pedagogical philosophy that emphasizes accessibility, interactivity, and engagement. The platform has been developed in conversation with an extensive community of DH graduate students, faculty, administrators, librarians, curators, and independent scholars, and our advisory board is drawn from a cross section of DH practitioners at institutional types such as community colleges, liberal arts colleges, regional colleges, and Historically Black Colleges and Universities (HBCUs). By engaging with this diverse community, we have been able to develop a platform that meets the needs of a wide range of learners and instructors.
 
 Additionally, DHRIFT values the principles of open education and open access. All workshop content on the platform is freely available to anyone who wishes to use it, and all workshops are licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. This means that you are free to use, share, and adapt the content for non-commercial purposes, as long as you provide attribution to the original authors and share any derivative works under the same license.
+
+<!-- There is language about pedagogy in the article I'm sharing via Slack-->
 
 ## Workshop Philosophy
 
@@ -343,6 +358,8 @@ To begin using the wizard, please navigate to the following page:
 <Info>To open the wizard on a new tab, hold the <kbd>control</kbd> / <kbd>command</kbd> key while clicking the link.</Info>
 
 From there, we will fill out the form together. 
+
+<!--Ok, this is where most of my attention will go when I get to Arlington tonight-->
 
 # Creating New DHRIFT Workshops
 
