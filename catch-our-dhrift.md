@@ -1,6 +1,6 @@
 ---
-title: How to Use DHRIFT
-cover title: How to Use DHRIFT
+title: Catch our DHRIFT
+cover title: Catch our DHRIFT
 description: "This workshop is designed for those who are interested in learning and teaching with DHRIFT, including those who want to create and customize their own DHRIFT site, those who would like to write their own workshops to publish with the DHRIFT platform, and for workshop facilitators and developers who would like to make use of DHRIFT’s minimal computing environment to create their own DH curricula." 
 
 programming_language: 'jupyter'
@@ -37,8 +37,6 @@ During this workshop, you will learn about the DHRIFT platform, including its di
 __Quick Links:__
 
 This workshop is meant as a starting point for utilizing the DHRIFT platform. We also encourage you to visit and bookmark other resources, such as:
-
-- The extended documentation and reference guides: TODO: link to docs
 
 - The DHRIFT GitHub repository: [DHRIFT GitHub](https://github.com/DHRI-Curriculum/DHRIFT)
 
@@ -90,11 +88,11 @@ If you have made it this far, you have already become familiarized with the stan
 
 Each workshop has a front page that provides the workshop’s description, learning objectives, estimated time, authors, workshop facilitators, ethical considerations, and more. To begin a workshop, simply click the Start Workshop button under the main description or below the workshop's additional details.
 
-![DHRIFT Workshop Front Page](ws-frontpage.png)
+![DHRIFT Workshop Front Page](images//catch-our-dhrift/ws-frontpage.png)
 
 Each individual workshop is divided into sections and subsections. You can navigate between sections by using the back and forward buttons in the navigation bar below each section. You can also access the table of contents for each workshop by clicking on the Workshop Overview button in the top-right corner of the screen.
 
-![DHRIFT Workshop Navigation](ws-overview.png)
+![DHRIFT Workshop Navigation](images/catch-our-dhrift/ws-overview.png)
 
 Workshop content can take many forms: text, images, code snippets, interactive exercises and quizzes, and more. Let's explore some of these features.
 
@@ -165,47 +163,39 @@ DHRIFT workshops may also include code editors for other programming languages, 
 
 You have already seen the JupyterLite notebook in action. DHRIFT also supports a standard Python editor, which allows you to write and run Python code in a basic script-style code editor.
 
-![Python Code Editor](python-editor.png)
+![Python Code Editor](images/catch-our-dhrift/python-editor.png)
 
 In addition, DHRIFT also provides a dedicated REPL (Read-Eval-Print Loop) for Python, which allows you to write and run simple Python commands.
 
-![Python REPL](python-repl.png)
+![Python REPL](images/catch-our-dhrift/python-repl.png)
 
 ### JavaScript
 
 DHRIFT supports a JavaScript code editor, which allow you to write and run JavaScript code directly in your browser. JavaScript is a popular programming language for building interactive web applications, games, and more.
 
-![JavaScript Code Editor](js-editor.png)
+![JavaScript Code Editor](images/catch-our-dhrift/js-editor.png)
 
 ### R
 
 DHRIFT supports an R code editor, which allow you to write and run R code directly in your browser. R is a popular programming language for statistical computing and data analysis.
 
-TODO: image of R editor
-
 ### Command Line
 
 DHRIFT supports command line code editors, which allow you to run shell commands directly in your browser. This is useful for working with files, directories, and other system-related tasks. _Note that the command line editor is an emulated terminal and will not have access to your local file system._
 
-![Command Line Editor](cl-editor.png)
+![Command Line Editor](images/catch-our-dhrift/cl-editor.png)
 
 ### HTML and CSS
 
 DHRIFT supports HTML and CSS code editors, which allow you to write and style web pages directly in your browser. HTML is a markup language for creating web pages, while CSS is a stylesheet language for styling web pages.
 
-TODO: image of HTML and CSS editor
+## Importing Workshop Materials
 
-## Downloading Workshop Materials
+To make things easier for participants, you can import files directly into the JupyterLite environment with the click of a button. Here is an example:
 
-DHRIFT workshops may also include downloadable materials, such as PDFs, slides, datasets, and more. These materials are typically provided to help you follow along with the workshop content, complete exercises, and refer back to the material later.
+<Jupyter IPYNB='https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/pandas/pandas_workshop_2024.ipynb' />
 
-Here's an example of how downloadable materials might be presented in a workshop:
-
-### Downloadable and Importable Materials
-
-TODO: add download button with something
-
-TODO: add import button with something  
+Clicking the button should import a .ipynb notebook file into Jupyter.
 
 ## Glossary
 
@@ -221,13 +211,13 @@ Each workshop is created using Markdown, a lightweight markup language that is e
 
  To access the full glossary of key terms for DHRIFT workshops, you can click on the Glossary button in the header section of the site.
 
-![Glossary](glossary.png)
+![Glossary](images/catch-our-dhrift/glossary.png)
 
 ## Workshop Completion
 
 Each workshop typically ends with a Theory to Practice section, which provides an opportunity to apply what you have learned in the workshop to a real-world scenario. This section may include case studies, projects, or reflection exercises.
 
-![Theory to Practice](theory-to-practice.png)
+![Theory to Practice](images/catch-our-dhrift/theory-to-practice.png)
 
 In general, these sections are intended to offer learners a chance to extend their understanding beyond the workshop and apply their new skills and knowledge in practical ways. For instance, you might be asked to analyze a dataset, create a visualization, or build a simple web application based on the concepts you have learned in the workshop.
 
@@ -251,11 +241,11 @@ Let's look at some best practices for teaching with DHRIFT.
 
 When teaching with DHRIFT, there are a few best practices you can follow to ensure a positive and engaging learning experience for your students. Here are some tips to keep in mind:
 
-- **Set Clear Learning Objectives**: Clearly present the learning objectives for each workshop and communicate them to your students at the outset. This will help students understand what they will be learning and why it is important.
+- **Identify Clear Learning Objectives**: Clearly present the learning objectives for each workshop and communicate them to your students at the outset. This will help students understand what they will be learning and why it is important.
 - **Provide Context**: Provide context for the material you are teaching and explain how it relates to the broader areas of research students might be interested in. Additionally, consider ethical considerations and implications of the material you are teaching.
-- **Encourage Active Learning**: Encourage students to actively engage with the material by asking questions, participating in discussions, and completing exercises. This will help reinforce their learning and make the material more memorable.
+- **Engage With the Platform's Features**: Encourage students to actively engage with the material by attempting challenges, answering quizzes, or taking some time to write code on their own. 
 - **Use a Variety of Teaching Methods**: Use a variety of teaching methods to keep students engaged and accommodate different learning styles. This could include different forms of group work in which students attempt to solve a problem together, or individual work in which students complete a task on their own.
-- **Provide Feedback**: Provide feedback to students on their progress as the workshop unfolds. This could include feedback on quizzes, challenges, and exercises, as well as general feedback on their understanding of the material. Reiterate key concepts to bolster understanding.
+- **Encourage Student's Autonomous Learning**: Recommend not only that students revisit a workshop on their own after completion, but also to apply their newly acquired skills in a different domain. Give them some project ideas or tasks that they can try.
 
 While DHRIFT tries to accommodate these best practices in terms of its design and content, it is, as always, up to the instructor to ensure that these practices are implemented effectively in the classroom.
 
@@ -299,14 +289,13 @@ Once you have completed the form and submitted your choices, the wizard will gen
 
 ### Accessing the Wizard
 
-TODO: To access the wizard, you can click on the Create New Institute button in the header menu. This will take you to the wizard page, where you can begin setting up your new DHRIFT site. (?) 
+To begin using the wizard, please navigate to the following page:
 
-Although the wizard is meant to be fairly self-explanatory, this workshop will walk through the form together to explain each option and how it will affect your site.
+[DHRIFT wizard](https://app.dhrift.org/wizard/)
 
-## Walking Through the Wizard
+<Info>To open the wizard on a new tab, hold the <kbd>control</kbd> / <kbd>command</kbd> key while clicking the link.</Info>
 
-Let's walk through the wizard together to create a new DHRIFT site. We'll go step by step through the form, explaining each option and how it will affect your site.
-
+From there, we will fill out the form together. 
 
 # Creating New DHRIFT Workshops
 
@@ -328,12 +317,6 @@ To create a new workshop, you will need to follow a few general key steps:
 6. Build and deploy your workshop using GitHub Actions
 
 Depending on what you want to achieve with your workshop, you may need to follow additional steps or best practices. We'll cover these in more detail as we go along.
-
-### Additional Resources
-
-Keep in mind that we have provided a template workshop that you can use as a starting point for creating your own workshops. The template workshop includes examples of how to structure your workshop content, configure your workshop metadata, and incorporate interactive features. You can find the template workshop here:  TODO: link to template workshop, or maybe just a download for the md file?
-
-We also have a detailed style guide on how to write workshops for the DHRIFT platform. While this guide is meant to be a reference for those wishing to publish workshops with the wider DHRIFT community, it can also be useful for those creating their own workshops for personal or professional use. You can access the style guide here: TODO: link to style guide
 
 ## Setting up Your Workshop Repository
 
