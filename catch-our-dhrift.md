@@ -46,9 +46,6 @@ There are a variety of projects designed to help users learn how to code, encode
     - [Programming Historian](https://programminghistorian.org/)
     - [SICSS: The Summer Institutes in Computational Social Science](https://sicss.io/)
     - DHSI: Digital Humanities Summer Institute
-
-resources: 
-    - 
 ---
 
 # Introduction
