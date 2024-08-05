@@ -51,31 +51,27 @@ resources:
     - "The DHRIFT informational website, which provides more information about the DHRIFT project, its team, and news/updates: [DHRIFT Website](https://dhrift.org)"
 ---
 
-# Introduction
+# Getting Started
 
 Welcome to DHRIFT!
 
-During this workshop, you will learn about the DHRIFT platform, including its directory of available workshops, interactive features, and pedagogical philosophy. You will learn to build your own DHRIFT website for a mock institute, including modifying and customizing existing DHRIFT content. By creating DHRIFT sites, you will also learn about DHRIFT’s underlying technologies: how workshop markdown files are created, ingested, and displayed, how they are stored and processed through GitHub actions, and how institute leaders can use the platform's wizard to build an institute based on your community’s needs.
+During this workshop, you will learn:
 
-__Quick Links:__
+- about the platform, including DHRIFT's directory of available workshops, interactive features, and pedagogical philosophy
+- to use DHRIFT's features to learn digital skills
+- to leverage DHRIFT's features and content to teaching digital skills
+- to customize a DHRIFT institute landing page
 
-This workshop is meant as a starting point for utilizing the DHRIFT platform. We also encourage you to visit and bookmark other resources, such as:
+Along the way, we will cover how workshop markdown files are created, ingested, and displayed, how they are stored and processed through GitHub actions. We will conclude by demonstrating how DHRIFT's markdown style guide can be used to create your own workshops.
 
-- The DHRIFT GitHub repository: [DHRIFT GitHub](https://github.com/DHRI-Curriculum/DHRIFT)
 
-- The DHRIFT informational website, which provides more information about the DHRIFT project, its team, and news/updates: [DHRIFT Website](https://dhrift.org)
-
-# Learning with DHRIFT
-
-Let's begin by exploring what DHRIFT is and how you can use it to learn digital humanities concepts.
-
-## What is DHRIFT?
+# What is DHRIFT?
 
 To start with, DHRIFT is the platform you are currently using to access this workshop!
 
 To be more specific, DHRIFT (Digital Humanities Resource Infrastructure for Teaching Technology) is an open educational resource (OER) and publication platform for digital humanities (DH) workshops. Designed by humanities scholars for humanities scholars, DHRIFT provides a minimal computing, accessibility-aware, and interactive environment for teaching fundamental DH concepts. 
 
-The platform includes a core set of more than 10 reviewed and tested workshops that have been developed and tested during two NEH-funded, week-long institutes, called the Digital Humanities Research Institutes (DHRI). Workshop topics range from learning the basics of Python, JavaScript, and R to conducting research through text analysis, data wrangling, and mapping. You can see the full list of workshops on the workshops page, accessible from the header menu or [by clicking here](https://app.dhrift.org/workshops/?instUser=dhri-curriculum&instRepo=dhrift-site-template&user=dhri-curriculum&repo=workshops). 
+The platform includes a core set of more than 10 reviewed and tested workshops that have been developed and tested during two NEH-funded, week-long institutes, called the Digital Humanities Research Institutes (DHRI). Workshop topics range from learning the basics of Python, JavaScript, and R to conducting research through text analysis, data wrangling, and mapping. You can see the full list of workshops on the workshops page, accessible from the header menu or [by clicking here](https://app.dhrift.org/workshops/?instUser=dhri-curriculum&instRepo=dhrift-site-template&user=dhri-curriculum&repo=workshops).
 
 DHRIFT’s core workshops are always accessible from and usable on our website; however, its flexible framework also allows users to build their own customized, static DHRIFT sites and tailor them for a variety of situations, such as teaching an undergraduate or graduate class, hosting a week-long skills institute, or organizing a series of professional development workshops. DHRIFT facilitates an instructor or organizations’ ability to reproduce, adapt, and publish DH workshops with interactive, learner-focused features. All workshop content is accessible in the browser, avoiding the need for learners to install software or set up complex computing environments.
 
@@ -83,7 +79,7 @@ DHRIFT’s core workshops are always accessible from and usable on our website; 
 
 DHRIFT is built on a few key technologies that make it easy to create, manage, and publish DH workshops. These technologies include:
 
-- **GitHub**: DHRIFT uses GitHub to store and manage workshop content. Each workshop is stored in a GitHub repository, which contains the workshop’s markdown files, images, and other assets. GitHub also provides version control, so you can track changes to your workshop content over time. 
+- **GitHub**: DHRIFT uses GitHub to store and manage workshop content. Each workshop is stored in a GitHub repository, which contains the workshop’s markdown files, images, and other assets. GitHub also provides version control, so you can track changes to your workshop content over time.
 
 - **Markdown**: DHRIFT uses Markdown to write workshop content. Markdown is a lightweight markup language that is easy to read and write. It allows you to format text, add images, and create links without having to write HTML.
 
@@ -97,7 +93,7 @@ DHRIFT is built on a few key technologies that make it easy to create, manage, a
 
 We'll be exploring these technologies in more detail throughout the workshop, so don't worry if you're not familiar with them yet!
 
-## The Learning Experience
+# Learning with DHRIFT
 
 DHRIFT is designed to be an interactive and engaging platform for learning digital humanities concepts. Let's explore some of the features and affordances of the DHRIFT platform, including interactive quizzes, challenges, and code editors. We'll also discuss how DHRIFT workshops are structured and how you can navigate and interact with them.
 
@@ -105,9 +101,9 @@ It should be noted that DHRIFT can be used in a variety of settings, including r
 
 Let's dive into the platform and see what it has to offer!
 
-## Using the DHRIFT Platform
+# Using the DHRIFT Platform
 
-If you have made it this far, you have already become familiarized with the standard DHRIFT workshop format. 
+If you have made it this far, you have already become familiarized with the standard DHRIFT workshop format.
 
 Each workshop has a front page that provides the workshop’s description, learning objectives, estimated time, authors, workshop facilitators, ethical considerations, and more. To begin a workshop, simply click the Start Workshop button under the main description or below the workshop's additional details.
 
