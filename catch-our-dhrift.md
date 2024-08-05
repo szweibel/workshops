@@ -38,7 +38,8 @@ ethical considerations:
     - 'DHRIFT is oriented toward users who are unfamiliar with technology, who have attempted to learn how to code and felt frustrated in those attempts, and/or who may identify with communities of learners traditionally excluded from technology fields. Consequently, authors are encouraged to design workshops that scaffold on concepts taught in other DHRIFT workshops and to clearly define new concepts and terms as they are introduced with minimal reliance on tacit or assumed knowledge.' 
     - 'DHRIFT values its community of contributors, editors, students, and testers. Consequently, workshops include lengthy histories that acknowledge intellectual labor from conception through authorship, editing, review, facilitation, and student feedback. If you choose to clone, revise, or customize DHRIFT content, please be sure to continue to acknowledge the contributions of others as thoroughly as possible.' 
     
-projects: "There are a variety of projects designed to help users learn how to code, encode, design, or produce digital humanities projects. The following are a few examples of discipline-informed resources for teaching and learning digital skills."
+projects: 
+    - description: "There are a variety of projects designed to help users learn how to code, encode, design, or produce digital humanities projects. The following are a few examples of discipline-informed resources for teaching and learning digital skills."
     - '[DARIAH Teach](https://teach.dariah.eu/)'
     - '[Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html) by Melanie Walsh'
     - '[Programming Historian](https://programminghistorian.org/)'
