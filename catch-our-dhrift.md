@@ -125,17 +125,23 @@ Each individual workshop is divided into sections and subsections. You can navig
 
 ![DHRIFT Workshop Navigation](/images/catch-our-dhrift/ws-overview.png)
 
-Workshop content can take many forms: text, images, code snippets, interactive exercises and quizzes, and more. Let's explore some of these features.
-
 <!-- We should probably do an orientation to the entire space, including the code editor here before getting into quizzing -->
+
+<!-- Something like this maybe? -->
+
+In general, DHRIFT is designed to be used in a variety of educational contexts. Ideally, whether remotely or in-person, learners will navigate through the workshop _at the same pace_ as the instructor. Each section (and subsection) is meant to promote a single core idea, so that participants are not overwhelmed by a large number of concepts coming at them all at once. This way, instructors can try to ensure that every one has a good grasp of the material before moving on to the next page.
+
+As we will also discuss later, each workshop in our core curriculum builds upon concepts over time, such that previous material is continually reintegrated, refined, and placed in new contexts. As we have experienced in running our own workshops, scaffolding material in this manner promotes greater understanding and retention of the content.
+
+Workshop content itself can take many forms: text, images, code snippets, interactive exercises and quizzes, and more. Let's explore some of these features.
 
 ## Quizzes
 
 DHRIFT workshops may include quizzes to test your knowledge and understanding of the material. Quizzes can take many forms, including multiple-choice, true/false, and short answer questions.
 
-<!-- Add paragraph about why quizzes are useful for learners. For example, research proves that low-stakes, intermittent quizzing produces more durable learning (https://showcase.ems.psu.edu/node/42)-->
+Quizzes on DHRIFT are meant to be quick, low-stakes ways for learners to test their knowledge throughout a workshop. [As research has shown](https://showcase.ems.psu.edu/node/42), intermittent quizzing produces more lasting and durable learning. While quizzes can be interspersed wherever (and as often as you'd like) in a workshop, DHRIFT's core curriculum usually embeds them after a particularly nuanced concept, key term, or coding structure to provide a means of immediate feedback for learners. This has the benefit of providing a "self-checking" mechanism for learners while also providing an instructor with the ability to discuss any issues or misunderstandings that may arise.
 
-A common quiz type you'll encounter in our core curriculum is the multiple-choice question, which looks like this:
+Quizzes can be fairly simple in format even if they are addressing complex ideas. A common quiz type you'll encounter in our core curriculum is the multiple-choice question, which looks like this:
 
 ### Evaluation
 
@@ -154,9 +160,11 @@ To answer a multiple-choice question, simply click on the answer you think is co
 
 DHRIFT workshops may also include challenges to test your skills and understanding of the material. Like quizzes, challenges can take many forms, including coding exercises, short answer questions, and more.
 
-While we will always provide a solution to the challenge, we encourage folks to try the challenge on their own first before looking at the solution. Therefore, we initially hide a solution and provide a button to reveal it, like so:
+<!-- Here's an attempt... I agree some of it might be better placed in teaching? But I think it's totally okay if our pedagogical aims are coming through in the learning section as well, as it's a bit more hands on -->
 
-<!-- Challenges are important to learning because they require us to take theoretical and abstract concepts that we've learned and apply them to real-world or cultural/theoretical contexts. This is the point of discussion in a humanities classroom. We want to push people to consider how what they're learning applies to an open ended question. Critical thinking and creating additional context to learning improves retention and helps deepen learning. Challenges are also opportunities for students to become teachers and producers of knowledge rather than passive receivers of information. This is also a key to a liberatory education. The second half of this should go into teaching, probably.-->
+We have found that utilizing intermittent challenges in our workshops allows learners to immediately apply abstract concepts and aid in understanding. While they can be particularly effective when presented as a short coding challenge immediately following the introduction of a new coding concept, they can also take the form of group discussions, short writing exercises, or other forms of self-reflection. In general, we want to push people to consider how what they're learning applies to an open-ended question. Challenges in this sense are meant to be opportunities for students to become teachers and producers of knowledge rather than simply passive receivers.
+
+While we will always provide a potential solution to a challenge, we encourage folks to try the challenge on their own first before looking at the solution. Therefore, we initially hide a solution and provide a button to reveal it, like so:
 
 ### Challenge
 
@@ -234,7 +242,7 @@ To make things easier for participants, you can import files directly into the J
 
 <Jupyter IPYNB='https://raw.githubusercontent.com/DHRI-Curriculum/workshops/main/uploads/pandas/pandas_workshop_2024.ipynb' />
 
-Clicking the button should import a .ipynb notebook file into Jupyter.
+Clicking the button should import a .ipynb notebook file into Jupyter. You can see for yourself by opening the code editor and looking for the `pandas_workshop_2024` notebook in the file directory to the left.
 
 ## Glossary
 
