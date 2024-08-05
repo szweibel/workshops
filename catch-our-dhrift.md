@@ -43,7 +43,7 @@ projects:"There are a variety of projects designed to help users learn how to co
     - '[DARIAH-Teach](https://teach.dariah.eu/)'
     - '[Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html) by Melanie Walsh'
     - '[Programming Historian](https://programminghistorian.org/)'
-    - '[SICSS: The Summer Institutes in Computational Social Science](https://sicss.io/)'
+    - '[SCISS - The Summer Institutes in Computational Social Science](https://sicss.io/)'
 
 resources: 
     - '[GitHub Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines) by Adam Pritchard'
