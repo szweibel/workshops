@@ -40,7 +40,7 @@ ethical considerations:
     
 projects: "There are a variety of projects designed to help users learn how to code, encode, design, or produce digital humanities projects. The following are a few examples of discipline-informed resources for teaching and learning digital skills."
 
-    - '[DARIAH-Teach](https://teach.dariah.eu/)'
+    - '[DARIAH Teach](https://teach.dariah.eu/)'
     - '[Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html) by Melanie Walsh'
     - '[Programming Historian](https://programminghistorian.org/)'
     - '[SCISS - The Summer Institutes in Computational Social Science](https://sicss.io/)'
