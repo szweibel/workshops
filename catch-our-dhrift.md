@@ -29,26 +29,25 @@ facilitators:
     - 'Leanne Fan'
 
 readings:
-    - Rhody, Lisa Marie and Kalle Westerling. "Expanding Communities of Practice through DH Andragogy." *What We Talk About When We Teach DH: Diigtal Humanities in the Classroom.* edited by Brian Croxall and Diane K. Jakacki, University of Minnesota Press, 2023. pp. 247-60. Debates in the Digital Humanities. 
+    - 'Rhody, Lisa Marie and Kalle Westerling. "Expanding Communities of Practice through DH Andragogy." *What We Talk About When We Teach DH: Diigtal Humanities in the Classroom.* edited by Brian Croxall and Diane K. Jakacki, University of Minnesota Press, 2023. pp. 247-60. Debates in the Digital Humanities.' 
 
 ethical considerations:
-    - DHRIFT is designed with an orientation toward minimal computing, choosing more resource-heavy alternatives only when a key pedagogical goal cannot be achieved through more minimal approaches. 
-    - DHRIFT is developed in partnership with a team of ADA-compliance and usability testers. 
-    - DHRIFT makes use of [cookies](https://en.wikipedia.org/wiki/HTTP_cookie) (small files stored in a user's browser for a period of time) to serve useful and necessary functions, such as reducing the number of file requests your browser needs to make to complete a lesson, such as retaining information in your code editor while moving forward a lesson in a workshop or authenticating your connection to GitHub when generating a new DHRIFT landing page using the wizard. DHRIFT does *not* store tracking information and therefore is not subject to the EU's GDPR regulations.
-    - DHRIFT's pedagogy is oriented toward users who are unfamiliar with technology, who have attempted to learn how to code and felt frustrated in those attempts, and/or who may identify with communities of learners traditionally excluded from technology fields. Consequently, authors are encouraged to design workshops that scaffold on concepts taught in other DHRIFT workshops and to clearly define new concepts and terms as they are introduced with minimal reliance on tacit or assumed knowledge. 
-    - DHRIFT values its community of contributors, editors, students, and testers. Consequently, workshops include lengthy histories that acknowledge intellectual labor from conception through authorship, editing, review, facilitation, and student feedback. If you choose to clone, revise, or customize DHRIFT content, please be sure to continue to acknowledge the contributions of others as thoroughly as possible.  
+    - 'DHRIFT is designed with an orientation toward minimal computing, choosing more resource-heavy alternatives only when a key pedagogical goal cannot be achieved through more minimal approaches.' 
+    - 'DHRIFT is developed in partnership with a team of ADA-compliance and usability testers.' 
+    - 'DHRIFT makes use of [cookies](https://en.wikipedia.org/wiki/HTTP_cookie) (small files stored in a user's browser for a period of time) to serve useful and necessary functions, such as reducing the number of file requests your browser needs to make to complete a lesson, such as retaining information in your code editor while moving forward a lesson in a workshop or authenticating your connection to GitHub when generating a new DHRIFT landing page using the wizard. DHRIFT does *not* store tracking information and therefore is not subject to the EU's GDPR regulations.'
+    - 'DHRIFT's pedagogy is oriented toward users who are unfamiliar with technology, who have attempted to learn how to code and felt frustrated in those attempts, and/or who may identify with communities of learners traditionally excluded from technology fields. Consequently, authors are encouraged to design workshops that scaffold on concepts taught in other DHRIFT workshops and to clearly define new concepts and terms as they are introduced with minimal reliance on tacit or assumed knowledge.' 
+    - 'DHRIFT values its community of contributors, editors, students, and testers. Consequently, workshops include lengthy histories that acknowledge intellectual labor from conception through authorship, editing, review, facilitation, and student feedback. If you choose to clone, revise, or customize DHRIFT content, please be sure to continue to acknowledge the contributions of others as thoroughly as possible.' 
     
 projects:
-    There are a variety of projects designed to help users learn how to code, encode, design, or produce digital humanities projects. The following are a few examples of discipline-informed resources for teaching and learning digital skills.
+    'There are a variety of projects designed to help users learn how to code, encode, design, or produce digital humanities projects. The following are a few examples of discipline-informed resources for teaching and learning digital skills.'
 
-    - [DARIAH-Teach](https://teach.dariah.eu/)
-    - [Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)
-    - [Programming Historian](https://programminghistorian.org/)
-    - [SICSS: The Summer Institutes in Computational Social Science](https://sicss.io/)
-    - DHSI: Digital Humanities Summer Institute
+    - '[DARIAH-Teach](https://teach.dariah.eu/)'
+    - '[Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)'
+    - '[Programming Historian](https://programminghistorian.org/)'
+    - '[SICSS: The Summer Institutes in Computational Social Science](https://sicss.io/)'
 
 resources: 
-    - [GitHub Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines) by Adam Pritchard
+    - '[GitHub Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines) by Adam Pritchard'
 ---
 
 # Introduction
