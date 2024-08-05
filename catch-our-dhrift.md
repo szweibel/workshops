@@ -39,13 +39,13 @@ ethical considerations:
     - DHRIFT values its community of contributors, editors, students, and testers. Consequently, workshops include lengthy histories that acknowledge intellectual labor from conception through authorship, editing, review, facilitation, and student feedback. If you choose to clone, revise, or customize DHRIFT content, please be sure to continue to acknowledge the contributions of others as thoroughly as possible.  
     
 projects:
-    -There are a variety of projects designed to help users learn how to code, encode, design, or produce digital humanities projects. The following are a few examples of discipline-informed resources for teaching and learning digital skills.
+    There are a variety of projects designed to help users learn how to code, encode, design, or produce digital humanities projects. The following are a few examples of discipline-informed resources for teaching and learning digital skills.
 
-    -- [DARIAH-Teach](https://teach.dariah.eu/)
-    -- [Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)
-    -- [Programming Historian](https://programminghistorian.org/)
-    -- [SICSS: The Summer Institutes in Computational Social Science](https://sicss.io/)
-    -- DHSI: Digital Humanities Summer Institute
+    - [DARIAH-Teach](https://teach.dariah.eu/)
+    - [Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)
+    - [Programming Historian](https://programminghistorian.org/)
+    - [SICSS: The Summer Institutes in Computational Social Science](https://sicss.io/)
+    - DHSI: Digital Humanities Summer Institute
 
 resources: 
     - [GitHub Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines) by Adam Pritchard
