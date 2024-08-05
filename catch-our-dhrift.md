@@ -88,11 +88,11 @@ If you have made it this far, you have already become familiarized with the stan
 
 Each workshop has a front page that provides the workshop’s description, learning objectives, estimated time, authors, workshop facilitators, ethical considerations, and more. To begin a workshop, simply click the Start Workshop button under the main description or below the workshop's additional details.
 
-![DHRIFT Workshop Front Page](images//catch-our-dhrift/ws-frontpage.png)
+![DHRIFT Workshop Front Page](/images/catch-our-dhrift/ws-frontpage.png)
 
 Each individual workshop is divided into sections and subsections. You can navigate between sections by using the back and forward buttons in the navigation bar below each section. You can also access the table of contents for each workshop by clicking on the Workshop Overview button in the top-right corner of the screen.
 
-![DHRIFT Workshop Navigation](images/catch-our-dhrift/ws-overview.png)
+![DHRIFT Workshop Navigation](/images/catch-our-dhrift/ws-overview.png)
 
 Workshop content can take many forms: text, images, code snippets, interactive exercises and quizzes, and more. Let's explore some of these features.
 
@@ -163,17 +163,17 @@ DHRIFT workshops may also include code editors for other programming languages, 
 
 You have already seen the JupyterLite notebook in action. DHRIFT also supports a standard Python editor, which allows you to write and run Python code in a basic script-style code editor.
 
-![Python Code Editor](images/catch-our-dhrift/python-editor.png)
+![Python Code Editor](/images/catch-our-dhrift/python-editor.png)
 
 In addition, DHRIFT also provides a dedicated REPL (Read-Eval-Print Loop) for Python, which allows you to write and run simple Python commands.
 
-![Python REPL](images/catch-our-dhrift/python-repl.png)
+![Python REPL](/images/catch-our-dhrift/python-repl.png)
 
 ### JavaScript
 
 DHRIFT supports a JavaScript code editor, which allow you to write and run JavaScript code directly in your browser. JavaScript is a popular programming language for building interactive web applications, games, and more.
 
-![JavaScript Code Editor](images/catch-our-dhrift/js-editor.png)
+![JavaScript Code Editor](/images/catch-our-dhrift/js-editor.png)
 
 ### R
 
@@ -183,7 +183,7 @@ DHRIFT supports an R code editor, which allow you to write and run R code direct
 
 DHRIFT supports command line code editors, which allow you to run shell commands directly in your browser. This is useful for working with files, directories, and other system-related tasks. _Note that the command line editor is an emulated terminal and will not have access to your local file system._
 
-![Command Line Editor](images/catch-our-dhrift/cl-editor.png)
+![Command Line Editor](/images/catch-our-dhrift/cl-editor.png)
 
 ### HTML and CSS
 
@@ -211,13 +211,13 @@ Each workshop is created using Markdown, a lightweight markup language that is e
 
  To access the full glossary of key terms for DHRIFT workshops, you can click on the Glossary button in the header section of the site.
 
-![Glossary](images/catch-our-dhrift/glossary.png)
+![Glossary](/images/catch-our-dhrift/glossary.png)
 
 ## Workshop Completion
 
 Each workshop typically ends with a Theory to Practice section, which provides an opportunity to apply what you have learned in the workshop to a real-world scenario. This section may include case studies, projects, or reflection exercises.
 
-![Theory to Practice](images/catch-our-dhrift/theory-to-practice.png)
+![Theory to Practice](/images/catch-our-dhrift/theory-to-practice.png)
 
 In general, these sections are intended to offer learners a chance to extend their understanding beyond the workshop and apply their new skills and knowledge in practical ways. For instance, you might be asked to analyze a dataset, create a visualization, or build a simple web application based on the concepts you have learned in the workshop.
 
@@ -466,7 +466,7 @@ In addition to text content, you can also add images to your workshop. Images ca
 To add an image to your workshop, you can use standard markdown syntax for images. Here is an example:
 
 ```markdown
-![Alt text](path/to/image.jpg)
+![Alt text](/path/to/image.jpg)
 ```
 
 In this syntax, `Alt text` is the alternative text for the image, which is displayed if the image fails to load (this should also comprise a short description of the image for accessibility purposes). `path/to/image.jpg` is the path to the image file in your repository. Typically, you will want to store your images in a subdirectory of your repository, such as `images/`, to keep your files organized. Even better would be to store the images in a designated folder for the workshop, e.g., `images/your-workshop`. Just make sure your folder title follows the _exact_ name of your workshop so DHRIFT knows where to look for it. You can also use a URL to an external image if needed.
