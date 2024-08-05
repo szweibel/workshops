@@ -46,7 +46,9 @@ projects:
     - '[SCISS - The Summer Institutes in Computational Social Science](https://sicss.io/)'
 
 resources: 
-    - '[GitHub Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines) by Adam Pritchard'
+    - "[GitHub Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines) by Adam Pritchard"
+    - "The DHRIFT GitHub repository: [DHRIFT GitHub](https://github.com/DHRI-Curriculum/DHRIFT)"
+    - "The DHRIFT informational website, which provides more information about the DHRIFT project, its team, and news/updates: [DHRIFT Website](https://dhrift.org)"
 ---
 
 # Introduction
