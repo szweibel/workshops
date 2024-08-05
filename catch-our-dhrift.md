@@ -193,7 +193,7 @@ DHRIFT supports HTML and CSS code editors, which allow you to write and style we
 
 To make things easier for participants, you can import files directly into the JupyterLite environment with the click of a button. Here is an example:
 
-<Jupyter IPYNB='https://raw.githubusercontent.com/GC-DRI/DRI24/main/uploads/pandas/pandas_workshop_2024.ipynb' />
+<Jupyter IPYNB='https://raw.githubusercontent.com/DHRI-Curriculum/workshops/main/uploads/pandas/pandas_workshop_2024.ipynb' />
 
 Clicking the button should import a .ipynb notebook file into Jupyter.
 
