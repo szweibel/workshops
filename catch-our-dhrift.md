@@ -75,6 +75,8 @@ The platform includes a core set of more than 10 reviewed and tested workshops t
 
 DHRIFT’s core workshops are always accessible from and usable on our website; however, its flexible framework also allows users to build their own customized, static DHRIFT sites and tailor them for a variety of situations, such as teaching an undergraduate or graduate class, hosting a week-long skills institute, or organizing a series of professional development workshops. DHRIFT facilitates an instructor or organizations’ ability to reproduce, adapt, and publish DH workshops with interactive, learner-focused features. All workshop content is accessible in the browser, avoiding the need for learners to install software or set up complex computing environments.
 
+While we realize everyone learns differently and no one tool can solve for the wide variety of possible hurdles for teaching and learning digital skills... DHRIFT is designed to be *flexible*. We have found that it can be useful in remote, in-person, and self-instructional modalities. It is designed to be accessible to learners of all backgrounds and skill levels, from beginners to more advanced users, but our content tends toward beginners. Whether you're new to digital humanities or an experienced practitioner, DHRIFT has something to offer you.
+
 ## Underlying Technologies
 
 DHRIFT is built on a few key technologies that make it easy to create, manage, and publish DH workshops. These technologies include:
@@ -95,17 +97,27 @@ We'll be exploring these technologies in more detail throughout the workshop, so
 
 # Learning with DHRIFT
 
-DHRIFT is designed to be an interactive and engaging platform for learning digital humanities concepts. Let's explore some of the features and affordances of the DHRIFT platform, including interactive quizzes, challenges, and code editors. We'll also discuss how DHRIFT workshops are structured and how you can navigate and interact with them.
+DHRIFT is designed to be an interactive and engaging platform for learning digital humanities concepts. Something that our team has learned over the years while writing, leading, and revising DH skill workshops is that interactivity and opportunities to learn by doing are key in creating lasting memories and sustainable learning. At the same time, learning requires taking risks and making mistakes. Not everyone is comfortable with making mistakes right away. In fact, there are social pressures that some learners feel that others don't that contribute demonstratively to learning outcomes.
 
-It should be noted that DHRIFT can be used in a variety of settings, including remote, in-person, and self-instructional modalities. The platform is designed to be accessible to learners of all backgrounds and skill levels, from beginners to more advanced users. Whether you're new to digital humanities or an experienced practitioner, DHRIFT has something to offer you.
+Enter DHRIFT! Through interactive and web-based features like using a code editor in the browser, users can get started with hands-on activities *without* the pressure that making mistakes can create.
+
+In this section, we'll explore how learners can make use of DHRIFT's features -- including interactive quizzes, challenges, and code editors -- to lower the stakes of learning and making mistakes and increasing the opportunities for interactivity and dialogue. We'll also discuss how DHRIFT workshops are structured and how you can navigate and interact with them to improve the learning experience.
 
 Let's dive into the platform and see what it has to offer!
 
-# Using the DHRIFT Platform
+# DHRIFT's Learning Features
 
-If you have made it this far, you have already become familiarized with the standard DHRIFT workshop format.
+By making it this far, you are already learning about some of the features built into DHRIFT to promote learning, such as the way each workshop is organized.
 
-Each workshop has a front page that provides the workshop’s description, learning objectives, estimated time, authors, workshop facilitators, ethical considerations, and more. To begin a workshop, simply click the Start Workshop button under the main description or below the workshop's additional details.
+To get the most out of a workshop, it helps not to skip ahead to the first code block that you see. Workshops are thoughtfully designed with a front page that provides the workshop’s description, learning objectives, estimated time, authors, workshop facilitators, ethical considerations, related readings and projects, as well as resources to consider or to keep on hand. 
+
+For example, this workshop includes having the [app.dhrift.org](https://app.dhrift.org) and our [informational site](https://dhrift.org) links on hand. We also talk through some of the decisions we have made in creating the workshop that may have ethical implications, such as our use of [cookies](https://en.wikipedia.org/wiki/HTTP_cookie) (NOTE: Yes, many cookies were consumed in the creation of DHRIFT, but in this case, we mean small files or bits of data stored in your web browser that make your use of DHRIFT a bit less complicated).
+
+We have included this material based on hundreds of hours of teaching workshops and learning that connecting digital skills to theoretical and practical applications is a key aspect of learning. When you understand better how concepts from using the command line (like what a file path is) becomes a building block to managing a web site and interacting with a remote server or installing software on your machine, the concept's applicability positively impacts the likelihood that you will be motivated to focus on and to learn the concept.
+
+# Start a Workshop
+
+Once you've read the lesson frontmatter, you're ready to begin. Simply click the Start Workshop button under the main description or below the workshop's additional details.
 
 ![DHRIFT Workshop Front Page](/images/catch-our-dhrift/ws-frontpage.png)
 
@@ -115,9 +127,13 @@ Each individual workshop is divided into sections and subsections. You can navig
 
 Workshop content can take many forms: text, images, code snippets, interactive exercises and quizzes, and more. Let's explore some of these features.
 
+<!-- We should probably do an orientation to the entire space, including the code editor here before getting into quizzing -->
+
 ## Quizzes
 
 DHRIFT workshops may include quizzes to test your knowledge and understanding of the material. Quizzes can take many forms, including multiple-choice, true/false, and short answer questions.
+
+<!-- Add paragraph about why quizzes are useful for learners. For example, research proves that low-stakes, intermittent quizzing produces more durable learning (https://showcase.ems.psu.edu/node/42)-->
 
 A common quiz type you'll encounter in our core curriculum is the multiple-choice question, which looks like this:
 
@@ -140,6 +156,8 @@ DHRIFT workshops may also include challenges to test your skills and understandi
 
 While we will always provide a solution to the challenge, we encourage folks to try the challenge on their own first before looking at the solution. Therefore, we initially hide a solution and provide a button to reveal it, like so:
 
+<!-- Challenges are important to learning because they require us to take theoretical and abstract concepts that we've learned and apply them to real-world or cultural/theoretical contexts. This is the point of discussion in a humanities classroom. We want to push people to consider how what they're learning applies to an open ended question. Critical thinking and creating additional context to learning improves retention and helps deepen learning. Challenges are also opportunities for students to become teachers and producers of knowledge rather than passive receivers of information. This is also a key to a liberatory education. The second half of this should go into teaching, probably.-->
+
 ### Challenge
 
 Where are DHRIFT workshops stored?
@@ -154,7 +172,9 @@ To reveal the solution to the challenge, simply click on the Reveal button.
 
 ## Interactive Code Editors
 
-DHRIFT workshops may also include interactive code editors that allow you to write and run code directly in your browser. These code editors are powered by WebAssembly, which allows you to run code snippets in a secure and sandboxed environment.
+So far, we've learned how interactive features like quizzing and challenges increase engagement with content and connecting concepts to context. Neither of these are necessarily new ideas, but there are few opportunities when quizzing and challenges have been presented alongside opportunities for hands-on experimentation and coding exercises.
+
+The majority of DHRIFT workshops include interactive code editors that allow you to write and run code directly in your browser. These code editors are powered by WebAssembly, which allows you to run code snippets in a secure and sandboxed environment.
 
 For demonstration purposes, this workshop includes a JupyterLite notebook that allows you to write and run multiple coding languages. To use the notebook, simply click the Open Code Editor button near the top-right corner of the screen. This will open the code editor in a slide-out panel on the right-hand side of the page.
 
