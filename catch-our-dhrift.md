@@ -339,7 +339,7 @@ On that note, let's move on to the next section, where you will learn how to cre
 
 In this section, you will learn how to create and modify DHRIFT sites to host your own workshops and digital research institutes. You will learn how to use the DHRIFT wizard to create a sample institute based on your community’s needs and how to customize your DHRIFT site to display your own branding and content.
 
-Our wizard is meant to be a tool that allows you to create a new DHRIFT site with a few simple steps. You will be able to choose workshops from among our core curriculum, customize your site with your institute name, logo, and more, and generate a new standalone DHRIFT site that you can further customize to suit your preferences.
+Our wizard is meant to be a tool that allows you to create a new DHRIFT site with a few simple steps. You will be able to choose workshops from among our core curriculum, customize your site with your institute name, logo, and more, and generate a new standalone DHRIFT site that you can further customize to suit your preferences. [Here is an example.](https://app.dhrift.org/inst/?instUser=zipper3030&instRepo=dhrift-institute)
 
 Let's get started!
 
