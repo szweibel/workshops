@@ -360,7 +360,7 @@ To begin using the wizard, please navigate to the following page:
 
 From there, we will fill out the form together.
 
-<!--Ok, this is where most of my attention will go when I get to Arlington tonight-->
+<!--Here is where we should give participants an option to open up a markdown file with the questions from the wizard. When they open the markdown file, it will have all the same questions and the dummy content pre-loaded. We can invite them to change it. -->
 
 # Creating New DHRIFT Workshops
 
