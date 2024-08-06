@@ -734,7 +734,6 @@ During the workshop, we covered the following topics:
 - How to teach with DHRIFT
 - How to create and customize a DHRIFT institute landing page
 - Creating and modifying workshop content
-
 The workshop will remain active on DHRIFT Core for you to access and review independently.
 
 # From Theory to Practice
@@ -744,7 +743,7 @@ What could you do next?
 - Ready to start learning? Try one of our workshops. We recommend starting with [Introduction to the Command Line](https://app.dhrift.org).
 - Want to teach with DHRIFT? Peruse the [directory of available workshops](https://app.dhrift.org) and choose one to teach without.
 - Interested in creating a workshop series? Try our [DHRIFT Wizard](https://app.dhrift.org/wizard) to build and customize your own.
-- Do you have a workshop you'd like to develop in DHRIFT and share with us? Keep an eye out on our social media and in your email for an invitation to write workshops for DHRIFT!
+- Do you have a workshop you'd like to develop in DHRIFT and share with us? Keep an eye out on our social media and in your email for an invitation to write workshops for DHRIFT! Reach out by email to dhinstitutes (at) gmail (dot) com for more information.
 
 # The End!
 
