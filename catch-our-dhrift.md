@@ -45,7 +45,8 @@ projects:
     - '[Programming Historian](https://programminghistorian.org/)'
     - '[SCISS - The Summer Institutes in Computational Social Science](https://sicss.io/)'
 
-resources: 
+resources:
+    - description: "For an optimal experience, we recommend for this workshop that you download and use Google Chrome as a browser and that for completing workshop activities you access this workshop with either a tablet, laptop, or desktop computer." 
     - "[GitHub Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines) by Adam Pritchard"
     - "The DHRIFT GitHub repository: [DHRIFT GitHub](https://github.com/DHRI-Curriculum/DHRIFT)"
     - "The DHRIFT informational website, which provides more information about the DHRIFT project, its team, and news/updates: [DHRIFT Website](https://dhrift.org)"
@@ -723,3 +724,16 @@ One of the main directories you will likely be working with is `/components`. Th
 ### Styles
 
 The `/styles` directory contains the CSS files that style the DHRIFT platform. You can modify these files to change the appearance of the site, including colors, fonts, spacing, and more. For instance, you might want to update the color scheme of the site to match your institute's branding.
+
+# Review
+
+During the workshop, we covered the following topics:
+
+- What DHRIFT is and the features it includes
+- How to use DHRIFT to learn digital skills
+- How to teach with DHRIFT
+- How to create and customize a DHRIFT institute landing page
+- Creating and modifying workshop content
+
+The workshop will remain active on DHRIFT Core for you to access and review independently. 
+
