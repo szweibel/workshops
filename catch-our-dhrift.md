@@ -29,7 +29,7 @@ facilitators:
     - 'Leanne Fan'
 
 readings:
-    - 'Rhody, Lisa Marie and Kalle Westerling. "Expanding Communities of Practice through DH Andragogy." *What We Talk About When We Teach DH: Diigtal Humanities in the Classroom.* edited by Brian Croxall and Diane K. Jakacki, University of Minnesota Press, 2023. pp. 247-60. Debates in the Digital Humanities.' 
+    - 'Rhody, Lisa Marie and Kalle Westerling. "Expanding Communities of Practice through DH Andragogy." *What We Talk About When We Teach DH: Digtal Humanities in the Classroom.* edited by Brian Croxall and Diane K. Jakacki, University of Minnesota Press, 2023. pp. 247-60. Debates in the Digital Humanities.' 
 
 ethical considerations:
     - 'DHRIFT is designed with an orientation toward minimal computing, choosing more resource-heavy alternatives only when a key pedagogical goal cannot be achieved through more minimal approaches.' 
@@ -64,12 +64,11 @@ During this workshop, you will learn:
 
 Along the way, we will cover how workshop markdown files are created, ingested, and displayed, how they are stored and processed through GitHub actions. We will conclude by demonstrating how DHRIFT's markdown style guide can be used to create your own workshops.
 
-
 # What is DHRIFT?
 
 To start with, DHRIFT is the platform you are currently using to access this workshop!
 
-To be more specific, DHRIFT (Digital Humanities Resource Infrastructure for Teaching Technology) is an open educational resource (OER) and publication platform for digital humanities (DH) workshops. Designed by humanities scholars for humanities scholars, DHRIFT provides a minimal computing, accessibility-aware, and interactive environment for teaching fundamental DH concepts. 
+To be more specific, DHRIFT (Digital Humanities Resource Infrastructure for Teaching Technology) is an open educational resource (OER) and publication platform for digital humanities (DH) workshops. Designed by humanities scholars for humanities scholars, DHRIFT provides a minimal computing, accessibility-aware, and interactive environment for teaching fundamental DH concepts.
 
 The platform includes a core set of more than 10 reviewed and tested workshops that have been developed and tested during two NEH-funded, week-long institutes, called the Digital Humanities Research Institutes (DHRI). Workshop topics range from learning the basics of Python, JavaScript, and R to conducting research through text analysis, data wrangling, and mapping. You can see the full list of workshops on the workshops page, accessible from the header menu or [by clicking here](https://app.dhrift.org/workshops/?instUser=dhri-curriculum&instRepo=dhrift-site-template&user=dhri-curriculum&repo=workshops).
 
@@ -81,17 +80,17 @@ While we realize everyone learns differently and no one tool can solve for the w
 
 DHRIFT is built on a few key technologies that make it easy to create, manage, and publish DH workshops. These technologies include:
 
-- **GitHub**: DHRIFT uses GitHub to store and manage workshop content. Each workshop is stored in a GitHub repository, which contains the workshop’s markdown files, images, and other assets. GitHub also provides version control, so you can track changes to your workshop content over time.
+- **GitHub**: DHRIFT uses [GitHub](https://github.com/) to store and manage workshop content. Each workshop is stored in a GitHub repository, which contains the workshop’s markdown files, images, and other assets. GitHub also provides version control, so you can track changes to your workshop content over time.
 
-- **Markdown**: DHRIFT uses Markdown to write workshop content. Markdown is a lightweight markup language that is easy to read and write. It allows you to format text, add images, and create links without having to write HTML.
+- **Markdown**: DHRIFT uses [Markdown](https://www.markdownguide.org/) to write workshop content. Markdown is a lightweight markup language that is easy to read and write. It allows you to format text, add images, and create links without having to write HTML.
 
-- **YAML**: DHRIFT uses YAML to configure workshop metadata. YAML is a human-readable data serialization format that is easy to read and write. It allows you to specify metadata such as the workshop title, author, and description.
+- **YAML**: DHRIFT uses [YAML](https://yaml.org/) to configure workshop metadata. YAML is a human-readable data serialization format that is easy to read and write. It allows you to specify metadata such as the workshop title, author, and description.
 
-- **React**: DHRIFT’s frontend is built with React, a JavaScript library for building user interfaces. React allows us to create interactive, responsive, and accessible interfaces for our workshops.
+- **React**: DHRIFT’s frontend is built with [React](https://react.dev/), a JavaScript library for building user interfaces. React allows us to create interactive, responsive, and accessible interfaces for our workshops.
 
-- **WebAssembly**: DHRIFT uses WebAssembly to run code snippets in the browser. WebAssembly is a low-level programming language that is designed to run fast and efficiently in web browsers. It allows us to incorporate code editors in a secure and sandboxed environment so that learners can immediately see the results of their code.
+- **WebAssembly**: DHRIFT uses [WebAssembly](https://webassembly.org/) to run code snippets in the browser. WebAssembly is a low-level programming language that is designed to run fast and efficiently in web browsers. It allows us to incorporate code editors in a secure and sandboxed environment so that learners can immediately see the results of their code.
 
-- **GitHub Actions**: DHRIFT uses GitHub Actions to automate the process of building and deploying workshop content. When you make changes to your workshop content, GitHub Actions will automatically build and deploy the changes to your DHRIFT site.
+- **GitHub Actions**: DHRIFT uses [GitHub Actions](https://docs.github.com/en/actions) to automate the process of building and deploying workshop content. When you make changes to your workshop content, GitHub Actions will automatically build and deploy the changes to your DHRIFT site.
 
 We'll be exploring these technologies in more detail throughout the workshop, so don't worry if you're not familiar with them yet!
 
@@ -109,7 +108,7 @@ Let's dive into the platform and see what it has to offer!
 
 By making it this far, you are already learning about some of the features built into DHRIFT to promote learning, such as the way each workshop is organized.
 
-To get the most out of a workshop, it helps not to skip ahead to the first code block that you see. Workshops are thoughtfully designed with a front page that provides the workshop’s description, learning objectives, estimated time, authors, workshop facilitators, ethical considerations, related readings and projects, as well as resources to consider or to keep on hand. 
+To get the most out of a workshop, it helps not to skip ahead to the first code block that you see. Workshops are thoughtfully designed with a front page that provides the workshop’s description, learning objectives, estimated time, authors, workshop facilitators, ethical considerations, related readings and projects, as well as resources to consider or to keep on hand.
 
 For example, this workshop includes having the [app.dhrift.org](https://app.dhrift.org) and our [informational site](https://dhrift.org) links on hand. We also talk through some of the decisions we have made in creating the workshop that may have ethical implications, such as our use of [cookies](https://en.wikipedia.org/wiki/HTTP_cookie) (NOTE: Yes, many cookies were consumed in the creation of DHRIFT, but in this case, we mean small files or bits of data stored in your web browser that make your use of DHRIFT a bit less complicated).
 
@@ -128,10 +127,11 @@ Each individual workshop is divided into sections and subsections. You can navig
 <!-- We should probably do an orientation to the entire space, including the code editor here before getting into quizzing -->
 
 <!-- Something like this maybe? -->
+<!-- i was thinking more about orienting the user to the layout of the entire workspace -->
 
-In general, DHRIFT is designed to be used in a variety of educational contexts. Ideally, whether remotely or in-person, learners will navigate through the workshop _at the same pace_ as the instructor. Each section (and subsection) is meant to promote a single core idea, so that participants are not overwhelmed by a large number of concepts coming at them all at once. This way, instructors can try to ensure that every one has a good grasp of the material before moving on to the next page.
+In general, DHRIFT is designed to be used in a variety of educational contexts. During synchronous remote or in-person workshops, learners will navigate through the lesson content *at the same pace* as the instructor. Each section (and subsection) is designed to promote a single concept, so that participant is not overwhelmed by mutiple concepts coming at them all at once. The advantage of combining interactive elements, such as quizzes, challenges, and interactive code activities, is that students can work through the content at varying speeds and each learner will receive the benefit of reinforcement, iteration, and connecting concepts to real-world contexts.
 
-As we will also discuss later, each workshop in our core curriculum builds upon concepts over time, such that previous material is continually reintegrated, refined, and placed in new contexts. As we have experienced in running our own workshops, scaffolding material in this manner promotes greater understanding and retention of the content.
+As we will also discuss later, each workshop in our core curriculum scaffolds concepts over time, such that previous material is continually reintegrated, refined, and placed in new contexts. As we have experienced in running our own workshops, scaffolding material in this manner promotes greater understanding and retention of the content.
 
 Workshop content itself can take many forms: text, images, code snippets, interactive exercises and quizzes, and more. Let's explore some of these features.
 
@@ -239,7 +239,7 @@ DHRIFT supports an R code editor, which allow you to write and run R code direct
 
 ### Command Line
 
-DHRIFT supports command line code editors, which allow you to run shell commands directly in your browser. This is useful for working with files, directories, and other system-related tasks. _Note that the command line editor is an emulated terminal and will not have access to your local file system._
+DHRIFT supports command line code editors, which allow you to run shell commands directly in your browser. This is useful for working with files, directories, and other system-related tasks. *Note that the command line editor is an emulated terminal and will not have access to your local file system.*
 
 ![Command Line Editor](/images/catch-our-dhrift/cl-editor.png)
 
@@ -249,6 +249,7 @@ DHRIFT supports HTML and CSS code editors, which allow you to write and style we
 
 ## Importing Workshop Materials
 
+<!-- we should ask them to import the markdown file for the answers to the wizard-->
 To make things easier for participants, you can import files directly into the JupyterLite environment with the click of a button. Here is an example:
 
 <Jupyter IPYNB='https://raw.githubusercontent.com/DHRI-Curriculum/workshops/main/uploads/pandas/pandas_workshop_2024.ipynb' />
@@ -305,7 +306,7 @@ When teaching with DHRIFT, there are a few best practices you can follow to ensu
 
 - **Identify Clear Learning Objectives**: Clearly present the learning objectives for each workshop and communicate them to your students at the outset. This will help students understand what they will be learning and why it is important.
 - **Provide Context**: Provide context for the material you are teaching and explain how it relates to the broader areas of research students might be interested in. Additionally, consider ethical considerations and implications of the material you are teaching.
-- **Engage With the Platform's Features**: Encourage students to actively engage with the material by attempting challenges, answering quizzes, or taking some time to write code on their own. 
+- **Engage With the Platform's Features**: Encourage students to actively engage with the material by attempting challenges, answering quizzes, or taking some time to write code on their own.
 - **Use a Variety of Teaching Methods**: Use a variety of teaching methods to keep students engaged and accommodate different learning styles. This could include different forms of group work in which students attempt to solve a problem together, or individual work in which students complete a task on their own.
 - **Encourage Student's Autonomous Learning**: Recommend not only that students revisit a workshop on their own after completion, but also to apply their newly acquired skills in a different domain. Give them some project ideas or tasks that they can try.
 
@@ -321,9 +322,9 @@ If you are teaching a live session using a workshop from the platform, you might
 
 ## Scaffolding a Workshop
 
-When teaching with DHRIFT, you may want to scaffold your session to guide students through the material in a structured and logical way. Scaffolding involves breaking down the material into manageable chunks and providing support and guidance to help students progress through the material. 
+When teaching with DHRIFT, you may want to scaffold your session to guide students through the material in a structured and logical way. Scaffolding involves breaking down the material into manageable chunks and providing support and guidance to help students progress through the material.
 
-The platform itself is designed to scaffold the learning experience, with workshops divided into sections and subsections that guide students through the material step by step. Still, it is a good idea as an instructor to work through the material yourself and identify which sections might be more challenging for students and where additional support might be needed. 
+The platform itself is designed to scaffold the learning experience, with workshops divided into sections and subsections that guide students through the material step by step. Still, it is a good idea as an instructor to work through the material yourself and identify which sections might be more challenging for students and where additional support might be needed.
 
 ## Teaching and Community Engagement
 
@@ -337,11 +338,11 @@ On that note, let's move on to the next section, where you will learn how to cre
 
 In this section, you will learn how to create and modify DHRIFT sites to host your own workshops and digital research institutes. You will learn how to use the DHRIFT wizard to create a sample institute based on your community’s needs and how to customize your DHRIFT site to display your own branding and content.
 
-Our wizard is meant to be a tool that allows you to create a new DHRIFT site with a few simple steps. You will be able to choose workshops from among our core curriculum, customize your site with your institute name, logo, and more, and generate a new standalone DHRIFT site that you can further customize to suit your preferences. 
+Our wizard is meant to be a tool that allows you to create a new DHRIFT site with a few simple steps. You will be able to choose workshops from among our core curriculum, customize your site with your institute name, logo, and more, and generate a new standalone DHRIFT site that you can further customize to suit your preferences.
 
 Let's get started!
 
-## We're Off to See the Wizard!
+## We're Off to See the Wizard
 
 Let's use the wizard to create a new DHRIFT site. The wizard is a simple form that will guide you through the process of setting up your site, choosing workshops, and customizing your site's appearance.
 
@@ -357,7 +358,7 @@ To begin using the wizard, please navigate to the following page:
 
 <Info>To open the wizard on a new tab, hold the <kbd>control</kbd> / <kbd>command</kbd> key while clicking the link.</Info>
 
-From there, we will fill out the form together. 
+From there, we will fill out the form together.
 
 <!--Ok, this is where most of my attention will go when I get to Arlington tonight-->
 
@@ -384,13 +385,13 @@ Depending on what you want to achieve with your workshop, you may need to follow
 
 ## Setting up Your Workshop Repository
 
-The first step in creating a new workshop is to set up a GitHub repository to house your workshop content. You can create a new repository from scratch or use an existing repository if you prefer. 
+The first step in creating a new workshop is to set up a GitHub repository to house your workshop content. You can create a new repository from scratch or use an existing repository if you prefer.
 
 Considering we have already set up a DHRIFT site and repository using the wizard, we can simply use that repository to house our new workshop and subsequently add it to the available workshops on our site.
 
-In general, you should be aware that the DHRIFT platform generates workshops by pointing to a specific repository that contains your workshop files. 
+In general, you should be aware that the DHRIFT platform generates workshops by pointing to a specific repository that contains your workshop files.
 
-For instance, in the following URL: https://app.dhrift.org/inst/?instUser=dhri-curriculum&instRepo=dhrift-site-template
+For instance, in the following URL: <https://app.dhrift.org/inst/?instUser=dhri-curriculum&instRepo=dhrift-site-template>
 
 ...the `instUser` parameter specifies the GitHub user or organization that owns the repository, and the `instRepo` parameter specifies the name of the repository. You can use these parameters to point to your own repository and display your workshops on your DHRIFT site. DHRIFT will automatically detect the workshops (markdown files) in your repository and display them on the workshops page.
 
@@ -519,9 +520,9 @@ This subsection introduces learners to the basics of programming and writing the
 This (sub)subsection covers how to write a simple "Hello, world!" program in Python.
 ```
 
-As you can see, we are utilizing level 1 headings for major sections like "Introduction" and "Getting Started" and level 2 headings for subsections like "Overview", "Learning Objectives", "Setting up Your Environment", etc. This structure helps to organize the content and make it easier for learners to follow along. 
+As you can see, we are utilizing level 1 headings for major sections like "Introduction" and "Getting Started" and level 2 headings for subsections like "Overview", "Learning Objectives", "Setting up Your Environment", etc. This structure helps to organize the content and make it easier for learners to follow along.
 
-Furthermore, we are using level 3 headings for additional (sub)subsections like "Installing Python" and "Hello, World!" to further break down the content. Note that level 3 headings will be displayed _on the same page_ as the level 1 or 2 heading they are nested under, and will not appear in the table of contents. This can be useful for breaking down content into smaller, more manageable sections without cluttering the table of contents or creating new pages.
+Furthermore, we are using level 3 headings for additional (sub)subsections like "Installing Python" and "Hello, World!" to further break down the content. Note that level 3 headings will be displayed *on the same page* as the level 1 or 2 heading they are nested under, and will not appear in the table of contents. This can be useful for breaking down content into smaller, more manageable sections without cluttering the table of contents or creating new pages.
 
 ## Adding Images
 
@@ -533,13 +534,13 @@ To add an image to your workshop, you can use standard markdown syntax for image
 ![Alt text](/path/to/image.jpg)
 ```
 
-In this syntax, `Alt text` is the alternative text for the image, which is displayed if the image fails to load (this should also comprise a short description of the image for accessibility purposes). `path/to/image.jpg` is the path to the image file in your repository. Typically, you will want to store your images in a subdirectory of your repository, such as `images/`, to keep your files organized. Even better would be to store the images in a designated folder for the workshop, e.g., `images/your-workshop`. Just make sure your folder title follows the _exact_ name of your workshop so DHRIFT knows where to look for it. You can also use a URL to an external image if needed.
+In this syntax, `Alt text` is the alternative text for the image, which is displayed if the image fails to load (this should also comprise a short description of the image for accessibility purposes). `path/to/image.jpg` is the path to the image file in your repository. Typically, you will want to store your images in a subdirectory of your repository, such as `images/`, to keep your files organized. Even better would be to store the images in a designated folder for the workshop, e.g., `images/your-workshop`. Just make sure your folder title follows the *exact* name of your workshop so DHRIFT knows where to look for it. You can also use a URL to an external image if needed.
 
 ## Code Snippets and Info Boxes
 
 ### Code Snippets
 
-DHRIFT workshops may also include inline code snippets to demonstrate programming concepts, provide examples, and guide learners through exercises. You can include code snippets in your workshop using standard markdown syntax for code blocks. 
+DHRIFT workshops may also include inline code snippets to demonstrate programming concepts, provide examples, and guide learners through exercises. You can include code snippets in your workshop using standard markdown syntax for code blocks.
 
 To create something like the following:
 
@@ -549,7 +550,7 @@ print("Hello, world!")
 
 ...you can use three backticks ````(```)```` to start and end the code block, followed by the language identifier (e.g., `python`) to specify the language of the code snippet.
 
-In this example, `python` specifies the language of the code snippet, which helps DHRIFT format the code block correctly. You can replace `python` with other supported languages like `javascript`, `html`, `console`, etc., as needed. 
+In this example, `python` specifies the language of the code snippet, which helps DHRIFT format the code block correctly. You can replace `python` with other supported languages like `javascript`, `html`, `console`, etc., as needed.
 
 ### Info Boxes
 
@@ -571,7 +572,7 @@ In this example, the `<Info>` tag creates an info box with the enclosed text. Th
 
 ## Incorporating Interactive Features
 
-DHRIFT workshops can include a variety of interactive features to engage learners and reinforce learning. 
+DHRIFT workshops can include a variety of interactive features to engage learners and reinforce learning.
 
 ### Quizzes
 
@@ -635,7 +636,7 @@ To ensure that your workshop is displayed correctly, keep in mind these checks:
 - Make sure your workshop markdown files are correctly formatted and free of syntactical errors.
 - Prepare all necessary assets (images, downloads, etc.) to be placed in designated folders in your repository.
 
-If everything looks good, there are a few ways you can add your workshop to your repository. If you are familiar with Git and GitHub, you can push your changes directly to your repository using Git commands. 
+If everything looks good, there are a few ways you can add your workshop to your repository. If you are familiar with Git and GitHub, you can push your changes directly to your repository using Git commands.
 
 For instance, you can add your files to the staging area, commit your changes, and push them to your repository using the following commands:
 
@@ -713,7 +714,7 @@ DHRIFT's platform is built with React, a JavaScript library for building user in
 If you are unfamiliar with React, we would recommend starting with the [React documentation](https://react.dev/learn) to get a sense of how React works and how you can use it to build user interfaces.
 </Info>
 
-If you take a look at the DHRIFT repository you forked, you will see a number of directories and files that make up the platform. 
+If you take a look at the DHRIFT repository you forked, you will see a number of directories and files that make up the platform.
 
 ### Components
 
@@ -722,5 +723,3 @@ One of the main directories you will likely be working with is `/components`. Th
 ### Styles
 
 The `/styles` directory contains the CSS files that style the DHRIFT platform. You can modify these files to change the appearance of the site, including colors, fonts, spacing, and more. For instance, you might want to update the color scheme of the site to match your institute's branding.
-
-
