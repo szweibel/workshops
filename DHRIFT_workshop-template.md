@@ -3,7 +3,8 @@ title: This is the title
 cover title: short title!
 description: A description of the workshop.
 
-programming_language: "choices are: jupyter, python, javascript, computer (for command line), or none"
+# for programming language, choices are: jupyter, python, javascript, computer (for command line), html_css, or none
+programming_language: python
 
 learning objectives:
     - Understand what Python is and, in general terms, what it can do.
@@ -70,7 +71,7 @@ resources:
 README: This workshop is a template for creating new workshops. Please read the instructions carefully.
 
 General instructions for editing this template:
-1) Duplicate this file (to avoid overwriting it) and rename/save it to the name of the workshop you are creating. Save the file as a Markdown file (`.md`) in the `workshops` folder, with hyphens to indicate spaces.
+1) Duplicate this file (to avoid overwriting it) and rename/save it to the name of the workshop you are creating. If you are creating your own workshop repository, save the file as a Markdown file (`.md`) in the `workshops` folder, with hyphens to indicate spaces.
 2) Edit the YAML front matter at the top of the file to include the correct information for your workshop (see more about that below).
 3) Edit the content of the workshop with your lessons.
 
@@ -91,7 +92,7 @@ For the metadata, you should typically include some or all of the following:
 - The resources, which should be a list of resources that are relevant to the workshop
 - The goals, which should be a list of goals that are relevant to the workshop
 
-The metadata you are currently seeing above is just an example, which you can use as a template for your own workshop. Make sure to follow the syntax exactly (or you will likely create errors), and to modify/delete any metadata that is not relevant to your workshop.
+The metadata you are currently seeing above is just an example, which you can use as a template for your own workshop. Make sure to follow the syntax exactly (or you will likely create errors), and to modify/delete any metadata that is not relevant to your workshop. It should be noted that the only truly required fields are title, cover title, and description. The other fields are optional but highly recommended for providing a complete and informative workshop experience.
 ---> 
 
 # Page 1
@@ -101,6 +102,38 @@ Welcome to my workshop! This is the first page (the first lesson).
 <!--- Each h1 and h2 markdown header (the #) indicates the beginning of a new page. Use them to structure lessons in your workshops. --->
 
 To add a lesson, simply type your lesson content below the header. You can use typical markdown styles to format your text.
+
+## Subsection 1
+
+This is a subsection of the first lesson.
+
+### Sub-subsection 1
+
+This is a sub-subsection of the first lesson. Note that level 3 headings will be displayed on the same page as the level 1 or 2 heading they are nested under, and will not appear in the table of contents. This can be useful for breaking down content into smaller, more manageable sections without cluttering the table of contents or creating new pages.
+
+In addition to text content, you can also add images to your workshop. Images can help illustrate concepts, provide visual interest, and make your workshop more engaging.
+
+### Images
+
+To add an image to your workshop, you can use standard markdown syntax for images. Here is an example:
+
+```markdown
+![Alt text](/path/to/image.jpg)
+```
+
+Replace `/path/to/image.jpg` with the path to your image file (located in designated folder in the /images folder)
+
+### Code Snippets
+
+You can include code snippets in your workshop using standard markdown syntax for code blocks. You can use three backticks (```) to start and end the code block, followed by the language identifier (e.g., python) to specify the language of the code snippet.
+
+```python
+print("Hello, world!")
+```
+
+In this example, python specifies the language of the code snippet, which helps DHRIFT format the code block correctly. You can replace python with other supported languages like javascript, html, console, etc., as needed.
+
+## Components
 
 There are several components you can incorporate into your lessons, including:
 
@@ -120,21 +153,13 @@ Here, `your_file1` and `your_file2` are the two files to download (you can add a
 Here's an interesting aside! 
 </Info>
 
-3. A way to link internally to other workshops.
+4. A way to link internally to other workshops.
 
-<Link workshop='python' page='56'>`Objects in Python`</Link>
+<Link workshop='python' page='5'> some text </Link>
 
 This is necessary when linking to another workshop page. 'workshop' is the workshop file name, and the 'page' can be found in the URL query string, for instance:   `?user=dhri-curriculum&repo=workshops&file=command-line&**page=15**&instUser=dhri-curriculum&instRepo=dhrift-site-template` 
 
-<!--- Most workshop lessons should include some form of a challenge, a solution, and an evaluation. See below for an example of each. --->
-
-## Challenge
-
-It's a good idea to include challenges in your workshop to help participants practice what they've learned.
-
-## Solution
-
-Provide a solution to the challenge.
+<!--- Most workshop lessons should include some form of a challenge, a solution, key terms, and an evaluation. See below for an example of each. --->
 
 ## Evaluation
 
@@ -161,6 +186,20 @@ definition 2
 </Keywords>
 
 <!--- Keywords are a good way to reinforce the key concepts of the lesson. Definitions cannot be multiple paragraphs. --->
+
+<!--- To create a challenge with a solution that you can show/hide, you can use the following custom markdown syntax: --->
+
+### Challenges
+
+Where are DHRIFT workshops stored?
+
+### Solution
+
+<Secret>
+In a GitHub repository.
+</Secret>
+
+In this example, the (optional heading) Challenge section poses a question or problem, and the <Secret> tag creates a hidden solution that learners can reveal by clicking a button. This allows learners to attempt the challenge on their own before checking the solution.
 
 # Section 2
 
