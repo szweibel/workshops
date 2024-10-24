@@ -13,8 +13,12 @@ At the top of each workshop file, metadata provides essential details to guide i
 - **Learning Goals**: Skills and competencies participants will acquire by completing the workshop.
 - **Prerequisites**: Knowledge or tools participants should have before starting the workshop.
 - **Duration**: Estimated time required to complete the workshop.
-- **Tools**: Software, libraries, or other resources needed (e.g., Python, Jupyter Notebooks).
-- **Assessment**: Types of assessments (e.g., quizzes) embedded in the workshop.
+- **programming_language**: A special key that tells DHRIFT which side bar tool to use. Possible choices:
+  - 'jupyter': includes a WASM Jupyter Notebook instance
+  - 'command_line': includes a simulated command line
+  - 'javascript': includes a JavaScript code editor
+  - 'python': includes a Python code editor
+  - 'html': includes an editor similar to jsfiddle
 
 ### 2. Interactive Features
 The workshops are built with **DHRIFT** (Digital Humanities Research Institute Framework for Teaching) in mind, which provides the following interactive elements:
