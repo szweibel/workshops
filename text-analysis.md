@@ -4,6 +4,8 @@ description: 'Analyzing textual data opens a new way to interrogate the world. P
 cover_image: '/images/workshops/img7.jpg'
 programming_language: "jupyter"
 
+tracks: ["programming", "python"]
+
 learning objectives:
     - Expand data manipulation possibilities beyond quantitative data
     - Experiment and play with data, this time with canonical or well-established data, helping us understand the conceptualization and operationalization steps of analysis.
