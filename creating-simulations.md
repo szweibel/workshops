@@ -5,6 +5,8 @@ description: "In this workshop, you will learn how to create very basic simulati
 
 programming_language: 'jupyter'
 
+tracks: ["python"]
+
 learning objectives:
     - 'Become familiar with core programming concepts, including classes, functions, and methods.'
     - 'Understand the interplay between functions and methods in a larger, more complex program.'
