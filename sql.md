@@ -6,8 +6,6 @@ description: Introduction to databases and SQL
 programming_language: "jupyter"
 published: false
 
-tracks: ["data", "sql"]
-
 learning objectives:
     - Understand what Python is and, in general terms, what it can do.
     - Run Python programs, both by interacting directly with the interpreter and by preparing and running scripts.
