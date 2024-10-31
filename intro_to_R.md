@@ -4,6 +4,8 @@ published: false
 cover title: R
 description: R is an increasingly popular language for data analysis, especially in academia. 
 programming_language: R
+tracks: ["R"]
+
 learning objectives:
     - Familiarize you with R language
     - Understand R syntax, logic, and 
