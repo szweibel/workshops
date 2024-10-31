@@ -3,6 +3,8 @@ title: 'Data Literacies'
 cover title: Data Literacies
 description: 'What is data? What counts as data? What are the ethical implications when working with data? How can we manage our data? These are questions we will explore throughout the workshop. Data is foundational to nearly all digital projects and often help us to understand and express our ideas and narratives. Hence, in order to do digital work, we should know how data is captured, constructed, and manipulated. We will also engage with the ethical dimensions of what it means to work with data, from collection to visualization to management.'
 
+tracks: ["fundamentals", "data"]
+
 learning objectives:
     - Define data in the context of digital research
     - Distinguish forms of data and data formats
