@@ -5,6 +5,7 @@ description: 'The command line is a way to interact with our computer via text. 
 cover_image: '/images/workshops/Cover_RT-11_help.jpg'
 
 programming_language: 'computer'
+tracks: ["fundamentals", "programming"]
 
 learning objectives: 
     - description: 'At the end of this workshop, you will be able to' 
