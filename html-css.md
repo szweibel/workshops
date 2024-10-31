@@ -5,6 +5,8 @@ description: 'HTML (Hypertext Markup Language) is used to create and organize th
 
 programming_language: html
 
+tracks: ["fundamentals", "web development"]
+
 learning objectives:
     - Familiarize yourself with the anatomy of a webpage and how the Internet works.
     - Understand the basics of the HTML and CSS markup languages.
