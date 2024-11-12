@@ -14,6 +14,7 @@ tracks:
       - "python"
       - "pandas"
       - "creating-simulations"
+      - "text-analysis"
 
   - name: "Web Development"
     short_name: "web-dev"
