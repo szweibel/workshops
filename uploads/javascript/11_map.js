@@ -1,43 +1,69 @@
-let poemMap;
-poemMap = L.map("map");
+// 11_map.js
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(poemMap);
+// Use native DOMContentLoaded as it doesn't rely on jQuery here
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Map script loaded, DOM ready.");
 
-poemMap.setView([40.7128, -74.0060], 16);
+    // Coordinates (use const as they won't change)
+    const nycCoords = [40.7128, -74.0060];
+    const timesSquareCoords = [40.7580, -73.9855];
+    const gradCenterCoords = [40.7486, -73.9840]; // Approx. GC location
 
-const timesSquare = L.marker([40.7580, -73.9855]).addTo(poemMap);
+    // 1. Initialize the map
+    const map = L.map('map').setView(nycCoords, 13); // Centered on NYC, zoom level 13
 
-timesSquare.bindPopup("<b>Times Square</b>");
+    // 2. Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-const circle = L.circle([40.7580, -73.9855], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(poemMap);
+    // 3. Add Markers
+    const timesSquareMarker = L.marker(timesSquareCoords).addTo(map);
+    timesSquareMarker.bindPopup("<b>Times Square</b><br>Iconic NYC location.");
 
-const polyline = L.polyline([
-    [40.7580, -73.9855],
-    [40.7486, -73.9840]
-], {
-    color: 'blue'
-}).addTo(poemMap);
+    const gradCenterMarker = L.marker(gradCenterCoords).addTo(map)
+        .bindPopup("<b>The Graduate Center, CUNY</b>");
 
-polyline.bindPopup("<b>Times Square to the Graduate Center</b>");
+    // 4. Add Shapes
+    const circle = L.circle(timesSquareCoords, {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.3, // Slightly less opaque
+        radius: 500 // in meters
+    }).addTo(map);
+    circle.bindPopup("Approx. 500m radius around Times Square");
 
-circle.bindPopup("I'm a circle!");
+    const polyline = L.polyline([timesSquareCoords, gradCenterCoords], {
+        color: 'blue',
+        weight: 3 // Slightly thicker line
+    }).addTo(map);
+    polyline.bindPopup("Line from Times Square to Grad Center");
 
-const latLng = timesSquare.getLatLng();
-console.log(latLng.lat);
-console.log(latLng.lng);
+    // 5. Map Events
+    map.on('click', function(e) {
+        const coords = e.latlng;
+        const popupContent = `You clicked at:<br>Lat: ${coords.lat.toFixed(4)}<br>Lng: ${coords.lng.toFixed(4)}`;
+        L.popup()
+            .setLatLng(coords)
+            .setContent(popupContent)
+            .openOn(map);
+        console.log(`Map clicked at: Lat ${coords.lat}, Lng ${coords.lng}`);
+    });
 
-poemMap.panTo(timesSquare.getLatLng());
+    map.on('zoomend', function() {
+        console.log("Current map zoom level:", map.getZoom());
+    });
 
-poemMap.on('click', function(e) {
-    const latLng = e.latlng;
-    console.log(latLng.lat);
-    console.log(latLng.lng);
-});
+    // Marker click event example
+    timesSquareMarker.on('click', function() {
+         console.log("Times Square marker clicked (separate event)!");
+         // this.openPopup(); // If you want the original popup to still open
+    });
+
+    // Example: Pan map to Times Square
+    // map.panTo(timesSquareCoords); // Uncomment to pan on load
+
+    console.log("Map features added.");
+
+}); // End DOMContentLoaded listener

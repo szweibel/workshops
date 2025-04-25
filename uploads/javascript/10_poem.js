@@ -1,37 +1,72 @@
-//Part 1 - Define the extra information section for the poem
-$("#info").html("<p>Extra info will go here.</p>");
+// 10_poem.js
 
-// Part 2 - Display the poem and allow for clicking on words
-$.getJSON("poem.json", function(data){ // data variable is the JSON object
-  let poemText; // Define a new variable to hold all text
-  poemText = "<blockquote><p>"; // Open the starting tags
-  // Now you can iterate (map) over the data variable’s .lines property:
-  data.lines.map(function(line){ // We get a variable, line
-    // Define a blank lineText.
-    let lineText = "";
-    // Now iterate over each line. This part should be familiar to you from before
-    line.map(function(word){
-      let wordString;
-      wordString = word.text;
-      if (word.info){
-        wordString = "<a href='#' data-info='" + word.info + "'>" + wordString + "</a>";
-      }
-      lineText = lineText + wordString + " "; // Add the word to the lineText variable with spacing
-    });
-    // Add lineText with a line break to the poemText
-    poemText = poemText + lineText + "<br/>";
-  });
-  // Close the poemText tags
-  poemText = poemText + "</p></blockquote>";
-  // Replace the content of #poem
-  $("#poem").html(poemText);
-  // Now that we have the data, we can add the click event to the poem
-  $("#poem a").click(function(){
-    let infoText, clickedWord, clickedInfo;
-    clickedWord = $( this ).text();
-    // .data("info") looks for the data-info HTML attribute
-    clickedInfo = $( this ).data("info");
-    infoText = clickedInfo;
-    $("#info").html(infoText);
-  });
-}); // Close the getJSON method and callback function
+$(document).ready(function() {
+    console.log("Poem page ready.");
+
+    const poemContainer = $("#poem");
+    const infoContainer = $("#info");
+
+    // Initial message
+    infoContainer.html("<p>Click on a highlighted term above.</p>");
+
+    // Use jQuery's getJSON method to fetch data from poem.json
+    $.getJSON("poem.json", function(data) {
+        console.log("Poem data loaded:", data);
+
+        let poemHtml = "<blockquote>"; // Start the blockquote for the poem
+
+        // Iterate through each line in the data using Array.forEach
+        data.lines.forEach(function(lineArray) {
+            poemHtml += "<p>"; // Start a paragraph for the line
+
+            // Iterate through each word object in the current lineArray
+            lineArray.forEach(function(wordObject) {
+                // Check if the word has an 'info' property and it's not empty
+                if (wordObject.info && wordObject.info.trim() !== "") {
+                    // Sanitize info text slightly for attribute (basic)
+                    const safeInfo = wordObject.info.replace(/"/g, '"').replace(/'/g, ''');
+                    // Wrap the word in an <a> tag, store info in data-info attribute
+                    poemHtml += `<a href="#" class="info-term" data-info="${safeInfo}">${wordObject.text}</a> `;
+                } else {
+                    // If no info, just add the word text
+                    poemHtml += wordObject.text + " ";
+                }
+            }); // End word loop
+
+            poemHtml += "</p>"; // End the paragraph for the line
+        }); // End line loop
+
+        poemHtml += "</blockquote>"; // End the blockquote
+
+        // Replace the content of the #poem div with the generated HTML
+        poemContainer.html(poemHtml);
+
+        // --- Add Event Listener AFTER poem is loaded using Event Delegation ---
+        poemContainer.on("click", ".info-term", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const clickedElement = $(this); // The specific <a> tag clicked
+            const infoText = clickedElement.data("info"); // Retrieve info from data-info attribute
+            const wordText = clickedElement.text(); // Get the text of the word itself
+
+            // Display the info text in the #info div
+            // Using template literals for cleaner formatting
+            infoContainer.html(`<p><strong>${wordText}:</strong> ${infoText}</p>`);
+
+            // Add a class to visually indicate the info box is active
+            infoContainer.addClass("active-info");
+
+            // Optional: Highlight the clicked term (remove from others first)
+            $('.info-term').removeClass('term-active'); // Remove from all
+            clickedElement.addClass('term-active'); // Add to clicked one
+             // Add CSS for .term-active in poem.css if using this (e.g., background: yellow;)
+
+        }); // End click handler
+
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+        // Handle errors if poem.json cannot be loaded
+        console.error("Error loading poem.json:", textStatus, errorThrown);
+        poemContainer.html("<p style='color:red; font-weight:bold;'>Sorry, could not load the poem data. Please check the file path and ensure it's valid JSON.</p>");
+    }); // End of $.getJSON
+
+}); // End of $(document).ready()

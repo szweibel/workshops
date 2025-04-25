@@ -1,4 +1,4 @@
-const nyc = {
+const nynycNeighborhoods = {
 "type": "FeatureCollection",
                                                                                 
 "features": [
