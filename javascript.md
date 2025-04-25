@@ -1,7 +1,9 @@
 ---
-title: Introduction to JavaScript for Graduate Students
+title: Intro to Javascript
+cover title: Javascript
 description: This is a hands-on introduction to JavaScript, the programming language of the web. This course is designed for graduate students and researchers interested in developing websites or creating interactive data visualizations, even without a computer science background. By the end of this course, you will be able to read, write, and adapt basic JavaScript code, utilize common libraries like jQuery and Leaflet, and build your own simple web projects.
 cover_image: /images/workshop/img2.jpg
+
 readings:
     - "Mozilla Developer Network (MDN) JavaScript Guide: [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)"
     - "Eloquent JavaScript (Online Book): [Eloquent JavaScript](https://eloquentjavascript.net/) - A more in-depth, free resource."
