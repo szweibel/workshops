@@ -304,41 +304,45 @@ This is useful for debugging or when you need to handle different types of data 
 
 ## Review Questions
 
-1.  Which command is generally preferred for displaying test output in the browser console?
+Which command is generally preferred for displaying test output in the browser console?
+
 <Quiz>
-    - `alert()`
-    - `console.log()`*
-    - `document.write()`
-    - `print()`
+- `alert()`
+- `console.log()`*
+- `document.write()`
+- `print()`
 </Quiz>
 
-1.  Select all the *strictly* true comparisons:
+Select all the *strictly* true comparisons:
+   
 <Quiz>
-    - `100 === "100"`
-    - `100 !== "100"`*
-    - `5 > 4`*
-    - `'apple' === 'Apple'`
-    - `true === true`*
-    - `0 === false`
+- `100 === "100"`
+- `100 !== "100"`*
+- `5 > 4`*
+- `'apple' === 'Apple'`
+- `true === true`*
+- `0 === false`
 </Quiz>
 
-2.  Which of these variable names are valid in JavaScript? (Select all that apply)
+Which of these variable names are valid in JavaScript? (Select all that apply)
+   
 <Quiz>
-    - `_count`*
-    - `$amount`*
-    - `1stPlace`
-    - `firstPlace`*
-    - `user-name`
-    - `let`
-    - `MAX_ITEMS`*
+- `_count`*
+- `$amount`*
+- `1stPlace`
+- `firstPlace`*
+- `user-name`
+- `let`
+- `MAX_ITEMS`*
 </Quiz>
 
-3.  When should you primarily use `const` to declare a variable?
+When should you primarily use `const` to declare a variable?
+
 <Quiz>
-    - When the variable's value might change later.
-    - When you are declaring a number.
-    - When the variable's value will not be reassigned after declaration.*
-    - Only for boolean values.
+- When the variable's value might change later.
+- When you are declaring a number.
+- When the variable's value will not be reassigned after declaration.*
+- Only for boolean values.
 </Quiz>
 
 ## Challenges
@@ -697,41 +701,44 @@ if (firstChoice === "LEFT") {
 
 ## Review Questions
 
-1.  The `prompt()` function returns user input as which data type?
+The `prompt()` function returns user input as which data type?
+
 <Quiz>
-    - Number
-    - Boolean
-    - String*
-    - Object
+- Number
+- Boolean
+- String*
+- Object
 </Quiz>
 
-2.  What is the primary purpose of the `break` statement inside a `switch` block?
+What is the primary purpose of the `break` statement inside a `switch` block?
+
 <Quiz>
-    - To indicate the default case.
-    - To stop the entire script.
-    - To exit the `switch` statement after a matching `case` is executed.*
-    - To repeat the current `case`.
+- To indicate the default case.
+- To stop the entire script.
+- To exit the `switch` statement after a matching `case` is executed.*
+- To repeat the current `case`.
 </Quiz>
 
-3.  Examine this code. What will be logged to the console if `score` is `75`?
-    ```javascript
-    const score = 75;
-    if (score >= 90) {
-      console.log("A");
-    } else if (score >= 80) {
-      console.log("B");
-    } else if (score >= 70) {
-      console.log("C");
-    } else {
-      console.log("D");
-    }
-    ```
-    <Quiz>
-    - A
-    - B
-    - C*
-    - D
-    </Quiz>
+Examine this code. What will be logged to the console if `score` is `75`?
+  ```javascript
+  const score = 75;
+  if (score >= 90) {
+    console.log("A");
+  } else if (score >= 80) {
+    console.log("B");
+  } else if (score >= 70) {
+    console.log("C");
+  } else {
+    console.log("D");
+  }
+  ```
+
+<Quiz>
+- A
+- B
+- C*
+- D
+</Quiz>
 
 ## Challenges
 
@@ -1203,36 +1210,40 @@ while (userCommand !== 'QUIT') {
 
 ## Review Questions
 
-1.  If `myArray` is `['a', 'b', 'c']`, what is `myArray[1]`?
+If `myArray` is `['a', 'b', 'c']`, what is `myArray[1]`?
+
 <Quiz>
-    - 'a'
-    - 'b'*
-    - 'c'
-    - undefined
+- 'a'
+- 'b'*
+- 'c'
+- undefined
 </Quiz>
 
-2.  What does the `.push()` method do to an array?
+What does the `.push()` method do to an array?
+
 <Quiz>
-    - Removes the last element.
-    - Removes the first element.
-    - Adds an element to the beginning.
-    - Adds an element to the end.*
+- Removes the last element.
+- Removes the first element.
+- Adds an element to the beginning.
+- Adds an element to the end.*
 </Quiz>
 
-3.  Consider the loop: `for (let i = 0; i < 3; i++) { console.log(i); }`. What will be logged to the console?
+Consider the loop: `for (let i = 0; i < 3; i++) { console.log(i); }`. What will be logged to the console?
+
 <Quiz>
-    - 1, 2, 3
-    - 0, 1, 2*
-    - 0, 1, 2, 3
-    - 1, 2
+- 1, 2, 3
+- 0, 1, 2*
+- 0, 1, 2, 3
+- 1, 2
 </Quiz>
 
-4.  What is the primary risk associated with `while` loops if not coded carefully?
+What is the primary risk associated with `while` loops if not coded carefully?
+
 <Quiz>
-    - They are slower than `for` loops.
-    - They can only loop through arrays.
-    - They might cause an infinite loop if the condition never becomes false.*
-    - They cannot use a counter variable.
+- They are slower than `for` loops.
+- They can only loop through arrays.
+- They might cause an infinite loop if the condition never becomes false.*
+- They cannot use a counter variable.
 </Quiz>
 
 ## Challenges
@@ -1703,36 +1714,40 @@ By using functions, we've made the code modular and easier to understand. Each f
 
 ## Review Questions
 
-1.  What is the primary benefit of using functions in programming?
+What is the primary benefit of using functions in programming?
+
 <Quiz>
-    - They make the code run faster.
-    - They allow you to reuse blocks of code, making it organized and maintainable.*
-    - They are the only way to use loops.
-    - They automatically handle errors.
+- They make the code run faster.
+- They allow you to reuse blocks of code, making it organized and maintainable.*
+- They are the only way to use loops.
+- They automatically handle errors.
 </Quiz>
 
-2.  In the function definition `function calculateArea(width, height)`, what are `width` and `height` called?
+In the function definition `function calculateArea(width, height)`, what are `width` and `height` called?
+
 <Quiz>
-    - Arguments
-    - Methods
-    - Parameters*
-    - Returns
+- Arguments
+- Methods
+- Parameters*
+- Returns
 </Quiz>
 
-3.  Variables declared with `let` and `const` inside a `for` loop's code block (`{...}`) are accessible:
+Variables declared with `let` and `const` inside a `for` loop's code block (`{...}`) are accessible:
+
 <Quiz>
-    - Only inside that `for` loop block.*
-    - Anywhere within the function containing the loop.
-    - Globally throughout the script.
-    - Only before the loop starts.
+- Only inside that `for` loop block.*
+- Anywhere within the function containing the loop.
+- Globally throughout the script.
+- Only before the loop starts.
 </Quiz>
 
-4.  How do you access the value associated with the key `email` in an object named `user`? (Select all correct ways)
+How do you access the value associated with the key `email` in an object named `user`? (Select all correct ways)
+
 <Quiz>
-    - `user(email)`
-    - `user.email`*
-    - `user[email]` (Only if `email` is a variable holding the string "email")
-    - `user["email"]`*
+- `user(email)`
+- `user.email`*
+- `user[email]` (Only if `email` is a variable holding the string "email")
+- `user["email"]`*
 </Quiz>
 
 ## Challenges
@@ -1998,36 +2013,40 @@ Debugging is a skill that improves with practice. Don't get discouraged! Treat e
 
 ## Review Questions
 
-1.  An error caused by forgetting a closing parenthesis `)` is most likely a:
+An error caused by forgetting a closing parenthesis `)` is most likely a:
+
 <Quiz>
-    - `TypeError`
-    - `ReferenceError`
-    - `SyntaxError`*
-    - Logical Error
+- `TypeError`
+- `ReferenceError`
+- `SyntaxError`*
+- Logical Error
 </Quiz>
 
-2.  If the console shows `Uncaught ReferenceError: myVar is not defined`, what is the most likely cause?
+If the console shows `Uncaught ReferenceError: myVar is not defined`, what is the most likely cause?
+
 <Quiz>
-    - You tried to add a string to a number.
-    - You forgot a semicolon.
-    - You are using a variable that hasn't been declared or is out of scope.*
-    - Your `if` statement condition is wrong.
+- You tried to add a string to a number.
+- You forgot a semicolon.
+- You are using a variable that hasn't been declared or is out of scope.*
+- Your `if` statement condition is wrong.
 </Quiz>
 
-3.  Code that runs without crashing but produces the wrong answer contains a:
+Code that runs without crashing but produces the wrong answer contains a:
+
 <Quiz>
-    - `TypeError`
-    - `SyntaxError`
-    - `ReferenceError`
-    - Logical Error*
+- `TypeError`
+- `SyntaxError`
+- `ReferenceError`
+- Logical Error*
 </Quiz>
 
-4.  Which debugging technique involves explaining your code step-by-step, often out loud?
+Which debugging technique involves explaining your code step-by-step, often out loud?
+
 <Quiz>
-    - Divide and Conquer
-    - Using `console.log()`
-    - Writing Pseudo-code
-    - Rubber Duck Debugging*
+- Divide and Conquer
+- Using `console.log()`
+- Writing Pseudo-code
+- Rubber Duck Debugging*
 </Quiz>
 
 ## Challenges
@@ -2234,36 +2253,40 @@ This Stage -> Commit -> Push cycle is fundamental to using Git and GitHub.
 
 ## Review Questions
 
-1.  What is the primary function of Git?
+What is the primary function of Git?
+
 <Quiz>
-    - To host websites online.
-    - To edit code files.
-    - To track changes to files over time (version control).*
-    - To manage software licenses.
+- To host websites online.
+- To edit code files.
+- To track changes to files over time (version control).*
+- To manage software licenses.
 </Quiz>
 
-2.  What is GitHub primarily used for?
+What is GitHub primarily used for?
+
 <Quiz>
-    - Running JavaScript code directly.
-    - Hosting Git repositories remotely for backup and collaboration.*
-    - Designing user interfaces.
-    - Compiling code.
+- Running JavaScript code directly.
+- Hosting Git repositories remotely for backup and collaboration.*
+- Designing user interfaces.
+- Compiling code.
 </Quiz>
 
-3.  In the Git workflow, what does "staging" mean?
+In the Git workflow, what does "staging" mean?
+
 <Quiz>
-    - Saving the file to your hard drive.
-    - Uploading the file to GitHub.
-    - Marking changes that will be included in the next commit.*
-    - Reverting changes to a previous version.
+- Saving the file to your hard drive.
+- Uploading the file to GitHub.
+- Marking changes that will be included in the next commit.*
+- Reverting changes to a previous version.
 </Quiz>
 
-4.  What command uploads your local commits to your remote GitHub repository?
+What command uploads your local commits to your remote GitHub repository?
+
 <Quiz>
-    - `git commit`
-    - `git stage`
-    - `git init`
-    - `git push`* (or clicking "Sync Changes" in VSCode)
+- `git commit`
+- `git stage`
+- `git init`
+- `git push`* (or clicking "Sync Changes" in VSCode)
 </Quiz>
 
 ## Challenge
@@ -2563,36 +2586,40 @@ This is how JavaScript makes web pages dynamic. We'll explore DOM manipulation (
 
 ## Review Questions
 
-1.  What is the primary role of HTML?
+What is the primary role of HTML?
+
 <Quiz>
-    - To define the visual style and layout.
-    - To add interactivity and dynamic behavior.
-    - To define the structure and content of a webpage.*
-    - To store data on the server.
+- To define the visual style and layout.
+- To add interactivity and dynamic behavior.
+- To define the structure and content of a webpage.*
+- To store data on the server.
 </Quiz>
 
-2.  Which HTML tag is used to link an external CSS file?
+Which HTML tag is used to link an external CSS file?
+
 <Quiz>
-    - `<script>`
-    - `<style>`
-    - `<meta>`
-    - `<link>`*
+- `<script>`
+- `<style>`
+- `<meta>`
+- `<link>`*
 </Quiz>
 
-3.  In CSS, which selector is used to target an element with the attribute `class="warning"`?
+In CSS, which selector is used to target an element with the attribute `class="warning"`?
+
 <Quiz>
-    - `warning`
-    - `#warning`
-    - `.warning`*
-    - `[class=warning]`
+- `warning`
+- `#warning`
+- `.warning`*
+- `[class=warning]`
 </Quiz>
 
-4.  Which selector is generally the *most* specific in CSS?
+Which selector is generally the *most* specific in CSS?
+
 <Quiz>
-    - Type selector (e.g., `p`)
-    - Class selector (e.g., `.info`)
-    - ID selector (e.g., `#header`)*
-    - Universal selector (`*`)
+- Type selector (e.g., `p`)
+- Class selector (e.g., `.info`)
+- ID selector (e.g., `#header`)*
+- Universal selector (`*`)
 </Quiz>
 
 ## Challenges
@@ -2963,36 +2990,40 @@ jQuery often requires less code for the same result, especially when selecting m
 
 ## Review Questions
 
-1.  In jQuery, what does the `$` symbol typically represent?
+In jQuery, what does the `$` symbol typically represent?
+
 <Quiz>
-    - A variable declaration
-    - A CSS class selector
-    - The jQuery function/object*
-    - A comment
+- A variable declaration
+- A CSS class selector
+- The jQuery function/object*
+- A comment
 </Quiz>
 
-2.  Which jQuery selector would target an HTML element with `id="main-nav"`?
+Which jQuery selector would target an HTML element with `id="main-nav"`?
+
 <Quiz>
-    - `$('.main-nav')`
-    - `$('#main-nav')`*
-    - `$('main-nav')`
-    - `$('id=main-nav')`
+- `$('.main-nav')`
+- `$('#main-nav')`*
+- `$('main-nav')`
+- `$('id=main-nav')`
 </Quiz>
 
-3.  Which jQuery method is used to set the HTML content of an element?
+Which jQuery method is used to set the HTML content of an element?
+
 <Quiz>
-    - `.text()`
-    - `.content()`
-    - `.value()`
-    - `.html()`*
+- `.text()`
+- `.content()`
+- `.value()`
+- `.html()`*
 </Quiz>
 
-4.  Why is it common practice to wrap jQuery code inside `$(document).ready(function() { ... });`?
+Why is it common practice to wrap jQuery code inside `$(document).ready(function() { ... });`?
+
 <Quiz>
-    - To make the code run faster.
-    - To ensure the code only runs after the HTML DOM is fully loaded and ready.*
-    - To automatically include the jQuery library.
-    - To handle errors more effectively.
+- To make the code run faster.
+- To ensure the code only runs after the HTML DOM is fully loaded and ready.*
+- To automatically include the jQuery library.
+- To handle errors more effectively.
 </Quiz>
 
 ## Challenges
@@ -3437,36 +3468,40 @@ This example demonstrates fetching external data, processing it with loops and c
 
 ## Review Questions
 
-1.  What is the primary advantage of using a separate JSON file for the poem data instead of embedding it directly in `poem.js`?
+What is the primary advantage of using a separate JSON file for the poem data instead of embedding it directly in `poem.js`?
+
 <Quiz>
-    - It makes the JavaScript code run faster.
-    - It separates data from code, making both easier to manage and update.*
-    - JSON files can include functions, unlike JavaScript objects.
-    - It's the only way to use loops.
+- It makes the JavaScript code run faster.
+- It separates data from code, making both easier to manage and update.*
+- JSON files can include functions, unlike JavaScript objects.
+- It's the only way to use loops.
 </Quiz>
 
-2.  In the code `poemHtml += <a href="#" class="info-term" data-info="${wordObject.info}">${wordObject.text}</a>`, what is the purpose of `data-info="${wordObject.info}"`?
+In the code `poemHtml += <a href="#" class="info-term" data-info="${wordObject.info}">${wordObject.text}</a>`, what is the purpose of `data-info="${wordObject.info}"`?
+
 <Quiz>
-    - To style the link using CSS.
-    - To store the information string directly on the HTML element for later retrieval.*
-    - To create a link to an external website with more info.
-    - To define the text content of the link.
+- To style the link using CSS.
+- To store the information string directly on the HTML element for later retrieval.*
+- To create a link to an external website with more info.
+- To define the text content of the link.
 </Quiz>
 
-3.  What does `event.preventDefault();` do inside the click handler for the `<a>` tags?
+What does `event.preventDefault();` do inside the click handler for the `<a>` tags?
+
 <Quiz>
-    - It stops the click event from reaching parent elements.
-    - It prevents the browser's default action for the link (like navigating to `#`).*
-    - It hides the element that was clicked.
-    - It reloads the page.
+- It stops the click event from reaching parent elements.
+- It prevents the browser's default action for the link (like navigating to `#`).*
+- It hides the element that was clicked.
+- It reloads the page.
 </Quiz>
 
-4.  Why is using `.on("click", ".info-term", ...)` attached to `#poem` generally preferred over attaching `.click()` directly to every `.info-term` element?
+Why is using `.on("click", ".info-term", ...)` attached to `#poem` generally preferred over attaching `.click()` directly to every `.info-term` element?
+
 <Quiz>
-    - It's shorter to type.
-    - It only works for the first `.info-term` element.
-    - It uses event delegation, which is more efficient and works for elements added after the initial page load.*
-    - It automatically prevents the default link behavior.
+- It's shorter to type.
+- It only works for the first `.info-term` element.
+- It uses event delegation, which is more efficient and works for elements added after the initial page load.*
+- It automatically prevents the default link behavior.
 </Quiz>
 
 ## Challenges
@@ -3747,36 +3782,40 @@ Leaflet offers a vast API for customization, custom icons, different base maps, 
 
 ## Review Questions
 
-1.  In Leaflet, what is the purpose of a Tile Layer?
+In Leaflet, what is the purpose of a Tile Layer?
+
 <Quiz>
-    - To display markers for specific locations.
-    - To draw shapes like circles and polygons.
-    - To provide the underlying base map image (e.g., streets, satellite).*
-    - To handle user click events on the map.
+- To display markers for specific locations.
+- To draw shapes like circles and polygons.
+- To provide the underlying base map image (e.g., streets, satellite).*
+- To handle user click events on the map.
 </Quiz>
 
-2.  What is the function `L.map('mapDivId')` used for?
+What is the function `L.map('mapDivId')` used for?
+
 <Quiz>
-    - To add a marker to the map.
-    - To define the map's tile layer URL.
-    - To initialize a map instance within the HTML element with the specified ID.*
-    - To set the map's zoom level.
+- To add a marker to the map.
+- To define the map's tile layer URL.
+- To initialize a map instance within the HTML element with the specified ID.*
+- To set the map's zoom level.
 </Quiz>
 
-3.  Which method is used to add a layer (like a marker or tile layer) to a Leaflet map instance (e.g., `myMap`)?
+Which method is used to add a layer (like a marker or tile layer) to a Leaflet map instance (e.g., `myMap`)?
+
 <Quiz>
-    - `.setView(myMap)`
-    - `.bindPopup(myMap)`
-    - `.on('add', myMap)`
-    - `.addTo(myMap)`*
+- `.setView(myMap)`
+- `.bindPopup(myMap)`
+- `.on('add', myMap)`
+- `.addTo(myMap)`*
 </Quiz>
 
-4.  In a Leaflet map click event handler `map.on('click', function(e) { ... })`, how do you typically access the latitude and longitude of the click location?
+In a Leaflet map click event handler `map.on('click', function(e) { ... })`, how do you typically access the latitude and longitude of the click location?
+
 <Quiz>
-    - `e.coords`
-    - `e.location`
-    - `e.latlng`*
-    - `map.getClickCoords()`
+- `e.coords`
+- `e.location`
+- `e.latlng`*
+- `map.getClickCoords()`
 </Quiz>
 
 ## Challenges
@@ -4181,36 +4220,40 @@ Save and refresh. You should now see the list of neighborhoods. Clicking a name 
 
 ## Review Questions
 
-1.  In GeoJSON, what does a "FeatureCollection" typically contain?
+In GeoJSON, what does a "FeatureCollection" typically contain?
+
 <Quiz>
-    - A single point's coordinates.
-    - An array of style properties.
-    - An array of "Feature" objects.*
-    - The map's tile layer URL.
+- A single point's coordinates.
+- An array of style properties.
+- An array of "Feature" objects.*
+- The map's tile layer URL.
 </Quiz>
 
-2.  What information is typically stored in the `properties` object of a GeoJSON "Feature"?
+What information is typically stored in the `properties` object of a GeoJSON "Feature"?
+
 <Quiz>
-    - The type of geometry (e.g., "Polygon").
-    - The coordinate data for the shape.
-    - Non-spatial attributes like name, ID, or description.*
-    - The map projection system.
+- The type of geometry (e.g., "Polygon").
+- The coordinate data for the shape.
+- Non-spatial attributes like name, ID, or description.*
+- The map projection system.
 </Quiz>
 
-3.  In Leaflet's `L.geoJSON(data, { onEachFeature: function(feature, layer) {...} })`, what does the `layer` parameter represent?
+In Leaflet's `L.geoJSON(data, { onEachFeature: function(feature, layer) {...} })`, what does the `layer` parameter represent?
+
 <Quiz>
-    - The entire GeoJSON dataset.
-    - The specific GeoJSON feature object being processed.
-    - The Leaflet layer (e.g., `L.Polygon`, `L.Marker`) created for the current feature.*
-    - The base tile layer of the map.
+- The entire GeoJSON dataset.
+- The specific GeoJSON feature object being processed.
+- The Leaflet layer (e.g., `L.Polygon`, `L.Marker`) created for the current feature.*
+- The base tile layer of the map.
 </Quiz>
 
-4.  What is the primary purpose of using `event.preventDefault()` inside a click handler for an `<a>` tag with `href="#"`?
+What is the primary purpose of using `event.preventDefault()` inside a click handler for an `<a>` tag with `href="#"`?
+
 <Quiz>
-    - To trigger the link's navigation.
-    - To stop the browser from jumping to the top of the page or adding `#` to the URL.*
-    - To get the `data-` attributes from the link.
-    - To hide the link after it's clicked.
+- To trigger the link's navigation.
+- To stop the browser from jumping to the top of the page or adding `#` to the URL.*
+- To get the `data-` attributes from the link.
+- To hide the link after it's clicked.
 </Quiz>
 
 ## Challenges
@@ -4335,36 +4378,40 @@ As you start your final project, make documentation your go-to resource when you
 
 ## Review Questions
 
-1.  What is the main difference between a "Getting Started" guide and an "API Reference"?
+What is the main difference between a "Getting Started" guide and an "API Reference"?
+
 <Quiz>
-    - Getting Started is for experts, API Reference is for beginners.
-    - Getting Started is sequential/tutorial-based, API Reference is a detailed lookup resource.*
-    - Getting Started covers only errors, API Reference covers only features.
-    - Getting Started is online, API Reference is offline.
+- Getting Started is for experts, API Reference is for beginners.
+- Getting Started is sequential/tutorial-based, API Reference is a detailed lookup resource.*
+- Getting Started covers only errors, API Reference covers only features.
+- Getting Started is online, API Reference is offline.
 </Quiz>
 
-2.  When using API reference documentation, what is generally the most effective first step?
+When using API reference documentation, what is generally the most effective first step?
+
 <Quiz>
-    - Reading the entire page from top to bottom.
-    - Searching for specific keywords related to your task or function name.*
-    - Looking only at the introduction section.
-    - Copying the first code example you find.
+- Reading the entire page from top to bottom.
+- Searching for specific keywords related to your task or function name.*
+- Looking only at the introduction section.
+- Copying the first code example you find.
 </Quiz>
 
-3.  Which website is considered the primary and most authoritative documentation source for core web technologies like HTML, CSS, and JavaScript?
+Which website is considered the primary and most authoritative documentation source for core web technologies like HTML, CSS, and JavaScript?
+
 <Quiz>
-    - Stack Overflow
-    - W3Schools
-    - Mozilla Developer Network (MDN)*
-    - jQuery API Documentation
+- Stack Overflow
+- W3Schools
+- Mozilla Developer Network (MDN)*
+- jQuery API Documentation
 </Quiz>
 
-4.  When searching the web for help with a programming error, what is generally recommended?
+When searching the web for help with a programming error, what is generally recommended?
+
 <Quiz>
-    - Copy and paste the entire multi-line error stack trace.
-    - Search only using the error type (e.g., "TypeError").
-    - Include the language/library name and the core part of the error message.*
-    - Avoid mentioning the error message in the search.
+- Copy and paste the entire multi-line error stack trace.
+- Search only using the error type (e.g., "TypeError").
+- Include the language/library name and the core part of the error message.*
+- Avoid mentioning the error message in the search.
 </Quiz>
 
 ## Challenges
