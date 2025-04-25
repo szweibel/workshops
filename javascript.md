@@ -1,1016 +1,1031 @@
 ---
-title: Intro to Javascript
-cover title: Javascript
-description: This is a basic introduction to JavaScript, which is the programming language of the web. The class is designed for anyone interested in developing a website, or creating an interactive data visualization. By the end of this course, you will be able to read JavaScript you find online and adapt it to your needs. You will also have an opportunity to work with common JavaScript libraries/tools and enhance your own research practices.
-
-long_pages: true
+title: Introduction to JavaScript for Graduate Students
+description: This is a hands-on introduction to JavaScript, the programming language of the web. This course is designed for graduate students and researchers interested in developing websites or creating interactive data visualizations, even without a computer science background. By the end of this course, you will be able to read, write, and adapt basic JavaScript code, utilize common libraries like jQuery and Leaflet, and build your own simple web projects.
+cover_image: /images/workshop/img2.jpg
 readings:
-    - 'Our inspiration: [The JavaScripting English Major (Moacir P. de Sá Pereira)](https://the-javascripting-english-major.org/v1/contents/01-introduction.html)'
-    - 'Another great book: [Eloquent JavaScript (Marijn Haverbeke)](https://eloquentjavascript.net/)'
-learning objectives:
-    - Gain capacity to read and write JavaScript at a beginner level.
-    - Understand the core programming concepts, including variables, loops, and conditionals.
-    - Distinguish among five core data types—integers, floats, strings, booleans, and arrays.
-    - Engage with error output and use the internet and documentation to independently research language features.
-    - Be familiar with JS libraries like JQuery.
-    - Be ready for further classes that require JavaScript knowledge.
+    - "Mozilla Developer Network (MDN) JavaScript Guide: [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)"
+    - "Eloquent JavaScript (Online Book): [Eloquent JavaScript](https://eloquentjavascript.net/) - A more in-depth, free resource."
+    - "JavaScript Info: [The Modern JavaScript Tutorial](https://javascript.info/) - Comprehensive tutorial site."
+goals:
+    - description: 'In this workshop, you will learn to:'
+    - Understand core programming concepts: variables, data types, operators, control flow (conditionals, loops), functions, and scope.
+    - Distinguish among core JavaScript data types: numbers, strings, booleans, arrays, and objects.
+    - Write and run JavaScript code in the browser console and via script files.
+    - Understand and interact with the Document Object Model (DOM) to make web pages dynamic, primarily using the jQuery library for simplification.
+    - Fetch and work with data using JSON.
+    - Create interactive maps using the Leaflet.js library.
+    - Engage with error messages and use documentation/online resources for troubleshooting.
+    - Set up a basic development environment using VSCode and manage code using Git/GitHub.
+    - Build a small, data-driven web project.
 programming_language: 'JavaScript'
-estimated time:
-    - 3 - 4 hours
-prerequisites: 
-    - command line: 
-        description: Introduction to the Command Line (Required) This workshop makes reference to concepts from the Command Line workshop, and having basic knowledge about how to use the command line will be central for anyone who wants to learn about programming with Python.
-        required: true
-    - data ethics: 
-        description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
-        recommended: true
-
-authors:
-    - 'Zach Lloyd'
-    - 'Stephen Zweibel'
-
-editors:
-    - 'Zach Lloyd'
-    - 'Stephen Zweibel'
-
-ethical considerations:
-    - 'Javascript is a programming language that is used to create interactive websites.
-It is important to consider the ethical implications of the websites you create.'
-    - If you are creating a website that collects data from users, consider how you will store and protect that data.
-    - When creating a website for a wide audience, consider accessibility issues.
-    - For websites used by people from different cultures, consider making it accessible to speakers of various languages.
-        
 ---
 
 # Introduction
 
-Hello! This is *The JavaScripting Masters Student*, a course designed particulary for graduate students who are not pursuing a degree in computer science. The course is designed to help you learn the fundamentals of programming and to help you get started on your own projects. The course is __not__ intended to be a comprehensive introduction to computer science concepts, but rather a step-by-step path to making something useful.
+Hello! Welcome to *JavaScript for Graduate Students*, a course designed particularly for those outside of computer science. This course aims to equip you with the fundamental programming skills needed to bring your research or creative ideas to life on the web. We'll focus on practical application, guiding you step-by-step toward creating something useful and interactive.
 
 ## Learning Outcomes
 
-By the end of the semester, successful students will
+By the end of this course, successful students will:
 
-- Gain capacity to read and write JavaScript at a beginner level.
-- Understand the core programming concepts, including variables, loops, and conditionals.
-- Distinguish among five core data types—integers, floats, strings, booleans, and arrays.
-- Engage with error output and use the internet and documentation to independently research language features.
-- Be familiar with JS libraries like Leaflet and JQuery.
-- Create a small project of their own that can live on the web!
-- Be ready for further classes that require JavaScript knowledge.
+-   Gain the ability to read and write JavaScript at a beginner level.
+-   Understand core programming concepts like variables, loops, conditionals, functions, and scope.
+-   Distinguish among primary data types: numbers, strings, booleans, arrays, and objects.
+-   Interpret error messages and effectively use online documentation and resources to solve problems independently.
+-   Become familiar with widely used JavaScript libraries like jQuery and Leaflet.
+-   Create and deploy a small, interactive web project.
+-   Be prepared for further learning in web development or data visualization requiring JavaScript.
+
+## Why Learn JavaScript?
+
+1.  **The Language of the Web:** JavaScript runs in every modern web browser. It's essential for creating dynamic, interactive websites, web applications, and data visualizations that users can engage with directly.
+2.  **Versatility:** While dominant in front-end web development (what the user sees and interacts with), JavaScript (with Node.js) is also widely used for back-end development, mobile apps, game development, and more.
+3.  **Rich Ecosystem:** JavaScript has a vast collection of libraries (like jQuery, React, Vue, Leaflet, D3.js) and frameworks that significantly speed up development and enable complex functionalities.
+4.  **Accessible Starting Point:** You can start writing and running JavaScript immediately in your browser's console, making the initial learning curve less steep than some other languages requiring complex setups.
 
 ## The Process of Learning a Language
 
-There are many ways to learn a language. In the case of human languages, the most effective is said to be full immersion. It can be very motivating to be put in a situation where learning is aligned well with a concrete goal, in this case communicating with the people around you.
+Learning a programming language, much like a human language, benefits immensely from immersion and having a concrete goal. The most effective way is often project-based learning – building something specific.
 
-In the same way, learning a programming language benefits from having a specific aim, typically a project built in that language. The problem, though, often ends up being that new learners do not know what is possible to do with a language, so it's hard to develop a clear and realistic goal. In order to help learners along their path, this course is designed as a guided process of project-oriented learning. At the end of this text, you will have finished a small project that you can put on the web, therefore getting some idea of what you can do with the language.
+However, beginners often don't know *what's possible* to build. This course provides a guided, project-oriented path. We'll build small examples along the way (like a text adventure and a simple library app) culminating in a modest, data-driven web page that showcases the concepts learned. This approach will give you a tangible outcome and a clearer idea of what you can achieve with JavaScript.
 
 ## Cool, Inspiring Libraries
 
-What's possible with JavaScript? You can use it to create a map, a data visualization, a website, or any number of things. Below are a few examples of powerful tools that you can use to create your own projects. We will be exploring one of these, Leaflet, later in the course.
+What's possible with JavaScript? You can create interactive charts, maps, generative art, dynamic websites, and much more. Here are a few examples of powerful libraries (we'll explore Leaflet later):
 
-- [Chart.js](https://www.chartjs.org/docs/latest/)
-- [D3.js](https://d3js.org/)
-- [p5.js](https://p5js.org/)
-- [leaflet.js](https://leafletjs.com/)
+-   [Chart.js](https://www.chartjs.org/docs/latest/): Create various types of charts and graphs.
+-   [D3.js](https://d3js.org/): A powerful library for data visualization based on web standards.
+-   [p5.js](https://p5js.org/): Focuses on creative coding, making coding accessible for artists, designers, educators, and beginners.
+-   [Leaflet.js](https://leafletjs.com/): An open-source library for mobile-friendly interactive maps.
+-   [jQuery](https://jquery.com/): A fast, small, and feature-rich JavaScript library simplifying HTML DOM traversal and manipulation, event handling, and animation. (We'll use this for convenience).
 
-## JavaSCRIPT, not Java
+## JavaScript, not Java!
 
-A fundamental part of learning how to program is becoming familiar with the meanings of specialist words in common use. The first thing that trips up a lot of beginners is the name of the programming language, "JavaScript". Often new learners will see references to "Java" and "JavaScript" and think that they are referring to the same language. They are not! But you would be forgiven for thinking so. The confusion could very nearly be called intentional! A bit of history:
+A common point of confusion for beginners is the name "JavaScript." It sounds similar to "Java," but **they are completely different programming languages** with distinct histories, syntax, and use cases.
 
-Java is a programming language that became popular in the 1990s. It was used primarily for desktop applications, but as the web became a bigger deal, Java was positioned as the language of choice for web development. The creator of JavaScript, Brendan Eich, wanted to hitch a ride on the success of Java and associate his new language with the more established one. Hence, "JavaScript". Other than the name, there is no association between the two.
+*   **Java:** Developed by Sun Microsystems in the 1990s, often used for large-scale enterprise applications, Android app development, and back-end systems. It needs to be compiled before running.
+*   **JavaScript:** Created by Brendan Eich at Netscape, initially designed to add interactivity to web pages. It runs directly in the browser (interpreted) and is the foundation of modern front-end development.
+
+The similar name was largely a marketing decision back in the 90s to leverage Java's popularity. Remember: **Java is to JavaScript as Car is to Carpet.**
 
 ## Acknowledgements
 
-This material is modeled off of [The JavaScripting English Major](https://the-javascripting-english-major.org/v1/contents) by Moacir P. de Sá Pereira. Its pragmatic approach to teaching programming inspired our own, particularly in the project-oriented design of the course. Similarly [Eloquent JavaScript](https://eloquentjavascript.net/) by Marijn Haverbeke demonstrated to us a step-by-step accretive method of learning that feels fitting for an audience of non-CS majors. We were also influenced by [Learn Python the Hard Way](https://learnpythonthehardway.org/book/) by Zed A. Shaw, in his emphasis on engaging the reader in actual typing and not just memorizing syntax. 
+This material draws inspiration from several excellent resources: [The JavaScripting English Major](https://the-javascripting-english-major.org/v1/contents) by Moacir P. de Sá Pereira for its pragmatic, project-oriented approach; [Eloquent JavaScript](https://eloquentjavascript.net/) by Marijn Haverbeke for its step-by-step, accretive learning method suitable for non-CS majors; and [Learn Python the Hard Way](https://learnpythonthehardway.org/book/) by Zed A. Shaw for its emphasis on active typing and engagement over rote memorization.
+
+---
 
 # Getting Started with JavaScript
 
-Let's begin our journey with the JavaScript language. As is tradition, we're first going to explore some ways to print a "Hello World!" message as output to the screen. In doing so, you will be introduced to the basics of working with the JavaScript console. As will become clearer, you can think of the console as an interactive way to run JavaScript commands in your browser. 
-
-To become further acquainted with the console, we will end the lesson by exploring some fundamental data types and variables in JavaScript, and ways you can use these capabilities to calculate and display a variety of conditions.
+Let's begin our journey! As is tradition, we'll start by printing a "Hello, World!" message. This will introduce you to the **JavaScript console**, an interactive environment within your browser where you can run JavaScript commands directly. We'll then explore fundamental data types and variables.
 
 ## Hello, World!
 
-### Alerts
-
-One of the most basic ways to output a message is to use the `alert()` method. This method will display a message to the user visiting your web page, and then wait for the user to click on the "OK" button.
-
-To create an alert, you can write the following line of code...
-
-```JavaScript
-alert("Hello, World!");
-```
-
-...into the box below, where you can see an instance of the interactive console that we have provided for you. If you click your mouse after the `>` symbol (called the _prompt_), you can begin writing your code, and then hit the <kbd>Enter</kbd> key to run it.
-
-<JSTerminal />
-
-You should now see a pop-up box that displays your message. __Note__: If you do _not_ see a pop-up message, you may need to disable your pop-up blocker.
-
-As you can see, the alert dialog box takes the focus and forces the user to read the specified message on the current webpage. This being the case, it is wise to avoid overusing this method because it stops the user from accessing other parts of the webpage until the box is closed. It is best used as a kind of warning message. For instance, you may have seen developers use it to notify the user that they are heading to a new external website after clicking a link.
-
-You'll notice that our message is enclosed in `()` (parentheses) as well as `""` double quotation marks. You'll understand why as we continue: this indicates part of the _syntax_, or the rules that define the structure of the JavaScript language.
-
-You will also notice that there is a `;` (semicolon) after the `alert` command. Not including the semicolon won't throw an error, but it is good practice to include after each command, or statement--after each single instruction given to the console. You'll see more examples of this (and learn when _not_ to include semicolons) as we progress. For now, just make sure to __include the semicolon__ at the end of each line of code.
-
 ### Using Your Browser's Console
 
-While we have provided a console for you embedded into this web page, you can also use a console built into your browser's developer tools to run commands. Most modern browsers allow you access to a developer console where you can work with JavaScript and read or manipulate data on a page. 
+Every modern web browser includes developer tools, which contain a JavaScript console. This is your primary playground for experimenting with JavaScript snippets.
 
-To open the developer console, you can use these methods:
+**How to Open the Console:**
 
-__Chrome:__
-- Command + Option + i (Mac)
-- Ctrl + Shift + i (Windows/Linux).
-- Open the Chrome settings menu in the top-right corner of your browser window and select `More Tools` > `Developer Tools`
+1.  **Right-click** anywhere on a webpage.
+2.  Select **"Inspect"** or **"Inspect Element"**.
+3.  In the panel that opens, find and click on the **"Console"** tab.
 
-__Firefox:__
-- Command + Option + i (Mac)
-- Ctrl + Shift + i (Windows/Linux)
+**Alternatively, use keyboard shortcuts:**
 
-__Safari:__
-- Develop menu in Safari’s Advanced preferences
-- Right-click on any page element and select Inspect Element
-- Command + Option + i
+*   **Chrome/Firefox/Edge (Windows/Linux):** `Ctrl`+`Shift`+`I` or `F12`
+*   **Chrome/Firefox/Edge (Mac):** `Command`+`Option`+`I`
+*   **Safari (Mac):** First, enable the Develop menu: `Safari > Preferences > Advanced > Show Develop menu in menu bar`. Then, `Command`+`Option`+`C` or `Develop > Show JavaScript Console`.
 
-__Opera:__
-- Command + Option + i (Mac)
-- Ctrl + Shift + i (Windows/Linux)
+You should see a prompt, usually `>` or `>>`. This is where you type your commands.
 
-Using these shortcuts should open a console window that you can use to run commands. After the `>` prompt, create another new `alert` command and hit the <kbd>Enter</kbd> key to run it. You should again see a pop-up box that displays your message. Practice opening your console with these commands to get the feel of it into your fingers.
+### The `console.log()` Function
 
-We should note here that the alert's system dialog box is not related to the design of the webpage currently being shown in the browser. Its appearance depends solely on your current operating system and browser (rather than on the HTML code of the current page). You will learn how to manipulate a webpage's content and appearance directly with JavaScript, HTML, and CSS in later lessons.  
+The most common way to display output for testing and debugging is `console.log()`. Type the following into your browser's console and press <kbd>Enter</kbd>:
 
-### The console.log() Function
-
-Let's use another technique to display "Hello, World!" This time, we will use the `console.log()` function, which writes a message to be output by the console. In your browser's developer console, write the following line of code:
-
-```JavaScript
+```javascript
 console.log("Hello, World!");
 ```
 
-You should now see the message "Hello, World!" printed out for you in the console itself.
+You should see the text `Hello, World!` printed directly in the console.
 
-The `console.log()` function is a useful tool for testing and debugging your code. As you continue learning JavaScript and begin building your own webpages, you will find it an effective way to display and understand the results of your programs.
+*   **Syntax Notes:**
+    *   The text `"Hello, World!"` is called a **string**, enclosed in double quotes. We'll cover strings soon.
+    *   The string is passed as an **argument** inside the parentheses `()`.
+    *   The line ends with a **semicolon** `;`. While JavaScript has automatic semicolon insertion (ASI) and often works without them, explicitly adding semicolons at the end of each statement (command) is considered good practice and avoids potential ambiguities. We will use semicolons consistently.
 
-__Note__: If you also receive a message of `undefined` in the console, don't worry! You will understand why this is happening as you continue learning more about how functions work in JavaScript.
+**(Optional) Using `alert()`**
 
-For now, let's continue working with the JavaScript console by exploring the way the language deals with data and discrete bits of information.
+Another way to display a message is `alert()`, which creates a pop-up box. Try this in your console:
 
-## Data Types
+```javascript
+alert("Hello, World!");
+```
 
-__Data types__ form the atomic elements of JavaScript programs and are used to store and manipulate data. The basic data types in JavaScript are: __number__, __string__, __boolean__, __array__, and __object__. For now, let's just discuss the first three of these types and how you can use them.
+*   **Note:** Pop-up blockers might prevent alerts. Also, `alert()` pauses all interaction with the page until dismissed, so it's generally disruptive and rarely used in modern web development except for simple warnings or very basic debugging. `console.log()` is preferred.
+
+<JSTerminal />
+*(This embedded terminal works like your browser's console. Try the `console.log` and `alert` commands here too!)*
+
+---
+
+## Data Types and Variables
+
+Programming involves working with data. JavaScript has several fundamental **data types**. Let's explore the main ones.
 
 ### Numbers
 
-Values of the `number` type are, as you might have guessed, numbers. Try typing the following numbers into the console, hitting the <kbd>Enter</kbd> key after each one:
+Numbers are used for mathematical calculations. JavaScript doesn't strictly distinguish between integers (whole numbers) and floats (decimals) in the way some other languages do; they are both just `number` type.
 
-```JavaScript
-> 9;
-> 3.8;
-> -1.2;
-```
-<JSTerminal />
+Try these in the console:
 
-We can also perform various mathematical calculations on these numbers. For example, try running each of the following mathematical operations in the console:
-
-```JavaScript
-> 5 + 5
-> 5 - 5
-> 5 / 5
-> 5 * 5
-> 5 % 6
+```javascript
+9;
+3.8;
+-1.2;
 ```
 
 <JSTerminal />
 
-JavaScript calculates the result of these operations for you. Whenever you can use a number, you can also create a mathematical expression using typical algebraic operators. The last example uses the <kbd>%</kbd> (remainder) symbol, which evaluates the remainder of a division.
+You can perform arithmetic operations:
+
+```javascript
+5 + 5;  // Addition
+5 - 5;  // Subtraction
+5 * 5;  // Multiplication
+5 / 5;  // Division
+10 % 3; // Modulo (remainder of division - result is 1)
+2 ** 3; // Exponentiation (2 to the power of 3 - result is 8)
+```
+
+<JSTerminal />
+
+*   **Order of Operations (PEMDAS/BODMAS):** JavaScript follows standard mathematical rules. `5 + 5 * 10 / 2` evaluates multiplication/division first, resulting in `30`. Use parentheses `()` to control the order: `(5 + 5) * 10 / 2` results in `50`.
 
 ### Strings
 
-As a data type, a __string__ is simply a series of alphanumeric characters, meaning it can combine both numbers and text into a phrase. Strings are mostly used for displaying or recognizing a series of text in your programs. You have actually already encountered a string--in the `console.log("Hello, World!");` command you ran above, everything enclosed in the double-quotation marks (namely, `Hello, World!`) is considered a string.
+Strings represent textual data. They are enclosed in single quotes (`'...'`), double quotes (`"..."`), or backticks (`` `...` ``).
 
-Just like with numbers, you can simply type a string (for instance, `"Hello, World!"`) into the console and it will repeat your string back to you. It is important to note that were you to add a number to the string, e.g., `"Hello, World in the Year 3030!";`, the entire phrase would still be considered a string and _not_ a number. This is because you have enclosed it within double-quotation marks, which always indicates a `string` type.
-
-It's worth noting that you can use both single- <kbd>'</kbd> and double-quotation <kbd>"</kbd> marks to identify a string. It is important, however, to keep your use consistent. For instance, if you were to write `"Hello, World!'`, beginning the phrase with double-quotes and ending with a single-quote, you will receive a `SyntaxError` (we'll cover how to deal with errors in a bit more detail later). It is best practice to primarily use double-quotes, as this allows you to use single-quotes _within_ a phrase without the console throwing errors. For example, `"It is Jill's birthday."` is a perfectly valid expression, while `'It is Jill's birthday.'` is not.
-
-__Note__: If you need to use double-quotes inside of a string, there are two ways you can do this. You can, conversely, simply use single-quotation marks to surround a phrase, e.g., `'I wonder what "truth" means today?'`, or you can use a <kbd>\</kbd> (backslash) to precede a double-quotation mark within enclosed double-quotation marks, e.g. `"I wonder what \"truth\" means today?"`. 
-
-Strings can also utilize the `+` operator to __concatenate__, or join, separate string phrases together. For example, `"Hello, " + "World!"` will return `"Hello, World!"`. Try it out in the console below.
+```javascript
+"Hello, World!";
+'This is also a string.';
+`Strings can use backticks too.`; // Template literals - more on these later
+```
 
 <JSTerminal />
 
-## Comparisons
-
-In the table below, you can see more of the various operators available to you as a JS programmer when working with data types. Many of the most useful operators deal in terms of comparison: seeing if one value is equal to, greater than, or lesser than another value. Each of these comparisons will evaluate to either `true` or `false`. It is important to understand how these operators work, so try inputting some of the examples you might be unclear with into the JS console to check out the results for yourself. In the `"5" == "5"` example below, each 5 is actually considered a _string_, rather than a number, because they are enclosed in quotation marks.
-
-| Operator | Meaning | Example | Evaluation |
-| --- | --- | --- | --- |
-| `<` | less than? | `5 < 5` | false |
-| `<` | less than? | `5 < 6` | true |
-| `>` | greater than? | `5 > 5` | false |
-| `>` | greater than? | `5 > 4` | true |
-| `<=` | less than or equal to? | `5 <= 5` | true |
-| `<=` | less than or equal to? | `5 <= 4` | false |
-| `>=` | greater than or equal to? | `5 >= 5` | true |
-| `>=` | greater than or equal to? | `5 >= 6` | false |
-| `==` | equal to? | `5 == 5` | true |
-| `==` | equal to? | `5 == 4` | false |
-| `==` | equal to? | `5 == "5"` | true |
-| `!=` | not equal to? | `5 != 5` | false |
-| `!=` | not equal to? | `5 != 4` | true |
-| `!=` | not equal to? | `5 != "5"` | false |
-| `===` | "strict" equal to (includes type)? | `5 === "5"` | false |
-| `===` | "strict equal" to (includes type)? | `5 === 5` | true |
-| `!==` | "strict" not equal to (includes type)? | `5 !== "5"` | true |
-| `!==` | "strict" not equal to (includes type)? | `5 !== 5` | false |
-
-
-
+*   **Quotes:** Use quotes consistently (start and end with the same type). Double quotes (`"`) are common and allow single quotes (`'`) inside without issues: `"It's a nice day."`. If you need the same type of quote inside, you can **escape** it with a backslash `\`: `"She said \"Hello!\""`. Or, use a different outer quote type: `'She said "Hello!"'`.
+*   **Concatenation:** Use the `+` operator to join strings:
+    ```javascript
+    "Hello, " + "World!"; // Results in "Hello, World!"
+    ```
 
 <JSTerminal />
 
-While nearly all of these operators are shared amongst the majority of modern programming languages, the `===` (triple equals) is unique to JavaScript. The distinctions between `==` (double equals) and `===` (triple equals) are important. The double equals `==` operator is used to compare _only_ the value of two variables, while the "strict" triple equals `===` operator is used to compare the value _and_ type of two variables. The strict operator will only return true if the two variables are _exactly_ the same, both in value and in type (e.g., number or string). So, while both `5 === 5` and `"5" === "5"` will return true because they are the same value and type, `5 === "5"` will return false because the latter is testing a number against a string. Also note the difference between the double equals `==` and triple equals `===`, which test for equality, and the `!=` and `!==` operators, which test for _inequality_.
+### Booleans
 
-We'll continue to work with comparison/equality operators throughout the course, so don't worry if they're still a bit unclear. Additionally, we have for now purposefully left out the `=` (single equals) operator, as it has a different function than evaluating equality. We'll cover the single equals operator later in this lesson.
+Booleans represent logical values: `true` or `false`. They are crucial for decision-making in code.
 
-
-### Boolean
-
-Unlike some real-world scenarios, determining what is true and false in JavaScript is refreshingly straightforward. __Booleans__ are data types that are either firmly `true` or `false`. In utilizing the comparison operators from the table earlier, you have already discovered how the console determines truth and falsity. For instance, typing `9 > 5` evaluates to `true`, whereas `5 > 9` evaluates to `false`. Similarly, `5 >= 5` as well as `5 <= 5` both resolve as `true`. If you simply type `true` or `false` into the console, the console recognizes it as a data type and will repeat it back to you.
-
-Booleans may seem simple, but very often in programming you will need a data type that can only have one of two values, akin to a "yes" or "no" or "on" or "off" determination. We will work more with booleans as we progress through the course.
-
-As a final step for this lesson, let's make using data types a bit more interesting by introducing __variables__.
-
-## Variables
-
-Now that we have explored a number of data types and how to use them, let's explore how to create variables in JavaScript to utilize data types more effectively.
-
-You can think of __variables__ as kinds of containers for data. They are named and can be assigned a value based on whatever data type is appropriate. To create a variable, type the `var` keyword along with the name of the variable you want to create, followed by a single equal sign (`=`) and then the value of the variable. For example, `var myMessage = "Hello, World!";` will create a new variable called `myMessage` and assign it the value `"Hello, World!"`. Creating a variable is called __declaring__ or __defining__ it, and attributing a value to it is called __assigning__ it.
-
-As mentioned earlier, this drastically sets apart the single equals `=` operator from the double equals `==` operator. The single equals operator is used to __assign__ a value to a variable, while the double equals operator (as well as the triple equals) is used to __test__ if two values or variables are equal to each other (without modifying either value).
-
-In the example below, we have replicated our `Hello, World!` message, only this time using a variable. You can see that instead of simply logging the string `"Hello, World!"` to the console, we have assigned the string to a variable called `myMessage` and then logged the value of `myMessage` to the console.
-
-```JavaScript
-    var myMessage = "Hello, World!";
-    console.log(myMessage);
+```javascript
+true;
+false;
 ```
 
-Understanding and working effectively with variables is probably the most important part of programming. They allow you to store data in memory, and then use that data to perform all kinds of operations upon it. Take a look at the example below:
+<JSTerminal />
 
-```JavaScript
-var a = 1;
-var b = 2;
-var c = a + b;
+Booleans are often the result of **comparison operations**.
+
+### Comparison Operators
+
+These operators compare values and evaluate to `true` or `false`.
+
+| Operator | Meaning                     | Example          | Evaluation | Notes                                       |
+| :------- | :-------------------------- | :--------------- | :--------- | :------------------------------------------ |
+| `>`      | Greater than                | `5 > 4`          | `true`     |                                             |
+| `<`      | Less than                   | `5 < 4`          | `false`    |                                             |
+| `>=`     | Greater than or equal to    | `5 >= 5`         | `true`     |                                             |
+| `<=`     | Less than or equal to       | `5 <= 4`         | `false`    |                                             |
+| `===`    | **Strict Equality**         | `5 === 5`        | `true`     | Compares value AND type. **Preferred.**     |
+| `===`    | Strict Equality             | `5 === "5"`      | `false`    | Number vs String                            |
+| `!==`    | **Strict Inequality**       | `5 !== 4`        | `true`     | Compares value AND type. **Preferred.**     |
+| `!==`    | Strict Inequality           | `5 !== "5"`      | `true`     | Number vs String                            |
+| `==`     | *Loose Equality*            | `5 == 5`         | `true`     | Compares value after *type coercion*. Avoid. |
+| `==`     | *Loose Equality*            | `5 == "5"`       | `true`     | **Avoid!** String "5" coerced to number 5. |
+| `!=`     | *Loose Inequality*          | `5 != 4`         | `true`     | Compares value after *type coercion*. Avoid. |
+| `!=`     | *Loose Inequality*          | `5 != "5"`       | `false`    | **Avoid!** Coercion makes them equal.     |
+
+**Key takeaway:** Always use **strict equality (`===`)** and **strict inequality (`!==`)** unless you have a very specific reason for type coercion. Loose equality (`==`, `!=`) can lead to unexpected bugs due to automatic type conversions.
+
+Try some comparisons in the console:
+<JSTerminal />
+
+### Variables: `let` and `const`
+
+Variables are named containers for storing data values. In modern JavaScript, we declare variables using `let` and `const`.
+
+*   **`const` (Constant):** Use `const` when you declare a variable whose value **will not be reassigned**. This is the preferred way to declare variables most of the time, as it prevents accidental changes.
+    ```javascript
+    const myMessage = "Hello, World!";
+    const year = 2024;
+    // myMessage = "Goodbye"; // This would cause an error!
+    ```
+*   **`let` (Let/Allow change):** Use `let` when you know the variable's value **might need to be updated later**.
+    ```javascript
+    let counter = 0;
+    counter = counter + 1; // This is allowed
+    console.log(counter); // Output: 1
+    ```
+
+**Declaring and Assigning:**
+
+```javascript
+const pi = 3.14159; // Declare and assign in one step
+let currentTemp;     // Declare first
+currentTemp = 25;    // Assign later
 ```
 
-You'll notice that the variable `c` is assigned the value of `a + b`. In other words, here we are assigning the value of a variable to that of the addition of two other variables. What do you think the result would be if we were to `console.log(c);`? 
+**Using Variables:** Once declared, use the variable name to access its value.
 
-Now let's make something ever so slightly more interesting. Let's talk about the weather.
+```javascript
+const courseName = "JavaScript for Grads";
+console.log(courseName); // Output: JavaScript for Grads
 
-```JavaScript
-var weather = 'sunny';
-var statement = 'The weather is ' + weather + ' today.';
+let visitorCount = 10;
+visitorCount = visitorCount + 1;
+console.log("Visitors: " + visitorCount); // Output: Visitors: 11
 ```
 
-Earlier, you saw how we can concatenate strings together to form a compound phrase. You can also use the `+` operator to combine strings and variables. In the above example, the variable `statement`, assigned `"The weather is " + weather + " today."` will return the string `"The weather is sunny today."`.
+<JSTerminal />
 
-Any of the data types you have already learned can be assigned to a variable. For example, you can assign a number to a variable, a string to a variable, a boolean to a variable, etc.
+*   **Why not `var`?** You might see `var` in older code or tutorials. `var` has different scoping rules (function scope or global scope, not block scope like `let`/`const`) which can lead to confusion and bugs in larger programs. It's best practice to use `let` and `const` exclusively in modern JavaScript. We'll discuss scope in more detail later.
 
-As your programs become more complex, it is generally good practice to declare all of your variables at the top of your program. This will make it easier to find and understand your code later. Take a look at the program below:
+**Variable Naming Conventions:**
 
-```JavaScript
-var book, author, isbn, description;
+*   Names must start with a letter, underscore (`_`), or dollar sign (`$`). Cannot start with a number.
+*   Can contain letters, numbers, underscores, or dollar signs.
+*   **Case-sensitive:** `myVariable` is different from `myvariable`.
+*   Use **camelCase** for multi-word names (e.g., `firstName`, `totalAmount`).
+*   Avoid reserved words (like `let`, `const`, `if`, `function`, etc.). [MDN Reserved Words List](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
+*   Choose meaningful, descriptive names. `userName` is better than `x`.
+*   Do **not** use hyphens (`-`), as they are interpreted as subtraction.
 
-book = "Hunger";
-author = "Knut Hamsun";
-isbn = 0374525285;
+### `typeof` Operator
 
-description = "The book " + book + " by " + author + " is on ISBN " + isbn;
-console.log(description);
+To check the data type of a variable or value, use the `typeof` operator:
 
-book = "The Master and Margarita";
-author = "Mikhail Bulgakov";
-isbn = 0679760806;
+```javascript
+const message = "Hello";
+let count = 100;
+const isReady = true;
 
-description = "The book " + book + " by " + author + " is on ISBN " + isbn;
-console.log(description);
+console.log(typeof message);  // Output: string
+console.log(typeof count);    // Output: number
+console.log(typeof isReady);  // Output: boolean
+console.log(typeof 99.9);     // Output: number
+console.log(typeof false);    // Output: boolean
 ```
 
-As you can see, we have declared all the variables we want to include for our categorization of the books at the top of the program.  It is important to note that these variables persist only for the duration of your particular session with the console. If you close the console, they will be deleted from memory. You will also notice, however, that the values of the variables are __mutable__, meaning that they can be changed as the program progresses. If you run this program in the console, each `console.log()` command will display a new description. __Note__: Certain variable types are __immutable__, meaning that they cannot be changed. We'll explore additional details about immutable variables in later lessons.
+<JSTerminal />
+This is useful for debugging or when you need to handle different types of data differently.
 
-### Variable Naming Conventions
-
-There are a few rules for variable naming conventions in JavaScript. 
-
-- Variables must begin with a letter or an underscore. You can't begin a variable name with a number (although you can use numbers after). 
-- Variables must not contain spaces or special characters. For example, `myVariable` is a valid variable name, but `my variable` is not.
-- Variable names are case sensitive. That is, a variable named `My_Books` is treated as an entirely different variable than one named `my_books`.
-- You can't use one of JavaScript's reserved words as a variable name. All programming languages have a supply of words that are used internally by the language. For a complete list, see here: [Reserved Words](https://www.w3schools.com/js/js_reserved.asp).
-- Do not include hyphens `-`. Hyphens can be misconstrued by JavaScript as attempts to subtract one value from another and will cause errors.
-
-In general, try to keep your variable names as short and descriptive of their purpose as possible.
-
-## Using typeof
-
-Let's end our discussion of variables with one more nifty tool: the `typeof` operator. The `typeof` operator is used to determine the data type of a variable. For example, if you have a variable named `myVariable`, you can use the `typeof` operator to determine what kind of data it is.
-
-```JavaScript
-var myVariable = "Hello, World!";
-console.log(typeof myVariable);
-```
-
-If you look at your developer console, you should see a `string` correctly identified as the data type of `myVariable`. You can use this operator to determine the data type of any variable you have created. This can become very useful when you are working with data types that are unknown to you or when you are converting data types from one type to another (which we'll begin learning in the next lesson).
+---
 
 ## Review Questions
 
-Let's review some of the main concepts we've covered in this lesson and get some practice in.
+1.  Which command is generally preferred for displaying test output in the browser console?
+    <Quiz>
+    - `alert()`
+    - `console.log()`*
+    - `document.write()`
+    - `print()`
+    </Quiz>
 
-1. `console.log()` is best used for (select one):
+2.  Select all the *strictly* true comparisons:
+    <Quiz>
+    - `100 === "100"`
+    - `100 !== "100"`*
+    - `5 > 4`*
+    - `'apple' === 'Apple'`
+    - `true === true`*
+    - `0 === false`
+    </Quiz>
 
-<Quiz>
-- testing and debugging your code*
-- changing the appearance of a webpage
-- warning the user about something
-</Quiz>
+3.  Which of these variable names are valid in JavaScript? (Select all that apply)
+    <Quiz>
+    - `_count`*
+    - `$amount`*
+    - `1stPlace`
+    - `firstPlace`*
+    - `user-name`
+    - `let`
+    - `MAX_ITEMS`*
+    </Quiz>
 
-2. Select all of the following statements that will evaluate to `true`:
-
-<Quiz>
-- 5*
-- 5 = 5
-- 5 == 5*
-- 5 != 5
-- 5 === 5*
-- 5 !== "5"*
-</Quiz>
-
-3. Which of these variable names are legal (valid) in JavaScript? (select all that apply)
-
-<Quiz>
-- my_books* 
-- myBooks*
-- my-books
-- myBooks1*
-- 1my_books
-- myBooks&I
-</Quiz>
+4.  When should you primarily use `const` to declare a variable?
+    <Quiz>
+    - When the variable's value might change later.
+    - When you are declaring a number.
+    - When the variable's value will not be reassigned after declaration.*
+    - Only for boolean values.
+    </Quiz>
 
 ## Challenges
 
-1. In JavaScript, as in algebra, ambiguity in a mathematical expression is resolved by [rules of precedence (PEMDAS)](https://www.purplemath.com/modules/orderops.htm). For example, the expression `5 + 5` is evaluated as `10`, while the expression `5 + 5 * 5` is evaluated as `30`. Using the rules of precedence and the console, rework the expression `5 + 5 * 10 /2` so that it resolves to `50`. Next, utilizing the variables defined below, write an expression that resolves to `true` using the double equals `==` operator.
+1.  **Calculations:** The area of a rectangle is `length * width`. Declare two variables, `length` and `width`, assign them number values, and then declare a third variable `area` calculated from the first two. Use `console.log()` to display the result like: "The area is: NN".
+2.  **String Concatenation:** Declare two string variables, `firstName` and `lastName`. Create a third variable `fullName` by concatenating the first name, a space, and the last name. Log the `fullName` to the console.
+3.  **Type Exploration:** Declare variables of different types (number, string, boolean). Use `console.log()` and the `typeof` operator to display both the value and the type of each variable. Example output: "Value: Hello, Type: string".
 
-```JavaScript
-var a = 15;
-var b = 10;
-var c = 30;
-var d = 5;
-```
+<CodeEditor language='JavaScript'>
+// Challenge 1: Area Calculation
+const length = 10;
+const width = 5;
+const area = length * width;
+console.log("The area is: " + area);
 
-<JSTerminal />
+// Challenge 2: Full Name
+const firstName = "Ada";
+const lastName = "Lovelace";
+const fullName = firstName + " " + lastName;
+console.log(fullName);
 
-2. Using variables, write a simple program that 1) sends an `alert` to the user telling them to open the developer console in their browser and 2) logs a message to the console saying they have won a prize. __Note__: This is an imaginary practice scenario. In reality, you would want to avoid using `console.log()` to send messages to users when actually deploying your website. Any information you want the user of your webpage to see should be presented on the webpage itself.
+// Challenge 3: Type Exploration
+const city = "New York";
+const population = 8500000;
+const isCapital = false;
+console.log("Value: " + city + ", Type: " + typeof city);
+console.log("Value: " + population + ", Type: " + typeof population);
+console.log("Value: " + isCapital + ", Type: " + typeof isCapital);
 
-## Key Terms
+</CodeEditor>
 
-Do you recall the meaning of the following terms from this lesson?
+## Key Terms (Review)
 
-- boolean
-- string
-- variable
-- concatenation
-- declaration/assignment
-- mutability
+-   console
+-   `console.log()`
+-   string
+-   number
+-   boolean
+-   variable
+-   `let`
+-   `const`
+-   assignment (`=`)
+-   strict equality (`===`)
+-   strict inequality (`!==`)
+-   concatenation
+-   `typeof` operator
+-   camelCase
+-   semicolon
 
-# If/Then
+---
 
-So far, we have been working with fairly simple programming structures. Our code thus far has been written as a single, linear, ordered list of instructions. However, there are other ways to structure your code that takes account of various conditions and reacts accordingly. 
+# If/Then: Making Decisions
 
-We are speaking here about __control flow__: the order in which the computer executes statements in a script.
+So far, our code runs linearly, from top to bottom. But often, we need programs to make decisions and execute different code blocks based on certain conditions. This is called **control flow**. `if`/`else` statements are the fundamental building blocks for decision-making.
 
-In general, code is run in order from the first line in the file to the last line, unless the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops. We will explore several of these structures in this lesson and learn how to use them to create dynamic, branching programs. To put these skills to work, at the end of the lesson you will learn to build your own small text-based "Choose Your Own Adventure" game that allows players/readers to change the outcomes of a story based on their decisions. Let's get started! 
+We'll also learn how to get input from the user using `prompt()` and build a small text-based "Choose Your Own Adventure" game to practice these concepts.
 
-## Thinking in Code
+## Thinking in Code: Branches
 
-Let's talk about the process of thinking in code. What does someone think about before they write code? In your head, how might you imagine what the code in action would look like? 
-
-In general, we might present a few initial ideas about the process:
-
-1. The computer reads from top to bottom. It does things according to the instructions it reads, step by step. That's the sense in which we mean 'scripting'. My thought process is about the steps that are necessary to get from the beginning to a defined end. What kind of data do I have? How will it have to be transformed? What will be the result? That's the linear vision of scripting.
-2. Digging into the code is a lot more difficult and we really need to envision its structure. What might the structure of the code look like? What is the structure of the data itself? That's the hierarchical vision of scripting.
-3. A branching, rather than linear, vision of code is about the decisions that are made in the process of getting to the end. The branches in the program are equivalent to a "decision tree." 
+Imagine a program's execution path not as a straight line, but as a road that might fork. An `if` statement is like a signpost at a fork: "If this condition is true, go left; otherwise, go right (or continue straight)."
 
 ![Decision Tree](/images/decision-tree.drawio.png)
 
-The decision tree is a visual representation of the process of getting to the end of a program. The diagram above shows how code will follow the different "branches" depending on the truth or falsity of a certain condition.
+This branching allows programs to react dynamically to different situations or inputs.
 
-To aid us in thinking about what our program might look like, let's also consider what a typical "Choose Your Own Adventure" game would consist of. In simple terms, it would need:
+**A Simple "Choose Your Own Adventure" Game Needs:**
 
-1. A predefined story (the story that the player is told)
-2. A set of choices that the player can make at certain points in the story 
-3. An internal way to change the story based on the player's choices (code branching)
-4. A set of outcomes that the player can see based on their choices 
+1.  A story or scenario.
+2.  Points where the user makes a choice.
+3.  A way to get the user's input.
+4.  Logic (branching) to change the story based on the input.
+5.  Different outcomes to display.
 
-Let's keep these ideas in mind and use them as a rough roadmap for the rest of the lesson.
+Let's start with getting user input.
 
-For now, let's not worry about the details of the story. Let's first start by exploring a simple way to allow the player to make choices and a way to store those choices.
+## Getting User Input with `prompt()`
 
-## Prompts
+The `prompt()` function displays a pop-up box asking the user for input. It returns the user's input as a **string**.
 
-One of the simplest ways to gather user input is through the `prompt()` function. This function displays a message to the user and waits for them to enter a response in the response field. The `prompt()` function returns the user's response as a string. Let's take a look at it in detail.
+```javascript
+// Ask the user for their name and store it
+const userName = prompt("What is your name?");
 
-```JavaScript
-    var userName = prompt("What is your name?");
-```
-Here is a simple example of the `prompt()` function in action. The user is asked to enter their name and waits for them to type it out and hit <kbd>Enter</kbd>. Once the user completes their name, their response will be stored in the variable `userName`. In other words, the function __returns__ the value you enter and stores it in the variable. We'll learn more about returns in a later lesson. For now, try running the code in the console below, answer the prompt, and then type `userName` in the console to see that the variable is now populated with the name you have entered.
-
-<JSTerminal />
-
-Pretty nifty, right? `Prompt` code is like `alert` code, with a couple differences:
-
-1. In a prompt, you need a way to capture the user's response. So, you must begin the prompt with a variable declaration.
-2. In a prompt, you can specify a second message, which acts as a "default" value. If the user doesn't enter a response, the default message will be stored in the variable. For instance, we might make a prompt like: `var whatAmI = prompt("What am I?", "I am a human!");`, in which `I am a human!` will show in the response field and act as the default return value if the user doesn't enter anything themselves. 
-
-### parseInt()
-
-It's important to note that the user's response to a `prompt` is _always_ a string. If you want to store and handle the user's response as a number (so you can perform arithmetic on it), you will need to convert it to a number using the `parseInt()` function. The `parseInt()` function takes a string and returns the number it represents. For example, `parseInt("5")` will return `5` (the number).
-
-Let's try this out now, this time asking the user their age:
-
-```JavaScript
-    var userAge = prompt("How old are you?");
-    userAge = parseInt(userAge);
-    alert("You are " + userAge + " years old.");
-    typeof userAge;
+// Greet the user using the entered name
+alert("Hello, " + userName + "!");
+console.log("User's name is: " + userName);
 ```
 
 <JSTerminal />
+*Try running the code above. Enter your name in the pop-up.*
 
-For this example we simply update `userAge` with the new conversion value. As you can see by checking with `typeof`, the user's response is now registered as a number.
+*   **Note:** Like `alert()`, `prompt()` pauses page interaction and is generally avoided in modern UI design. For real websites, you'd use HTML forms. However, `prompt()` is simple and useful for learning basic input/output.
+*   **Always Returns a String:** Even if the user types `18`, `prompt()` returns the *string* `"18"`, not the *number* `18`.
 
-__Note:__ This is not a foolproof data type conversion tactic and is easily broken. For instance, if you type the response "one" into the prompt instead of 1, the `parseInt` function will return a `NaN` (Not a Number) value. The `NaN` value is a special value that is returned when you try to perform arithmetic on a value that is not recognized as a number. For our purposes at the moment, however, this technique will suffice.
+### Converting Input to Numbers: `parseInt()` and `parseFloat()`
 
-## If/Else Statements
+If you need the user's input as a number for calculations, you must convert it.
 
-So far so good--we now have a way to capture user input. However, we don't yet have a way to react or respond to that input. For this we can use a different kind of structure called an __if/else statement__. These statements allow us to make decisions based on the value of a variable.
+*   `parseInt()`: Converts a string to an **integer** (whole number). It stops parsing at the first non-numeric character.
+*   `parseFloat()`: Converts a string to a **floating-point number** (decimal).
 
-The basic structure of an `if/else` statement is:
+```javascript
+const ageString = prompt("How old are you?");
+const userAge = parseInt(ageString); // Convert the input string to a number
 
-```JavaScript
-    if (condition) {
-        // code to run if condition is true
-    } else {
-        // code to run if condition is false
-    }
-```
+console.log("Age as string:", ageString, typeof ageString);
+console.log("Age as number:", userAge, typeof userAge);
 
-If statements translate to something like "_If condition is met, then execute the task_". In other words, the code in the `if` "block" will run if the `condition` (whatever it may be) is true and skip the `else` block, and the code in the `else` block will run if the `condition` is false and skip the initial `if` block. Note the beginning and ending curly braces `{}` surrounding each branch of the code: `if` and `else` always utilize curly braces, rather than semicolons. These braces always indicate a particular block of code and you will encounter them in many contexts.
-
-Also note the text following the two forward slashes `//`: these are called __comments__. Comments are used to explain the code and are not executed by the computer. They are purely for human readers. As we continue to build more complex programs, we will often use comments to explain the code. Writing comments for yourself is an important way to make sure that you recall the purpose of the code you are writing if you return to it later. It also helps others reading your code to understand your intentions as well.
-
-Let's look at a more concrete example of an if/else statement, modifying our "get the user's age" program from above and seeing if they are legally eligible to vote (as far as age goes) in the U.S. Try running the code in the console below.
-
-```JavaScript
-    var userAge = prompt("How old are you?");
-    userAge = parseInt(userAge);
-    if (userAge >= 18) {
-        alert("You are legally old enough to vote in the U.S.");
-    } else {
-        alert("You are not legally old enough to vote in the U.S.");
-    }
+// Now you can do calculations
+const nextYearAge = userAge + 1;
+alert("Next year, you will be " + nextYearAge + ".");
 ```
 
 <JSTerminal />
 
-After gathering the user input and performing the conversion, we then use an `if/else` statement to determine if the user is old enough to vote (that is, we check to see if they are 18 years or older). 
+*   **`NaN` (Not a Number):** If the conversion fails (e.g., user enters "twenty"), `parseInt()`/`parseFloat()` return `NaN`. You can check for this using `isNaN(variable)`.
 
-## Else If Statements
+    ```javascript
+    const maybeNumber = parseInt("hello"); // maybeNumber becomes NaN
+    console.log(isNaN(maybeNumber)); // Output: true
+    ```
 
-Using `else if`, you can utilize as many statements as you want in your code to check as many conditions as you need. Try running the following example in the console:
+## `if` Statements
 
-```JavaScript    
-    var userAge = prompt("How old are you?");
-    userAge = parseInt(userAge);
+An `if` statement executes a block of code **only if** a specified condition evaluates to `true`.
 
-    if (userAge >= 18) {
-        alert("You are legally old enough to vote and drive in the U.S.");
-    } else if (userAge >= 16) {
-        alert("You are not old enough to vote, but you are old enough to drive in the U.S.");
-    } else {
-        alert("You are not legally old enough to vote or drive in the U.S.");
-    }
-```
-
-<JSTerminal />
-
-The first `if` statement checks to see if the user is old enough to vote. If they are, the `alert` message is displayed. If they are not, the second statement `else if` checks to see if they are at least able to drive. If they are, the `alert` message is displayed. If they are not, the final `else` statement displays the last `alert` message. The final `else` statement in a series is usually considered a default case or catchall to execute if none of the other `if/else` statements are true.
-
-Along with testing as many conditions as you want, you can also run as many lines of code as you want in each block. You can even chain together a series of `if/else` statements. This is called __nesting__. For example:
-
-```JavaScript
-if (condition1)\{
-    // code to run if condition1 is true
-    if (condition2){
-        // code to run if condition2 is true
-        if (condition3){
-            // code to run if condition3 is true
-        } else {
-            // code to run if condition3 is false
-        }
-    } else {
-        // code to run if condition2 is false
-    }
-} else {
-    // code to run if condition1 is false
+```javascript
+if (condition) {
+  // Code to run if condition is true
 }
 ```
 
-As you might be able to tell from just this example, too many nested `if/else` statements can be hard to read and hard to maintain, so try to keep them to a minimum whenever possible.
+*   The `condition` is typically a boolean expression (using comparison operators).
+*   The code block is enclosed in curly braces `{}`.
 
-To help you understand how each block of this conditional cascade is structured, take a look at the diagram below:
+Example:
+
+```javascript
+const userAge = parseInt(prompt("Enter your age:"));
+
+if (userAge >= 18) {
+  console.log("You are old enough to vote.");
+}
+
+console.log("Finished checking."); // This line always runs
+```
+
+<JSTerminal />
+
+## `if...else` Statements
+
+An `if...else` statement provides an alternative block of code to execute if the condition is `false`.
+
+```javascript
+if (condition) {
+  // Code to run if condition is true
+} else {
+  // Code to run if condition is false
+}
+```
+
+Example: Voting eligibility check revisited.
+
+```javascript
+const userAge = parseInt(prompt("How old are you?"));
+
+if (userAge >= 18) {
+  alert("You are legally old enough to vote in the U.S.");
+  console.log("Eligible.");
+} else {
+  alert("You are not legally old enough to vote in the U.S.");
+  console.log("Not eligible.");
+}
+```
+
+<JSTerminal />
+
+## `else if` Statements
+
+To check multiple conditions in sequence, use `else if`.
+
+```javascript
+if (condition1) {
+  // Runs if condition1 is true
+} else if (condition2) {
+  // Runs if condition1 is false AND condition2 is true
+} else if (condition3) {
+  // Runs if conditions 1 and 2 are false AND condition3 is true
+} else {
+  // Runs if ALL preceding conditions are false
+}
+```
+
+Example: Age categories.
+
+```javascript
+const userAge = parseInt(prompt("How old are you?"));
+
+if (userAge >= 65) {
+  alert("You are eligible for senior discounts.");
+} else if (userAge >= 18) {
+  alert("You are an adult.");
+} else if (userAge >= 13) {
+  alert("You are a teenager.");
+} else {
+  alert("You are a child.");
+}
+```
+
+<JSTerminal />
+
+*   Only **one** block (`if`, `else if`, or `else`) will execute – the first one whose condition is met.
+
+## Comments
+
+Use comments to explain your code. JavaScript ignores them.
+
+*   **Single-line comment:** Starts with `//`
+    ```javascript
+    // This is a single-line comment
+    let score = 100; // This part explains the score
+    ```
+*   **Multi-line comment:** Starts with `/*` and ends with `*/`
+    ```javascript
+    /*
+    This is a multi-line comment.
+    It can span several lines.
+    Useful for longer explanations.
+    */
+    const gravity = 9.8;
+    ```
+    Good commenting makes your code understandable to others and to your future self!
+
+## Nesting Conditionals
+
+You can place `if`/`else` statements inside other `if`/`else` blocks. This is called **nesting**.
+
+```javascript
+const knowsJavaScript = true;
+const knowsPython = false;
+
+if (knowsJavaScript) {
+  console.log("Great! You know JavaScript.");
+  if (knowsPython) {
+    console.log("You know Python too!");
+  } else {
+    console.log("Maybe learn Python next?");
+  }
+} else {
+  console.log("You should learn JavaScript!");
+}
+```
+
+*   **Caution:** Deeply nested conditionals can become hard to read and debug. Try to keep nesting levels shallow if possible.
 
 ![if/else diagram](/images/if-else-diagram.png)
-
-The arrows indicate the beginning (opening) and ending (closing) braces of a particular `if/else` statement. By matching the colors of each statement, you can see how the curly braces are continually nesting and designating their own blocks of code. While many modern code editors have their own built-in syntax highlighting (or coloring) as well as automatic indentation and bracing to make our code more visually understandable, it is still important to keep a close eye on your code and make sure you are following the correct structure and working in the correct block. 
+*(This diagram shows how nested blocks work. Pay attention to the curly braces `{}` defining each block.)*
 
 ## Switch Statements
 
-Switch statements are another control flow structure used to handle multiple conditions. They are perhaps not as common, but they are useful to cover here briefly, as they can have a cleaner syntax than creating overly complex chains of `if/else` statements.
+A `switch` statement is an alternative to a long chain of `else if` statements, particularly useful when checking a single variable against multiple specific values.
 
-The basic structure of a switch statement is:
-
-```JavaScript
-    switch (variable) {
-        case value1:
-            // code to run if `variable` is `value1`
-            break;
-        case value2:
-            // code to run if `variable` is `value2`
-            break;
-        case value3:
-            // code to run if `variable` is `value3`
-            break;
-        default:
-            // code to run if `variable` is not `value1`, `value2`, or `value3`
-            break;
-    }
+```javascript
+switch (expression) {
+  case value1:
+    // Code to run if expression === value1
+    break; // Important: stops execution within the switch
+  case value2:
+    // Code to run if expression === value2
+    break;
+  // ... more cases
+  default:
+    // Code to run if no cases match
+    break;
+}
 ```
 
-Like the `if/else` statement, the `switch` statement is broken into a series of `case` statements. Each `case` statement is a condition that the `switch` statement will check. The `switch` statement will then execute the code in the block that is associated with the first `case` statement that is evaluated as true. If none of the `case` statements are true, the `default` block will be executed.
+*   The `expression`'s value is compared strictly (`===`) against each `case`.
+*   The `break` statement is crucial. Without it, execution will "fall through" to the next `case`, even if it doesn't match.
+*   The `default` case is optional and runs if no other `case` matches.
 
-The `break` statement is used to break out of the `switch` statement. The `break` statement is not required, but it is recommended to use it. If you omit the `break` statement, the `switch` statement will continue to execute the code in the next `case` statements even if they do not match the case.
+Example: Difficulty setting.
 
-Let's take a look at a more concrete example of a `switch` statement. Let's say we were creating a computer game, and wanted to let the player pick a difficulty setting. Take a look at the following code and run it in the console:
+```javascript
+const difficultyChoice = prompt("Choose difficulty: 1-Easy, 2-Medium, 3-Hard");
 
-```JavaScript
-    var difficulty = prompt("What difficulty would you like to play? 1- Easy, 2- Medium, 3- Hard");
-    switch (difficulty) {
-        case "1":
-            alert("You have selected the Easy difficulty.");
-            break;
-        case "2":
-            alert("You have selected the Medium difficulty.");
-            break;
-        case "3":
-            alert("You have selected the Hard difficulty.");
-            break;
-        default:
-            alert("Invalid entry.");
-            break;
-    }
+switch (difficultyChoice) {
+  case "1":
+    alert("You selected Easy.");
+    break;
+  case "2":
+    alert("You selected Medium.");
+    break;
+  case "3":
+    alert("You selected Hard.");
+    break;
+  default:
+    alert("Invalid choice. Defaulting to Medium.");
+    // No break needed at the end of default
+}
 ```
 <JSTerminal />
 
-Here we have three different difficulty levels (although you can have as many levels or `cases` as you want in a `switch` statement). The first `case` statement checks to see if the user entered `1`, the second `case` statement checks to see if the user entered `2`, and the final `case` statement checks to see if the user entered `3`. If the user entered `1`, `2`, or `3`, the `alert` message is displayed. If the user entered anything else, the `default` block is executed and an error message is shown. 
+*   Note: We are comparing against strings (`"1"`, `"2"`, `"3"`) because `prompt()` returns a string.
 
-While this example could also easily be written using `if/else` statements, in your programming journey there may be times when writing a `switch` statement is more appropriate than writing many unwieldy `if/else` statements. Did you notice how many fewer curly braces you had to keep track of when writing a `switch` structure? Readability is just as important as functionality in programming.
+`switch` can sometimes be cleaner than many `else if` checks, especially for exact value comparisons.
 
-## Choose Your Own Adventure
+## Choose Your Own Adventure Game
 
-Now that you have a better understanding of some basic control flow structures in JavaScript, it's time to put them to work creating a simple Choose Your Own Adventure game using `prompt` for input and `alert()` for output. Since our game is meant to be a piece of interactive fiction, we'll want to use a variable to track player choices, and perhaps also let the player input their name to personalize the game and get things started.
+Let's combine `prompt`, `alert`, and `if/else if/else` to create a simple text adventure.
 
-```JavaScript
-    var playerName, playerChoice;
+```javascript
+// Get Player Name
+const playerName = prompt("What is your name, brave adventurer?");
+alert("Welcome, " + playerName + "!");
 
-    var playerName = prompt("What is your name?");
-    alert("Welcome, " + playerName + "!");
+// Start the Story
+alert(playerName + ", you stand at a crossroads. A dark forest lies to the LEFT, and a sunny path leads to the RIGHT.");
+const firstChoice = prompt("Which way do you go? (Type LEFT or RIGHT)").toUpperCase(); // Convert input to uppercase for easier comparison
+
+// Branching based on choice
+if (firstChoice === "LEFT") {
+  alert("You enter the spooky forest. Twigs snap underfoot.");
+  const forestChoice = prompt("You see a glimmering light ahead (LIGHT) or hear a rustling in the bushes (BUSHES)?").toUpperCase();
+
+  if (forestChoice === "LIGHT") {
+    alert("You follow the light and find a hidden treasure chest! You win!");
+  } else if (forestChoice === "BUSHES") {
+    alert("A grumpy badger jumps out and chases you away! You lose.");
+  } else {
+    alert("Lost in the woods, you wander aimlessly. Game Over.");
+  }
+
+} else if (firstChoice === "RIGHT") {
+  alert("You walk along the sunny path. You see a river ahead.");
+  const pathChoice = prompt("Do you try to SWIM across or look for a BRIDGE?").toUpperCase();
+
+  if (pathChoice === "SWIM") {
+    alert("The current is too strong! You are swept away. Game Over.");
+  } else if (pathChoice === "BRIDGE") {
+    alert("You find a sturdy bridge, cross safely, and reach a peaceful village! You win!");
+  } else {
+    alert("Unsure what to do, you sit by the riverbank indefinitely. Game Over.");
+  }
+
+} else {
+  alert("Indecision paralyzes you at the crossroads. Game Over.");
+}
 ```
-
-Next, we can begin adding our story. I am going to show you an example, but feel free to get creative and write a story of your own. For my example, I am going to adapt the first two lines of Fredric Brown’s short story “Knock,” written in 1948. These two lines are a complete story in themselves and are widely considered one of the shortest and yet most evocative horror/sci fi stories to date. In Brown’s story, the first two lines are as follows: 
-
-> “The last man on earth sat alone in a room.  There was a knock on the door.”
-
-I’m going to have some fun with this story and let the player decide what to do next. I will also modify the language a bit—because we are creating a Choose Your Own Adventure story, we want to use second person phrasing (you). So, my story will look rather like this:
-
-```JavaScript
-    alert(playerName + ", you are the last person on earth, sitting alone in a room. There is a knock on the door... What will you do?");
-    playerChoice = prompt("Enter 1 to cautiously approach the door. Enter 2 to hide under the table.");
-    if (playerChoice == "1"){
-        alert("Your hands are trembling as you approach the door. You pause a moment before it.");
-    } else if (playerChoice == "2"){
-        alert("As you hide under the table you hear the doorknob rattling.");
-    }
-    else {
-        alert("Invalid entry.");
-    }
-```
-
-Let's try adding some more options to our story. Using the code editor below, see if you can add further options by nesting additional `if-else if` statements in the areas I have indicated with comments. You'll first want to include a new `prompt()` for `playerChoice` to get the player's new choices.
 
 <CodeEditor language='JavaScript' height = '600px'>
-var playerName, playerChoice;
-var playerName = prompt("What is your name?");
-alert("Welcome, " + playerName + "!");
-alert(playerName + ", you are the last person on earth, sitting alone in a room. There is a knock on the door... What will you do?");
-playerChoice = prompt("Enter 1 to cautiously approach the door. Enter 2 to hide under the table.");
-if (playerChoice == "1"){
-    alert("Your hands are trembling as you approach the door. You pause a moment before it.");
-    // add new prompt and choices for this branch here
-} else if (playerChoice == "2"){
-    alert("As you hide under the table you hear the doorknob rattling.");
-    // add new prompt and choices for this branch here
-}
-else {
-    alert("Invalid entry.");
-}
+// Paste the code above here to try it!
 </CodeEditor>
 
-
-Were you successfully able to add more options? Study my example below for a minute. For each choice (whether 1 or 2), I have added a new `if/else-if/else` statement within that block:
-
-```JavaScript
-    if (playerChoice == "1"){ // here's their first choice #1
-        alert("Your hands are trembling as you approach the door. You pause a moment before it.");
-        playerChoice = prompt("Enter 1 to bravely open the door. Enter 2 to look through the door's peephole.");
-        if (playerChoice == "1"){ //here's their second choice #1
-            alert("You swing the door open with courageous gusto.")
-        }
-        else if (playerChoice == "2"){ //here's their second choice #2
-            alert("You cautiously look through the peephole. You make out a vague shape looming before the door.")
-        }
-        else {
-            alert("Invalid entry."); // invalid entry for second choices
-        }
-    } else if (playerChoice == "2"){ // here's their first choice #2
-        alert("As you hide under the table you hear the doorknob rattling.");
-        playerChoice = prompt("Enter 1 to stay hidden under the table. Enter 2 to get up and find a weapon to defend yourself with.");
-        if (playerChoice == "1"){ //here's their second choice #1
-            alert("Whatever is at the door has now begun banging on it loudly.");
-        }
-        else if (playerChoice == "2"){ //here's their second choice #2
-            alert("You quickly but quietly get up and look around. You see a broom in the corner of the room and wield it mightily.");
-        }
-        else {
-            alert("Invalid entry."); // invalid entry for second choices
-        }
-    }
-    else {
-        alert("Invalid entry."); // invalid entry for first choices
-    }
-```
-
-In this way, we are creating a branching structure that follows different paths according to player choice.
-
-Putting it all together then, here is the story so far:
-
-```JavaScript
-    var playerName, playerChoice;
-
-    var playerName = prompt("What is your name?");
-    alert("Welcome, " + playerName + "!");
-
-    alert(playerName + ", you are the last person on earth, sitting alone in a room. There is a knock on the door... What will you do?");
-    playerChoice = prompt("Enter 1 to cautiously approach the door. Enter 2 to hide under the table.");
-    if (playerChoice == "1"){
-        alert("Your hands are trembling as you approach the door. You pause a moment before it.");
-        playerChoice = prompt("Enter 1 to bravely open the door. Enter 2 to look through the door's peephole.");
-        if (playerChoice == "1"){
-            alert("You swing the door open with courageous gusto.")
-        }
-        else if (playerChoice == "2"){
-            alert("You cautiously look through the peephole. You make out a vague shape looming before the door.")
-        }
-        else {
-            alert("Invalid entry.");
-        }
-    } else if (playerChoice == "2"){
-        alert("As you hide under the table you hear the doorknob rattling.");
-        playerChoice = prompt("Enter 1 to stay hidden under the table. Enter 2 to get up and find a weapon to defend yourself with.");
-        if (playerChoice == "1"){
-            alert("Whatever is at the door has now begun banging on it loudly.");
-        }
-        else if (playerChoice == "2"){
-            alert("You quickly but quietly get up and look around. You see a broom in the corner of the room and wield it mightily.");
-        }
-        else {
-            alert("Invalid entry.");
-        }
-    }
-    else {
-        alert("Invalid entry.");
-    }
-```
-
-Copy/paste my code into the code editor below if you'd like to see it in action.
-
-<CodeEditor language='JavaScript' height = '450px'>
-</CodeEditor>
-
-While this approach to creating a Choose Your Own Adventure program works, it is very clunky and quite hard to read. As we said before, simply using a bunch of nested `if/else if` statements makes a program incredibly difficult to build and maintain. You probably noticed this yourself when trying to add more choices to the program. Also, if the player incorrectly inputs a number, this program simply exits rather than prompting them to try again. Thankfully, JavaScript has many tools to help us address these issues. As we continue to learn more about the language, we will learn to use more control flow structures and data types to make our programs more readable and maintainable. Specifically, in the next lesson we will begin learning about loops and how to use them to repeat blocks of code, iterate over a series of values, and make our programs more efficient overall.
+*   **Improvements:** This code works, but notice the repetition (prompting, converting to uppercase). It also exits immediately on invalid input. Loops and functions (covered next) can make this much cleaner and more robust.
 
 ## Review Questions
 
-Let's review the concepts we have learned in this lesson.
+1.  The `prompt()` function returns user input as which data type?
+    <Quiz>
+    - Number
+    - Boolean
+    - String*
+    - Object
+    </Quiz>
 
-1. The `prompt()` function always returns a `string`.
+2.  What is the primary purpose of the `break` statement inside a `switch` block?
+    <Quiz>
+    - To indicate the default case.
+    - To stop the entire script.
+    - To exit the `switch` statement after a matching `case` is executed.*
+    - To repeat the current `case`.
+    </Quiz>
 
-<Quiz>
-- True*
-- False
-</Quiz>
-
-2. The code snippet below will throw errors or otherwise not work as intended. Why? Take a moment to look over it carefully, then select all that apply in the quiz below.
-
-```JavaScript
-prompt("What is your name?");
-if (name = "Sal Ami")
-    alert("Hello name!");
-else
-    alert("It's too bad your name isn't" + name + ".");
-```
-
-<Quiz>
-- `prompt()` needs to be assigned to a variable.*
-- a double-equals (rather than a single equals) operator is needed in the `if` statement.*
-- the first `alert` will not correctly display `name` as intended.*
-- the `if/else` statement needs curly braces for each part.*
-</Quiz>
-
-3. Switch statements should have (select all that apply):
-
-<Quiz>
-- `break`*
-- curly braces*
-- a default case*
-</Quiz>
+3.  Examine this code. What will be logged to the console if `score` is `75`?
+    ```javascript
+    const score = 75;
+    if (score >= 90) {
+      console.log("A");
+    } else if (score >= 80) {
+      console.log("B");
+    } else if (score >= 70) {
+      console.log("C");
+    } else {
+      console.log("D");
+    }
+    ```
+    <Quiz>
+    - A
+    - B
+    - C*
+    - D
+    </Quiz>
 
 ## Challenges
 
-1. Write a program that has the user input a number. If the number is even, `alert` "The number is even." If the number is odd, `alert` "The number is odd."
-
-<CodeEditor language='JavaScript'>
-</CodeEditor>
-
-2. Utilizing `switch` statements, write a short Choose Your Own Adventure story that allows the player 3 choices to choose from at a time.
+1.  **Even or Odd:** Write a program that prompts the user for a number, converts it to an integer using `parseInt()`, and then uses the modulo operator (`%`) within an `if/else` statement to alert whether the number is "even" or "odd". (Hint: An even number `n` satisfies `n % 2 === 0`).
+2.  **Simple Calculator:** Prompt the user for two numbers and an operator (`+`, `-`, `*`, `/`). Use `if/else if/else` or a `switch` statement to perform the calculation based on the operator and alert the result. Handle potential division by zero.
 
 <CodeEditor language='JavaScript' height='400px'>
+// Challenge 1: Even or Odd
+const numString = prompt("Enter a whole number:");
+const num = parseInt(numString);
+
+if (isNaN(num)) {
+  alert("Invalid input. Please enter a number.");
+} else if (num % 2 === 0) {
+  alert(num + " is even.");
+} else {
+  alert(num + " is odd.");
+}
+
+// Challenge 2: Simple Calculator (using if/else if/else)
+const num1String = prompt("Enter the first number:");
+const num2String = prompt("Enter the second number:");
+const operator = prompt("Enter an operator (+, -, *, /):");
+
+const num1 = parseFloat(num1String);
+const num2 = parseFloat(num2String);
+let result;
+
+if (isNaN(num1) || isNaN(num2)) {
+  alert("Invalid number input.");
+} else if (operator === '+') {
+  result = num1 + num2;
+  alert(num1 + " + " + num2 + " = " + result);
+} else if (operator === '-') {
+  result = num1 - num2;
+   alert(num1 + " - " + num2 + " = " + result);
+} else if (operator === '*') {
+  result = num1 * num2;
+   alert(num1 + " * " + num2 + " = " + result);
+} else if (operator === '/') {
+  if (num2 === 0) {
+    alert("Cannot divide by zero!");
+  } else {
+    result = num1 / num2;
+     alert(num1 + " / " + num2 + " = " + result);
+  }
+} else {
+  alert("Invalid operator.");
+}
+
 </CodeEditor>
 
 ## Key Terms
 
-Do you recall the meaning of the following terms from this lesson?
+-   control flow
+-   `if`, `else if`, `else`
+-   `switch`, `case`, `break`, `default`
+-   condition
+-   boolean expression
+-   `prompt()`
+-   `parseInt()`, `parseFloat()`
+-   `NaN`, `isNaN()`
+-   nesting
+-   comments (`//`, `/* */`)
 
-- control flow
-- return
-- comments
-- nesting
+---
 
 # Loops and Arrays
 
-In this lesson we will begin exploring how to use __loops__ to repeat blocks of code and iterate over a series of values. We will also learn to work with a very versatile new data type called `arrays`. To put these skills to work, at the end of the lesson we will create a simple library app that allows users to search for a book and see if it is located in the library's collection. 
+Often, you need to repeat a block of code multiple times or work with collections of data. **Loops** allow you to automate repetition, and **arrays** are fundamental data structures for storing ordered lists of items.
+
+In this lesson, we'll explore `for` and `while` loops, learn how to create and manipulate arrays, and combine these concepts to build a simple library search application.
 
 ## Arrays
 
-Let's begin by learning about the `array` data type. So far, you have encountered variables that only contain a single value. An array, in contrast, is a _series_ or a _collection_ of values stored in a single variable. The following is an example of four different arrays:
+An **array** is an ordered collection of values, stored in a single variable. Arrays can hold items of any data type, including other arrays or objects. They are defined using square brackets `[]`, with elements separated by commas.
 
-```JavaScript
-var myArray1 = [1, 2, 3, 4, 5];
-var myArray2 = ['a', 'b', 'c', 'd', 'e'];
-var myArray3 = [true, false, true, false];
-var myArray4 = [1, 2, 'dog', true, [1, 2, 3]];
+```javascript
+// Examples of arrays:
+const emptyArray = [];
+const fibonacci = [1, 1, 2, 3, 5, 8]; // Array of numbers
+const colors = ['red', 'green', 'blue']; // Array of strings
+const mixedData = [1, 'hello', true, null, colors]; // Mixed types, including another array
 ```
 
-Creating an array is just like other variable declarations you have seen, but the items it contains are always denoted by square brackets `[]`. An array can house any of the data types we have encountered so far. The first array, for example, contains a series of numbers, the second array contains a series of letters, and the third array contains a series of booleans. Arrays are very versatile and can also contain a mix of different data types, like in the fourth example. As you can see, this array even contains another array `[1, 2, 3]`!
+### Accessing Array Elements (Indexing)
 
-Arrays are useful when you want to have a series of values that are easily accessible. Creating an individual variable for each of the values in the example above, for instance, would make your code very confusing and hard to work with.
+Array elements are accessed using their **index**, which is their numerical position in the array. **Important:** Array indexing starts at **0**.
 
-Let's look at how we can access the values in an array.
+```javascript
+const fruits = ['apple', 'banana', 'cherry'];
 
-## Accessing Values in an Array
-
-To work with particular values in an array, we access its __index__. Values in an array are numbered starting from 0. The first value in an array is at index 0, the second value at index 1, and so on. Take a look at the example below:
-
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-alert(myArray[0]); // returns 1
+console.log(fruits[0]); // Output: apple (index 0 is the first element)
+console.log(fruits[1]); // Output: banana (index 1 is the second element)
+console.log(fruits[2]); // Output: cherry (index 2 is the third element)
+console.log(fruits[3]); // Output: undefined (index 3 doesn't exist)
 ```
 
-We access the index of an array by using the square brackets `[]` and the corresponding index number. The code snippet above will `alert` the value at index 0 of the array `myArray`. Remember, 0 is the _first_ value in an array, 1 is the _second_ value, and so on.
+<JSTerminal />
 
-Try using `alert` to display the value for each of the items from the example in the code editor below:
+### Modifying Array Elements
 
-<CodeEditor language='JavaScript'>
-    </CodeEditor>
+You can change the value of an element by assigning a new value to its index:
 
-As you can see, when you access the value at index 4 (`myArray[4]`), you get the value `1, 2, 3`. Again, this is because the value at index 4 is an array itself.
-
-## Changing Values in an Array
-
-To change the value at a particular index in an array, we use the same syntax. We use the square brackets `[]` and the index number to access the value, and then assign that index a new value.
-
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-myArray[0] = 'cat';
-alert(myArray[0]); // returns 'cat'
+```javascript
+const colors = ['red', 'green', 'blue'];
+colors[1] = 'yellow'; // Change the element at index 1
+console.log(colors); // Output: ['red', 'yellow', 'blue']
 ```
 
-In this example, the value at index 0 (originally `1`) will be changed to `'cat'`.
+<JSTerminal />
 
-## Adding Values to an Array
+### Array Properties and Methods
 
-To add a new value to the end of an array, we use the `push()` method. __Methods__ are utilized with _dot notation_, and act upon whatever object or value (in the case below, an array) you specify. The `push()` method takes a single value and adds it to the end of the array.
+Arrays come with built-in properties and methods (functions associated with the array object) to help you work with them. Access these using dot notation (`.`).
 
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-myArray.push('cat');
-alert(myArray[5]); // returns 'cat'
-```
+*   **`.length` Property:** Returns the number of elements in the array.
+    ```javascript
+    const numbers = [10, 20, 30, 40];
+    console.log(numbers.length); // Output: 4
+    ```
+    *   **Accessing the Last Element:** Since indexing starts at 0, the last element's index is always `length - 1`.
+        ```javascript
+        const letters = ['a', 'b', 'c'];
+        console.log(letters[letters.length - 1]); // Output: c
+        ```
 
-As you can see, we attach our `push()` method to `myArray` with a `.` (dot), and indicate the value we want to add in the `()` parentheses. This code adds the value `'cat'` to the end of the array `myArray`. Methods are similar to functions, but are used to act upon a specific object. We will learn more about functions in the next lesson, but for now, just keep in mind the general syntax and usage of methods.
+*   **`.push()` Method:** Adds one or more elements to the **end** of an array.
+    ```javascript
+    const pets = ['cat', 'dog'];
+    pets.push('hamster');
+    console.log(pets); // Output: ['cat', 'dog', 'hamster']
+    pets.push('fish', 'bird');
+    console.log(pets); // Output: ['cat', 'dog', 'hamster', 'fish', 'bird']
+    ```
 
-## Removing Values from an Array
+*   **`.pop()` Method:** Removes the **last** element from an array and returns it.
+    ```javascript
+    const tools = ['hammer', 'saw', 'screwdriver'];
+    const removedTool = tools.pop();
+    console.log(removedTool); // Output: screwdriver
+    console.log(tools);       // Output: ['hammer', 'saw']
+    ```
 
-To remove a value from an array, we can use the `pop()` method. This method removes the last value in the array.
+*   **`.indexOf()` Method:** Returns the index of the **first occurrence** of a specified value. Returns `-1` if the value is not found.
+    ```javascript
+    const planets = ['Mercury', 'Venus', 'Earth', 'Mars'];
+    console.log(planets.indexOf('Earth')); // Output: 2
+    console.log(planets.indexOf('Jupiter')); // Output: -1
+    ```
 
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-myArray.pop();
-alert(myArray[4]);
-```
+*   **`.includes()` Method:** Checks if an array contains a certain value, returning `true` or `false`.
+    ```javascript
+    const tech = ['HTML', 'CSS', 'JavaScript'];
+    console.log(tech.includes('CSS'));        // Output: true
+    console.log(tech.includes('Python'));     // Output: false
+    ```
 
-Try running this code in the code editor below.
+*   **`.sort()` Method:** Sorts the elements of an array *in place*.
+    *   By default, it sorts alphabetically (converting elements to strings if necessary).
+    *   For numbers, this default sort can be unexpected (`[1, 10, 2]` becomes `[1, 10, 2]`). You often need to provide a comparison function for numerical sorting (more advanced topic).
+    ```javascript
+    const names = ['Charlie', 'Alice', 'Bob'];
+    names.sort();
+    console.log(names); // Output: ['Alice', 'Bob', 'Charlie']
 
-<CodeEditor language='JavaScript'>
-    </CodeEditor>
+    const points = [100, 1, 21];
+    points.sort();
+    console.log(points); // Output: [1, 100, 21] (Incorrect numerical sort!)
+    ```
 
-Oh no, we are now getting a message of `undefined`! But this is exactly what we intended to happen, because the `pop()` method removed the last value in the array. So, when we try to access it, JavaScript finds nothing there.
+*   **`.splice()` Method:** Changes the contents of an array by removing or replacing existing elements and/or adding new elements *in place*. It's versatile but can be complex. Basic usage: `array.splice(startIndex, deleteCount)` removes elements.
+    ```javascript
+    const months = ['Jan', 'March', 'April', 'June'];
+    months.splice(1, 0, 'Feb'); // Insert 'Feb' at index 1 (delete 0 elements)
+    console.log(months); // Output: ['Jan', 'Feb', 'March', 'April', 'June']
 
-## Splicing an Array
+    months.splice(4, 1, 'May'); // Replace 1 element at index 4 with 'May'
+    console.log(months); // Output: ['Jan', 'Feb', 'March', 'April', 'May']
 
-If we want to remove a range of values from an array or start at a particular index, we can use the `splice()` method. This method takes two parameters: the first parameter is the index number of the first value we want to start from and remove, and the second parameter is the number of values to remove in total.
+    months.splice(2, 1); // Remove 1 element starting at index 2 ('March')
+    console.log(months); // Output: ['Jan', 'Feb', 'April', 'May']
+    ```
 
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-myArray.splice(0, 2);
-alert(myArray[0]); // returns 'dog'
-```
+There are many more useful array methods ([MDN Array Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)). Arrays are essential for managing collections of data.
 
-In this example, the first two values in the array `myArray` are removed (we start at index 0 and remove two values total). After the operation, the value at index 0 is now `'dog'`.
+<CodeEditor language='JavaScript' height='400px'>
+// Try array methods here
+const testArray = ['one', 'two', 'three'];
+console.log("Original:", testArray);
+console.log("Length:", testArray.length);
 
-## Determining the Length of an Array
+testArray.push('four');
+console.log("After push:", testArray);
 
-It may not always be clear to you how many values are actually stored in a particular array at any given time, especially if it becomes very large or you are adding and removing a lot of elements. To determine the number of values in an array, we use the `length` property. The `length` property returns the number of values in an array. For example:
+const popped = testArray.pop();
+console.log("Popped:", popped);
+console.log("After pop:", testArray);
 
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-alert(myArray.length); // returns 5
-```
+console.log("Index of 'two':", testArray.indexOf('two'));
+console.log("Includes 'one':", testArray.includes('one'));
 
-We utilize `length` by prefacing it with a `.` (dot) and the array we want to act upon. Note that with `length`, you don't need to include the ending parentheses. This is because, strictly speaking, length is a property (a value), and not a method (which act like functions). Don't worry too much about this difference for now, just keep in mind that `length` does not require parentheses.
+testArray.sort();
+console.log("Sorted:", testArray);
 
-As you can see, `length` counts through the values in the array, so it will return 5. It is important to note here that `length` starts with 1, not 0, so although the last value in the array is at index 4, `length` will still return 5. Confusing, right? It is simply a quirk of the language to get used to, so keep it in mind when working with arrays.
+</CodeEditor>
 
-As an example, if you want to access the last value in the array, you can use the `[length - 1]` syntax. This will always return the last value in the array:
+## Looping
 
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-alert(myArray[myArray.length - 1]); // returns [1, 2, 3]
-```
+Loops execute a block of code repeatedly as long as a condition remains true.
 
-This is a useful way to access the last value in an array even when you don't know how many elements the array holds.
+### The `for` Loop
 
-## The sort() Method
+The `for` loop is ideal when you know how many times you want to iterate, often used for looping through arrays.
 
-Let's take a look at one last method that we can use on arrays. The `sort()` method sorts an array in alphabetical order, and is particularly useful if you have an array of letters or strings:
+**Syntax:**
 
-```JavaScript
-var myArray = ['c', 'b', 'a', 'e', 'd'];
-myArray.sort();
-alert(myArray); // returns ['a', 'b', 'c', 'd', 'e']
-```
-
-You can, however, also use the `sort()` method to sort an array in numerical order. For example:
-
-```JavaScript
-var myArray = [2, 4, 3, 1, 5];
-myArray.sort();
-alert(myArray); // returns [1, 2, 3, 4, 5]
-```
-
-There are [many other methods](https://www.w3schools.com/js/js_array_methods.asp) you can perform on arrays, and we have only scratched the surface here. But keep in mind that arrays are a powerful tool for storing and manipulating data. Let's now take a look at how we can loop through arrays to make our code more efficient.
-
-## Looping Through an Array
-
-We have so far seen how we can access values in an array, and manipulate them in ways that are useful. But what if we want to do something with every value in an array? For instance, if we wanted to access every value in an array, it would be very tedious to write out the same code over and over, referencing each and every item:
-
-```JavaScript
-myArray[0];
-myArray[1];
-myArray[2];
-myArray[3];
-...
-```
-
-Thankfully, we can do this in a more efficient way. Let's explore a new kind of technique called __looping__. Looping is a way to iterate through a structure and perform an action on each element.
-
-## The For Loop
-
-When you want to loop through an array, the most common way is with a `for` loop. This loop will __iterate__ or step through the array and execute a block of code for each value in the array.
-
-The general structure of a `for` loop is as follows:
-
-```JavaScript
-for (var i = 0; i < array.length; i++) {
-    // do something
+```javascript
+for (initialization; condition; final-expression) {
+  // Code block to execute repeatedly
 }
 ```
 
-This may look a little complicated, so let's explore it a bit. The `for` loop is comprised of three parts: the first part is the initialization of the loop, which is the variable `i` in this case (`i` is often used by convention, but the variable name can be anything you want). The second part is the condition that the loop will continue to execute until, and the third part is the incrementor. Each is separated by a semi-colon `;`.
+1.  **initialization:** Runs once before the loop starts (e.g., declare a counter variable: `let i = 0`).
+2.  **condition:** Checked *before* each iteration. If `true`, the code block runs. If `false`, the loop stops. (e.g., `i < array.length`).
+3.  **final-expression:** Executed *after* each iteration (e.g., increment the counter: `i++`).
 
-To break it down a little more:
-- `var i = 0`: This is the starting point of the loop. It will serve as the index number of the first element in the array.
-- `i < array.length`: This is the condition of the loop. It is a boolean expression that determines whether the loop should continue. In other words, it says: "while `i` is less than the `length` of the array, do the following:".
-- `i++`: This is the incrementor. `++` is a new operator that means that the value of `i` will increase or __increment__ by 1 each time the loop executes. We use it to increment the index number of the loop so that it will continually move to the next element in the array. 
+**Looping Through an Array:**
 
- Let's see how this works in action using our `myArray` array from earlier:
+```javascript
+const colors = ['red', 'green', 'blue'];
 
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-for (var i = 0; i < myArray.length; i++) {
-    alert(myArray[i]);
+// Loop from index 0 up to (but not including) colors.length
+for (let i = 0; i < colors.length; i++) {
+  console.log("Color at index " + i + " is " + colors[i]);
+}
+// Output:
+// Color at index 0 is red
+// Color at index 1 is green
+// Color at index 2 is blue
+```
+
+<CodeEditor language='JavaScript' height='250px'>
+const numbers = [10, 20, 30];
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  sum = sum + numbers[i]; // Add current number to sum
+  console.log("Adding", numbers[i], "Current sum:", sum);
+}
+console.log("Final sum:", sum); // Output: Final sum: 60
+</CodeEditor>
+
+*   `i++` is shorthand for `i = i + 1`.
+*   The loop variable (`i` here) is often used to access array elements by index (`colors[i]`).
+
+### The `while` Loop
+
+The `while` loop executes a block of code as long as a specified condition is `true`. It's useful when you don't know exactly how many iterations are needed beforehand.
+
+**Syntax:**
+
+```javascript
+while (condition) {
+  // Code block to execute
+  // **Crucial:** Must eventually make the condition false,
+  // or you create an infinite loop!
 }
 ```
 
-Try running this code in the code editor below.
+Example: Counting down.
 
-<CodeEditor language='JavaScript'>
-    </CodeEditor>
+```javascript
+let count = 3;
 
-As you can see, the loop iterated through the array and alerted each value in the array. You'll notice that the loop executed the alert 5 times instead of displaying all the values at once. This is because the loop is executing the alert once _for each_ value in the array. In other words, the code inside the `for` loop block executes once for each value in the array based on the current value of `i`. So, if there are 5 values in the array, the loop will execute 5 times.
-
-`for` loops are incredibly important to get the hang of, so let's look at one more example, looping from 1 to 5:
-
-```JavaScript
-var num = 5;
-
-// looping from i = 1 to 5
-// in each iteration, i is increased by 1
-for (var i = 1; i <= num; i++) {
-    console.log(i);     // printing the value of i
+while (count > 0) {
+  console.log("Countdown: " + count);
+  count = count - 1; // Decrement count - essential step!
 }
+
+console.log("Blast off!");
+// Output:
+// Countdown: 3
+// Countdown: 2
+// Countdown: 1
+// Blast off!
 ```
 
-If we were to run this, what would we get? Well, in this case we would get the following output:
-
-```
-1
-2
-3
-4
-5
-```
-
-In this case, we started our loop at `i = 1`, rather than `i = 0`. This is because we want to start our loop at 1, not 0. We then check if `i` is less than or equal to `num`, which is 5. If `i` is less than or equal to 5, the loop will continue to execute. If `i` is greater than 5, the loop will stop executing. Thus, we get the output of 1 through 5.
-
-## The While Loop
-
-The `while` loop is similar to the `for` loop, but it will infinitely execute the code inside a loop until a certain specified condition is met. This is useful if you want a certain code block to run until a particular outcome is resolved. Try running the example in the code editor below: 
-
-```JavaScript
-var i = 0;
+<CodeEditor language='JavaScript' height='200px'>
+let i = 0;
 while (i < 5) {
-    alert(i);
-    i++;
+    console.log("Current value of i:", i);
+    i++; // Increment i to eventually make the condition false
 }
-```
+console.log("Loop finished.");
+</CodeEditor>
 
-<CodeEditor language='JavaScript'>
-    </CodeEditor>
-
-As you can see, the loop executed the alert 5 times, incrementing the value of `i` each time. In other words, this loop is saying: "while `i` is less than 5, do the following:".
-
-__Note:__ It is very important to make sure your `while` loops ultimately end by satisfying the condition you specify. If you don't, the loop will continue forever, and the user will be required to force-quit your program or close the window to stop it.
+*   **Infinite Loops:** If the condition in a `while` loop *never* becomes false, the loop runs forever, crashing the browser tab. Always ensure there's a way to exit the loop (like incrementing/decrementing a counter).
 
 ## Putting It All Together - The Library App
 
-Let's use the skills we've learned in this lesson to create a simple app that will allow us to sort, display, and search for book titles from our library.
+Let's build a simple command-line style library search app using `prompt`, arrays, loops, and conditionals.
 
-To begin, let's imagine a number of fiction titles that are available in our library and add them to an array. We'll sort this array to put it in alphabetical order.
+**1. Setup:** Define the library collection and necessary variables.
 
-```JavaScript
-var bookTitles = [
+```javascript
+// Our library collection (an array of strings)
+const bookTitles = [
     'Too Loud a Solitude',
     'Things Fall Apart',
     'The Master and Margarita',
@@ -1020,2420 +1035,3606 @@ var bookTitles = [
     'The Tenant of Wildfell Hall',
     "Lady Chatterley's Lover",
 ];
+bookTitles.sort(); // Alphabetize the list
 
-bookTitles.sort();
-var requestedTitle = "";
-var libRequests = []
+const libRequests = []; // An array to store user requests
+let userCommand = "";    // Variable to store user input
 ```
 
-Because we want to get book requests from the user, an empty string `requestedTitle` will store the title of the book that the user requested in the prompt, and an empty array `libRequests` will store all the many requests the user may enter.
+**2. Welcome Message:**
 
-Next, let's give the user a short welcome message. We will also let them know they can make a request by typing `request` at the prompt, display all book titles by typing `display`, or quit the program by typing `quit`:
-
-```JavaScript
-alert("Welcome to the library!\n\nPlease search for a book title when prompted.\n\nType `request` at the prompt to make a request for a book.\n\nYou can also type `display` at the prompt to display all available book titles.\n\nType `quit` at the prompt to quit the program.");
+```javascript
+alert("Welcome to the Library!\n\n" +
+      "Commands:\n" +
+      "- Type a book title to search.\n" +
+      "- Type 'DISPLAY' to see all titles.\n" +
+      "- Type 'REQUEST' to request a book.\n" +
+      "- Type 'QUIT' to exit.");
+// Note: \n creates a new line in alert/prompt messages
 ```
 
-Our welcome message gives the user a few options for what they can do. To keep the text display neat, we use `\n` characters (specifically 2 in this case) to create two new lines after each statement.
+**3. Main Loop:** Keep prompting the user until they type 'QUIT'.
 
-At this point, we can envision a few things about how our program should operate:
-- We want to allow the user to search for books until they decide to quit. So, a `while` loop will be needed.
-- We want to check if the user types `request` or `display` at the prompt. If they do, we want to perform the appropriate action. So, we will need several `if/else` statements. 
-- We want to iterate through the array of book titles and display each one. So, we can use a `for` loop to accomplish this.
+```javascript
+while (userCommand !== 'QUIT') {
+    userCommand = prompt("Enter command or book title (or 'QUIT'):").toUpperCase(); // Get input, convert to uppercase
 
-Okay, conceptually we have the basic toolkit. However, we are missing one crucial piece. We want the program to check if a book title the user enters is actually in the library. That is, we want to see if the string the user enters matches an item in the array `bookTitles`. How can we do this? Let's introduce one more new method: `indexOf`.
+    // Handle different commands using if/else if
+    if (userCommand === 'QUIT') {
+        alert("Thank you for visiting the library!");
+        break; // Exit the while loop
+    } else if (userCommand === 'DISPLAY') {
+        // Display all books (uses a for loop)
+        let allTitles = "Available Titles:\n";
+        for (let i = 0; i < bookTitles.length; i++) {
+            allTitles += "- " + bookTitles[i] + "\n"; // Add each title to the string
+        }
+        alert(allTitles);
+    } else if (userCommand === 'REQUEST') {
+        // Handle book requests
+        const requestedTitle = prompt("What book would you like to request?");
+        if (requestedTitle) { // Check if the user entered something
+            libRequests.push(requestedTitle);
+            alert("Request for '" + requestedTitle + "' logged. Your requests: " + libRequests.join(", "));
+        } else {
+            alert("Request cancelled.");
+        }
+    } else {
+        // Assume user entered a title to search for
+        const searchTerm = userCommand; // User input is the search term
+        let found = false; // Flag to track if the book was found
 
-### indexOf
-
-`indexOf` is a method that returns the index of the first occurrence of a value in an array. If the value is not found, it will return `-1`. Here's an example:
-
-```JavaScript
-var myArray = ['dog', 'cat', 'bird', 'fish'];
-myArray.indexOf('dog'); // returns 0
-myArray.indexOf('cat'); // returns 1
-myArray.indexOf('bird'); // returns 2
-myArray.indexOf('fish'); // returns 3
-myArray.indexOf('cow'); // returns -1
-```
-
-Using this method, we can check if a book title the user enters is in the library (if the string the user enters matches an item in the array `bookTitles`). If it doesn't (if the method returns `-1`), we can alert the user that the book they requested is not in the library.
-
-With this method we should now have everything we need. Let's put the whole program together:
-
-```JavaScript
-var bookTitles = [
-    'Too Loud a Solitude',
-    'Things Fall Apart',
-    'The Master and Margarita',
-    'The Three Body Problem',
-    'The Woman Destroyed',
-    'Beloved',
-    'The Tenant of Wildfell Hall',
-    "Lady Chatterley's Lover",
-];
-
-bookTitles.sort();
-var libRequests = [];
-var requestedTitle = "";
-
-alert("Welcome to the library!\n\nPlease search for a book title when prompted.\n\nType `request` at the prompt to make a request for a book.\n\nYou can also type `display` at the prompt to display all available book titles.\n\nType `quit` at the prompt to quit the program.");
-
-var response = "";
-while (response != 'quit') {
-    response = prompt("Search for a book title or make a request by typing 'request': ");
-    // check if the user wants to make a request
-    if (response == 'request') {
-        requestedTitle = prompt("What book would you like to request? ");
-        libRequests.push(requestedTitle); // add the requested title to the library requests array
-        alert("You have requested the following titles:" + libRequests + "."); // alert the user their requests
-    }
-    // check if the user wants to display all the titles
-    else if (response == 'display') {
-        for (var i = 0; i < bookTitles.length; i++) {
-            alert(bookTitles[i]); // display all available book titles
-            }
-    }
-    // otherwise, check if the book the user entered is in the library
-    else {
-        var bookIndex = bookTitles.indexOf(response);
-        if (response != 'quit'){
-            // if indexOf returns -1, the book the user entered is not in the library
-            if (bookIndex == -1) {
-                alert("Sorry, we don't have that book. You can always request it.");
-            }
-            else {
-                alert("Yes, " + response + " is available to check out.");
+        // Loop through bookTitles to check for a match (case-insensitive)
+        for (let i = 0; i < bookTitles.length; i++) {
+            if (bookTitles[i].toUpperCase() === searchTerm) {
+                alert("Yes, '" + bookTitles[i] + "' is available!");
+                found = true;
+                break; // Stop searching once found
             }
         }
+
+        // If the loop finished and 'found' is still false
+        if (!found) {
+            alert("Sorry, '" + searchTerm + "' is not in our collection. You can try requesting it.");
+        }
     }
-}
+} // End of while loop
 ```
 
-Try running and exploring the program:
-
 <CodeEditor language='JavaScript' height='550px'>
-    </CodeEditor>
+// Paste all parts of the Library App code here to run it.
 
-Let's break down the logic of the program a bit. First, we have a `var response = "";` line. This is an empty string variable declaration meant to store the user's response to the prompt. We will use this variable to determine whether or not the user wants to make a request, display, quit, or else search for the book in our library. Next, we have a `while` loop that will continue to execute until the user types `quit`. Within the `while` loop, we first check if the user's response is `request` or `display`. If it is, we can perform the appropriate action using `if/else if` statements. To display all book titles, we use a `for` loop to alert each book. If the response is not a defined user action (i.e., request, display, quit), we can check if the string is in the library. We use the `indexOf` method to check if the `response` string is in the library. If it is, we can alert the user that the book is available to check out. If it isn't (if the method returns `-1`), we can alert the user that the book is not in the library.
+// 1. Setup
+const bookTitles = [
+    'Too Loud a Solitude', 'Things Fall Apart', 'The Master and Margarita',
+    'The Three Body Problem', 'The Woman Destroyed', 'Beloved',
+    'The Tenant of Wildfell Hall', "Lady Chatterley's Lover",
+];
+bookTitles.sort();
+const libRequests = [];
+let userCommand = "";
 
-Congratulations! You have now successfully created a basic library search program. There are, of course, a number of limitations to this program. For instance: 
-- The search parameters are not very robust. The user must type out the full title of the book, with the exact spelling and punctuation of the title. As you might imagine, this is not a very good user experience.
-- The `for` loop sends an alert for each book in the library. This is not ideal, especially if we had a large amount of books. We would want to display the books in a more organized manner.
+// 2. Welcome
+alert("Welcome to the Library!\n\n" +
+      "Commands:\n" +
+      "- Type a book title to search.\n" +
+      "- Type 'DISPLAY' to see all titles.\n" +
+      "- Type 'REQUEST' to request a book.\n" +
+      "- Type 'QUIT' to exit.");
 
-These are basic considerations we would want to take into account if we were actually designing a library search program. However, if you can understand how this program works, you are well on your way to creating complex and robust JavaScript programs. To get some more practice in, try out the challenges below.
+// 3. Main Loop
+while (userCommand !== 'QUIT') {
+    const rawInput = prompt("Enter command or book title (or 'QUIT'):");
+    // Handle if user clicks Cancel/Esc (prompt returns null)
+    if (rawInput === null) {
+        userCommand = 'QUIT'; // Treat cancel as quit
+    } else {
+         userCommand = rawInput.toUpperCase(); // Get input, convert to uppercase
+    }
+
+
+    // Handle different commands
+    if (userCommand === 'QUIT') {
+        alert("Thank you for visiting the library!");
+        // Loop will terminate naturally on next check
+    } else if (userCommand === 'DISPLAY') {
+        let allTitles = "Available Titles:\n";
+        for (let i = 0; i < bookTitles.length; i++) {
+            allTitles += "- " + bookTitles[i] + "\n";
+        }
+        alert(allTitles);
+    } else if (userCommand === 'REQUEST') {
+        const requestedTitle = prompt("What book would you like to request?");
+        if (requestedTitle) { // Check if the user entered something (not null or empty string)
+            libRequests.push(requestedTitle);
+            alert("Request for '" + requestedTitle + "' logged. Your requests: " + libRequests.join(", "));
+        } else {
+            alert("Request cancelled.");
+        }
+    } else if (userCommand === '') {
+        // Handle empty input if needed, maybe prompt again or ignore
+        alert("Please enter a command or title.");
+    }
+    else {
+        // Assume user entered a title to search for
+        const searchTerm = userCommand;
+        let found = false;
+
+        for (let i = 0; i < bookTitles.length; i++) {
+            // Case-insensitive comparison
+            if (bookTitles[i].toUpperCase() === searchTerm) {
+                alert("Yes, '" + bookTitles[i] + "' is available!");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            alert("Sorry, '" + searchTerm + "' is not in our collection. You can try requesting it.");
+        }
+    }
+} // End of while loop
+
+</CodeEditor>
+
+*   **Explanation:**
+    *   The `while` loop continues as long as `userCommand` is not 'QUIT'.
+    *   Inside the loop, we get user input using `prompt()` and convert it to uppercase using `.toUpperCase()` for case-insensitive comparisons.
+    *   An `if/else if/else` structure handles the different commands ('QUIT', 'DISPLAY', 'REQUEST') or defaults to searching.
+    *   `break;` is used to exit the loop immediately when 'QUIT' is entered.
+    *   The 'DISPLAY' command uses a `for` loop to build a string containing all titles.
+    *   The search logic also uses a `for` loop and compares the uppercase search term with the uppercase book title. A `found` flag tracks if a match occurred.
+    *   `.join(", ")` is used to display the requested books nicely.
+
+*   **Limitations:** This is still basic. Searching requires an exact title match (though case-insensitive). Error handling is minimal. A real app would use a better interface and more robust searching.
 
 ## Review Questions
 
-Let's review the concepts we have learned in this lesson.
+1.  If `myArray` is `['a', 'b', 'c']`, what is `myArray[1]`?
+    <Quiz>
+    - 'a'
+    - 'b'*
+    - 'c'
+    - undefined
+    </Quiz>
 
-1. What will be the result of the `alert` in the code below?
+2.  What does the `.push()` method do to an array?
+    <Quiz>
+    - Removes the last element.
+    - Removes the first element.
+    - Adds an element to the beginning.
+    - Adds an element to the end.*
+    </Quiz>
 
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-myArray.pop();
-alert(myArray[4]);
-```
+3.  Consider the loop: `for (let i = 0; i < 3; i++) { console.log(i); }`. What will be logged to the console?
+    <Quiz>
+    - 1, 2, 3
+    - 0, 1, 2*
+    - 0, 1, 2, 3
+    - 1, 2
+    </Quiz>
 
-<Quiz>
-- 1, 2, 3
-- true
-- undefined*
-</Quiz>
-
-2. What will be the result of the `alert` in this code snippet?
-
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-alert(myArray.length);
-```
-
-<Quiz>
-- 4
-- 5*
-- 6
-</Quiz>
-
-3. What will be the result of the `alert` here?
-
-```JavaScript
-var myArray = [1, 2, 'dog', true, [1, 2, 3]];
-myArray.splice(0, 2);
-alert(myArray[0]);
-```
-
-<Quiz>
-- 1
-- 2
-- dog*
-- true
-- [1, 2, 3]
-</Quiz>
+4.  What is the primary risk associated with `while` loops if not coded carefully?
+    <Quiz>
+    - They are slower than `for` loops.
+    - They can only loop through arrays.
+    - They might cause an infinite loop if the condition never becomes false.*
+    - They cannot use a counter variable.
+    </Quiz>
 
 ## Challenges
 
-1. Write a `for` loop that prints all even numbers from 0 to 100 to the console.
+1.  **Sum of Evens:** Write a `for` loop that iterates from 1 to 20. Inside the loop, use an `if` statement and the modulo operator (`%`) to check if the current number `i` is even. If it is, add it to a running `sum` variable (initialized to 0 before the loop). After the loop, `console.log` the final `sum`.
+2.  **Improved Library Search:** Modify the Library App's search logic. Instead of an exact match, use the string method `.includes()` ([MDN .includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)) to check if the `bookTitle` *contains* the `searchTerm` (both converted to uppercase or lowercase for case-insensitivity). Alert the user if any matches are found. This allows partial title searches.
+
+<CodeEditor language='JavaScript' height='400px'>
+// Challenge 1: Sum of Evens
+let sumOfEvens = 0;
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    sumOfEvens = sumOfEvens + i;
+  }
+}
+console.log("Sum of even numbers from 1 to 20:", sumOfEvens); // Should be 110
+
+
+// Challenge 2: Improved Library Search (showing only the relevant part)
+// Assume bookTitles array and searchTerm variable exist from the app
+
+/*
+// --- Inside the 'else' block of the Library App's main loop ---
+
+const searchTermUpper = searchTerm.toUpperCase(); // Use existing variable from app
+let foundTitles = []; // Array to hold matching titles
+
+for (let i = 0; i < bookTitles.length; i++) {
+    const currentTitleUpper = bookTitles[i].toUpperCase();
+    if (currentTitleUpper.includes(searchTermUpper)) {
+        // Found a match (or partial match)
+        foundTitles.push(bookTitles[i]); // Add the original title to our list
+    }
+}
+
+// After the loop, check if any titles were found
+if (foundTitles.length > 0) {
+    alert("Found matching title(s):\n- " + foundTitles.join("\n- "));
+} else {
+    alert("Sorry, no titles matching '" + searchTerm + "' found. You can try requesting it.");
+}
+
+// --- End of relevant part ---
+*/
+</CodeEditor>
+
+## Key Terms
+
+-   `array`
+-   index / indexing (0-based)
+-   `.length` property
+-   `.push()`, `.pop()`, `.indexOf()`, `.includes()`, `.sort()`, `.splice()` methods
+-   loop
+-   `for` loop (initialization, condition, final-expression)
+-   `while` loop
+-   iteration
+-   increment (`++`), decrement (`--`)
+-   infinite loop
+-   `.toUpperCase()`, `.toLowerCase()` string methods
+-   `.join()` array method
+
+---
+
+# Functions: Reusable Code Blocks
+
+As programs grow, you'll find yourself writing the same (or very similar) pieces of code multiple times. **Functions** allow you to package a block of code, give it a name, and reuse it whenever needed, making your code more organized, readable, and efficient.
+
+In this lesson, we'll learn to define and call our own functions, understand function parameters and return values, and delve deeper into variable **scope** (`let`/`const` vs. the older `var`). We'll apply these concepts by creating a simple student grading program using **objects**.
+
+## What are Functions?
+
+A function is a reusable block of code designed to perform a specific task.
+
+**Analogy:** Think of a function like a recipe. It has a name (e.g., "makePancakes"), it might need ingredients (**parameters**), it has a set of steps (the code inside), and it produces a result (**return value**, e.g., a stack of pancakes).
+
+**Basic Syntax (Function Declaration):**
+
+```javascript
+function functionName(parameter1, parameter2, ...) {
+  // Code block: the steps to perform
+  // ...
+  return value; // Optional: sends a result back
+}
+```
+
+*   **`function` keyword:** Starts the declaration.
+*   **`functionName`:** A descriptive name (use camelCase).
+*   **`parameters`:** (Optional) Variables listed inside the parentheses `()`, separated by commas. They act as placeholders for inputs the function will receive when called.
+*   **Code Block `{...}`:** The statements that perform the function's task.
+*   **`return` statement:** (Optional) Specifies the value the function sends back to the place where it was called. If omitted, the function implicitly returns `undefined`.
+
+**Example: An `add` Function**
+
+```javascript
+function add(num1, num2) {
+  const sum = num1 + num2;
+  return sum; // Return the calculated sum
+}
+```
+
+This function `add` takes two parameters (`num1`, `num2`), calculates their sum, stores it in a local variable `sum`, and then returns that `sum`.
+
+## Calling a Function
+
+Defining a function doesn't run its code. You need to **call** (or invoke) the function by using its name followed by parentheses `()`. When calling, you provide actual values, called **arguments**, for the parameters.
+
+```javascript
+// Define the function
+function add(num1, num2) {
+  const sum = num1 + num2;
+  return sum;
+}
+
+// Call the function with arguments 5 and 3
+const result = add(5, 3); // The return value (8) is stored in 'result'
+console.log(result);     // Output: 8
+
+// Call it again with different arguments
+const anotherResult = add(10, -2);
+console.log(anotherResult); // Output: 8
+
+// You can use the return value directly
+console.log("2 + 2 equals " + add(2, 2)); // Output: 2 + 2 equals 4
+```
+
+<CodeEditor language='JavaScript' height='250px'>
+function greet(name) {
+  const message = "Hello, " + name + "!";
+  return message;
+}
+
+const greetingForAlice = greet("Alice");
+console.log(greetingForAlice);
+
+console.log(greet("Bob"));
+
+</CodeEditor>
+
+*   **Parameters vs. Arguments:**
+    *   **Parameters** are the variables listed in the function definition (`num1`, `num2` in `add`).
+    *   **Arguments** are the actual values passed into the function when it's called (`5`, `3` in `add(5, 3)`).
+
+**Functions Without Parameters or Return Values:**
+
+A function doesn't *have* to take parameters or explicitly return a value.
+
+```javascript
+function sayHello() {
+  console.log("Hello there!");
+  // Implicitly returns undefined
+}
+
+sayHello(); // Output: Hello there!
+const returnValue = sayHello(); // Output: Hello there! (again)
+console.log(returnValue);       // Output: undefined
+```
 
 <CodeEditor language='JavaScript'>
 </CodeEditor>
 
-2. The library program is very case sensitive, requiring the user to enter exact punctuation and capitalization of a book title. This is not a very robust search. Try improving the program using the [toLowerCase method](https://www.w3schools.com/jsref/jsref_tolowercase.asp), which converts all the letters of a string to lowercase, to make the search parameters case insensitive. _Hint: To match the two terms, you will want to perform the `toLowerCase` method both on the user's response as well as on each book title in the library. Try storing these results in new variables!_
+## Scope: Where Variables Live
 
-## Key Terms
+**Scope** determines the accessibility (visibility) of variables. Where you declare a variable affects where it can be used. JavaScript has different types of scope. Understanding scope is crucial for avoiding bugs.
 
-Do you recall the following terms from this lesson?
-- `array`
-- `index`
-- `length`
-- `push`
-- `pop`
-- `splice`
-- `sort`
-- `indexOf`
+### Block Scope (`let` and `const`)
 
-# Functions
+Variables declared with `let` and `const` have **block scope**. They exist only within the nearest enclosing block, defined by curly braces `{...}` (like in `if` statements, `for` loops, or functions).
 
-In the last lesson, we learned how to loop through a series of statements to repeat blocks of code. As you saw, this can be very useful if we want to automate a series of tasks that would otherwise take forever to write out manually. __Functions__ are another technique that can be used to repeat and reuse blocks of code and help us automate tasks. In this lesson, we will learn how to create our own functions and how to use them. To this end, at the bottom of the lesson we will create a simple grading program that will allow you to add, calculate, and display student grades.
+```javascript
+function testScope() {
+  const functionVar = "I'm inside the function";
+  console.log(functionVar); // Works
 
-## What are Functions?
+  if (true) {
+    const blockVar = "I'm inside the if-block";
+    let blockLetVar = "Me too";
+    console.log(functionVar); // Works (outer scope is accessible)
+    console.log(blockVar);    // Works
+    console.log(blockLetVar); // Works
+  }
 
-Functions are blocks of code that are designed to perform a specific task and can be reused. When developing applications, you will likely need to perform the same action in many different places. For example, you may need to perform a specific calculation on a number of different values and in different places in your code. Or, you might want to show an error message whenever an error occurs. Instead of rewriting the same code over and over again to perform these actions, you can wrap the code in a function and then call the function whenever you need to perform the action.
-
-The basic syntax for creating a function is as follows:
-
-```JavaScript
-function functionName(parameter1, parameter2, ...) {
-    // code to be executed
-    return value;
-}
-```
-
-To create a function, you must first define the function name. Naming conventions for functions are [lower CamelCase](https://wiki.c2.com/?LowerCamelCase), in which the first word is lowercase and the following words begin with a capital letter. Next, you define the function's __parameters__ or __arguments__ within closed parentheses `()`. The parameters are the values that will be __passed__ into the function when it is called. Passing in parameters allows us to reuse the same function for different tasks, because we can pass in different values to the function each time we want to reuse it. The parameters are separated by commas. You can define as many parameters as you want.
-
-Like loops, you can see that functions use curly braces to define their contents. The contents of the function are the code that will be executed whenever the function is called.
-
-For a procedure to be designated a function, it will also __return__ a value. In other words, a function takes some input, transforms that input somehow, and returns an output. 
-
-To make this all clearer, let's look at a basic example of a function. We will create a function called `add` that takes two numbers as parameters and returns the sum of the two numbers.
-
-```JavaScript
-function add(num1, num2) {
-    return num1 + num2;
-}
-```
-First we define the function `add()` with two parameters to pass in, `num1` and `num2`. To add the two numbers we can simply return `num1 + num2`. Note that we could also have defined a variable `sum` and then returned `sum`, like so:
-
-```JavaScript
-function add(num1, num2) {
-    var sum = num1 + num2;
-    return sum;
-}
-```
-
-This is functionally the same result. The only difference is that we have created a new variable within the function to store the sum.
-
-## Calling a Function
-
-If you were to run the code above, you would see that nothing happens. This is because we have not __called__ the function yet. To call a function, we simply use the function name followed by parentheses. The parentheses contain the values that will be passed into the function as parameters. Let's try calling the `add()` function with two number values:
-
-```JavaScript
-function add(num1, num2) {
-    return num1 + num2;
+  // console.log(blockVar); // ERROR! blockVar is not defined here
+  // console.log(blockLetVar); // ERROR! blockLetVar is not defined here
 }
 
-add(1, 2);
-```
-
-Try running this code in the editor below.
-
-<CodeEditor language='JavaScript'>
-    </CodeEditor>
-
-As you can see, the result of the `add()` function above returns 3 to the console. This is because `add()` takes two numbers as parameters and returns the sum of the two numbers. In this case, `num1` is 1 and `num2` is 2. If you change the values of `num1` and `num2` to different numbers, the result will also change. Again, this allows us to reuse the `add()` function to perform the same calculation on different values.
-
-We could also capture the result of the function in a variable and then work with that variable. For example:
-
-```JavaScript
-function add(num1, num2) {
-    var sum = num1 + num2;
-    return sum;
-}
-
-var result = add(1, 2);
-alert(result);
-```
-
-Here we are calling the `add` function and storing the result of the function (the return value) in the variable `result`. We can then use the variable to perform whatever action we want.
-
-__Note:__ Make sure you are passing in the correct number of parameters when calling a function (at least for functions you have created yourself. Built-in functions inherent to JavaScript can behave a little differently, but don't worry about that right now). If you call the function with too few parameters or too many parameters, your function will likely either behave in unexpected ways or throw an error.
-
-It is worth pointing out that you can also call a function with no parameters and also without an explicit `return` statement. For example, we can create a function called `alertHello` that will simply alert "Hello!" to the user.
-
-```JavaScript
-function alertHello() {
-    alert('Hello!');
-}
-
-alertHello();
-```
-
-Running this code will alert "Hello!" to the user.
-
-Note that if your code does not have a return statement or if the content does not return a value, JavaScript functions will automatically return `undefined`.
-
-Here's an example:
-
-```JavaScript
-function doNothing() {
-    // do nothing
-}
-
-doNothing();
-```
-
-If you type this code into the developer console in your browser, you will see that the function returns `undefined` because you have not provided it with any return value.
-
-Okay, now that we have some basic understanding of how functions operate, let's look at how they create new "scopes" in your code.
-
-## Scope
-
-When you create a function, it designates a new __scope__. Scope is the context in which a particular variable is accessible. In other words, it means where a variable can be available for use (read, manipulated, displayed, etc.) in your code. Depending on how and where you declare your variables, you can have different scopes.
-
-### Rethinking Variable Declarations: `var` vs. `let` and `const`
-
-So far in this course, we have used the `var` keyword to declare variables. While this was the old standard way of declaring variables in JavaScript, in most modern usages it has been replaced by the `let` and `const` keywords. `const` in particular has become the new standard for declaring variables in JavaScript. While you can see that the syntax is the same...
-
-```JavaScript
-var name = 'John';
-let age = 30;
-const isAdmin = true;
-```
-
-...the behavior of the keywords is different. From now on, __we will shift to using the `let` and `const` keywords in this course, and in particular, to using `const`.__ What, then, are the differences between these variable declarations?
-
-To understand the differences between these declarations, we need to understand their scope. Let's understand the scope of each of these types and see why `let` and especially `const` are the new standard.
-
-## `var`
-
-`var` declarations can be "globally" and "function/locally" scoped. Global scope means that the variable is available for use anywhere throughout your code. Function scope means that the variable is available for use only within the function it is defined. When declared outside of a function, `var` is global and can be accessed anywhere in your code. When declared inside of a function, `var` is function-scoped and can only be accessed within the function. Take a look at the example below:
-
-```JavaScript
-var greet = "hi there";
-
-function newFunction() {
-    var hello = "hello";
-}
-```
-
-In this example, `greet` is globally scoped because it exists outside of the function, while `hello` is function scoped. These variables have different levels of access. To see what I mean, try running the code below in the editor:
-
-```JavaScript
-var greet = "hey hi"
-
-function newFunction() {
-    var hello = "hello";
-}
-
-console.log(greet); // this would work
-console.log(hello); // but this will not
+testScope();
+// console.log(functionVar); // ERROR! functionVar is not defined here
 ```
 
 <CodeEditor language='JavaScript'>
-    </CodeEditor>
+</CodeEditor>
 
-As you can see, the console trips up at the `console.log(hello);` and throws a `ReferenceError`, which states that '`hello is not defined`. This is because `hello` is only available _inside_ of the function in which it was declared. If you try to access `hello` outside of the function, JavaScript can't find the variable declaration you are referring to. In contrast, `greet` will correctly log the value of `greet` because it is globally scoped.
-    
-You have also seen how `var` declarations are mutable, insofar as they can be re-declared and reassigned. You can change the value of a `var` at any time:
+*   Variables declared inside a block are not accessible outside that block.
+*   Inner blocks can access variables from outer blocks.
 
-```JavaScript
-// re-declaration
-var greet = "hi there";
-var greet = "hello there";
+### Function Scope (`var` - Legacy)
 
-// reassignment
-var greet = "hi there";
-greet = "hello there";
-```
+Variables declared with the older `var` keyword have **function scope** (or global scope if declared outside any function). They are accessible anywhere within the function they are declared in, regardless of blocks (`if`, `for`).
 
-While this can be useful in some circumstances, it is not recommended. Once your programs become more complex, you may find yourself accidentally re-declaring or reassigning variables without realizing it. This can cause unexpected behavior and can be a source of bugs. This is a large part of why we will use the `let` and `const` keywords in the future instead of `var`, so let's discuss each of those keywords next.
-
-## `let`
-
-In contrast to `var`, `let` declarations are block-scoped. This means that the variable is only available within the block of code in which it is declared. As you have seen, a block is a section of code surrounded by curly braces. So, a variable declared inside of a block with `let` is only available within that block. Try running the code below in the editor:
-
-```JavaScript
-let someValue = 1;
-
-if (someValue > 0) {
-    let greet = "hi there";
-    console.log(greet); // this will successfully log "hi there"
+```javascript
+function testVarScope() {
+  if (true) {
+    var legacyVar = "I'm declared with var";
+  }
+  console.log(legacyVar); // WORKS! var "leaks" out of the if-block
 }
 
-console.log(someValue); // this will successfully log 1
-console.log(greet); // but this throws a ReferenceError
+testVarScope(); // Output: I'm declared with var
+// console.log(legacyVar); // ERROR! Still not accessible outside the function
 ```
 
-<CodeEditor language='JavaScript'>
-    </CodeEditor>
+This "leaking" behavior of `var` is often confusing and error-prone. **This is why `let` and `const` (with block scope) are strongly preferred in modern JavaScript.**
 
-We can see that using `greet` outside of its block (the curly braces where it was defined) returns an error. Again, this is because `greet` is only available inside of the block in which it was declared. By contrast, `someValue` is available to display because it was declared within its own block outside of the function.
+### Global Scope
 
-Just like with `var`, you can reassign the values of `let` variables at any time. However, unlike `var`, you cannot re-declare a `let` variable. So while this will work:
+Variables declared outside of any function or block have **global scope**. They are accessible from anywhere in your script.
 
-```JavaScript
-// reassignment
-let greet = "hi there";
-greet = "hello there";
-```
+```javascript
+const appName = "My Cool App"; // Global variable
 
-This will not:
-
-```JavaScript
-// re-declaration, will error
-let greet = "hi there";
-let greet = "hello there";
-```
-
-If you try running the re-declaration code you will get a `SyntaxError` that says `"Identifier 'greet' has already been declared"`. Using `let` therefore solves the problem of accidentally re-declaring variables. 
-
-__Note:__ While you cannot re-declare a `let` variable within the block is which it was declared, you _can_ re-declare a `let` variable _outside_ of the block in which it was declared:
-
-```JavaScript
-let greet = "hi there";
-if (true) {
-    let greet = "hello there";
-    console.log(greet); // this will successfully log "hello there"
+function showAppName() {
+  console.log("App name is: " + appName); // Accessing global variable
 }
-console.log(greet); // will successfully log "hi there"
+
+showAppName(); // Output: App name is: My Cool App
+console.log(appName); // Output: My Cool App
 ```
 
-Do you understand why this works? Because they are block-scoped, both `greet` variables are treated as _entirely different_ variables!
+*   **Caution:** Avoid creating too many global variables. They can lead to naming conflicts between different parts of your code or between different scripts on the same page ("polluting the global scope"). Encapsulate variables within functions or modules whenever possible.
 
-As you can see, `let` is an improvement over `var` in the sense that it can help you avoid accidentally modifying the value of a variable that you did not intend to modify. However, `const` has become the standard for many cases, so let's look at why.
+## Objects: Key-Value Collections
 
-## `const`
+While arrays store ordered lists, **objects** store collections of related data and functionality using **key-value pairs**. Think of them like dictionaries or real-world objects with properties.
 
-In the rest of this course, we will often use `const` to declare variables. Like `let`, `const` is block-scoped. This means that the variable is only available within the block of code in which it is declared. However, unlike `let`, `const` variables are __immutable__. This means that once they are declared, they cannot be updated or re-declared. As you might have guessed, `const` is shorthand for "constant." In other words, `const` is a way to declare variables that you will never want to modify.
+**Syntax (Object Literal):**
 
-The value of a `const` variable always remains the same within its scope. So, if we declare a `const` variable, we can't do any of the following:
-
-```JavaScript
-// reassignment
-const greet = "hi there";
-greet = "wait, say hello there instead"; // throws a TypeError
-
-// re-declaration
-const greet = "hi there";
-const greet = "I really wish I could say hello there"; // throws a TypeError
-```
-
-Running this code would give you a `TypeError` saying `"Cannot assign to constant variable"`. This is because we are trying to change the value of a constant variable.
-
-Okay, now that we have a basic understanding of how scope in JavaScript works, let's move on to utilizing functions to create a simple grading program.
-
-## The Student Grades Program
-
-Using functions, let's create a simple program that will allow us to evaluate student grades.
-
-Let's imagine that students have just submitted several homework assignments and we need to evaluate their grades. We want to:
-1. Easily display their grades.
-2. A new student has joined and submitted work, so we want to add a student to our list of students.
-3. Evaluate their numbered grades to a letter (A, B, C, D, or F).
-
-Functions are perfect for this because we can define each of these three tasks as a separate function. We can then call each of these functions at the appropriate time. Remember, functions should be used to perform a _single_ defined task whenever possible.
-
-## Objects
-
-For this program, we first need a way to store the information about each student. We want to store the name of each student as well as their corresponding grades. While we could solely use arrays to accomplish this, it makes much more sense to utilize a new data type called __objects__. 
-
-Objects are similar to arrays, but they are more flexible. Objects are collections of _key-value_ pairs, and each key-value pair is called a _property_. In real life, all objects have properties. For example, a car has properties such as `make`, `model`, `year`, `color`, and so on. Analogously, we might imagine that a student has properties such as `name`, `grade`, `GPA`, and so on.
-
-To create an object, we use the curly brace `{}` syntax. For example, we could create a student object with the following code:
-
-```JavaScript
-let student = {
-    name: "Bob",
-    grade: "A",
-    GPA: 4.0
+```javascript
+const student = {
+  // key: value
+  firstName: "Ada",
+  lastName: "Lovelace",
+  major: "Mathematics",
+  graduationYear: 1833, // Numbers are okay
+  isEnrolled: true,      // Booleans are okay
+  // Methods (functions within objects)
+  greet: function() {
+    console.log("Hello, my name is " + this.firstName); // 'this' refers to the object itself
+  }
 };
 ```
 
-Here we have a student object with three properties: `name`, `grade`, and `GPA`. Each key is followed by a colon `:` and the corresponding value. We separate each key-value pair (each property) with commas.
+*   Objects are enclosed in curly braces `{}`.
+*   Keys are usually strings (quotes are optional if the key is a valid identifier) or symbols.
+*   Values can be any data type (string, number, boolean, array, another object, function).
+*   Key-value pairs are separated by commas.
+*   Functions within objects are called **methods**.
 
-To access the value of a property, we use the `.` syntax with the key. For example, to log the properties of our `student` object, we could write:
+**Accessing Properties:** Use dot notation (`.`) or bracket notation (`[]`).
 
-```JavaScript
-console.log(student.name); // logs "Bob"
-console.log(student.grade); // logs "A"
-console.log(student.GPA); // logs 4.0
+```javascript
+console.log(student.firstName);      // Output: Ada (Dot notation)
+console.log(student["lastName"]);    // Output: Lovelace (Bracket notation)
+
+// Bracket notation is useful when the key is stored in a variable
+const propToAccess = "major";
+console.log(student[propToAccess]); // Output: Mathematics
+
+// Calling a method
+student.greet(); // Output: Hello, my name is Ada
 ```
 
-As you can see, objects very usefully allow us to associate a number of different properties with a single item.
+**Modifying Properties:**
 
-For our purposes, we have many students rather than just one. How might we accomplish this? Well, we can create an array of objects! Let's try creating an array of student objects.
+```javascript
+student.major = "Computer Science"; // Change existing property
+student.minor = "Physics";         // Add a new property
+console.log(student.major);        // Output: Computer Science
+console.log(student.minor);        // Output: Physics
+```
 
-```JavaScript
+<CodeEditor language='JavaScript' height='300px'>
+const book = {
+  title: "Moby Dick",
+  author: "Herman Melville",
+  yearPublished: 1851,
+  genres: ["Adventure", "Fiction", "Nautical"]
+};
+
+console.log("Title:", book.title);
+console.log("Author:", book.author);
+console.log("First genre:", book.genres[0]); // Access array inside object
+
+book.yearPublished = 1851; // Correct if wrong, or just reassign
+book.rating = 5; // Add new property
+console.log(book);
+
+</CodeEditor>
+
+Objects are incredibly versatile for structuring complex data.
+
+## The Student Grades Program (Using Functions and Objects)
+
+Let's build a program to manage student grades, using functions for organization and an array of objects for the data.
+
+**1. Data Structure:** An array of student objects.
+
+```javascript
+// Array of student objects
 let students = [
-    {
-        name: "Bob",
-        grades: [88, 90, 80, 77, 89]
-    },
-    {
-        name: "Alice",
-        grades: [100, 95, 92, 89, 97]
-    },
-    {
-        name: "Juan",
-        grades: [91, 90, 94, 86, 90]
-    }
+  {
+    name: "Bob",
+    grades: [88, 90, 80, 77, 89]
+  },
+  {
+    name: "Alice",
+    grades: [100, 95, 92, 89, 97]
+  },
+  {
+    name: "Juan",
+    grades: [91, 90, 94, 86, 90]
+  }
 ];
 ```
 
-Here we have an array of three student objects. Each student object has a `name` property and a `grades` property. The `grades` property is itself an array of numbers (5 different grades).
+**2. Function to Print Grades:**
 
-### Printing the Grades
-
-Next, let's write a function to print all student names and their grades. Because we want to iterate through the array of student objects, we will use a `for` loop.
-
-```JavaScript
-// print all student names and their grades
-function printGrades(students) {
-    for (let i = 0; i < students.length; i++) {
-        console.log(students[i].name + ": " + students[i].grades);
-    }
+```javascript
+// Function to print all student names and their grades
+function printGrades(studentArray) {
+  console.log("--- Student Grades ---");
+  for (let i = 0; i < studentArray.length; i++) {
+    const student = studentArray[i]; // Get the current student object
+    // Use template literal for cleaner output:
+    console.log(`${student.name}: ${student.grades.join(', ')}`);
+  }
+  console.log("--------------------");
 }
+```
+*   **Template Literals:** The string enclosed in backticks (`` `...` ``) is a template literal. Inside it, `${...}` allows you to embed expressions (like variable values) directly. This is often cleaner than using `+` for concatenation.
+*   `.join(', ')` converts the grades array into a comma-separated string.
 
+**3. Function to Add a Student:**
+
+```javascript
+// Function to add a new student
+function addStudent(studentArray, name, grades) {
+  const newStudent = {
+    name: name,
+    grades: grades
+  };
+  studentArray.push(newStudent); // Adds the new object to the original array
+  console.log(`Added student: ${name}`);
+}
+```
+*   Note: This function modifies the original `students` array passed into it.
+
+**4. Function to Convert Grades to Letters:**
+
+```javascript
+// Function to convert number grades to letter grades and print
+function printLetterGrades(studentArray) {
+  console.log("--- Letter Grades ---");
+  for (let i = 0; i < studentArray.length; i++) {
+    const student = studentArray[i];
+    const grades = student.grades; // Get the grades array for this student
+    let letterGrades = []; // Array to store letter grades
+
+    // Inner loop to process each grade for the current student
+    for (let j = 0; j < grades.length; j++) {
+      const grade = grades[j];
+      let letter = '';
+      if (grade >= 90) {
+        letter = 'A';
+      } else if (grade >= 80) {
+        letter = 'B';
+      } else if (grade >= 70) {
+        letter = 'C';
+      } else if (grade >= 60) {
+        letter = 'D';
+      } else {
+        letter = 'F';
+      }
+      letterGrades.push(letter); // Add the letter to the array
+    }
+    // Print the student's name and their letter grades
+    console.log(`${student.name}: ${letterGrades.join(' ')}`);
+  }
+  console.log("-------------------");
+}
+```
+*   This function uses nested loops: the outer loop iterates through students, and the inner loop iterates through the grades of *each* student.
+
+**5. Using the Functions:**
+
+```javascript
+// Initial print
 printGrades(students);
-```
 
-As you can see, we are accessing the `name` and `grades` properties of each student object (using the `.` dot operator) and logging them as we loop through. By using `i` as our index, we are accessing each student object in the array.
+// Add a new student
+addStudent(students, "Biff", [71, 80, 56, 65, 60]);
 
-### Adding a Student
-
-A new student joined our class and submitted his work. So, let's add him to our array of students with a new `addStudent()` function.
-
-```JavaScript
-function addStudent(name, grades) {
-    let student = {
-        name: name,
-        grades: grades
-    };
-    students.push(student);
-}
-
-addStudent("Biff", [71, 80, 56, 65, 60]);
-```
-
-In the function, we are creating a new student object with `name` and `grades` properties to match the other students. We then add this object to the end of the `students` array using the `push` method. Finally, we call the function with the name and grades of the new student (poor Biff didn't do too well, sadly), which will add the values to the corresponding properties. If you were to run the `printGrades()` function now, you would see that the new student is included in the list of students.
-
-### Converting Grades to Letters
-
-Lastly, let's create a function to convert all student grades to letter grades and print them: 
-
-```JavaScript
-function convertGrades(students) {
-    for (let i = 0; i < students.length; i++) {
-        let grades = students[i].grades;
-        let letterGrade = "";
-        for (let j = 0; j < grades.length; j++) {
-            if (grades[j] >= 90) {
-                letterGrade += "A ";
-            } else if (grades[j] >= 80) {
-                letterGrade += "B ";
-            } else if (grades[j] >= 70) {
-                letterGrade += "C ";
-            } else if (grades[j] >= 60) {
-                letterGrade += "D ";
-            } else {
-                letterGrade += "F ";
-            }
-        }
-        console.log(students[i].name + ": " + letterGrade);
-    }
-}
-
-convertGrades(students);
-```
-
-This function is slightly more complicated, because we need to iterate _both_ through the `students` array and each student's `grades` array, and evaluate the latter numbers to a letter grade. We can accomplish this by using two `for` loops: a `for` loop to iterate through the `students` array (using `i` and `students.length`), and a nested `for` loop to iterate through each student's `grades` (using `j` and `grades.length`). As we work through each student object, we first store the grades values of each student in a variable `grades`. Because `grades` is itself an array of values, we can use the `.length` property to determine the number of grades for each student (5). We then use the `if` statement to determine the letter grade for each number, and add it to the `letterGrade` variable with the `+=` operator (with an extra space at the end to make it more readable).
-
-Let's put the whole program together:
-
-```JavaScript
-// array of student objects
-let students = [
-    {
-        name: "Bob",
-        grades: [88, 90, 80, 77, 89]
-    },
-    {
-        name: "Alice",
-        grades: [100, 95, 92, 89, 97]
-    },
-    {
-        name: "Juan",
-        grades: [91, 90, 94, 86, 90]
-    }
-];
-
-// print all student names and their grades
-function printGrades(students) {
-    for (let i = 0; i < students.length; i++) {
-        console.log(students[i].name + ": " + students[i].grades);
-    }
-}
-
-//add a new student
-function addStudent(name, grades) {
-    let student = {
-        name: name,
-        grades: grades
-    };
-    students.push(student);
-}
-
-// convert grades to letters
-function convertGrades(students) {
-    for (let i = 0; i < students.length; i++) {
-        let grades = students[i].grades;
-        let letterGrade = "";
-        for (let j = 0; j < grades.length; j++) {
-            if (grades[j] >= 90) {
-                letterGrade += "A ";
-            } else if (grades[j] >= 80) {
-                letterGrade += "B ";
-            } else if (grades[j] >= 70) {
-                letterGrade += "C ";
-            } else if (grades[j] >= 60) {
-                letterGrade += "D ";
-            } else {
-                letterGrade += "F ";
-            }
-        }
-        console.log(students[i].name + ": " + letterGrade);
-    }
-}
-
-// call functions
-addStudent("Biff", [71, 80, 56, 65, 60]);
+// Print again to see the new student
 printGrades(students);
-convertGrades(students);
+
+// Print letter grades
+printLetterGrades(students);
 ```
-Try running the program below in the editor. You can observe the results of the program by checking your browser's developer console.
 
 <CodeEditor language='JavaScript' height='600px'>
-     </CodeEditor>
+// Paste all parts of the Student Grades code here to run it.
 
-*Congratulations*, you have now created a simple grading program utilizing functions!
+// 1. Data Structure
+let students = [
+  { name: "Bob", grades: [88, 90, 80, 77, 89] },
+  { name: "Alice", grades: [100, 95, 92, 89, 97] },
+  { name: "Juan", grades: [91, 90, 94, 86, 90] }
+];
 
-Functions are a great way to keep your code organized and readable. They are mainly used to create reusable pieces of code that can be employed in multiple places in your program. Remember that functions should ideally always be used to perform a _single_ task, and that their names should be descriptive of the task they are performing.
+// 2. Function to Print Grades
+function printGrades(studentArray) {
+  console.log("--- Student Grades ---");
+  for (let i = 0; i < studentArray.length; i++) {
+    const student = studentArray[i];
+    console.log(`${student.name}: ${student.grades.join(', ')}`);
+  }
+  console.log("--------------------");
+}
+
+// 3. Function to Add a Student
+function addStudent(studentArray, name, grades) {
+  const newStudent = { name: name, grades: grades };
+  studentArray.push(newStudent);
+  console.log(`Added student: ${name}`);
+}
+
+// 4. Function to Convert Grades to Letters
+function printLetterGrades(studentArray) {
+  console.log("--- Letter Grades ---");
+  for (let i = 0; i < studentArray.length; i++) {
+    const student = studentArray[i];
+    const grades = student.grades;
+    let letterGrades = [];
+    for (let j = 0; j < grades.length; j++) {
+      const grade = grades[j];
+      let letter = '';
+      if (grade >= 90) { letter = 'A'; }
+      else if (grade >= 80) { letter = 'B'; }
+      else if (grade >= 70) { letter = 'C'; }
+      else if (grade >= 60) { letter = 'D'; }
+      else { letter = 'F'; }
+      letterGrades.push(letter);
+    }
+    console.log(`${student.name}: ${letterGrades.join(' ')}`);
+  }
+  console.log("-------------------");
+}
+
+// 5. Using the Functions
+printGrades(students);
+addStudent(students, "Biff", [71, 80, 56, 65, 60]);
+printGrades(students);
+printLetterGrades(students);
+
+</CodeEditor>
+*Check your browser's developer console for the output.*
+
+By using functions, we've made the code modular and easier to understand. Each function has a single, clear purpose.
 
 ## Review Questions
 
-Let's review the concepts we have learned in this lesson.
+1.  What is the primary benefit of using functions in programming?
+    <Quiz>
+    - They make the code run faster.
+    - They allow you to reuse blocks of code, making it organized and maintainable.*
+    - They are the only way to use loops.
+    - They automatically handle errors.
+    </Quiz>
 
-1. What is the naming convention for functions in JavaScript?
+2.  In the function definition `function calculateArea(width, height)`, what are `width` and `height` called?
+    <Quiz>
+    - Arguments
+    - Methods
+    - Parameters*
+    - Returns
+    </Quiz>
 
-<Quiz>
-- lowercase_with_underscores
-- lower camelCase*
-- snake_case
-- PascalCase
-</Quiz>
+3.  Variables declared with `let` and `const` inside a `for` loop's code block (`{...}`) are accessible:
+    <Quiz>
+    - Only inside that `for` loop block.*
+    - Anywhere within the function containing the loop.
+    - Globally throughout the script.
+    - Only before the loop starts.
+    </Quiz>
 
-2. What will be the result of the following code?
-
-```JavaScript
-if (someValue > 0) {
-    let greet = "hi there";
-}
-
-console.log(greet);
-```
-
-<Quiz>
-- hi there
-- undefined
-- ReferenceError*
-- TypeError
-</Quiz>
-
-3. Should you use the `var` keyword to declare a variable?
-
-<Quiz>
-- Yes
-- No*
-- Don't tell me what to do!
-</Quiz>
+4.  How do you access the value associated with the key `email` in an object named `user`? (Select all correct ways)
+    <Quiz>
+    - `user(email)`
+    - `user.email`*
+    - `user[email]` (Only if `email` is a variable holding the string "email")
+    - `user["email"]`*
+    </Quiz>
 
 ## Challenges
 
-1. Write a function that always returns the last item in whatever array is passed to it. (Hint: Refer to the [Loops and Arrays](?page=4) lesson if you need a refresher on an easy way to get the last element.)
-
-
-2. Biff decided to drop your class after his unfortunate grades. Add a function to the Student Grades program that will remove Biff from the list of students using the `pop` method.
-
-3. In the wild, you will often see what are called __arrow functions__. In modern JavaScript, arrow functions are a shorter way to write functions, and utilize the `=>` (arrow) syntax. Check out [this resource](https://www.w3schools.com/js/js_arrow_function.asp) to learn about the syntax for arrow functions. Then, try to reformat the following traditional function using arrow function syntax instead:
-
-```JavaScript
-function add(a, b) {
-    return a + b;
-}
-```
+1.  **Average Grade Function:** Write a function `calculateAverage(gradesArray)` that takes an array of numbers (grades) as input. Inside the function, use a loop to sum the grades and then return the average grade (sum / number of grades). Test it by calling it with one of the student's `grades` arrays from the example program and logging the result.
+2.  **Arrow Function Syntax:** Rewrite the `addStudent` function from the example using **arrow function syntax**. Check the [MDN Arrow Functions guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for syntax.
+3.  **Remove Student Function:** Add a function `removeStudent(studentArray, nameToRemove)` to the Student Grades program. This function should find the student object with the matching `nameToRemove` in the `studentArray` and remove it. (Hint: Find the index of the student first, perhaps using a loop or the `.findIndex()` array method, then use the `.splice()` method to remove that student object). Test it by removing "Biff".
 
 <CodeEditor language='JavaScript' height='400px'>
-     </CodeEditor>
+// Challenge 1: Average Grade Function
+function calculateAverage(gradesArray) {
+  if (gradesArray.length === 0) {
+    return 0; // Avoid division by zero for empty arrays
+  }
+  let sum = 0;
+  for (let i = 0; i < gradesArray.length; i++) {
+    sum += gradesArray[i]; // Shorthand for sum = sum + gradesArray[i]
+  }
+  return sum / gradesArray.length;
+}
+
+// Assuming 'students' array exists from the example
+const bobsGrades = students[0].grades;
+const bobsAverage = calculateAverage(bobsGrades);
+console.log(`Bob's average grade: ${bobsAverage}`);
+
+
+// Challenge 2: addStudent as Arrow Function
+const addStudentArrow = (studentArray, name, grades) => {
+  const newStudent = { name: name, grades: grades };
+  studentArray.push(newStudent);
+  console.log(`(Arrow Fn) Added student: ${name}`);
+};
+
+// Test arrow function version
+addStudentArrow(students, "Chloe", [85, 88, 92, 90, 89]);
+console.log(students); // Check if Chloe was added
+
+
+// Challenge 3: Remove Student Function
+function removeStudent(studentArray, nameToRemove) {
+  let indexToRemove = -1;
+  // Find the index of the student to remove
+  for (let i = 0; i < studentArray.length; i++) {
+    if (studentArray[i].name === nameToRemove) {
+      indexToRemove = i;
+      break; // Stop loop once found
+    }
+  }
+
+  // If the student was found (index is not -1)
+  if (indexToRemove > -1) {
+    studentArray.splice(indexToRemove, 1); // Remove 1 element at indexToRemove
+    console.log(`Removed student: ${nameToRemove}`);
+  } else {
+    console.log(`Student "${nameToRemove}" not found.`);
+  }
+}
+
+// Test remove function
+removeStudent(students, "Biff");
+console.log(students); // Check if Biff was removed
+
+removeStudent(students, "NonExistent"); // Test case for student not found
+
+
+</CodeEditor>
 
 ## Key Terms
 
-Do you recall the meaning of the following terms?
+-   function
+-   parameter
+-   argument
+-   `return` value
+-   call / invoke
+-   scope (block scope, function scope, global scope)
+-   `let`, `const`, `var` (legacy)
+-   object
+-   key-value pair
+-   property
+-   method (function in an object)
+-   `this` keyword (within objects)
+-   template literals (`` `${}` ``)
 
-- parameter/argument
-- pass (values)
-- call (function)
-- return value
-- constant
-- scope
-- objects
+---
 
-# Making Mistakes
+# Making Mistakes: Errors and Debugging
 
-It is an inevitability to make mistakes while programming. Especially when you are first beginning, it is easy to create errors and to write code that acts erratically or doesn't work at all. In fact, we have already made a few mistakes in previous lessons to illustrate the problems that can arise when learning to work with a new programming language. However, you should be aware that even the most seasoned professional programmers make mistakes as well. Coding can be a frustrating, laborious task at times, and dealing with errors and bugs is a constant process. However, I think you'll also find that coming up with creative ways to address issues that arise in your code can also be a great source of satisfaction.
+Making mistakes is an inevitable and essential part of learning to program. Even experienced developers encounter errors (**bugs**) regularly. The key skill is not avoiding errors entirely, but learning how to **debug** – to find and fix them.
 
-Thankfully, programmers have developed many tools and strategies to help us deal with errors. In this lesson, we will cover a variety of tools, techniques, and strategies to help you write cleaner code, avoid common programming errors and pitfalls, and generally feel more confident in your ability to address problems.
-
-First, let's jump into some common error types and their causes.
+This lesson covers common types of JavaScript errors and strategies for identifying and resolving them, including the indispensable `console.log()` and the concept of pseudo-code.
 
 ## Common Types of Errors
 
-### Syntax Errors
+Errors stop your program from running correctly. The browser console is your best friend for seeing error messages.
 
-You may have noticed that JavaScript is a finnicky language. One errant `{` can cause your entire program to break. For all their usefulness, computers are not (yet) very good at discerning meaning or understanding implicit intentions. You must speak to them in a highly specific way for them to understand what you are trying to achieve. 
+### 1. Syntax Errors
 
-When writing JavaScript, the most common type of error to make is a __syntax error__. These errors arise when you fail to add or misspell an element of the language that is needed for the code to be understood. For instance, below is an example of a basic syntax error. Can you identify the error? Try running it in the code editor to see the result.
+These occur when your code violates the grammatical rules of JavaScript. The browser cannot understand the instruction. They often result from typos, missing punctuation, or incorrect structure.
 
-```JavaScript
+**Example:** Missing closing parenthesis `)` in an `if` statement.
+
+```javascript
 const oops = 12;
-if (oops == 12 {
-    alert(oops)
+// Error on the next line: missing ')' before '{'
+if (oops === 12 { // SYNTAX ERROR!
+    alert(oops);
 }
 ```
 
 <CodeEditor language="JavaScript">
     </CodeEditor>
 
-As you can see, we get the message of `SyntaxError: Unexpected token '{'`. In other words, it is telling us that the first curly brace seems out of place. Why? Well, looking closely you'll notice that we did not close the parentheses `)` in the `if` statement, as JavaScript expected us to. Instead, it found a curly brace and didn't know what to do with it. 
+*   **Console Message:** Often looks like `Uncaught SyntaxError: Unexpected token '{'` or similar, pointing near the location of the mistake.
+*   **Fixing:** Carefully read the error message and examine the line number indicated (and often the line *before* it). Look for missing parentheses `()`, curly braces `{}`, square brackets `[]`, quotes `""`/`''`, commas `,`, or semicolons `;`, and check for misspelled keywords (`functin` instead of `function`).
 
-When dealing with syntax errors, it is often best to use the error message JavaScript gives you to try and pinpoint where the error might be located. In this example, for instance, the curly brace _is_ where it should be, but is still described as "unexpected." From this you can guess that you are likely missing something immediately before it.
+### 2. Reference Errors
 
-Many code editors nowadays (including VSCode, which we'll begin to work with in the next lesson) have built-in tools that will detect and alert you to syntactical mistakes you are making while writing your code. Syntax errors will inevitably happen, though, so when you see them arise make sure to take a careful look over what you've written for typos or missing elements.
+These happen when you try to use a variable or function that hasn't been declared or is not accessible in the current scope.
 
-### Type Errors
+**Example:** Using a variable outside its block scope.
 
-__Type errors__ are when you try to perform an operation on a value of the wrong type. For instance, below is an example of a type error. Can you identify what is causing the error? Try running it in the code editor to see the result.
-
-```JavaScript
-let num = 1;
-let oops = num.toUpperCase();
-console.log(oops);
-```
-
-<CodeEditor language="JavaScript">
-    </CodeEditor>
-
-In this example, we are trying to use the `toUpperCase` method on a number. However, `toUpperCase` is only available for strings. You can only uppercase text! Hence the `TypeError` message. 
-
-This error gives us a direct clue for how to fix our code. We would first need to convert the number to a string. For instance, we could use the `toString` method:
-
-```JavaScript 
-let num = 1;
-let fixed = num.toString().toUpperCase();
-console.log(fixed);
-```
-
-Here we apply both the `toString` and `toUpperCase` methods to the number, which then allows us to use it as an uppercase string. Note that you can chain methods together to accomplish tasks like this.
-
-If, for whatever reason, you are ever in doubt about the particular type of a value, remember that you can use the `typeof` operator to check its type. This is a useful tool for figuring out where you might be going wrong.
-
-### Reference Errors
-
-When your programs begin to get more complex, it is occasionally difficult to discern what particular scope you are working within. This can cause programs to throw a __Reference Error__. Take a look at the example below. Can you identify what is causing the error? Try running it in the code editor to see the result.
-
-```JavaScript
-let someValue = 1;
-
-if (someValue > 0) {
-    let oops = "blah blah";
-    console.log(oops);
-}
-
-console.log(someValue);
-console.log(oops); 
-```
-
-<CodeEditor language="JavaScript">
-    </CodeEditor>
-
-
-As you can see, we receive the message of `ReferenceError: oops is not defined`. This is telling us that we are trying to use the `oops` variable out of the scope in which it was declared. Always be sure to check the scope of your variables before using them.
-
-## Logical Errors
-
-__Logical errors__ occur where your syntax is actually correct but the code is not producing what you intended. In other words, the program runs successfully, but gives "incorrect" results. These are often harder to fix than other types of errors, as there usually isn't an explicit error message to direct you to the source of the error.
-
-Take a look at this example. It is a perfectly valid and legal code snippet, but won't work as intended. Can you identify where it is going wrong? Try running it in the code editor to see the result.
-
-```JavaScript
-function getPassword(){
-  let correct = "password";
-  let guess = "";
-  while (guess == correct) {
-    guess = prompt("What is the password?");
+```javascript
+function test() {
+  if (true) {
+    let blockScopedVar = "Inside block";
   }
-  alert("You may enter.");
+  console.log(blockScopedVar); // REFERENCE ERROR!
 }
-
-getPassword();
+test();
 ```
 
 <CodeEditor language="JavaScript">
     </CodeEditor>
 
-As you can see, this is not a very good password system. In fact, it lets everyone have access immediately! To correct this, we would need to change the `==` operator to `!=`, to make sure the `while` loop runs only until the correct password is entered.
+*   **Console Message:** `Uncaught ReferenceError: blockScopedVar is not defined`.
+*   **Fixing:** Check for typos in the variable name. Ensure the variable is declared (`let`, `const`) *before* you use it and *within* a scope accessible from where you're trying to use it. Remember `let`/`const` are block-scoped.
 
-This is a fairly straightforward example, but for larger pieces of software logical errors can be much more complex and difficult to identify. Let's discuss some general strategies to help you deal with logical errors.
+### 3. Type Errors
 
-## Strategies to Avoid Mistakes
+These occur when you try to perform an operation on a value of an inappropriate data type.
 
-Below are some general strategies and best practices you can follow to help you think through the structure and design of your programs.
+**Example:** Calling a string method on a number.
 
-### Writing Pseudo-code
-
-One common mistake for beginners in approaching code and coding problems is trying to solve a problem entirely in JavaScript. While this may seem like an obvious and commonsense approach, it is actually not always the best way to tackle a problem. Often, when creating complex programs, it is often useful to flesh out the structure and logic of your program before even writing any code or when faced with a seemingly unsolvable problem.
-
-This practice is called __pseudo-coding__. Pseudo-code is an amalgamation of code-like expressions and regular English (or whatever natural language you are most comfortable with). There's no correct way to write pseudo-code--you make it up as you go along. As long as it looks a little bit like code and follows the same general pattern and procedure, you're doing well.
-
-The reason we write pseudo-code is that it allows us to flesh out the logic of the program in a clear and accessible way. We use it to skip over unnecessary details in a way that we can easily convert into code later.
-
-Here's a possible example of pseudo-code for our simple password program from before:
-
-```
-create function get password
-    store correct password in variable
-    prompt user for password
-    while password is incorrect
-        prompt for password
-    alert user they may enter
-    end function
+```javascript
+let num = 123;
+// Error: num.toUpperCase is not a function
+console.log(num.toUpperCase()); // TYPE ERROR!
 ```
 
-As you can see, pseudo-code is a lot more readable than writing actual code. It provides you with an accessible blueprint of a program's logic and structure that you can then overlay or follow with actual code.
+<CodeEditor language="JavaScript">
+    </CodeEditor>
 
-As mentioned, there is no one way to write pseudo-code. You can be as detailed or as abstract as you'd like. As long as you are clarifying the structure of your program to yourself (and others you may be collaborating with), it is sufficient. It is often best, however, to write pseudo-code that more or less matches the syntax and vocabulary of JavaScript.
+*   **Console Message:** `Uncaught TypeError: num.toUpperCase is not a function`.
+*   **Fixing:** Make sure the value has the type you expect. Use `typeof` to check if needed. Convert the value to the correct type if necessary (e.g., `num.toString().toUpperCase()`). Ensure you are calling methods that actually exist for that data type.
 
-Whenever you are beginning a new program, it is highly recommended to write pseudo-code first. Not only will it make the overall structure of your program more intelligible, but it will also help you to avoid making logical errors down the road.
+### 4. Logical Errors
 
-### General Tips
+These are often the trickiest. The code runs without crashing (no syntax, reference, or type errors), but it doesn't produce the *intended* result. The logic of the program is flawed.
 
-Here are some more general tips for dealing with logical errors:
+**Example:** Incorrect loop condition causing an infinite loop or wrong calculation.
 
-1. Understand what your code is doing step by step.
+```javascript
+// Intended: calculate sum of 1 to 5. Reality: Infinite loop!
+let count = 1;
+let sum = 0;
+while (count > 0) { // Logical Error: Condition is always true
+  sum += count;
+  // Missing: count++; // Forgot to increment count!
+  // To prevent crashing this editor, let's add a safety break:
+   if (count > 10) break; // Safety break for example only
+}
+console.log(sum); // This might never be reached if not for the safety break
+```
 
-With a logical error, code behavior is unpredictable. A loop may never happen, it may never end, or it might sometimes work right and sometimes not. The key to finding logic errors is to predict why the code is doing what it's doing and why it's not doing what you want. Follow through your code step by step, identifying _key changes of behavior_. 
+<CodeEditor language="JavaScript">
+    </CodeEditor>
 
-2. Form a hypothesis or two before looking at the code. 
+*   **Console Message:** Usually none, unless the error leads to another type (like an infinite loop eventually crashing the browser).
+*   **Fixing:** Requires careful analysis of the code's logic. Step through the code mentally or using debugging tools. Check conditions (`if`, `while`, `for`), calculations, and the overall flow. `console.log()` is invaluable here.
 
-Think about what is wrong before you look over the code. Try to describe in plain English (or etc.) what is going wrong. Go through this process before you look at code. The moment you see code, you'll start worrying about details rather than thinking about the bigger picture. Logic errors are almost always about _logic_, and no amount of staring at code will show you the error.
+## Debugging Strategies
 
-3. Resolve syntax errors.
+### 1. Read the Error Message Carefully
 
-Go to the console and see if there are any syntax errors. If so, resolve them. Logic errors will not appear until you've resolved all syntax errors. If your code shows no syntax errors but still doesn't work correctly, you've got a logic error.
+The console error message is your first clue. It usually tells you:
+*   **Type of error:** `SyntaxError`, `ReferenceError`, `TypeError`.
+*   **Description:** A brief explanation of the problem.
+*   **Location:** The file name and line number where the error occurred (or was detected). This is often a starting point, but the actual mistake might be on a preceding line.
 
-4. Identify key variables or conditions.
+### 2. Use `console.log()` Extensively
 
-Most logic errors are centered around a condition that's not working right, and conditions are usually based on variables. Begin by taking a careful look at the conditions that control the behavior you're concerned about.
+This is the simplest yet most powerful debugging technique. Print the values of variables at different stages of your code to see if they are what you expect.
 
-5. Think about your logic.
+```javascript
+function calculateTotal(price, quantity) {
+  console.log("Calculating total for price:", price, " quantity:", quantity); // Check inputs
+  const subtotal = price * quantity;
+  console.log("Subtotal calculated:", subtotal); // Check intermediate result
+  const tax = subtotal * 0.1; // Assume 10% tax
+  console.log("Tax calculated:", tax); // Check tax calculation
+  const total = subtotal + tax;
+  console.log("Final total:", total); // Check final result
+  return total;
+}
 
-Logical errors aren't about getting the vocabulary right (remember, those are syntax errors). Logic errors are about telling the computer to do the wrong thing. The computer only does precisely what you tell it to do, so think hard about the logic you've applied and how you might be able to revise it.
+calculateTotal(10, 5);
+calculateTotal(100, -1); // What happens here?
+```
 
-## Using console.log() to Debug
+*   Log inputs to functions.
+*   Log values before and after calculations or conditional checks.
+*   Log intermediate results within loops.
+*   Combine with `typeof` to check data types: `console.log("Variable x:", x, "Type:", typeof x);`
 
-To keep things simple, we have been console.logging a lot of our programs just so we can see an immediate result. However, `console.log()` is best used for debugging purposes in your programs. It is a quick and easy way to see the current state of a particular variable or condition. If you are ever uncertain about what result you might get from a particular piece of code, or if it is giving you an error or an otherwise unintended value, try breaking down the code step by step and using `console.log()` to see what is going on at each point.
+### 3. Isolate the Problem ("Divide and Conquer")
 
-Keep in mind that `console.log()` is useful no matter the data type: for instance, if you pass in an array, you'll be able to inspect the array's contents. Pass in an object, you can examine the object's attributes/methods. Pass in a string, it'll log the string. A good first step in any debugging process is to see exactly what you're getting back from the code. Pairing `console.log()` with `typeof` can also be particularly effective. Usually, this will give you some insight into what is going wrong.
+If you have a large block of code that isn't working:
+*   **Comment out sections:** Temporarily disable parts of the code using `/* ... */` or `//` to see if the error disappears. This helps narrow down where the issue lies.
+*   **Test small pieces:** Run individual lines or small functions in the console to verify they work as expected in isolation.
 
+### 4. Write Pseudo-code
+
+Before writing complex logic, or when debugging faulty logic, step back and write **pseudo-code**. This means describing the steps your code *should* take using plain English mixed with code-like structure (indentation, keywords like IF, THEN, ELSE, FOR, WHILE).
+
+**Example (Pseudo-code for finding the largest number in an array):**
+
+```
+FUNCTION findLargest(numbersArray)
+  IF numbersArray is empty THEN
+    RETURN null // Or handle error appropriately
+  ENDIF
+
+  SET largestSoFar = first element of numbersArray
+
+  FOR each remaining number in numbersArray starting from the second element
+    IF current number > largestSoFar THEN
+      SET largestSoFar = current number
+    ENDIF
+  ENDFOR
+
+  RETURN largestSoFar
+ENDFUNCTION
+```
+
+Pseudo-code helps you clarify the logic without getting bogged down in exact syntax, making it easier to spot flaws in your reasoning.
+
+### 5. Rubber Duck Debugging
+
+Explain your code, line by line, out loud to someone else, or even to an inanimate object (like a rubber duck). The act of articulating the process often forces you to see the flaw you overlooked.
+
+### 6. Simplify and Test Edge Cases
+
+*   Does the code work with simple, expected inputs?
+*   What happens with unusual inputs (e.g., 0, negative numbers, empty strings, empty arrays)? These are **edge cases**. Test them!
+*   Temporarily replace complex parts with simpler, fixed values to see if other parts of the code work correctly.
+
+### 7. Take a Break
+
+Sometimes, staring at the same problem for too long makes it harder to see the solution. Step away, do something else, and come back with fresh eyes.
+
+Debugging is a skill that improves with practice. Don't get discouraged! Treat errors as puzzles to be solved.
 
 ## Review Questions
 
-1. True or False - A syntax error occurs when code is not typed out correctly.
+1.  An error caused by forgetting a closing parenthesis `)` is most likely a:
+    <Quiz>
+    - `TypeError`
+    - `ReferenceError`
+    - `SyntaxError`*
+    - Logical Error
+    </Quiz>
 
-<Quiz>
-- True*
-- False
-</Quiz>
+2.  If the console shows `Uncaught ReferenceError: myVar is not defined`, what is the most likely cause?
+    <Quiz>
+    - You tried to add a string to a number.
+    - You forgot a semicolon.
+    - You are using a variable that hasn't been declared or is out of scope.*
+    - Your `if` statement condition is wrong.
+    </Quiz>
 
-2. True or False - A reference error occurs when a variable is used outside its scope or before it is declared.
+3.  Code that runs without crashing but produces the wrong answer contains a:
+    <Quiz>
+    - `TypeError`
+    - `SyntaxError`
+    - `ReferenceError`
+    - Logical Error*
+    </Quiz>
 
-<Quiz>
-- True*
-- False
-</Quiz>
-
-3. True or False - A logical error occurs when code works but is not producing the results you expected.
-
-<Quiz>
-- True*
-- False
-</Quiz>
+4.  Which debugging technique involves explaining your code step-by-step, often out loud?
+    <Quiz>
+    - Divide and Conquer
+    - Using `console.log()`
+    - Writing Pseudo-code
+    - Rubber Duck Debugging*
+    </Quiz>
 
 ## Challenges
 
-1. Identify the logical error in the following code.
+1.  **Find the Bug:** The following code is intended to calculate the factorial of a number (e.g., 5! = 5 * 4 * 3 * 2 * 1 = 120). It contains a logical error. Use `console.log` or step through the logic to find and fix it.
 
-```JavaScript
-// find the even numbers in an array
-let someValues = [0, 1, 2, 3, 4, 5];
-
-for (let i = 0; i < someValues.length; i++) {
-    if (someValues[i] / 2 == 0) {
-        console.log(someValues[i]);
+    ```javascript
+    function factorial(n) {
+      let result = 0; // Bug might be here
+      for (let i = n; i >= 1; i--) {
+        result = result * i; // Bug might be here
+      }
+      return result;
     }
-}
-```
+    console.log("Factorial of 5:", factorial(5)); // Should be 120
+    ```
+    <CodeEditor language="JavaScript">
+    // Fix the factorial function here
+    function factorial(n) {
+      if (n < 0) return undefined; // Factorial not defined for negative numbers
+      if (n === 0) return 1;      // Factorial of 0 is 1
 
-2. Let's say you are writing a program that allows users to manage a collection of recipes. You want the user to be able to add, remove, edit, and search through their recipes. You also want the user to be able to "favorite" individual recipes and let them search and look through their list of favorites. Write some pseudo-code for a program that allows for each of these features.
+      let result = 1; // <<< FIX 1: Initialize to 1 (identity for multiplication)
+      for (let i = n; i >= 1; i--) {
+        console.log(`Calculating: ${result} * ${i}`); // Debugging log
+        result = result * i; // <<< FIX 2: Logic is correct, initialization was the issue.
+      }
+      return result;
+    }
+    console.log("Factorial of 5:", factorial(5));
+    console.log("Factorial of 0:", factorial(0));
+    </CodeEditor>
+
+2.  **Pseudo-code Practice:** Write pseudo-code for a function that takes an array of strings and returns a new array containing only the strings that have more than 5 characters.
 
 ## Key Terms
 
-- syntax error
-- type error
-- reference error
-- logical error
-- pseudo-code
+-   Error / Bug
+-   Debugging
+-   `SyntaxError`
+-   `ReferenceError`
+-   `TypeError`
+-   Logical Error
+-   `console.log()` (for debugging)
+-   Pseudo-code
+-   Rubber Duck Debugging
+-   Edge Cases
 
-# VSCode and GitHub 
+---
 
-Up to this point we have been working entirely in the browser and our work has faded into the past at every screen refresh. Ephemerality is not a feature much appreciated in programming. So, to get started on something more permanent, let's set up a practice folder to hold our code. Call it `javascript`, or whatever you want, as long as you promise to remember it. Throughout the rest of this course, we will be working in this folder. 
+# VSCode and GitHub: Your Development Environment
 
-Click this button to download a couple of files we'll be needing. Unzip the folder and add the files to your working folder.
+So far, we've mostly used the browser console or embedded editors. For real projects, you need a proper code editor and a way to manage your code versions and collaborate. We'll set up **Visual Studio Code (VSCode)** as our editor and **Git/GitHub** for version control.
 
-<Download files='index.html, script.js'>
-::download{files='index.html, script.js'}
+From now on, create a dedicated folder on your computer for this course's work (e.g., `javascript_course`). We'll store all our project files here.
 
+Click the button below to download starting files (`index.html`, `script.js`). Unzip the downloaded file and place these two files inside your new `javascript_course` folder.
 
-Next, we'll want to get our coding environment set up. This will be the main focus of this particular lesson. We'll first install the VSCode code editor, and then learn how to set up and use a GitHub repository.
+<Download files='index.html, script.js'><br />
+*(These will be very basic files to get you started).*
 
-Much of your academic career has likely been structured around sending in single documents. For instance, a .pdf or Word document of your latest essay masterpiece. In general, however, going forward in this class you'll want to think of your work in terms of a __project__, which is a collection of files and code that you want to work on. In the coding environment we'll set up and the project we'll create, we'll be working with many files that will all contribute to the same overall project. A website, for instance, is a project, made up of many different files. What we will end up building by the end of this course will all be housed in the same folder and will be managed though a single GitHub repository. This will hopefully make more sense once we get into it.
+## Visual Studio Code (VSCode)
 
-For now, let's go ahead and install VSCode.
+VSCode is a free, powerful, and popular code editor from Microsoft, available for Windows, macOS, and Linux. It offers features like:
 
-## VSCode
-
-VSCode is a free and open-source code editor that is available for Windows, Mac, and Linux. It is a great tool for developers to use when they are working on code. It supports syntax highlighting, code completion, has built-in GitHub integration, and has an large library of extensions that can be used to extend its functionality.
+*   **Syntax Highlighting:** Makes code easier to read.
+*   **IntelliSense:** Code completion and suggestions.
+*   **Debugging Tools:** Built-in debugger.
+*   **Integrated Terminal:** Run command-line tools directly within the editor.
+*   **Git Integration:** Manage version control easily.
+*   **Extensions:** A vast marketplace to add more features and language support.
 
 ### Installing VSCode
 
-Navigate to the [homepage of VSCode](https://code.visualstudio.com/) and download the appropriate version for your operating system (stable version).
+1.  Go to the [official VSCode website](https://code.visualstudio.com/).
+2.  Download the "Stable" version for your operating system.
+3.  Run the installer and follow the prompts (accept defaults is usually fine).
 
-![VSCode homepage](/images/vscode_homepage.png)
+### Opening Your Project Folder
 
-Once it is installed, open up the application. On the left sidebar, you'll see a few different options. Let's look at three of them:
+1.  Launch VSCode.
+2.  Go to `File > Open Folder...` (or `Code > File > Open Folder...` on Mac).
+3.  Navigate to and select the `javascript_course` folder you created earlier. Click "Open" or "Select Folder".
 
-![VSCode sidebar](/images/vs_code_sidebar.png)
+You'll now see the VSCode interface. Key areas:
 
-- The Explorer Window is the main window that you'll be working with. It is the main way to navigate through your project and to interact with files.
-- The Search Window is a window that you can use to search for files or words throughout your project.
-- The Source Control Window will allow you to manage your project's files and code through GitHub integration.
+*   **Explorer (Left Sidebar):** Shows the files and folders in your opened project (`index.html`, `script.js`). Click files here to open them in the editor pane.
+*   **Editor Pane (Center):** Where you view and edit your code files.
+*   **Activity Bar (Far Left):** Icons for different views (Explorer, Search, Source Control, Extensions, etc.).
+*   **Status Bar (Bottom):** Shows information about the current file, Git status, etc.
 
-These are the main windows you'll be working with, along with the main code editor area, in which you'll be writing code.
+![VSCode Interface Overview (Conceptual)](/images/vscode_openproject.png)
+*(Your view might look slightly different based on version/OS)*
 
-### Opening a Project
+Take a moment to open `index.html` and `script.js` by clicking them in the Explorer.
 
-For now, go ahead and open up the Explorer Window and click Open Folder. Navigate to your working folder for the course, select the folder, and click Select Folder.
+## Git and GitHub: Version Control
 
-In the Explorer, you should now be able to view both the `index.html` file and the `script.js` file, and can open them to view the code for each file.
+### What are Git and GitHub?
 
-![New Project](/images/vscode_openproject.png)
+*   **Git:** A **version control system (VCS)**. It's software that runs on *your* computer to track changes you make to files over time. Think of it like "track changes" on steroids, allowing you to save snapshots (**commits**) of your project, view history, revert to previous versions, and manage different lines of development (**branches**). It's essential for managing code complexity and collaborating.
+*   **GitHub:** A popular **web-based hosting service** for Git repositories. It provides a remote place to store your code (*your GitHub repository*), facilitates collaboration, issue tracking, project management, and offers features like GitHub Pages for hosting simple websites (which we'll use later).
 
-Next, let's go ahead and initialize a Git repository for our project.
+You use **Git** locally to manage your project, and then you **push** your changes to **GitHub** to back them up, share them, or collaborate.
 
-## Creating a GitHub Account
+### Installing Git
 
-The first step we'll need to take is to set up a GitHub account. Navigate to the [GitHub homepage](https://github.com/) and click "Sign Up for GitHub". You'll be prompted to create a new account.
+VSCode uses Git, but you usually need to install Git separately first.
 
-![GitHub Sign Up](/images/github_homepage.png)
+*   **macOS:** Open the Terminal app (`Applications > Utilities > Terminal`). Type `git --version` and press Enter. If Git isn't installed, it might prompt you to install the Xcode Command Line Tools, which include Git. Alternatively, download an installer from the [official Git website](https://git-scm.com/download/mac).
+*   **Windows:** Download the installer from the [official Git website](https://git-scm.com/download/win). Run the installer; accepting the default settings is usually fine. You might need to restart VSCode after installation.
+*   **Linux:** Use your distribution's package manager. E.g., on Debian/Ubuntu: `sudo apt update && sudo apt install git`. On Fedora: `sudo dnf install git`.
 
- __Note:__ Although you don't have to, it is best to use your student email account (.edu) to register with GitHub, as this will allow you access to some features you otherwise would have to pay for.
+Verify installation by opening a terminal (in VSCode: `Terminal > New Terminal`) and typing `git --version`. You should see a version number.
 
- Work through the steps to create a new account and return here when you are finished.  
+### Configuring Git (First time only)
 
-## Getting Acquainted with Git and GitHub
-
-Now that you have a GitHub account, let's go ahead and initialize a repository (folder) for our project. 
-
-First, we should understand a little about how Git and Github work. __Git__ is a _version control system_ that allows you to track changes to your files. If you have used "track changes" in the past with either Microsoft Word or Google Docs, you're likely familiar with the terminology. In effect, you are tracking all of the "versions" or life-histories of your files stored in the repository.
-
-__GitHub__ is an online platform for hosting Git repositories. It functions for some, predominantly programmers, as a social network for sharing and collaborating on code-based projects. Users can share their own projects, as well as search for others, which they can then often work on and contribute to. Digital Humanists, librarians, and other academics are also finding ways Git and GitHub are useful in writing projects and teaching.
-
-A [study of how Digital Humanists use GitHub](https://digitalscholarship.files.wordpress.com/2016/07/spirosmithdh2016githubpresentationfinal.pdf), conducted by Lisa Spiro and Sean Morey Smith, found that a wide range of users, including professors, research staff, graduate students, IT staff, and librarians commonly used the site in their DH work. They used GitHub for a diverse range of activities, such as:
-
-- Developing software
-- Sharing data sets
-- Creating websites
-- Writing articles and books
-- Collating online resources
-- Keeping research notes
-- Hosting syllabi and course materials
-
-Although it has many benefits, using Git and GitHub effectively does take a bit of practice. It is notorious for being a bit of a pain in the neck (leading to such websites as [Oh Shit, Git!](https://ohshitgit.com/)), but it is worth the effort.
-
-## Installing Git
-
-Git, as a version control system, can be enabled in a folder, and then used to save the state of the contents in that folder at different points in the future. It will also keep a record of all changes made in the past. It knows exactly when a file is added to a project and even when it is deleted. It can even resurrect files that have been deleted, if needed.
-
-Let's go ahead and install Git. 
-
-### Installing on macOS
-
-There are several ways to install Git on a Mac. The easiest way is probably to open up the Terminal (search for it in Spotlight if you are unfamiliar with the terminal), type the following command and press <kbd>enter</kbd>:
+Open a terminal (VSCode or system terminal) and tell Git who you are. This information is attached to your commits.
 
 ```bash
-$ git --version
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
 ```
 
-If you don’t have it installed already, it should prompt you to install it.
+Replace `"Your Name"` and `"your.email@example.com"` with the name and email you want to use (ideally the same ones you'll use for GitHub).
 
-You can also find a macOS Git installer available for download [at the Git website](https://git-scm.com/download/mac).
+### Creating a GitHub Account
 
-### Installing on Windows
+If you don't have one already:
 
-The most up-to-date build is available for download on the Git website. Just go to [the official download page](https://git-scm.com/download/win) and select the version you want to download (likely the 64-bit version).
+1.  Go to [GitHub.com](https://github.com/).
+2.  Click "Sign up".
+3.  Follow the registration process. Using your student email might grant access to certain benefits (like the [Student Developer Pack](https://education.github.com/pack)).
 
-### Installing on Linux
+## Connecting VSCode, Git, and GitHub
 
-There are several ways to install Git on Linux, depending on your distribution. You can find the official instructions for installing Git on Linux [on the Git website](https://git-scm.com/download/linux).
+Now let's set up version control for our project folder and link it to GitHub.
 
-## Initializing a Git Repository on GitHub
+**1. Initialize a Git Repository Locally:**
 
-Next, let's go ahead and initialize a Git repository for our project. In VSCode, click on the Source Control Window and click on the `Initialize Repository` button.
+*   In VSCode, open the "Source Control" view from the Activity Bar (it usually looks like three connected dots or a branching icon).
+*   If your folder isn't already a Git repository, you'll likely see a button like "Initialize Repository". Click it.
+*   VSCode will ask which folder to initialize; confirm it's your `javascript_course` folder.
 
 ![Initialize Repository](/images/vscode_initgit.png)
 
-You should now be able to see the following:
+You'll see your files (`index.html`, `script.js`) listed under "Changes". The 'U' means 'Untracked'.
 
-![Initial Commit](/images/vscode_gitcommit.png)
+**2. Make the Initial Commit:**
 
-In Git, every change you make to a file and submit to version control is called a __commit__. A commit is effectively a snapshot of a file or files at a certain point in time. Every commit also has a __commit message__, which is a short description of what the commit is all about, either for yourself or for others you are collaborating with. You should write a brief, descriptive message that encapsulates the changes you have made at that point in time.
+A **commit** is a snapshot of your project at a specific point in time. Every commit needs a **commit message** describing the changes made.
 
-Let's go ahead and make our first commit. In VSCode, type "First commit" in the message window and click `Commit`.
+*   In the "Source Control" view, hover over the "Changes" title and click the `+` icon to **stage** all changes. Staging means preparing files to be included in the *next* commit. The files will move to a "Staged Changes" section.
+*   In the "Message" box at the top of the Source Control view, type a descriptive message, like `Initial commit`.
+*   Click the checkmark icon (✓) labelled "Commit".
 
-You should receive a message that `There are no staged changes to commit`. 
+![Initial Commit](/images/vscode_gitcommit.png) *(Concept showing staging, message box, and commit button)*
 
-![No Staged Changes](/images/vscode_nostaged.png)
+**3. Publish to GitHub:**
 
-This is because we haven't made any changes to any files yet and because we haven't __staged__ any files yet. Before making a commit, you need to add the files to the "staging environment". Staged files are those that are ready to be committed. This will make more sense later as we continue to work with Git.
+Now, let's create a remote repository on GitHub and push our local commits there.
 
-For now, go ahead and click `Yes` to the prompt.
+*   In the Source Control view, you might now see a button like "Publish Branch" or "Publish to GitHub". Click it.
+    ![Publish Branch](/images/vscode_publishbranch.png)
+*   VSCode will likely ask you to sign in to GitHub. Click "Allow" and follow the prompts in your browser to authorize VSCode.
+    ![Authorize VSCode](/images/github_authorize.png)
+*   You'll be asked to name the repository on GitHub. You can keep the default (`javascript_course`) or choose another name.
+*   Choose whether to make the repository **public** (visible to anyone) or **private** (visible only to you and collaborators you invite). For this course, **public** is usually preferred for easier sharing.
+*   Click the button to publish (e.g., "Publish to public repository").
 
-Afterwards, you should see a button updated to `Publish Branch`.
-
-![Publish Branch](/images/vscode_publishbranch.png)
-
-Go ahead and click Publish Branch. You should be prompted to sign into GitHub. Go ahead and click `Allow`, and sign in to GitHub with your account.
-
-If you receive a message to `Authorize VSCode`, click Authorize.
-
-![Authorize VSCode](/images/github_authorize.png)
-
-If you are given additional messages to allow VSCode to access your account, click through to allow.
-
-Lastly, you will want to give your repository a name. In VSCode at the top, you should see a text field window for typing the name of your repository. Give it whatever name you want, and click `Publish to public repository`. You can also create private repositories, but for this class we will make our repositories public.
-
-Afterwards, you should see a message that says `Successfully published to GitHub` in the lower right corner of VSCode. (If you also receive a message to `periodically run git fetch`, you can just say no for now.)
-
-![Successfully Published](/images/github_published.png)
-
-If you click through to `Open in GitHub`, you should be able to see the repository you just created, along with a message of your first commit.
+VSCode will create the repository on GitHub and push your initial commit. You should see a success notification. You can click the prompt to "Open in GitHub" to see your new repository online.
 
 ![New Repository](/images/github_new_repository.png)
 
-Congratulations! You have successfully created a new GitHub repository for this course.
+**Congratulations! Your project is now under Git version control locally and backed up on GitHub.**
 
-Let's go ahead and explore our files a bit, make a new change, and make a new commit to our repository.
+## The Basic Git Workflow
 
-## Exploring our Files
+From now on, the typical process for saving your work will be:
 
-Back in VSCode, open up the Explorer Window and click on the `index.html` file. 
+1.  **Make Changes:** Edit your files (`.html`, `.css`, `.js`, etc.) in VSCode and save them.
+2.  **Stage Changes:** Go to the Source Control view. Changed files will appear under "Changes". Click the `+` next to each file you want to include in the next commit, or the `+` next to "Changes" to stage all files.
+    ![Staged Changes](/images/staged_changes.png)
+3.  **Commit Changes:** Type a descriptive commit message (e.g., "Add heading to index page", "Implement feature X") in the message box and click the Commit (✓) button. This saves the snapshot *locally*.
+4.  **Push Changes:** Click the "Sync Changes" button (often shows arrows or cloud icon) at the bottom-left status bar or in the Source Control view menu (`... > Push`). This uploads your local commits to your GitHub repository.
+    ![Sync Changes Button Area](https://code.visualstudio.com/assets/docs/editor/versioncontrol/sync-changes.png) *(Image concept)*
 
-![index.html](/images/index_scrn.png)
+**Why Commit Often?** Committing frequently with small, logical changes makes it easier to track your progress, understand changes later, and revert specific mistakes if needed.
 
-This is an HTML file. It contains the code for the page that we will be working with. We will learn more about HTML in the next lesson.
+Let's practice:
 
-Now open the `script.js` file. As you can tell by the file extension (`.js`), this is a JavaScript file. It contains the code for the JavaScript that we will be working with.
-
-As a project, each of these files is contributing to the webpage. We will learn more about how later, but for now let's look at the webpage in your browser.
-
-In your file system, (not in VSCode), navigate to your folder containing these two files and double-click the `index.html` file to open it in your browser.
-
-You should see the following:
-
-![Hey it worked!](/images/heyitworked.png)
-
-If you reference both files in VSCode, you can see that text from each is being reflected on the webpage. In the HTML file, we are displaying `This is my project!`. In the JavaScript file, we are providing an alert that says `Hey it worked!`.
-
-### Making a Change
-
-Without worrying about the HTML for now, let's change the `Hey it worked!` message to `My project is going to be awesome!`. Go ahead and make the change in your code editor.
-
-If you save the file now, you should see a new change being registered in the source control window.
-
-![Second Commit](/images/second_commit.png)
-
-The number 1 in the source control icon indicates that there is one file change. If you click on it, you can see that it is tracking all the changes made to the file. The little `M` next to the file name indicates that the file is modified. 
-
-### Staging our Change
-
-You can also see a `+` (plus) sign next to the file name, which allows you to __stage__ a change for commit. Go ahead and click it. You should now see a section that says `Staged Changes`.
-
-![Staged Changes](/images/staged_changes.png)
-
-### Committing our Change
-
-Now that we have staged our change, let's go ahead and commit our change. Be sure to type a message for the commit, like `Second Commit` or `modifying text`.
-
-### Pushing our Changes to GitHub
-
-You should now see a button that says `Sync Changes`. In the lingo of Git, this is called __pushing__ your changes. It is a way to send your changes to the remote repository on GitHub. Simply committing your changes will _not_ make the changes on your remote repository until you push them. Let's go ahead and click `Sync Changes` and click `Ok`to the prompt.
-
-If you navigate to your repository in GitHub, you should see a new commit with the message `Second Commit`.
+1.  Open `index.html` in VSCode.
+2.  Change the text inside the `<h1>` tags from `This is my project!` to `My Awesome JavaScript Project`.
+3.  Save the file (`Ctrl+S` or `Cmd+S`).
+4.  Go to the Source Control view. You'll see `index.html` listed under Changes.
+5.  Stage the change (click the `+`).
+6.  Type a commit message like `Update heading text`.
+7.  Click Commit (✓).
+8.  Click "Sync Changes" (push) to upload it to GitHub. Check your repository on GitHub.com to see the new commit.
 
 ![New Commit](/images/github_secondcommit.png)
 
-Congratulations! You have successfully pushed your changes to GitHub.
-
-Using Git and GitHub might take a little getting used to, but it is a valuable resource for maintaining, sharing, and collaborating on projects. 
-
-To wrap up, keep in mind that the general process for working with Git is as follows:
-1. Make Changes
-2. Stage modified files
-3. Commit files with message
-4. Push to remote repository on GitHub
+This Stage -> Commit -> Push cycle is fundamental to using Git and GitHub.
 
 ## Review Questions
 
-1. A version control system like Git allows you to (select all that apply):
+1.  What is the primary function of Git?
+    <Quiz>
+    - To host websites online.
+    - To edit code files.
+    - To track changes to files over time (version control).*
+    - To manage software licenses.
+    </Quiz>
 
-<Quiz>
-- track changes to your files*
-- share your files and collaborate with others*
-- restore files you may have deleted on your own machine*
-- undo changes and revert to earlier versions*
-</Quiz>
+2.  What is GitHub primarily used for?
+    <Quiz>
+    - Running JavaScript code directly.
+    - Hosting Git repositories remotely for backup and collaboration.*
+    - Designing user interfaces.
+    - Compiling code.
+    </Quiz>
 
-2. True or False - You need to stage your files before committing them.
+3.  In the Git workflow, what does "staging" mean?
+    <Quiz>
+    - Saving the file to your hard drive.
+    - Uploading the file to GitHub.
+    - Marking changes that will be included in the next commit.*
+    - Reverting changes to a previous version.
+    </Quiz>
 
-<Quiz>
-- True*
-- False
-</Quiz>
-
-3. True or False - If you commit your changes, they will be immediately reflected in your GitHub repository.
-
-<Quiz>
-- True
-- False*
-</Quiz>
+4.  What command uploads your local commits to your remote GitHub repository?
+    <Quiz>
+    - `git commit`
+    - `git stage`
+    - `git init`
+    - `git push`* (or clicking "Sync Changes" in VSCode)
+    </Quiz>
 
 ## Challenge
 
-We saw that both the HTML file and the JavaScript file are contributing to the creation of our project webpage. For this challenge, try changing the text that is displayed from the HTML page to whatever you'd like. Once you have made a change and see it reflected in the webpage, stage the change, commit it, and push it to GitHub with an appropriate message.
+1.  Open `script.js` in VSCode.
+2.  Change the `alert('Hey, it worked!');` line to `console.log('My script is running!');`.
+3.  Save the file.
+4.  Go through the Stage -> Commit -> Push cycle in VSCode's Source Control view. Use a descriptive commit message like `Change alert to console log in script.js`.
+5.  Verify the change appears in your repository on GitHub.com.
 
 ## Key Terms
 
-Do you recall the meaning of the following terms?
+-   Code Editor (VSCode)
+-   Version Control System (VCS)
+-   Git
+-   GitHub
+-   Repository (Repo)
+-   Commit (Snapshot)
+-   Commit Message
+-   Stage / Staging Area
+-   Push (Upload to remote)
+-   Branch (e.g., `main`)
+-   Initialize Repository
 
-- Git
-- GitHub
-- stage
-- commit
-- push
+---
 
-# HTML and CSS
+# HTML and CSS: Structuring and Styling Web Pages
 
-In the last lesson we set up our project and created a repository on GitHub. Now that we have the environment set up and some files to work with, let's begin learning about writing HTML and CSS to modify a webpage. 
+Now that our development environment is set up, let's dive into the core languages that define web pages: **HTML** for structure and content, and **CSS** for style and layout. JavaScript then adds interactivity to this structure and style.
 
-We will be refreshing the page a lot, so the first thing I recommend doing is opening your `script.js` file in VSCode and commenting out `//` the alert that says `My project is going to be awesome!` so it doesn't become as much of an annoyance.
+Let's modify the `script.js` file again. Since we'll be reloading the page often, `alert()` pop-ups become annoying. **Comment out** the `alert()` line or change it back to `console.log()`.
 
-```JavaScript
-// alert('My project is going to be awesome!');
+```javascript
+// Commented out: alert('My project is going to be awesome!');
+console.log('Script loaded!'); // Use console.log for non-intrusive messages
 ```
+Remember to stage, commit, and push this change!
 
-To start us off and provide some context for this lesson, let's understand a bit about how HTML, CSS, and JavaScript work together.
+## HTML, CSS, and JavaScript: The Trio
 
-## HTML, CSS, and JavaScript
+Think of building a webpage like building a house:
 
-__HTML__ stands for HyperText Markup Language. It is the standard language used to define the _structure and content_ of a particular webpage. It allows you to add text, images, and other elements to a webpage, and to direct the overall layout of the webpage. For example, you can use HTML to add a header to your webpage, structure text in a series of paragraphs, add a table, a list of bullet points, an image, and much, much more. 
+1.  **HTML (HyperText Markup Language):** The **structure** and **content**. It's the foundation, walls, roof, doors, windows, and the text/images inside. It defines *what* is on the page (headings, paragraphs, lists, images, links, forms).
+2.  **CSS (Cascading Style Sheets):** The **presentation** and **style**. It's the paint color, wallpaper, furniture arrangement, font styles, spacing, and layout. It defines *how* the HTML elements look and where they are positioned.
+3.  **JavaScript (JS):** The **interactivity** and **dynamic behavior**. It's the light switches, doorbell, opening/closing windows, or maybe even appliances. It allows users to *interact* with the page, changes content dynamically, fetches data, and responds to events (like clicks).
 
-HTML works in tandem with __CSS__, which defines the _style_ of a webpage. CSS stands for Cascading Style Sheets. While HTML directs the overall structure and content of a page, CSS is used to define the particular _stylistic or aesthetic appearance_ of the page. For example, you can use CSS to define the color of text, the font, the size, the background color, the color of elements like buttons, and much more. While you could create a webpage entirely using HTML, it would ultimately be a boring, uninteresting webpage with a white background and black Times New Roman text. This is precisely where CSS comes in.
+While they have distinct roles, they work together seamlessly. You can embed CSS and JS directly within HTML files, but it's best practice to keep them in separate `.css` and `.js` files for better organization and maintainability, linking them from the HTML.
 
-Both HTML and CSS can also work in tandem with JavaScript files. While HTML and CSS direct the structure and style of a page, JavaScript allows you to add _functionality_ to a webpage. For example, you could use JavaScript to add a button that says "Click Me!" and when the button is clicked, it will display an alert that says "Hey! A button was clicked!". In other words, whatever the user can interact with on a webpage is controlled by JavaScript.
+## HTML Basics
 
-It's worth noting that the three languages are intertwined, and that you can write CSS and JavaScript inside an HTML file. This will make more sense as we continue learning.
-
-In general, just keep in mind that:
-- HTML provides the _structure_ of a webpage.
-- CSS provides the _style_ of a webpage.
-- JavaScript provides the _functionality_ of a webpage.
-
-With this in mind, let's go ahead and dive into the basics of HTML.
-
-## HTML
-
-So far, we have one HTML file to work with in our project: `index.html`. You can tell it is an HTML file by the `.html` extension. The name of the file (index) is an industry standard, because web browsers tend to recognize the index.html page as the opening page to your website directory. See [here](https://www.thoughtco.com/index-html-page-3466505) for more explanation.
-
-Let's take a look at the contents of the file. Open your project in VSCode and open the `index.html` file. You should see the following code display:
+HTML uses **tags** (keywords surrounded by angle brackets `< >`) to define elements. Most tags come in pairs: an opening tag `<tagname>` and a closing tag `</tagname>`. The content goes between them.
 
 ```html
-<!doctype HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My JavaScripting Master's Student Project</title>
+<p>This is a paragraph.</p>
+```
+
+Some tags are **self-closing** (or **void elements**) and don't need a closing tag, like `<br>` (line break) or `<img>` (image). Conventionally written as `<br />` or `<img ... />`.
+
+Let's examine our starting `index.html`:
+
+```html
+<!DOCTYPE html> <!-- Declares the document type (HTML5) -->
+<html lang="en"> <!-- Root element, language set to English -->
+
+  <head> <!-- Contains metadata (information *about* the page) -->
+    <meta charset="utf-8"> <!-- Specifies character encoding (use UTF-8!) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configures viewport for responsive design -->
+    <title>My JavaScript Project</title> <!-- Title shown in the browser tab/window -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to our external CSS file (we'll create this) -->
   </head>
-  <body>
-    <h1>This is my project!</h1>
+
+  <body> <!-- Contains the *visible* content of the page -->
+
+    <h1>My Awesome JavaScript Project</h1> <!-- Main heading -->
+
+    <p>This is the starting point for our project.</p> <!-- A paragraph -->
+
+    <!-- Link to our external JavaScript file. Usually placed just before </body> -->
     <script src="script.js"></script>
   </body>
+
 </html>
 ```
 
-This is a standard layout for a basic HTML page. The first thing you'll probably notice is that HTML elements are defined by the `<` and `>` characters. Some tags need both opening and closing tags, like `<h1></h1>`, while others only need one tag, like `<meta>`. Tags that are self-closing, or don't require closing tags, are called _void elements_. To close a tag when needed, add a `/` before the name of the element in the last tag.
+**Key Parts:**
 
-Let's break down some of the specific elements we are seeing here. The first element is a `<!doctype>` tag. This tag is used to define the type of document that is being created: in this case, an HTML doc. We also see an `<html>` tag after. This tag begins the HTML document proper.
+*   `<!DOCTYPE html>`: Essential first line for modern HTML.
+*   `<html>`: The root element wrapping everything. `lang="en"` helps browsers and search engines.
+*   `<head>`: Contains non-visible setup info.
+    *   `<meta charset="utf-8">`: Crucial for correct character display.
+    *   `<meta name="viewport"...>`: Important for mobile responsiveness.
+    *   `<title>`: Text appears in the browser tab.
+    *   `<link rel="stylesheet" href="...">`: Connects external CSS files.
+*   `<body>`: Contains all content displayed to the user (headings, text, images, etc.).
+    *   `<script src="..."></script>`: Connects external JavaScript files. Placing scripts at the *end* of the `<body>` is common practice. This ensures the HTML structure is loaded before the script tries to interact with it.
 
-We also have a `<head>` tag. This element is where we put all of the background information, or _metadata_, about the webpage. None of this information is actually visible in a webpage except for the `<title>` tag, which will be displayed as the title of the page in your browser's title bar.
+### Common HTML Tags
 
-Next, we have the `<body>` tag. This tag begins the body of the webpage, where we put all of the actual content we want to display. In this case, we have a `<h1>` tag. This tag defines a header, or a large series of text, and it has a text content of `"This is my project!"`. For the moment, let's skip the `<script>` tag--we'll discuss that later in the lesson. We end the HTML document by closing the `</body>` and `</html>` tags.
+*   `<h1>` to `<h6>`: Headings (h1 is most important, h6 least).
+*   `<p>`: Paragraph.
+*   `<a>`: Anchor (creates hyperlinks). Requires `href` attribute.
+    ```html
+    <a href="https://developer.mozilla.org/">Visit MDN</a>
+    ```
+*   `<img>`: Image. Requires `src` (source URL) and `alt` (alternative text for accessibility/if image fails). Self-closing.
+    ```html
+    <img src="images/logo.png" alt="My Project Logo" />
+    ```
+*   `<ul>`, `<ol>`, `<li>`: Unordered list (`<ul>`, bullet points), ordered list (`<ol>`, numbered), and list item (`<li>`).
+    ```html
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+    </ul>
+    ```
+*   `<div>`: Division. A generic block-level container used to group elements for styling or layout. Doesn't have inherent meaning.
+*   `<section>`: Represents a thematic grouping of content.
+*   `<span>`: A generic inline container, often used to style parts of text.
 
-In general, then, the basic template for any HTML document is as follows:
-
-```html
-<!doctype HTML>
-<html lang="en">
-    <head>
-        <title>This is the page title.</title>
-    </head>
-<body>
-    <h1>Here's an example large heading.</h1>
-    <p>This is an example paragraph of text.</p>
-</body>
-</html>
-```
-
-In other words...
-- All HTML documents must start with a document type declaration: `<!doctype HTML>`.
-- The HTML document itself begins with `<html>` and ends with `</html>`.
-- The `<head>` of the HTML document contains the metadata about the document, such as the `<title>`.
-- The visible part of the HTML document is between `<body>` and `</body>`, which can hold any number of elements you want to display.
-
-### Useful Tags
-
-There are many tags you will find yourself using in HTML. Here are some of the most common:
-
-- `<p></p>`: This tag defines a paragraph of text.
-- `<h1></h1>`: This tag defines a header, or a large series of text.
-- `<h2</h2>`: This tag defines a smaller header, or a smaller series of text. It descends all the way down to `<h6>`.
-- `<img src ="..." alt="Text for accessibility purposes" />`: This tag sets an image to display, with an alternative text for accessibility. Note that it is a void element, meaning it doesn't have a closing tag.
-- `<a href="...">...</a>`: This tag creates a hyperlink.
-- `<div></div>`:  This tag designates a container block or section for other elements.
-- `<section></section>`: This tag creates a section of content.
-
-There are many, many other tags you will encounter in the wild. You can find a complete list of tags here: [HTML Tags](https://www.w3schools.com/tags/default.asp).
-
-In your browser, you can observe the HTML for any page you encounter using the same browser's developer tools you used to open the console. It may not make much sense depending on the page you are looking at, but it can often be a good way to to simply get a glimpse of what the HTML looks like. Open the `index.html` page in your browser and right-click on the page and select `View Source`. You should be familiar with the code you are seeing.
+Find a complete list on [MDN HTML Elements Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 ### HTML Attributes
 
-In the `<html>` tag in our `index.html` file, you'll also notice we have added `lang="en"`. This is called an _attribute_. Attributes are pieces of information that are added to a tag element, and follow the syntax `attribute="value"`. They allow us to modify the behavior of the element in a variety of ways or to add information. Here we wrote `lang="en"` to define the language of the document as English (a common practice as info for the browser). 
+Attributes provide additional information about an element or modify its behavior. They appear inside the opening tag, usually as `name="value"`.
 
-You'll also notice, in the `<script>` tag, that we added a `src` attribute. We'll discuss this in more detail later in this lesson. Throughout the course, you'll be introduced to a variety of useful attributes that you can use to modify elements in your HTML pages. For now, however, just keep in mind the syntax so you can recognize attributes when you see them.
+*   `href`: Specifies the URL for a link (`<a>` tag).
+*   `src`: Specifies the source URL for images (`<img>`) or scripts (`<script>`).
+*   `alt`: Provides alternative text for images (`<img>`). **Essential for accessibility!**
+*   `id`: Assigns a **unique** identifier to an element (e.g., `<div id="main-content">`). Used for CSS styling and JavaScript targeting. An ID must be unique on the page.
+*   `class`: Assigns one or more class names to an element (e.g., `<p class="highlight important">`). Used for CSS styling and JavaScript targeting. Multiple elements can share the same class, and an element can have multiple classes (separated by spaces).
 
-Now that we have some basic understanding of how an HTML document is set up, let's move on to CSS to add some style to our webpage.
+## CSS Basics
 
-## CSS
+CSS (Cascading Style Sheets) controls the visual appearance. We write CSS rules to **select** HTML elements and apply **styles** (properties and values) to them.
 
-As mentioned earlier, HTML works in conjunction with CSS to define the style of a webpage. 
+### Linking CSS
 
-Examples of what CSS can help you modify include:
-- What background color you want to use for the page or a paragraph.
-- What font or font size you want for your headings or your normal text.
-- How large you want the images, and whether you want them aligned center, left, or right.
-- Where elements appear on the page.
-- Whether elements are visible to a user or not.
+The best way is using an external stylesheet.
 
-And much more! 
-
-### Adding A New Stylesheet
-
-CSS files are called _stylesheets_. Let's create a new file called `styles.css` in our project so we can modify the style of our HTML page. The useful thing about stylesheets is that we simply need to create _one_, which will then control the layout of many different HTML documents.
-
-To add a new file in VSCode, simply click on the "New File" button next to your project title in the Explorer window. Type `styles.css` into the name field and hit <kbd>Enter</kbd>. Make sure to add the `.css` extension to the name.
-
-Next, we'll link to the `styles.css` file in our HTML file so it can be applied to our webpage. In our HTML file, we'll connect the files through a void `<link>` tag that lives inside the _parent_, or containing, `<head>` tag. Its `href` attribute is a link to our CSS document. The link tag is as follows:
-
-```html
-<link rel="stylesheet" href="styles.css">
-```
-
-The `rel` attribute is used to define the relationship between the HTML document and the CSS document. In this case, the relationship is `stylesheet` because we are linking a CSS stylesheet. The `href` attribute is used to define the location of the CSS document. In this case, the location is relative to the location of the HTML document (it lives in the same folder), so we'll just provide the name of the CSS file.
-
-So, open the `index.html` file in VSCode and add the `<link>` to the `<head>` section like so:
-
-```html
-<!doctype HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+1.  **Create a CSS file:** In VSCode, create a new file named `styles.css` in the same folder as `index.html`.
+2.  **Link it in HTML:** Add the `<link>` tag inside the `<head>` of your `index.html` (we already did this in the template):
+    ```html
     <link rel="stylesheet" href="styles.css">
-    <title>My JavaScripting Master's Student Project</title>
-  </head>
-  <body>
-    <h1>This is my project!</h1>
-    <script src="script.js"></script>
-  </body>
-</html>
-```
+    ```
 
-### Styling Elements
+### CSS Rule Syntax
 
-Next, let's start adding some styling to our page. In the `styles.css` file, let's add a background color. We'll do this by adding a `background-color` property to the `body` element. 
+A CSS rule consists of a **selector** and a **declaration block**.
 
 ```css
-body {
-    background-color: rgb(118, 92, 120);
-  }
-``` 
-
-To modify an HTML element, you first indicate which element you want to modify, followed by curly braces containing the properties you want to modify. In this case, we want to modify the `background-color` of the `body` element. Lines within the curly braces are called _declarations_, and they change the formatting of the elements in the HTML document. Each line in the declaration sets the value for a property and ends with a semicolon `;`.
-
-To define the color, we use the `rgb()` function. This function takes three numbers as arguments that represent color values, and returns a color in the form `rgb(Red, Green, Blue)`. In this case, I'm using the RGB values for a purplish grey color, but you can use whatever color you'd like. VSCode usually comes equipped with a built-in color picker, so you can just click on the color you want and it will appear in the text field. If you can't see the color picker, you can also determine particular RGB values using [this online resource](https://htmlcolorcodes.com/color-picker/) to get the RGB value you want along with analogous colors. 
-
-__Note:__ High contrast is very important for people with visual disabilities. So, when designing websites always ensure that the contrast between the text color and the background color (or background image) is good! See [this very useful contrast checker](https://webaim.org/resources/contrastchecker/).
-
-If you save the CSS file and open the HTML file in your browser, you should now see the background color change.
-
-Next, let's modify the header element a bit. Let's make it white, a different font, and a little bigger. We'll also set it to be bold and center it.
-
-```css
-h1 {
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    text-align: center;
-  }
-```
-
-As you can see, each of these aspects have their own properties you can modify. If you add this code to your file and refresh your browser, you should see the header centered and modified accordingly.
-
-Next, let's add a paragraph with some text to our page. We'll start by adding a `<p>` tag to our HTML file, within the `<body>`. I'm going to add a very bad (sorry!) joke to my site, but you can write whatever you'd like.
-
-```html
-<!doctype HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>My JavaScripting Master's Student Project</title>
-  </head>
-  <body>
-    <h1>This is my project!</h1>
-    <p>Q: Why did the programmer quit his job?
-      A: Because he didn't get arrays.</p>
-    <script src="script.js"></script>
-  </body>
-</html>
-```
-
-Next, let's add some styling to the paragraph. We'll follow the same process as we did for the header, but we'll make the text size a bit smaller (20px smaller, to be precise).
-
-```css
-p {
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    white-space: pre-line;
-  }
-```
-
-The other addition is the `white-space` property. This property allows you to control how whitespace is handled. In this case, I wanted to preserve the line break in the text so the question and answer are on different lines, so I set the value to `pre-line`.
-
-If you save and reload, you should see something like the following:
-
-![First CSS styling](/images/1_css-styling.png)
-
-### CSS Selectors
-
-CSS is made up of selectors with specific properties. Selectors are usually tags, ids, or classes. Let's take a look at both of the latter selectors. `id` will allow us to select a single element by its id and modify it. `class` will allow us to efficiently modify a number of elements with the same class at once.
-
-#### Class
-
-In our project page so far, we applied many of the same styles to the `<h1>` element as well as to the `<p>` element. For instance, we centered them both, made them both white, changed the font, etc. This works, but is ultimately repetitive and inefficient because we had to rewrite the same code. Using the `<div>` tag and classes, we can make this much easier.
-
-First, let's create a class in our CSS file. We'll create a class called `formatText` and use it to style all the text on the page.
-
-```css
-.formatText {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    white-space: pre-line;
-  }
-```
-
-To create a class, we use the `.` (dot) character followed by the name of the class. We can then use the class in our HTML file. Let's use the `<div>` tag, which acts like a container for other elements, and style it with our class. Everything within the `<div>` tag will then be styled according to the `.formatText` properties.
-
-
-```html
-<!doctype HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>My JavaScripting Master's Student Project</title>
-  </head>
-  <body>
-    <div class="formatText">
-      <h1>This is my project!</h1>
-      <p>Q: Why did the programmer quit his job?
-        A: Because he didn't get arrays.</p>
-    </div>
-    <script src="script.js"></script>
-  </body>
-</html>
-```
-
-As you can see, we use the `class` selector to style the `<div>` element with the name of the class we created. We include both text elements within the bounds of the `<div>` tag so they are both styled the same.
-
-Back in our CSS file, we can now delete the repetitive bits. Our `<h1>` element now only needs to be distinguished by font size and boldness...
-
-```css
-h1 {
-    font-size: 50px;
-    font-weight: bold;
-  }
-```
-
-...while our `<p>` element only needs to be distinguished by the text size.
-
-```css
-p {
-    font-size: 30px;
-  }
-```
-
-All together, your CSS file should now look something like this:
-
-```css
-body {
-    background-color: rgb(118, 92, 120);
-  }
-
-h1 {
-    font-size: 50px;
-    font-weight: bold;
-  }
-
-p {
-    font-size: 30px;
-  }
-
-.formatText {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    white-space: pre-line;
-  }
-```
-
-Save and reload the page, and you should see the same result as before. What, then, was the point? Well, by using classes we have reduced the amount of code we need to write and made it much more readable and organized. Classes are very useful when you know you want to style many elements at once with a number of common or generic properties. You can apply classes to almost any element, and every element can even have multiple classes! Just separate the names with a space, like so:
-
-```html
-<div class="firstClass secondClass thirdClass"></div>
-```
-
-This is a particularly powerful feature of classes.
-
-##### ID
-
-In contrast to classes, IDs are unique. They are used to identify a _single_ element in the HTML file rather than many. This is useful when you want to style a single element, but you don't want to style every element with the same properties.
-
-Let's say we wanted to set our joke apart from the header text a bit. Let's add a border around the joke text and provide it with a different background and font color. Let's also add a second joke to the page.
-
-There are several ways we could do this, but the best might be to use a _flexbox_. Flexbox is a method to lay out elements in a way that is more efficient than using absolute positioning (or manually figuring out height, width, and dimensions of the page). It is a way to allow for a dynamic positioning of elements on a particular page. This layout also makes elements responsive, which means that the elements change their behavior according to the kind of device displaying them. No matter if you are viewing the page on a mobile phone or a computer monitor, the elements will be provided with appropriate position and symmetry. In general, flexbox is one of the best methods for vertically and horizontally centering elements because it’s responsive and doesn’t require margin calculations.
-
-Let's start by creating a new section in our HTML file, and adding a new `id` of `joke` to designate it as the joke section. I'll also add a new bad joke, this time at the expense of academics:
-
-```html
-<!doctype HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>My JavaScripting Master's Student Project</title>
-  </head>
-  <body>
-    <div class="formatText">
-      <h1>This is my project!</h1>
-        <section id="joke">     
-          <p>Q: Why did the programmer quit his job?
-          A: Because he didn't get arrays.</p>
-          <p>Q: What's the difference between an academic and a genie?
-          A: One grants wishes, the other wishes for grants.</p>
-        </section>
-    </div>
-    <script src="script.js"></script>
-  </body>
-</html>
-```
-
-You can see that we have now designated a new `<section>` with an `id` of `joke`. Next, let's move to our CSS file to define the properties for the section.
-
-The syntax for ids is mostly the same as classes, but instead of using the `.` (dot) character, we use the `#` (hash) character:
-
-```css
-#joke {
-    border: 5px solid rgb(16, 29, 55);
-    background-color: rgb(118, 125, 158);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin: 0 auto;
-    color: rgb(255, 230, 204);
-  }
-```
-
-We have several new things here, so let's break them down. First, we create a border around the joke text. We use the `border` property to set the border width (`5px` = 5 pixels) and style. `solid` indicates a solid fill border, and we set the color to a dark blue. We also use the `display` property to set the display type of our `joke` id to `flex`. This is defining our flexbox layout. We use the `flex-direction` property to set the direction of the layout to `column`. Flexboxes can utilize horizontal rows (this is defining their "direction") as well as a columnar structure. Choosing columns allows us to place jokes one below the other on our page and make it easier to read. In other words, each `<p>` element within the joke `<section>` will appear evenly spaced below the first as a long column of jokes.
-
- We then use the `justify-content` and `align-items` properties to set the alignment of the elements to `center`. This means that the elements (the jokes) will be aligned in the center of the flex container. We use the `width` property to set the width of the overall flex container to 50% of the width of the screen, and we use the `margin` property to set the margin to `0 auto`. This means that the container will be centered on the screen (the margins will be even on each side and it will warp to 50% of the screen width). Finally, we use the `color` property to set the text color to a light peach color.
-
- If you save and reload the page, you should now see something like the following:
-
-![joke id](/images/2_css-styling.png)
-
-Nice! You'll notice that even though the id is located within the `.formatText` class (i.e., the parent class) and that its styling is still being applied, you can nest ids and classes within each other to override the particular styling of the parent or container they are in. This allows you to create a complex hierarchy of styles that can be applied to many elements at once.
-
-By creating a joke id we now have a specific section to hold and style all our terrible jokes. At this point I might encourage you to check out the [flexbox guide here](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) to learn a bit more about flexboxes, as they are incredibly useful for modern CSS.
-
-Additionally, while there are far, far too many CSS properties to cover in this course, I also urge you to at least peek through the [entire CSS reference library](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) and bookmark it. Try looking up the `flex` property, or any of the other properties we have used so far.
-
-### External, Internal, and Inline CSS
-
-As a final note about CSS, in this course we are using an _external_ CSS file, meaning it is its own separate file that we have to link to in our HTML. This is the recommended way to utilize CSS. However, it is possible to use CSS directly in your HTML file as well, through both _internal_ and _inline_ methods. If you are curious, you can visit [this page to understand the differences](https://www.w3schools.com/css/css_howto.asp) between these methods. In general, however, just keep in mind that using external CSS files is the preferred method of using CSS.
-
-## JavaScript
-
-So far, we have just been using HTML and CSS to style our page. The only bit of JavaScript we have is linked through the `<script>` tag, located in the `<body>` of the HTML file:
-
-```html
-    <script src="script.js"></script>
-```
-
-The `src` (source) attribute is used to link to the JavaScript file `script.js`. This is the file that contains the code that will be executed when the page loads. At the moment, the only thing it is doing is alerting the user that your project is going to be awesome.
-
-In the next lesson, we will learn how to use JavaScript to create a more complex webpage with some actual interactivity. For now, let's just review some of the concepts we've learned so far concerning HTML and CSS.
-
-## Review Questions
-
-1. How do we associate a CSS stylesheet with a HTML file? (select one)
-
-<Quiz>
-- By including a link to the CSS file in the HTML page's `<head>` element.*
-- By including the CSS file in the HTML page's `<body>` element.
-- By sheer coincidence.
-</Quiz>
-
-2. True or False - ids are created using the `.` (dot) character and classes are created using the `#` (hash) character.
-
-<Quiz>
-- True
-- False*
-</Quiz>
-
-3. True or False - Flexboxes are useful because they allow for a dynamic layout of elements on a page.
-
-<Quiz>
-- True*
-- False
-</Quiz>
-
-## Challenges
-
-1. Add another joke of your own to the jokes section of your page.
-
-2. Add a link in the jokes section to an online list of jokes using the `<a href=""></a>` tag. To learn about this tag, [see this page](https://www.w3schools.com/Html/html_links.asp).
-
-3. Create a new `<section>` in your HTML file to display your favorite poem. In CSS, give it an appropriate id, and define the section as a centered flexbox with a different border, background color, and text color.
-
-4. Push all your changes to the project to GitHub.
-
-## Key Terms
-
-Do you remember the meaning of the following terms?
-
-- self-closing or void tags
-- metadata
-- attributes
-- class
-- id
-- flexbox
-
-## Download the Project
-
-Here are the course files we created for this lesson if you need a reference:
-
-<Download files='8_index.html, 8_script.js, 8_styles.css'> <br/>
-
-# Interactive Web Design
-
-Now that you have a basic understanding of HTML and CSS, let's begin using JavaScript to add more interactivity to your webpage. 
-
-Just as a note, for the rest of this course, we will be switching back and forth between environments (e.g., VSCode, the browser, the console) as well as between languages (e.g., JavaScript, HTML, and CSS) fairly often. This might be a little confusing and disorienting at first, but with a bit of practice it will eventually begin to feel more natural. 
-
-Before we get to working with JavaScript, there are a few things we'll want to do. The first is to get a local server up and running so we can test our code on the fly, and the next will be to incorporate the jQuery library into our code. Let's accomplish these now.
-
-## Running a Live Server in VSCode
-
-So far, we have simply double-clicked the `index.html` file in your computer's file system and opened it in the browser. This is a perfectly fine way to get started previewing our webpage, but it may cause issues as we add more complexity. To address this, let's add an extension to our VSCode that will allow us to run a local web server to load and preview our webpages.
-
-Open up your project in VSCode. Next, click on the Extensions button in the sidebar.
-
-![vscode extension](/images/open_extensions.png)
-
-In the search field, type `live server` and press enter.
-
-Open the Live Server extension (it will likely be the first search result, see below for specifics), and click Install.
-
-![Live Server](/images/live_server.png)
-
-Once installed, you should see a new button in the taskbar on the bottom-right of VSCode that says "Go Live".
-
-![Go Live](/images/go_live.png)
-
-Clicking this button will open a new window that will load your webpage in the browser. Now, you can make changes to your page and, after saving the file in VScode, you can see your changes immediately reflected in the browser. Try changing some of the text on your page, saving it, and returning to your page in the browser. You should see your changes display, without even needing to reload the page. 
-
-Pretty neat, right?
-
-To shut down the server, simply click on the button (now showing the port #) in the taskbar again.
-
-## Importing jQuery
-
-Next, we will incorporate the __jQuery library__ into our code. JQuery is an open-source JavaScript library that allows us to build our webpage without needing to reinvent the wheel in terms of common functionality. It takes many of the typical tasks that would usually take many lines of JavaScript or HTML code to accomplish, and simplifies them into functions that you can call with a single line of code. In short, it is a "library" in the sense that it provides us with many pre-written functions that we can use to make our webpage writing much more simple and efficient.
-
-First, we need to import the jQuery library into our code. To do this, we need to add another script tag to our HTML file. Above the `script.js` import in the `<body>`, add the following line:
-
-```html
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-```
-
-Here we are importing the jQuery library from the [jQuery CDN](https://code.jquery.com/) (Content Delivery Network). In other words, our `src` attribute is directed to the web server `code.jquery.com` and is told to download the source file `jquery-3.6.0.min.js`, which is the latest version of jQuery (at the time of writing this).
-
-Next, let's learn how to use jQuery to perform some basic tasks.
-
-## Using jQuery
-
-### Selecting Elements
-
-The first function we will cover is the __jQuery selector__, which is one of the most important functions in jQuery. It allows us to select and manipulate HTML elements on our page. It is used to "find" HTML elements based on their name, id, class, type, and other attributes.
-
-All selectors start with a dollar sign followed by parentheses: `$("")`. A selector takes a single argument in the parentheses (set between double quotes `""`), which is the element we want to modify. Let's look at some basic examples.
-
-### Selecting the Header
-
-Currently, our header in the `<h1>` tag seems a bit unnecessary. All it is doing is telling us `This is my project!`, which is information we clearly already know (and which also doesn't do much for the visitor to the site). We could, of course, simply change the text to something more appropriate, but to show you the power of jQuery selectors, let's play around with this element a bit and see how we can use JavaScript to modify it.
-
-First, we could simply hide the header from our page so that visitors to the site would not see it. In your `script.js`, add the following line:
-
-```JavaScript
-$("h1").hide();
-```
-
-We begin by selecting `$` the `h1` element of our page, and then we use the `.hide()` method to hide the element. This will remove the header from view on our page, but keep it in our HTML code. Save the file and check out your page in the browser. The header with the message `This is my project!` should now be hidden from view.
-
-What happens now if we add a new header to replace the old one? Let's try it out. In your `index.html`, add a new header below the old one:
-
-```html
-<h1>This is my project!</h1>
-<h1>Bad Jokes Galore!</h1>
-```
-
-Save the file and check out your page in the browser. What happens?
-
-Nothing, right? The new header is not visible to the visitor either. This is because by using the `$("h1")` selector to hide, we are selecting _all_ the `h1` elements in our page. In other words, any `<h1>` tag we try to add will be hidden from view.
-
-### Selecting by ID
-
-Let's address this by utilizing an __ID selector__ instead. This will allow us to select a single element. In your `index.html`, let's define an id `noShow` for the header we specifically want to hide, like so:
-
-```html
-<h1 id="noShow">This is my project!</h1>
-<h1>Bad Jokes Galore!</h1>
-```
-Next, let's change our selector so that only the element with the id `noShow` is hidden instead of all `h1` elements. In your `script.js`, change the original hide code to the following:
-
-```JavaScript
-$("#noShow").hide();
-```
-
-To select by id, we use the `#` (hash) symbol followed by the id name (this is, as you might recall, the same when styling by id in CSS). If you save and view the page, you should now see the old header hidden from view, but the new header still visible:
-
-![id selector](/images/id_selector.png)
-
-Great!
-
-...well, perhaps we think these jokes are getting too much flak. In fact, let's consider that these may actually be the best jokes ever. Why don't we change the text of the header to reflect this more positive attitude (no matter how misguided it may be)? We could, of course, simply change the text manually in the HTML file, but we can also use the `.html()` method to change the text of an element entirely in JavaScript.
-
-In your `script.js`, add the following line:
-
-```JavaScript
-$("h1").html("The Best Jokes Ever!");
-```
-
-If you save and check your page, you should now see the header text changed to `The Best Jokes Ever!`. 
-
-![change header](/images/change_header_text.png)
-
-Keep in mind, again, that because we are specifying the `h1` tag, this will change the text of _all_ `h1` elements in the page to "The Best Jokes Ever!" If you were to add another header anywhere on the page, it would also change the text to "The Best Jokes Ever!". This is clunky and wouldn't be advised for more complex webpages, but will work for now just for demonstration purposes.
-
-### Selecting by Class
-
-Selecting by class is the same as selecting by id, but instead of using the `#` symbol, we use the `.` (dot) symbol. You can select any class element with the following syntax:
-
-```JavaScript
-$(".className")
-```
-
-This will allow you to modify or manipulate all elements with the class `className` in the page, just as you did with the id selector.
-
-### Appending Elements
-
-Let's say we wanted to add a new joke to our page. We could simply add a new `<p>` tag to our HTML file like we did in earlier lessons, but we can also add elements with jQuery. It makes sense to use JavaScript here anyway--for instance, what if we wanted users to be able to post their own jokes to the page? We would want a way to automatically update the list of jokes rather than doing it manually ourselves in HTML. 
-
-So, let's use the `.append()` method to add a new joke to our `joke` section. In your `script.js`, add the following line:
-
-```JavaScript
-$("#joke").append("<p>Q. What do you call a fake noodle? <br /> A. An impasta</p>");
-```
-
-Here we are identifying the element with the id `joke` (used for our joke `<section>`) and adding a new paragraph `<p>` element to it. To keep a line break between the question and answer, we use the self-closing HTML `<br />` (break) tag in between. Save the file and check out your page in the browser.
-
-![append joke](/images/append_joke.png)
-
-Cool, we now have three ~~terrible~~ amazing jokes on our page.
-
-To wrap up, keep in mind that...
-- `$("")` is the jQuery selector.
-- To select an element by id, use `#` followed by the id name.
-- To select an element by class, use `.` followed by the class name.
-- You can use methods like `.hide()` and `.html()` and `.append()` to modify elements that you select. 
-
-## Adding Interactivity
-
-Okay, we have learned how to use jQuery to select and manipulate elements on our page. However, we still don't have any real interactivity. As a basic example, let's add a button that will allow us to show and hide the jokes section from view on the page.
-
-### Creating a Button
-
-To create the button, add the following code to your `index.html` file, underneath your header tags:
-
-```html
-<button id="toggleJokes">Toggle Jokes</button>
-```
-
-Here we have a simple `<button>` element set to an id `toggleJokes`. If you save your file, you should now see a button on the page above your jokes section.
-
-You can see that it doesn't look very good at the moment, so why don't we add a bit of styling to make it better? Now, we could simply style the button in our CSS file like we did with other elements in the page. For example, to make the button orange, with larger white text, a border, some padding, and some margin space around the button to separate it from other elements, we could add the following code to our `style.css` file:
-
-```css
-#toggleJokes {
-    background-color: orange;
-    color: white;
-    font-size: 20px;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
+selector {
+  property: value; /* This is a declaration */
+  another-property: another-value;
+  /* ... more declarations ... */
 }
 ```
 
-Here we are styling the button with the id `toggleJokes` using the CSS styling techniques we learned about earlier. This would probably be the best and most efficient way to style the button. However, you can also style an element entirely in JavaScript. Why don't we try this instead?
+*   **Selector:** Targets the HTML element(s) to style (e.g., `h1`, `p`, `.my-class`, `#unique-id`).
+*   **Declaration Block:** Enclosed in curly braces `{}`.
+*   **Declaration:** A property-value pair, ending with a semicolon `;`.
+    *   `property`: The style aspect to change (e.g., `color`, `font-size`, `background-color`).
+    *   `value`: The setting for that property (e.g., `blue`, `16px`, `#FF0000`).
 
-### CSS Styling in JavaScript
+### Basic Selectors
 
-We can use the `.css()` method to add styling to any element. For example, take a look at the code below:
+*   **Type Selector:** Selects all elements of a specific type.
+    ```css
+    /* Style all paragraphs */
+    p {
+      color: navy;
+      line-height: 1.6; /* Add space between lines */
+    }
+    /* Style the main body */
+    body {
+      font-family: sans-serif; /* Use a common sans-serif font */
+      background-color: #f0f0f0; /* Light grey background */
+    }
+    ```
+*   **Class Selector:** Selects elements with a specific class attribute. Starts with a dot `.`.
+    ```css
+    /* Style elements with class="highlight" */
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+    ```
+    *(In HTML: `<p class="highlight">Important text.</p>`)*
+*   **ID Selector:** Selects the *single* element with a specific ID attribute. Starts with a hash `#`.
+    ```css
+    /* Style the element with id="main-logo" */
+    #main-logo {
+      border: 2px solid red;
+      padding: 10px;
+    }
+    ```
+    *(In HTML: `<img src="..." alt="..." id="main-logo">`)*
 
-```JavaScript
-// modify css styles for the button
-$("#toggleJokes").css("background-color", "orange");
-$("#toggleJokes").css("color", "white");
-$("#toggleJokes").css("font-size", "20px");
-$("#toggleJokes").css("padding", "10px");
-$("#toggleJokes").css("border-radius", "5px");
-$("#toggleJokes").css("border", "2px solid black");
-$("#toggleJokes").css("margin", "10px");
+### Applying Styles
+
+Let's add some styles to `styles.css`:
+
+```css
+/* styles.css */
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Font stack, tries Arial first */
+  line-height: 1.5; /* Spacing between lines */
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  margin: 20px; /* Add some space around the body content */
+}
+
+h1 {
+  color: #0056b3; /* A shade of blue */
+  text-align: center; /* Center the heading */
+}
+
+/* Style links */
+a {
+  color: #0066cc;
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover { /* Style links when mouse hovers over them */
+  color: #004080;
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Example class */
+.important-note {
+  font-style: italic;
+  color: firebrick;
+}
+
+/* Example ID */
+#page-footer {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc; /* Light gray top border */
+  font-size: 0.9em; /* Slightly smaller font */
+  text-align: center;
+}
+
 ```
 
-Here, we are modifying the the many CSS properties of the button with the id `toggleJokes`. When using the `.css()` method, you must specify the property name and the value you want to set it to. As you can see, we use the same properties and values as we do when writing regular CSS styles. JavaScript, HTML, and CSS are very interwoven languages.
+Now, modify your `index.html` to use some of these:
 
-Instead of writing a bunch of separate lines, we can also use the `.css()` method to modify the styles of multiple properties of an element at once. To do so, you simply wrap the properties in curly braces and separate them with a comma, writing them out as you would in a typical CSS style sheet:
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My JavaScript Project</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
 
-```JavaScript
-// modify css styles for the button
-$("#toggleJokes").css({
-    "background-color": "orange",
-    "color": "white",
-    "font-size": "20px",
-    "padding": "10px",
-    "border-radius": "5px",
-    "border": "2px solid black",
-    "margin": "10px"
-});
+    <h1>My Awesome JavaScript Project</h1>
+
+    <p>This is the starting point for our project. We will use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> for structure, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> for style, and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> for interactivity.</p>
+
+    <p class="important-note">Remember to save your files often!</p>
+
+    <div id="page-footer">
+      <p>&copy; 2024 Your Name Here</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
 ```
 
-This is functionally the same, but is cleaner and easier to read. Add this code to your `script.js` file and save your file. You should see something like the following:
+Save both files and open `index.html` in your browser (or refresh if using Live Server). You should see the styles applied!
 
-![Button Styling](/images/style_button.png)
+### The Cascade and Specificity
 
-A bit ugly still, but at least it has some flavor. Again, while it is preferred to define your styles _within your CSS stylesheet_ (like we did initially), you can see how JavaScript can add dynamic styles to your elements as well. Each language forms a part of the whole to define the user's experience.
+CSS stands for *Cascading* Style Sheets. This means styles "cascade" down, and conflicts are resolved based on:
 
-Speaking of user experience, if you try clicking on the button, you'll notice it doesn't do anything yet. Let's add some proper interactivity to it.
+1.  **Specificity:** More specific selectors override less specific ones. ID selectors (`#id`) are more specific than class selectors (`.class`), which are more specific than type selectors (`p`).
+2.  **Source Order:** If selectors have the same specificity, the rule that appears later in the CSS file (or is linked later in HTML) takes precedence.
+3.  **Inheritance:** Some styles (like `color` and `font-family`) are inherited by child elements from their parents, unless overridden.
 
-### Making the Button Clickable
+## The Document Object Model (DOM)
 
-We'll want this button to both show and hide the jokes section. Now, we could write a somewhat complex function that would `hide()` the jokes section when the button is clicked (and when the text is displayed), while also `show()` the jokes section when the button is clicked (when the text is hidden), but here's an example of jQuery to the rescue, simplifying things for us. You can simply use the `.toggle()` method to toggle the display (visible/invisible) of a particular element.
+When a browser loads an HTML page, it creates an internal, tree-like representation of the page called the **Document Object Model (DOM)**. Each HTML element becomes an "object" or "node" in this tree.
 
-To accomplish this, however, we need to make the button clickable in the first place. We can do this by using another jQuery method, `.click()`, which will add a click __event__ to the button. You can think of events as "things that happen" to your HTML elements (text fields being typed in, buttons being clicked, etc). So, in your `script.js`, add the following lines:
+JavaScript can access and manipulate this DOM tree to:
 
-```JavaScript
-$("#toggleJokes").click(function() {
-  $("#joke").toggle();
-});
-```
+*   Find elements (like finding a specific `<div>` by its ID).
+*   Change element content (like updating text in a `<p>`).
+*   Change element styles (like making text bold or changing its color).
+*   Add or remove elements.
+*   Respond to user events (like button clicks).
 
-First we select the button with the id `toggleJokes` and then add a click event to it. We attach a simple function to the `click()` event so it will run when the click occurs. This function selects the `joke` section and adds a `.toggle()` method to it.
-
-If you save and check your page, you should now be able to click on the button and see the jokes section disappear and reappear. 
-
-Very well done! You're already a successful web developer.
-
-## Additional jQuery Methods
-
-There are many, many more jQuery methods available (way too many to cover). You can find a full list of them [here](http://api.jquery.com/).
-
-As their slogan has it, with jQuery the intent is to "write less, do more". It allows you to very easily perform tasks and manage behaviors on your page without having to write lengthy, complicated code for common situations. As your web project grows more interactive, the potential for using more jQuery grows along with it.
+This is how JavaScript makes web pages dynamic. We'll explore DOM manipulation (using jQuery for convenience) in the next lesson.
 
 ## Review Questions
 
-1. True or False - Unless you specify otherwise, a selector will select all elements of the same type on a page.
+1.  What is the primary role of HTML?
+    <Quiz>
+    - To define the visual style and layout.
+    - To add interactivity and dynamic behavior.
+    - To define the structure and content of a webpage.*
+    - To store data on the server.
+    </Quiz>
 
-<Quiz>
-1. True*
-2. False
-</Quiz>
+2.  Which HTML tag is used to link an external CSS file?
+    <Quiz>
+    - `<script>`
+    - `<style>`
+    - `<meta>`
+    - `<link>`*
+    </Quiz>
 
-2. True or False - To select an element by id, use `#` followed by the id name.
+3.  In CSS, which selector is used to target an element with the attribute `class="warning"`?
+    <Quiz>
+    - `warning`
+    - `#warning`
+    - `.warning`*
+    - `[class=warning]`
+    </Quiz>
 
-<Quiz>
-1. True*
-2. False
-</Quiz>
-
-3. True or False - To select an element by class, use `.` followed by the class name.
-
-<Quiz>
-1. True*
-2. False
-</Quiz>
+4.  Which selector is generally the *most* specific in CSS?
+    <Quiz>
+    - Type selector (e.g., `p`)
+    - Class selector (e.g., `.info`)
+    - ID selector (e.g., `#header`)*
+    - Universal selector (`*`)
+    </Quiz>
 
 ## Challenges
 
-1. Add an image somewhere on the page. You can [learn how to add images here](https://www.w3schools.com/html/html_images.asp). Note that you will have to save the image within your project folder to be able to load it into your page.
-
-2. Using selectors, give the image [rounded corners](https://www.w3schools.com/css/css3_borders.asp) in CSS or JavaScript.
-
-3. `Prompt()` the user whether the jokes on our page are good or bad. If the user responds with "bad", then change the header text to "The Worst Jokes Ever!". If the user responds with "good", keep the header text as "The Best Jokes Ever!".
-
-4. Add a button to the page that will change the page's overall color scheme (background color, text color, etc.).
-
-5. Push all your changes to GitHub.
+1.  **Add More Content:** Add an ordered list (`<ol>`) with three list items (`<li>`) to your `index.html` body.
+2.  **Style the List:** In `styles.css`, add rules to give your ordered list (`ol`) a light blue background color and some padding.
+3.  **Add an Image:** Find a small, royalty-free image online (or use one you have). Save it into an `images` subfolder within your `javascript_course` project folder. Add an `<img>` tag to your `index.html` to display it. **Crucially, include a descriptive `alt` attribute.**
+4.  **Style the Image:** In `styles.css`, add a rule to select the `img` tag. Give it a `max-width` of `100%` (to prevent it overflowing its container) and add `display: block;` and `margin: 20px auto;` to center it on the page.
+5.  **Commit Changes:** Stage, commit, and push all your HTML and CSS changes to your GitHub repository.
 
 ## Key Terms
 
-Do you recall these terms?
+-   HTML (HyperText Markup Language)
+-   CSS (Cascading Style Sheets)
+-   Tag (opening `<tag>`, closing `</tag>`)
+-   Element
+-   Attribute (`name="value"`)
+-   `<body>`, `<head>`, `<title>`, `<link>`, `<script>`, `<meta>`
+-   `<h1>`-`<h6>`, `<p>`, `<a>`, `<img>`, `<ul>`, `<ol>`, `<li>`, `<div>`, `<span>`
+-   `href`, `src`, `alt`, `id`, `class`
+-   Stylesheet
+-   Selector (Type, Class, ID)
+-   Declaration (Property, Value)
+-   `color`, `background-color`, `font-family`, `font-size`, `text-align`, `padding`, `margin`, `border`
+-   Cascade, Specificity, Inheritance
+-   DOM (Document Object Model)
 
-- jQuery
-- selector
-- events
+## Download the Project (End of Lesson 8 State)
 
-## Download the Project
+Here are the course files reflecting the state at the end of this lesson:
 
-Here are the course files we created for this lesson if you need a reference:
+<Download files='8_index.html, 8_script.js, 8_styles.css'> <br/>
+
+---
+
+# Interactive Web Design with jQuery
+
+We now know how HTML structures content and CSS styles it. The next step is making the page *do* things using JavaScript. JavaScript interacts with the HTML structure (the DOM) to respond to user actions (events) and dynamically change the page content or appearance.
+
+While modern native JavaScript provides powerful tools for DOM manipulation (`document.querySelector`, `element.addEventListener`, etc.), these can sometimes be verbose. **jQuery** is a long-standing, popular JavaScript library designed to *simplify* these common tasks. It lets you "write less, do more."
+
+In this lesson, we'll learn the basics of jQuery for:
+
+1.  Selecting HTML elements.
+2.  Modifying element content and style.
+3.  Responding to user events (like button clicks).
+
+## Including jQuery
+
+Like Leaflet, jQuery is a library – code written by others that we incorporate into our project. The easiest way is using a **CDN (Content Delivery Network)**.
+
+Open your `index.html` file. Add the following `<script>` tag **before** your own `script.js` tag (order matters!). It's common to place library scripts in the `<head>` or just before your own script at the end of `<body>`. Let's put it before our `script.js`:
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ... other head elements ... -->
+    <title>My JavaScript Project</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- ... your page content ... -->
+    <h1>My Awesome JavaScript Project</h1>
+    <p>Let's make this interactive!</p>
+    <button id="myButton">Click Me</button>
+    <div id="outputArea"></div>
+
+
+    <!-- Include jQuery FIRST -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Then include your script -->
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+*   We've added a simple button with `id="myButton"` and a div with `id="outputArea"` to `index.html` for testing.
+*   The jQuery script tag includes the source (`src`) from jQuery's official CDN, along with `integrity` and `crossorigin` attributes for security. Using a specific version (like 3.7.1) is generally recommended over just using `jquery.min.js` which might change unexpectedly.
+
+## Using jQuery
+
+jQuery code typically starts with the dollar sign `$`, which is shorthand for the `jQuery` function.
+
+### Selecting Elements
+
+jQuery uses CSS-style selectors inside `$()` to find elements. This is much more concise than native methods like `document.getElementById()` or `document.getElementsByClassName()`.
+
+```javascript
+// script.js
+
+// Select the H1 element
+const heading = $('h1');
+
+// Select the element with ID "myButton"
+const button = $('#myButton'); // Use # for ID
+
+// Select all elements with class "important-note"
+const notes = $('.important-note'); // Use . for class
+
+// Select all paragraph elements
+const paragraphs = $('p');
+
+// You can use more complex CSS selectors too
+const firstListItem = $('ul li:first-child');
+```
+
+These commands return jQuery objects, which represent the selected element(s) and have special jQuery methods available.
+
+### Modifying Content and HTML
+
+jQuery makes changing element content easy.
+
+*   `.html()`: Gets or sets the inner HTML content.
+    ```javascript
+    // Get the HTML content of the H1
+    console.log( $('h1').html() );
+
+    // Set the HTML content of the H1
+    $('h1').html("<em>Interactive</em> Project!"); // Adds emphasis tag too
+
+    // Set the HTML content of the output area
+    $('#outputArea').html("<p>Content set by jQuery!</p>");
+    ```
+*   `.text()`: Gets or sets only the text content (strips out HTML tags).
+    ```javascript
+    // Get text content
+    console.log( $('h1').text() ); // Gets "Interactive Project!"
+
+    // Set text content
+    $('#outputArea').text("Just plain text here.");
+    ```
+*   `.append()`: Adds content to the *end* of the selected element(s).
+    ```javascript
+    $('#outputArea').append("<span> More text appended.</span>");
+    ```
+*   `.prepend()`: Adds content to the *beginning* of the selected element(s).
+*   `.val()`: Gets or sets the value of form elements (like `<input>`).
+
+Let's try these in `script.js`:
+
+```javascript
+// script.js
+console.log('Script loaded!');
+
+// Change heading HTML
+$('h1').html("jQuery Makes It <em>Easier</em>!");
+
+// Add initial text to output area
+$('#outputArea').text("Ready for clicks...");
+```
+
+Save `script.js` and refresh `index.html` in your browser. You should see the heading changed and the initial text in the output div.
+
+### Modifying Styles and Attributes
+
+*   `.css()`: Gets or sets CSS properties.
+    ```javascript
+    // Get a CSS property
+    console.log( $('h1').css('color') );
+
+    // Set a single CSS property
+    $('h1').css('color', 'darkred');
+
+    // Set multiple CSS properties using an object
+    $('#myButton').css({
+      'background-color': 'lightblue',
+      'padding': '10px 15px',
+      'border': 'none',
+      'border-radius': '5px', // Note: CSS property names with hyphens are quoted
+      'cursor': 'pointer'     // Make the mouse cursor a pointer
+    });
+    ```
+*   `.addClass()`, `.removeClass()`, `.toggleClass()`: Add, remove, or toggle CSS classes (often preferred over setting styles directly).
+    ```javascript
+    // Add the 'highlight' class (defined in styles.css perhaps)
+    $('p:first').addClass('highlight');
+
+    // Remove the 'important-note' class
+    $('.important-note').removeClass('important-note');
+
+    // Toggle a class (add if not present, remove if present)
+    // We'll use this with a click later
+    ```
+*   `.attr()`: Gets or sets HTML attributes.
+    ```javascript
+    // Get the href attribute of the first link
+    console.log( $('a:first').attr('href') );
+
+    // Set the href attribute
+    $('a:first').attr('href', 'https://jquery.com/');
+    ```
+*   `.hide()`, `.show()`, `.toggle()`: Change the visibility of elements (manipulates the `display` CSS property).
+    ```javascript
+    // Hide the first paragraph initially
+    $('p:first').hide();
+
+    // We'll use toggle later
+    ```
+
+Add the CSS modifications to your `script.js`:
+
+```javascript
+// script.js
+console.log('Script loaded!');
+$('h1').html("jQuery Makes It <em>Easier</em>!");
+$('#outputArea').text("Ready for clicks...");
+
+// Style the button with jQuery
+$('#myButton').css({
+  'background-color': 'cornflowerblue', // Changed color
+  'color': 'white',
+  'padding': '10px 15px',
+  'border': 'none',
+  'border-radius': '5px',
+  'cursor': 'pointer',
+  'font-size': '1em'
+});
+
+// Example: Add a class to the first paragraph
+// Assuming you have a .highlight class in styles.css
+// e.g., .highlight { background-color: yellow; }
+$('p:first').addClass('highlight');
+```
+
+### Handling Events
+
+Events are actions that happen on the page (user clicks, key presses, mouse movements, page loading). jQuery provides simple ways to **listen** for events and run code (**event handlers** or **callback functions**) when they occur.
+
+The most common event is `click`.
+
+**Syntax:** `$(selector).on(eventName, handlerFunction);` or the shorthand `$(selector).eventName(handlerFunction);`
+
+```javascript
+// script.js (add this below the previous code)
+
+// Event handler for the button click
+$('#myButton').on('click', function() {
+  // Code inside this function runs when the button is clicked
+
+  console.log("Button was clicked!"); // Log to console
+  $('#outputArea').html("<strong>Button clicked!</strong> Timestamp: " + Date.now()); // Update the output div
+
+  // Example: Toggle the visibility of the first paragraph on each click
+  $('p:first').toggle(); // If hidden, show; if shown, hide.
+
+  // Example: Toggle a CSS class on the heading
+  $('h1').toggleClass('active'); // Assumes an .active class exists in styles.css
+});
+
+// Add a hover effect (using shorthand methods)
+$('#myButton').hover(
+  function() {
+    // Function runs when mouse enters the button
+    $(this).css('background-color', 'darkblue'); // 'this' refers to the button being hovered
+  },
+  function() {
+    // Function runs when mouse leaves the button
+    $(this).css('background-color', 'cornflowerblue'); // Restore original color
+  }
+);
+
+// Add an example .active class to styles.css:
+/*
+.active {
+  text-shadow: 2px 2px 5px grey;
+}
+*/
+```
+
+*   The code inside the `function() { ... }` passed to `.on('click', ...)` or `.click(...)` only runs *when* the click happens.
+*   `$(this)` inside an event handler usually refers to the specific HTML element that triggered the event (e.g., the button that was clicked).
+*   `.hover()` is a shorthand for handling mouse enter (`mouseover`) and mouse leave (`mouseout`) events.
+
+Save `script.js` (and `styles.css` if you added the `.active` class) and refresh `index.html`. Try clicking the button and hovering over it. Check the console output too.
+
+### Document Ready
+
+Sometimes, JavaScript code tries to manipulate HTML elements *before* the browser has fully loaded and parsed the HTML. This leads to errors because the elements don't exist yet. jQuery provides a way to ensure your code runs only after the DOM is fully ready:
+
+```javascript
+$(document).ready(function() {
+  // ALL your jQuery code that interacts with the DOM should go inside here.
+  console.log("DOM is ready!");
+
+  $('h1').html("jQuery Makes It <em>Easier</em>!");
+  $('#outputArea').text("Ready for clicks...");
+
+  // Style the button with jQuery
+  $('#myButton').css({ /* ... styles ... */ });
+
+  // Add event handlers
+  $('#myButton').on('click', function() { /* ... click handler code ... */ });
+  $('#myButton').hover( /* ... hover handler code ... */ );
+
+  // etc.
+});
+
+// Shorter version (equivalent to document ready):
+$(function() {
+  // Code here also runs after DOM is ready
+  console.log("DOM ready (shorthand)!");
+});
+```
+
+It's a standard practice to wrap *all* your jQuery code that interacts with page elements inside a `$(document).ready(...)` block (or the shorthand `$(function() { ... });`). This prevents errors caused by scripts running too early.
+
+Refactor your `script.js` to use the document ready handler:
+
+```javascript
+// script.js
+$(document).ready(function() {
+    console.log('DOM ready, script running!');
+
+    // Change heading HTML
+    $('h1').html("jQuery Makes It <em>Easier</em>!");
+
+    // Add initial text to output area
+    $('#outputArea').text("Ready for clicks...");
+
+    // Style the button with jQuery
+    $('#myButton').css({
+        'background-color': 'cornflowerblue',
+        'color': 'white',
+        'padding': '10px 15px',
+        'border': 'none',
+        'border-radius': '5px',
+        'cursor': 'pointer',
+        'font-size': '1em'
+    });
+
+     // Example: Add a class to the first paragraph
+    $('p:first').addClass('highlight');
+
+    // Event handler for the button click
+    $('#myButton').on('click', function() {
+        console.log("Button was clicked!");
+        $('#outputArea').html("<strong>Button clicked!</strong> Timestamp: " + Date.now());
+        $('p:first').toggle();
+        $('h1').toggleClass('active');
+    });
+
+    // Add a hover effect
+    $('#myButton').hover(
+        function() { $(this).css('background-color', 'darkblue'); },
+        function() { $(this).css('background-color', 'cornflowerblue'); }
+    );
+
+}); // End of $(document).ready()
+```
+
+## Native JavaScript Alternatives (Briefly)
+
+For comparison, here's how you might do some of the above with native JavaScript:
+
+*   **Select element by ID:** `const button = document.getElementById('myButton');`
+*   **Select first H1:** `const heading = document.querySelector('h1');`
+*   **Select all paragraphs:** `const paragraphs = document.querySelectorAll('p');` (returns a NodeList, similar to an array)
+*   **Change HTML:** `heading.innerHTML = 'New Content';`
+*   **Change text:** `heading.textContent = 'New Text';`
+*   **Change style:** `button.style.backgroundColor = 'red';` `button.style.padding = '10px';`
+*   **Add class:** `button.classList.add('active');`
+*   **Toggle class:** `button.classList.toggle('active');`
+*   **Handle click event:** `button.addEventListener('click', function() { console.log('Clicked!'); });`
+*   **Document Ready equivalent:** Place your `<script>` tag just before the closing `</body>` tag, or use the `defer` attribute (`<script src="script.js" defer></script>`) in the `<head>`, or use the `DOMContentLoaded` event listener.
+
+jQuery often requires less code for the same result, especially when selecting multiple elements or chaining actions, which is why it remains useful, particularly for beginners learning DOM manipulation concepts.
+
+## Review Questions
+
+1.  In jQuery, what does the `$` symbol typically represent?
+    <Quiz>
+    - A variable declaration
+    - A CSS class selector
+    - The jQuery function/object*
+    - A comment
+    </Quiz>
+
+2.  Which jQuery selector would target an HTML element with `id="main-nav"`?
+    <Quiz>
+    - `$('.main-nav')`
+    - `$('#main-nav')`*
+    - `$('main-nav')`
+    - `$('id=main-nav')`
+    </Quiz>
+
+3.  Which jQuery method is used to set the HTML content of an element?
+    <Quiz>
+    - `.text()`
+    - `.content()`
+    - `.value()`
+    - `.html()`*
+    </Quiz>
+
+4.  Why is it common practice to wrap jQuery code inside `$(document).ready(function() { ... });`?
+    <Quiz>
+    - To make the code run faster.
+    - To ensure the code only runs after the HTML DOM is fully loaded and ready.*
+    - To automatically include the jQuery library.
+    - To handle errors more effectively.
+    </Quiz>
+
+## Challenges
+
+1.  **Add More Interaction:** Add a second button to your `index.html` with `id="hideButton"`. In your `script.js` (inside the document ready block), add a click event handler to this new button that uses jQuery's `.hide()` method to hide the `<h1>` element when clicked.
+2.  **Input Interaction:** Add an `<input type="text" id="textInput">` element to your `index.html`. In `script.js`, add an event handler to the *first* button (`#myButton`) so that when it's clicked, it gets the current value from the input field using `.val()` and displays it in the `#outputArea` div using `.text()`.
+3.  **CSS Class Toggling:** Add a CSS rule in `styles.css` like `.fancy { border: 3px dashed green; background-color: lightgreen; }`. In `script.js`, modify the click handler for `#myButton` to also use `.toggleClass('fancy')` on the `#outputArea` div, so its appearance changes on each click.
+4.  **Commit Changes:** Stage, commit, and push all your HTML, CSS, and JS changes to GitHub.
+
+## Key Terms
+
+-   jQuery
+-   Library
+-   CDN (Content Delivery Network)
+-   `$` (jQuery function)
+-   Selector (jQuery: `$('...')`, `$('#...')`, `$('....')`)
+-   `.html()`, `.text()`, `.append()`, `.val()`
+-   `.css()`, `.addClass()`, `.removeClass()`, `.toggleClass()`
+-   `.attr()`
+-   `.hide()`, `.show()`, `.toggle()`
+-   Event (e.g., `click`, `hover`, `mouseover`, `mouseout`)
+-   Event Handler / Callback Function
+-   `.on()`, `.click()`, `.hover()`
+-   `$(document).ready()` or `$(function(){})`
+-   `$(this)` (within event handlers)
+
+## Download the Project (End of Lesson 9 State)
+
+Here are the course files reflecting the state at the end of this lesson:
 
 <Download files='9_index.html, 9_script.js, 9_styles.css'> <br/>
 
-# Building a Data-Driven Webpage
+---
 
-Let's begin putting all our knowledge together to build a data-driven webpage that is more useful than simply a list of unfunny jokes. In this lesson, we'll build a digital version of a famous poem that will allow users to click on aspects of the poem to see more information about the literary devices being used. It is meant to be an educational tool for anyone who is interested in the techniques utilized in the poem.
+# Building a Data-Driven Webpage: Poem Analysis
 
-As a preliminary note, this lesson might take you a bit longer to get through. We will be learning about a variety of important new concepts, so take your time and try to understand each step before moving on. 
+Let's combine our knowledge of HTML, CSS, JavaScript, jQuery, and data handling (arrays, objects) to build a more complex, data-driven webpage. We'll create an interactive version of Walt Whitman's poem "Broadway," allowing users to click on certain words or phrases to get information about literary devices.
 
-Are you ready? 
+This lesson involves several steps and introduces processing data from a separate file (JSON). Take your time with each part.
 
-Let's get into it!
+## The Goal
 
-## The Poem
+We want to:
 
-Because we are all in NYC and have likely experienced the throbbing, perpetual daylight of Times Square, as a dataset let's work with Walt Whitman's famous poem _Broadway_, published in 1888. Here is the poem in its entirety:
+1.  Display Whitman's poem "Broadway" on a webpage.
+2.  Structure the poem data (lines and words) in a way JavaScript can easily use.
+3.  Make specific words or phrases clickable.
+4.  When a clickable element is clicked, display relevant information (e.g., about a literary device) in a separate area on the page.
 
-    Broadway
-    Walt Whitman
+## Setting Up the Page (poem.html)
 
-    What hurrying human tides, or day or night!
-    What passions, winnings, losses, ardors, swim thy waters!
-    What whirls of evil, bliss and sorrow, stem thee!
-    What curious questioning glances- glints of love!
-    Leer, envy, scorn, contempt, hope, aspiration!
-    Thou portal- thou arena- thou of the myriad long-drawn lines and groups!
-    (Could but thy flagstones, curbs, facades, tell their inimitable tales;
-    Thy windows rich, and huge hotels- thy side-walks wide;)
-    Thou of the endless sliding, mincing, shuffling feet!
-    Thou, like the parti-colored world itself- like infinite, teeming,
-    mocking life!
-    Thou visor'd, vast, unspeakable show and lesson!
+1.  **Create Files:** In your project folder, create three new files:
+    *   `poem.html`
+    *   `poem.css`
+    *   `poem.js`
+2.  **Link from Index:** Open `index.html` and add a link to the new poem page, perhaps near the top:
+    ```html
+    <!-- Inside the body of index.html -->
+    <h2><a href="poem.html">Explore Walt Whitman's <em>Broadway</em></a></h2>
+    <hr> <!-- Optional horizontal rule for separation -->
+    ```
+3.  **Basic HTML Structure (`poem.html`):** Paste this structure into `poem.html`. It includes placeholders for the poem (`#poem`) and the info display area (`#info`), links the new CSS and JS files, and includes jQuery.
 
-Our goal will be to create a page that prints these lines and turns certain parts into clickable elements. When the user does click, the page will display a message below the text that contains information about that element.
+    ```html
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Walt Whitman's Broadway - Interactive</title>
+        <!-- Link to our specific CSS for this page -->
+        <link rel="stylesheet" href="poem.css">
+      </head>
+      <body>
+        <div class="container"> <!-- Optional container for layout -->
+          <h1><em>Broadway</em> by Walt Whitman (Interactive)</h1>
 
-## Setting Up the Page
+          <div id="intro">
+            <p>Click on highlighted words or phrases below to learn more about the literary devices used in the poem.</p>
+          </div>
 
-Let's create a new page specifically for our poem. Perhaps the simplest way for now will be to just create a link to our page in the `index.html` file. So, within the `<div>` container on your page, add the following code for a link:
+          <div id="poem">
+            <!-- Poem text will be inserted here by JavaScript -->
+            Loading poem...
+          </div>
 
-```HTML
-<h2><a href="poem.html">Walt Whitman's <em>Broadway</em></a></h2>
+          <hr> <!-- Separator -->
+
+          <div id="info">
+            <!-- Information about clicked elements will appear here -->
+            <p>Click on a highlighted term above.</p>
+          </div>
+        </div> <!-- End container -->
+
+        <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- Include our specific JS for this page -->
+        <script src="poem.js"></script>
+      </body>
+    </html>
+    ```
+
+## Structuring the Poem Data
+
+We need to represent the poem in a structured format. An array where each element represents a line seems logical. Each line could then be an array of word objects. Each word object needs at least the word text, and potentially some associated info if it's a term we want to highlight.
+
+**Example (First Line):**
+
+```javascript
+// Representing a line as an array of word objects
+const line1 = [
+  { text: "What", info: "Anaphora: The repetition of 'What' begins the first four lines, emphasizing the overwhelming nature of Broadway's sights and sounds." },
+  { text: "hurrying" },
+  { text: "human" },
+  { text: "tides," }, // Note comma included
+  { text: "or" },
+  { text: "day" },
+  { text: "or" },
+  { text: "night!" } // Note exclamation included
+];
 ```
 
-The `<em></em>` tags stand for emphasis, which allows us to italicize words.
+*   Each word is an object `{}`.
+*   The `text` property holds the word itself.
+*   The optional `info` property holds the explanation if this word is interactive.
 
-Next, create a new file (by clicking the New File button in the VSCode Explorer Window) called `poem.html`. Paste into it this basic structure:
+Manually creating this for the whole poem in `poem.js` would be tedious and mix data with code. A better approach is to store the data separately.
+
+## Using JSON for Data
+
+**JSON (JavaScript Object Notation)** is a standard text-based format for representing structured data based on JavaScript object syntax. It's perfect for storing our poem data.
+
+1.  **Create `poem.json`:** In your project folder, create a new file named `poem.json`.
+2.  **Format the Data:** Copy and paste the *entire* poem structure below into `poem.json`. Note the specific JSON syntax: keys and strings must be in *double* quotes.
+
+    ```json
+    {
+      "title": "Broadway",
+      "author": "Walt Whitman",
+      "lines": [
+        [
+          {"text": "What", "info": "Anaphora: The repetition of 'What' begins the first four lines, emphasizing the overwhelming nature of Broadway's sights and sounds."},
+          {"text": "hurrying"},
+          {"text": "human"},
+          {"text": "tides,"},
+          {"text": "or"},
+          {"text": "day"},
+          {"text": "or"},
+          {"text": "night!"}
+        ],
+        [
+          {"text": "What"},
+          {"text": "passions,"},
+          {"text": "winnings,"},
+          {"text": "losses,"},
+          {"text": "ardors,"},
+          {"text": "swim"},
+          {"text": "thy"},
+          {"text": "waters!"}
+        ],
+        [
+          {"text": "What", "info": "Alliteration: Repetition of the 'w' sound in 'What whirls'."},
+          {"text": "whirls", "info": "Alliteration: Repetition of the 'w' sound in 'What whirls'."},
+          {"text": "of"},
+          {"text": "evil,"},
+          {"text": "bliss"},
+          {"text": "and"},
+          {"text": "sorrow,"},
+          {"text": "stem"},
+          {"text": "thee!"}
+        ],
+        [
+          {"text": "What"},
+          {"text": "curious"},
+          {"text": "questioning"},
+          {"text": "glances—", "info": "Caesura: A pause within a line, often indicated by punctuation (like the em dash here), breaking the rhythmic flow."},
+          {"text": "glints"},
+          {"text": "of"},
+          {"text": "love!"}
+        ],
+        [
+          {"text": "Leer,"},
+          {"text": "envy,"},
+          {"text": "scorn,"},
+          {"text": "contempt,"},
+          {"text": "hope,"},
+          {"text": "aspiration!", "info": "Accumulation/Listing: A list of abstract nouns, rapidly presenting conflicting emotions seen on Broadway."}
+        ],
+        [
+          {"text": "Thou", "info": "Apostrophe & Personification: Addressing Broadway directly ('Thou') as if it were a person capable of hearing."},
+          {"text": "portal—"},
+          {"text": "thou"},
+          {"text": "arena—"},
+          {"text": "thou"},
+          {"text": "of"},
+          {"text": "the"},
+          {"text": "myriad"},
+          {"text": "long-drawn"},
+          {"text": "lines"},
+          {"text": "and"},
+          {"text": "groups!"}
+        ],
+        [
+          {"text": "(Could"},
+          {"text": "but"},
+          {"text": "thy"},
+          {"text": "flagstones,"},
+          {"text": "curbs,"},
+          {"text": "facades,"},
+          {"text": "tell"},
+          {"text": "their"},
+          {"text": "inimitable"},
+          {"text": "tales;"}
+        ],
+        [
+          {"text": "Thy"},
+          {"text": "windows"},
+          {"text": "rich,"},
+          {"text": "and"},
+          {"text": "huge"},
+          {"text": "hotels—"},
+          {"text": "thy"},
+          {"text": "side-walks"},
+          {"text": "wide;)"}
+        ],
+        [
+          {"text": "Thou"},
+          {"text": "of"},
+          {"text": "the"},
+          {"text": "endless"},
+          {"text": "sliding,"},
+          {"text": "mincing,"},
+          {"text": "shuffling"},
+          {"text": "feet!"}
+        ],
+        [
+          {"text": "Thou,"},
+          {"text": "like", "info": "Simile: Explicit comparison using 'like' or 'as'."},
+          {"text": "the"},
+          {"text": "parti-colored"},
+          {"text": "world"},
+          {"text": "itself—"},
+          {"text": "like"},
+          {"text": "infinite,"},
+          {"text": "teeming,"},
+          {"text": "mocking"},
+          {"text": "life!"}
+        ],
+        [
+          {"text": "Thou"},
+          {"text": "visor'd,"},
+          {"text": "vast,"},
+          {"text": "unspeakable"},
+          {"text": "show"},
+          {"text": "and"},
+          {"text": "lesson!"}
+        ]
+      ]
+    }
+
+    ```
+
+## Processing JSON Data with JavaScript (jQuery)
+
+Now, in `poem.js`, we need to:
+1.  Fetch the data from `poem.json`.
+2.  Process the data to build the HTML for the poem display.
+3.  Insert the generated HTML into the `#poem` div.
+4.  Add event listeners to the clickable words.
+
+jQuery's `$.getJSON()` method is perfect for fetching and parsing JSON data.
+
+```javascript
+// poem.js
+
+$(document).ready(function() {
+    console.log("Poem page ready.");
+
+    // Use jQuery's getJSON method to fetch data from poem.json
+    $.getJSON("poem.json", function(data) {
+        console.log("Poem data loaded:", data);
+
+        let poemHtml = "<blockquote>"; // Start the blockquote for the poem
+
+        // Iterate through each line in the data (data.lines is the array of lines)
+        data.lines.forEach(function(lineArray) {
+            poemHtml += "<p>"; // Start a paragraph for the line
+
+            // Iterate through each word object in the current lineArray
+            lineArray.forEach(function(wordObject) {
+                // Check if the word has an 'info' property
+                if (wordObject.info) {
+                    // If yes, wrap the word in an <a> tag, store info in data-info attribute
+                    // Use template literals for easier string construction
+                    poemHtml += `<a href="#" class="info-term" data-info="${wordObject.info}">${wordObject.text}</a> `;
+                } else {
+                    // If no info, just add the word text
+                    poemHtml += wordObject.text + " ";
+                }
+            }); // End word loop
+
+            poemHtml += "</p>"; // End the paragraph for the line
+        }); // End line loop
+
+        poemHtml += "</blockquote>"; // End the blockquote
+
+        // Replace the content of the #poem div with the generated HTML
+        $("#poem").html(poemHtml);
+
+        // --- Add Event Listener AFTER poem is loaded ---
+        // Select all elements with class 'info-term' INSIDE #poem
+        // Use .on() for event delegation - handles elements added dynamically
+        $("#poem").on("click", ".info-term", function(event) {
+            event.preventDefault(); // Prevent the default link behavior (jumping to '#')
+
+            // Get the info text stored in the data-info attribute of the clicked element
+            const infoText = $(this).data("info"); // jQuery's .data() reads data-* attributes
+
+            // Display the info text in the #info div
+            $("#info").html(`<p><strong>${$(this).text()}:</strong> ${infoText}</p>`);
+            // Optional: Add a class to highlight the info area
+            $("#info").addClass("active-info");
+        });
+
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+        // Handle errors if poem.json cannot be loaded
+        console.error("Error loading poem.json:", textStatus, errorThrown);
+        $("#poem").html("<p style='color:red;'>Error loading poem data.</p>");
+    }); // End of $.getJSON
+
+}); // End of $(document).ready()
+
+```
+
+**Explanation:**
+
+1.  **`$(document).ready()`:** Ensures code runs after the basic HTML page structure is ready.
+2.  **`$.getJSON("poem.json", function(data) {...})`:**
+    *   Fetches `poem.json`.
+    *   If successful, it parses the JSON data into a JavaScript object (`data`).
+    *   The code inside the callback function `function(data)` runs *after* the data is loaded.
+3.  **Building `poemHtml`:**
+    *   We initialize an empty string `poemHtml` starting with `<blockquote>`.
+    *   We use nested loops (`forEach` is a convenient array iteration method) to go through each `lineArray` in `data.lines`, and then each `wordObject` within that line.
+    *   **Conditional Wrapping:** Inside the word loop, `if (wordObject.info)` checks if the word has associated information.
+    *   **Clickable Element:** If it has info, the word text (`wordObject.text`) is wrapped in an `<a>` tag.
+        *   `href="#"`: Makes it look like a link, but `preventDefault()` later stops it from actually navigating.
+        *   `class="info-term"`: Gives these links a common class for easy selection and styling.
+        *   `data-info="${wordObject.info}"`: This is crucial. We store the *actual information string* directly onto the HTML element using a **custom data attribute**. `data-info` is the attribute name. jQuery's `.data('info')` method can easily retrieve this later.
+    *   Non-info words are added as plain text.
+    *   Spaces are added after each word. `<p>` tags wrap each line.
+4.  **Displaying the Poem:** `$("#poem").html(poemHtml);` replaces the "Loading poem..." message with our fully constructed HTML.
+5.  **Event Listener (`.on()`):**
+    *   `$("#poem").on("click", ".info-term", function(event) {...});` This uses **event delegation**. Instead of attaching a listener to *each* `<a>` tag (which might be numerous), we attach *one* listener to the parent `#poem` container. It listens for clicks that *originate* on elements matching the `.info-term` selector within it. This is more efficient and works even for elements added dynamically (like ours).
+    *   `event.preventDefault();`: Stops the browser from following the `href="#"`.
+    *   `const infoText = $(this).data("info");`: `$(this)` refers to the specific `<a>` tag that was clicked. `.data("info")` retrieves the value stored in its `data-info` attribute.
+    *   `$("#info").html(...)`: Updates the `#info` div with the retrieved information, adding some basic formatting.
+
+## Styling (poem.css)
+
+Let's add some basic styles to `poem.css` to make the clickable terms stand out and format the info box.
+
+```css
+/* poem.css */
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: #fdfdfd;
+  color: #222;
+}
+
+.container {
+  max-width: 800px; /* Limit width for readability */
+  margin: 0 auto; /* Center the container */
+}
+
+h1 {
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+#poem blockquote {
+  margin-left: 40px; /* Indent the poem */
+  font-size: 1.1em;
+  color: #333;
+}
+
+#poem p {
+    margin-bottom: 0.5em; /* Space between lines */
+}
+
+/* Style the clickable terms */
+.info-term {
+  cursor: pointer; /* Indicate interactivity */
+  color: #0066cc;
+  border-bottom: 1px dotted #0066cc;
+  text-decoration: none; /* Remove default underline */
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.info-term:hover {
+  background-color: #e0f0ff; /* Light blue background on hover */
+}
+
+/* Style the info display area */
+#info {
+  margin-top: 30px;
+  padding: 15px;
+  border-left: 5px solid #ddd;
+  background-color: #f9f9f9;
+  min-height: 40px; /* Ensure it has some height even when empty */
+}
+
+#info.active-info { /* Style when info is displayed */
+   border-left-color: #0066cc; /* Change border color when active */
+}
+
+#info p {
+    margin: 0; /* Remove default paragraph margin inside info box */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+```
+
+## Testing
+
+1.  Save `poem.html`, `poem.css`, `poem.js`, and `poem.json`.
+2.  Open `poem.html` in your browser (using Live Server if possible).
+3.  You should see the poem displayed.
+4.  Click on the highlighted words (like the first "What").
+5.  The information from the `info` property in `poem.json` should appear in the `#info` div at the bottom.
+
+This example demonstrates fetching external data, processing it with loops and conditionals, dynamically building HTML, and adding interactivity with event listeners – core concepts in data-driven web development.
+
+## Review Questions
+
+1.  What is the primary advantage of using a separate JSON file for the poem data instead of embedding it directly in `poem.js`?
+    <Quiz>
+    - It makes the JavaScript code run faster.
+    - It separates data from code, making both easier to manage and update.*
+    - JSON files can include functions, unlike JavaScript objects.
+    - It's the only way to use loops.
+    </Quiz>
+
+2.  In the code `poemHtml += <a href="#" class="info-term" data-info="${wordObject.info}">${wordObject.text}</a>`, what is the purpose of `data-info="${wordObject.info}"`?
+    <Quiz>
+    - To style the link using CSS.
+    - To store the information string directly on the HTML element for later retrieval.*
+    - To create a link to an external website with more info.
+    - To define the text content of the link.
+    </Quiz>
+
+3.  What does `event.preventDefault();` do inside the click handler for the `<a>` tags?
+    <Quiz>
+    - It stops the click event from reaching parent elements.
+    - It prevents the browser's default action for the link (like navigating to `#`).*
+    - It hides the element that was clicked.
+    - It reloads the page.
+    </Quiz>
+
+4.  Why is using `.on("click", ".info-term", ...)` attached to `#poem` generally preferred over attaching `.click()` directly to every `.info-term` element?
+    <Quiz>
+    - It's shorter to type.
+    - It only works for the first `.info-term` element.
+    - It uses event delegation, which is more efficient and works for elements added after the initial page load.*
+    - It automatically prevents the default link behavior.
+    </Quiz>
+
+## Challenges
+
+1.  **Add More Info:** Add `info` properties to more words/phrases in your `poem.json` file for other literary devices (e.g., find examples of simile, personification, imagery).
+2.  **Improve Info Display:** Modify the `poem.js` click handler. Instead of replacing the content of `#info` each time, use `.append()` to add the new information below any existing information already displayed there. Add a clear button maybe?
+3.  **Highlight Active Term:** When an `.info-term` is clicked, add a specific CSS class (e.g., `.active-term`) to *that specific term* (`$(this)`). Remove the class from any previously active term. Define styles for `.active-term` in `poem.css` (e.g., a different background color or bold text).
+4.  **Commit and Push:** Save all your changes and push them to your GitHub repository.
+
+## Key Terms
+
+-   JSON (JavaScript Object Notation)
+-   `$.getJSON()`
+-   Callback Function
+-   Data Attribute (`data-*`)
+-   `.data()` (jQuery method)
+-   `.forEach()` (Array method)
+-   Event Delegation (`.on()`)
+-   `event.preventDefault()`
+-   Template Literals (`` `${}` ``)
+
+## Download the Project (End of Lesson 10 State)
+
+Here are the course files reflecting the state at the end of this lesson:
+
+<Download files='10_index.html, 10_script.js, 10_styles.css, 10_poem.html, 10_poem.css, 10_poem.js, poem.json'> <br/>
+
+---
+
+# Mapping With Leaflet.js
+
+Now let's explore **Leaflet.js**, a leading open-source JavaScript library for creating interactive maps. It's relatively lightweight, easy to use, and highly extensible. We'll learn how to add a basic map to our webpage, display markers, popups, and shapes, and handle basic map events.
+
+Interactive maps are powerful tools for visualizing geographic data, telling location-based stories, or simply providing context.
+
+## Leaflet Basics
+
+Leaflet works with map **layers**. Think of layers like transparent sheets stacked on top of each other:
+
+*   **Base Layer (Tile Layer):** The fundamental map image itself (like streets, satellite view). Usually sourced from services like OpenStreetMap, Mapbox, etc.
+*   **Overlay Layers:** Things drawn *on top* of the base layer, like markers, circles, polygons (shapes), lines, or GeoJSON data.
+
+Leaflet provides a main object, typically accessed via `L`, which contains methods to create map instances, layers, controls, and manage interactions.
+
+## Getting Started: Adding Leaflet to Your Page
+
+Similar to jQuery, we need to include Leaflet's CSS and JavaScript files in our HTML.
+
+Let's add a map to our `poem.html` page, below the poem analysis section.
+
+**1. Modify `poem.html`:**
+
+*   Add the Leaflet CSS `<link>` in the `<head>` ( **before** your own `poem.css`).
+*   Add the Leaflet JavaScript `<script>` in the `<head>` (it's common for mapping libraries) or at the end of the `<body>` **before** your own scripts that use it.
+*   Add a `<div>` with a unique `id` (e.g., `map`) where the map will be rendered. Give it a heading.
+*   Create and link a *new* JavaScript file, `map.js`, specifically for the map code (keeping concerns separate).
 
 ```html
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Walt Whitman's Broadway</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walt Whitman's Broadway - Interactive</title>
+
+    <!-- Leaflet CSS (Add this!) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <!-- Your specific CSS -->
     <link rel="stylesheet" href="poem.css">
+
+    <!-- Leaflet JavaScript (Add this!) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
   </head>
   <body>
     <div class="container">
-      <h1><em>Broadway</em> by Walt Whitman</h1>
-      <div id="intro">
-        <p>Welcome to the page for Walt Whitman's poem <em>Broadway</em>. Click on elements to see more information about them.</p>
-      </div>
-      <div id="poem">
-      </div>
-      <div id="info">
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <h1><em>Broadway</em> by Walt Whitman (Interactive)</h1>
+      <!-- ... intro, poem, info divs ... -->
+      <div id="poem">Loading poem...</div>
+      <hr>
+      <div id="info"><p>Click on a highlighted term above.</p></div>
+      <hr>
+
+      <!-- Map Section (Add this!) -->
+      <h2>Map Context: New York City</h2>
+      <div id="map"></div>
+      <!-- End Map Section -->
+
+    </div> <!-- End container -->
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Include your poem script -->
     <script src="poem.js"></script>
+    <!-- Include your new map script (Add this!) -->
+    <script src="map.js"></script>
   </body>
 </html>
 ```
+*   We're using version `1.9.4` of Leaflet from the unpkg CDN. Check the [Leaflet download page](https://leafletjs.com/download.html) for the latest stable version if needed.
 
-You'll see that we are adding a new dedicated stylesheet to work with `poem.css`, as well as a new script file to work with `poem.js`. Let's go ahead and create those now (again click New File > `poem.css` and `poem.js`).
+**2. Create `map.js`:** Create this new file in your project folder.
 
-Use the "Go Live" button to see your new page and make sure you are seeing the intro text display. 
+**3. Define Map Height in CSS (`poem.css`):** Leaflet maps *must* have an explicit height defined in CSS. Add this rule to `poem.css`:
 
-Now that we have a page, let's convert our poem into usable JavaScript data.
+```css
+/* poem.css (add this rule) */
 
-## Converting the Poem into Data
-
-We have seen how both `arrays` and `objects` allow us to store large quantities of data. Here we have 11 lines of a poem, with a variable amount of words per line. We want to be able to manipulate each word as well as each line, if needed.
-
-We could envision an array of `lines`, that stores another array of `words`. But, just like we did with our Student Grades program in a previous lesson, it would probably be best to create an `array` containing a series of `objects`. 
-
-Let's take a look at what this might mean for the first line of the poem. 
-
-```JavaScript
-let line1 = [{text:  "What"}, {text: "hurrying"}, {text: "human"}, {text: "tides"}, {text: "or"}, {text: "day"}, {text: "or"}, {text: "night!"}];
-```
-
-Here we have the first line of the poem, broken up into words. Each word is an `object` with a `text` property that designates each word of the poem.
-
-### The `map()` Method
-
-To perform an operation on each of these elements, we can use a new JavaScript method called `map()`. This method allows us to iterate over each element of an array and perform an operation (specifically, a function) on each element.
-
-This method takes the function as an argument and runs that function's operations as it iterates. In doing so, it will create a new array that you can use to store the results of the function without altering the original array.  In short, you use `.map()` whenever you want to build an array out of another array. In this case, we want to create a new array that contains the text of each word in the poem.
-
-```JavaScript
-let line1TextArray = []
-line1TextArray = line1.map(function(word) {
-  return word.text;
-}); 
-```
-
-`.map()` here creates a new array out of the array of word objects, and this new array contains just the `.text` property (the words) of each object. 
-
-Now, we can put the phrase back together using another new method.
-
-### The `join()` Method
-
-The `join()` method returns an array as a string. In other words, when applied to our array of words, it will return them together as a string, with spaces in between each word.
-
-```JavaScript
-let line1Text = line1TextArray.join(" ");
-```
-
-Let's put it all together in our `poem.js` file to see what it looks like.
-
-```JavaScript
-$("#info").html("<p>The info will go here.</p>");
-let line1, line1Text; // don’t need the intermediate step of line1TextArray
-line1 = [{text:  "What"}, {text: "hurrying"}, {text: "human"}, {text: "tides"}, 
-    {text: "or"}, {text: "day"}, {text: "or"}, {text: "night!"}];
-line1Text = line1.map(function(word){
-    return word.text;
-    }).join(" ");
-$("#poem").html("<p>" + line1Text + "<br /></p>");
-```
-
-If you save and check your page in the browser, you should see that we have successfully displayed the first line of the poem.
-
-![Poem first line](/images/poem_first_line.png)
-
-## Adding Information to the Poem
-
-Next, we'll want a way to display information about certain elements of the poem. To indicate which ones, we can add another property to specific word objects. Let's add a new property `info` that will provide information about the literary device being used.
-
-```JavaScript
-    line1 = [{text:  "What", info: "Anaphora: The repetition of a word or phrase at the beginning of (usually successive) lines. For example, the use of What in the first four lines."}, 
-        {text: "hurrying"}, {text: "human"}, {text: "tides"}, 
-        {text: "or"}, {text: "day"}, {text: "or"}, {text: "night!"}];
-```
-
-Here you can see that we have added a new `info` property to the first word of the poem to describe the technique of [anaphora](https://literarydevices.net/anaphora/). 
-
-This way, we can send this info down to the `#info` div on the page when the user clicks the word. 
-
-## Making Elements Clickable
-
-You might recall our brief discussion of _events_ in the previous lesson. Events are the actions that occur when a user interacts with a certain element. For instance, when a user clicks on a button, a certain event occurs. 
-
-We want the user to be able to click on a word to find the appropriate information about it. Do you recall how we might accomplish this?
-
-We can use the `click` event, of course! It will allow us to listen for a user's click on a certain element. To do this, however, we'll need to revamp our code a bit. We want to use word-size chunks of data here, so we'll need to get rid of our `.join()` method from before and instead iterate through the array word by word.
-
-For now, just paste the following to overwrite all your current code:
-
-```JavaScript
-$("#info").html("<p>The info will go here.</p>");
-let line1, line1Text; // don’t need the intermediate step of line1TextArray
-line1 = [{text:  "What", info: "Anaphora: The repetition of a word or phrase at the beginning of (usually successive) lines. For example, the use of What in the first four lines."}, 
-    {text: "hurrying"}, {text: "human"}, {text: "tides"}, 
-    {text: "or"}, {text: "day"}, {text: "or"}, {text: "night!"}];
-// Create a blank string that opens two tags.
-line1Text = "<blockquote><p>"; // opening tags for blockquote and p, we close them in the loop below
-line1.map(function(word){
-  // Add in the word object’s .text property plus a space.
-  line1Text = line1Text + word.text + " ";
-});
-// Break the line and close the two tags.
-line1Text = line1Text + "<br />(line 2 would go here)</p></blockquote>";
-$("#poem").html(line1Text);
-```
-
-If you save and check your page, you'll see functionally the same result as before. We use the `map()` method to iterate through the array of word objects, setting `line1Text` to the `.text` property of each word object and add spacing. We then use the `.html()` method to set the `#poem` `<div>` to the string we created. 
-
-Next we'll want to check if a specific word has an `info` property. We can accomplish this by using an `if` statement within our `map()` method, like so:
-
-```JavaScript
-line1.map(function(word){
-  // Define a variable that will be the entirety of a single
-  // word-sized chunk of information.
-  let wordString;
-  wordString = word.text;
-  // Test to see if the .info property exists.
-  if (word.info){
-    // If it does, surround wordString in an <a> tag.
-    wordString = "<a href='#'>" + wordString + "</a>";
-  }
-  // Add wordString plus a space to the line1Text.
-  line1Text = line1Text + wordString + " ";
-});
-$("#poem").html(line1Text);
-```
-
-For each word in the array, we check to see if it has an `info` property using an `if` statement (if word.info == True). If it does, we add an `<a>` tag to the word, which will turn the word element into a clickable link. By capturing this in `wordString`, we can add it to the overall `line1Text` string phrase as usual. Otherwise, `wordString` will just be the word itself and get added as well.
-
-If you save, you should be able to see the poem with "What" now clickable. If it you do click it, however, nothing will happen yet. Let's add in our `click` event listener:
-
-```JavaScript
-$("#poem a").click(function(){
-    $("#info").html("<h2>You clicked on a word!</h2>");
-  });
-```
-
-If you save and click on the word now, you should see "This is where the info will go" replaced by "You clicked on a word!". What's happening here is that we're listening for a click on every element in the page marked with an `<a>` tag (by using `#poem a`). Because we marked "What" with an `<a>`, the `.click` event knows to trigger. When that happens, we're setting the `#info` `<div>` to the text "You clicked on a word!".
-
-All together, the code looks like this: 
-
-```JavaScript
-$("#info").html("<p>The info will go here.</p>");
-let line1, line1Text; // don’t need the intermediate step of line1TextArray
-line1 = [{text:  "What", info: "Anaphora: The repetition of a word or phrase at the beginning of (usually successive) lines. For example, the use of What in the first four lines."}, 
-    {text: "hurrying"}, {text: "human"}, {text: "tides"}, 
-    {text: "or"}, {text: "day"}, {text: "or"}, {text: "night!"}];
-// Create a blank string that opens two tags.
-line1Text = "<blockquote><p>"; // opening tags for blockquote and p, we close them in the loop below
-line1.map(function(word){
-  // Define a variable that will be the entirety of a single
-  // word-sized chunk of information.
-  let wordString;
-  wordString = word.text;
-  // Test to see if the .info property exists.
-  if (word.info){
-    // If it does, surround wordString in an <a> tag.
-    wordString = "<a href='#'>" + wordString + "</a>";
-  }
-  // Add wordString plus a space to the line1Text.
-  line1Text = line1Text + wordString + " ";
-});
-$("#poem").html(line1Text);
-$("#poem a").click(function(){
-    // Define the text and the word that was clicked.
-    let infoText, clickedWord;
-    clickedWord = $( this ).text();
-    infoText = "<h2>You clicked on the word: " + clickedWord + "</h2>";
-    $("#info").html(infoText);
-  });
-```
-
-Okay, we now have clickable elements that allow us to display info about words. However, we want to actually display the info in the `info` property we wrote out.
-
-There are a few steps we'll need to take to carry this out.
-
-## Accessing the Info Property
-
-We have two things to accomplish here. First, we want to send specific information to the `#info` div. Second, we want that data to be the `info` property of the word that was clicked.
-
-Let's tackle the first part. We'll need to modify our `click` event:
-
-```JavaScript
-$("#poem a").click(function(){
-    // Define the text and the word that was clicked.
-    let infoText, clickedWord;
-    clickedWord = $( this ).text();
-    infoText = "<h2>You clicked on the word: " + clickedWord + "</h2>";
-    $("#info").html(infoText);
-  });
-```
-
-We have a new element introduced here: the keyword `this`. In this context, `this` indicates a reference to the object that is currently being acted upon (e.g., whatever word that was just clicked). In short, we can use `this` to access the `.text` property of the word that was just clicked, whichever word that may be.
-
-We haven't quite accomplished what we want here, but we're getting there. We can now access at least the `.text` property of the word that was clicked, but we still need to get at the `.info` property.
-
-To do this, we'll need to use __data attributes__. Data attributes allow us to store data on an element and access it. They are custom-made attributes that we can apply on HTML elements.
-
-Let's make one, called `data-info`, and use it to modify the string of text we create in our `.map()` method:
-
-```JavaScript
-line1.map(function(word){
-  // Define a variable that will be the entirety of a single
-  // word-sized chunk of information.
-  let wordString;
-  wordString = word.text;
-  // Test to see if the .info property exists.
-  if (word.info){
-    // Add the data-info attribute to the word.
-    wordString = "<a href='#' data-info='" + word.info + "'>" + wordString + "</a>";
-  }
-  // Add wordString plus a space to the line1Text.
-  line1Text = line1Text + wordString + " ";
-});
-```
-
-Here we have added a new data attribute and utilized it to store the `.info` property of the word that was clicked. Be careful about copying this correctly: you'll notice that we need to close the opening `<a` and `data-info` attribute with a `>` closing tag, as well as correct opening and closing quotes to indicate the info is a string.
-
-If you check the HTML element inspector in your browser, you should see that the info text is now stored in the `data-info` attribute.
-
-We can now access this data attribute in our `click` event listener, using the `.data` method:
-
-```JavaScript
-$("#poem a").click(function(){
-    let infoText, clickedWord, clickedInfo; //variables to capture the info text and the clicked text/info
-    clickedWord = $( this ).text(); // get the clicked word
-    // .data("info") looks for the data-info HTML attribute.
-    clickedInfo = $( this ).data("info"); // get the info from the clicked word using .data
-    infoText = clickedInfo; // set the info text var to the clicked info
-    $("#info").html(infoText); // change the info div to the info text
-  });
-```
-
-If you save and try to click on the word now, you should be rewarded with the info that was stored in the `.info` property about anaphora.
-
-Okay! So far so good. We've added in the ability to display info about words. However, all we currently have is one line of text. Surely we'd like to add _all_ the lines of the poem, right? Let's go about doing that now.
-
-## JSON
-
-To use our dataset (our poem) more efficiently, we'll use JSON. JSON stands for JavaScript Object Notation. We can use a JSON object (as a separate file) to store our poem data, and then use that data to populate our poem. 
-
-JSON, as a data format, allows us to store data in a structured way and utilize it in a variety of ways in JavaScript. Like object syntax you have seen so far, JSON object data is written in key/value pairs. For instance, here's a object containing details about an example person named Sal Ami in JSON:
-
-```JSON
-{
-   "firstName": "Sal",
-   "lastName": "Ami",
-   "age": 30,
-   "streetAddress": "404 JavaScript Dr",
-   "city": "JavaTown",
-   "state": "JA",
-   "postalCode": "12345",
-   "phoneNumbers": [
-      { "Mobile": "111-111-1111" },
-      { "Home": "222-222-2222" }
-   ]
+#map {
+  height: 400px; /* Or any height you prefer */
+  width: 100%;   /* Make it fill the container width */
+  border: 1px solid #ccc; /* Optional: add a border */
+  margin-top: 20px; /* Optional: space above the map */
 }
 ```
 
-As you can see, we store data in key/value pairs as usual, and we can use both object and array syntax.
+## Initializing the Map (`map.js`)
 
-Using JSON, we can store our poem in a file called `poem.json`. As you might imagine, writing it all out is a bit of a pain, so luckily for you I've already done it. Download the `poem.json` file from the button below and save it to your working folder.
+Now, let's write the basic JavaScript in `map.js` to create the map.
 
-<Download files='poem.json'><br />
+```javascript
+// map.js
 
-If you open the file in VSCode, you can see that we have stored the lines of the text in a similar fashion as we did before, with a `text` property for each word of the poem. I also went ahead and added a few extra literary devices for the first half of the poem and listed them as `info`. 
+// Wait for the DOM to be ready (optional but good practice)
+document.addEventListener('DOMContentLoaded', function() {
 
-In general, just keep in mind that:
-1. JSON objects are very much like JavaScript objects.
-2. JSON objects are written in key/value pairs.
-3. JSON objects are surrounded by curly braces `{ }`.
-4. Keys must be strings, and values must be a valid JSON data type (string, number, object, array, boolean or null).
-5. Keys and values are separated by a colon.
-6. Each key/value pair is separated by a comma.
-7. Arrays are enclosed in square brackets `[ ]` and each element is separated by a comma.
+    // 1. Initialize the map and set its view
+    // L.map('map') creates a map instance linked to the div with id="map"
+    const map = L.map('map').setView([40.7128, -74.0060], 13); // NYC Coordinates [lat, lng], Zoom level 13
 
-Now that we have a full JSON file with our poem, let's use it to populate our page with the text. We'll need to revamp our code one more time to accomplish this. 
+    // 2. Add a tile layer (the base map image)
+    // Using OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19, // Max zoom level for these tiles
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map); // Add the tile layer to our map instance
 
-To clearly observe the logic of what we have so far, let's take a look at the 3 different parts to our program:
+    console.log("Map initialized.");
 
-```JavaScript
-//Part 1 - Define the extra information section for the poem
-$("#info").html("<p>Extra info will go here.</p>");
+}); // End DOMContentLoaded listener
+```
 
-// Part 2 - Display the first line of the poem and access info from the poem object if it exists
-let line1, line1Text;
-line1 = [{text:  "What", info: "Anaphora: The repetition of a word or phrase at the beginning of (usually successive) lines. For example, the use of What in the first four lines."}, 
-    {text: "hurrying"}, {text: "human"}, {text: "tides,"}, 
-    {text: "or"}, {text: "day"}, {text: "or"}, {text: "night!"}];
-line1Text = "<blockquote><p>"; 
-line1.map(function(word){
-  let wordString;
-  wordString = word.text;
-  if (word.info){
-    wordString = "<a href='#' data-info='"+ word.info + "'>" + wordString + "</a>";
-  }
-  line1Text = line1Text + wordString + " ";
+**Explanation:**
+
+1.  **`document.addEventListener('DOMContentLoaded', ...)`:** Native JavaScript way to wait for the HTML to load before running the map code. This prevents errors if the `<div id="map">` doesn't exist yet when the script runs.
+2.  **`L.map('map')`:** Creates the map object, linking it to the HTML element with the ID `map`.
+3.  **`.setView([latitude, longitude], zoomLevel)`:** Sets the initial center coordinates and zoom level. `zoomLevel` typically ranges from 0 (fully zoomed out) to ~18/19 (very close).
+4.  **`L.tileLayer(urlTemplate, options)`:** Creates the base map layer.
+    *   The URL template points to the tile server (OpenStreetMap here). `{s}`, `{z}`, `{x}`, `{y}` are placeholders Leaflet replaces with subdomain, zoom, and tile coordinates.
+    *   `options` object includes:
+        *   `maxZoom`: Limits how far users can zoom in.
+        *   `attribution`: **Required** text displayed on the map, giving credit to the data source(s). Always include this!
+5.  **`.addTo(map)`:** Adds the created layer (the tile layer) to our map instance (`map`).
+
+Save all files and open `poem.html`. You should see an interactive map centered on NYC!
+
+## Adding Markers and Popups
+
+Markers pinpoint specific locations. Popups display information when a marker (or shape) is clicked.
+
+```javascript
+// map.js (Inside the DOMContentLoaded listener, after map initialization)
+
+// Add a marker for Times Square
+const timesSquareCoords = [40.7580, -73.9855];
+const timesSquareMarker = L.marker(timesSquareCoords).addTo(map);
+
+// Add a popup to the marker
+timesSquareMarker.bindPopup("<b>Times Square</b><br>Mentioned in Whitman's era context.");
+
+// Add a marker for the Graduate Center (approximate)
+const gradCenterCoords = [40.7486, -73.9840];
+const gradCenterMarker = L.marker(gradCenterCoords).addTo(map)
+    .bindPopup("The Graduate Center, CUNY"); // Chain .bindPopup().addTo()
+
+```
+
+*   **`L.marker([lat, lng])`:** Creates a marker at the specified coordinates.
+*   **`.bindPopup(htmlContent)`:** Attaches a popup to the marker (or shape). You can use HTML inside the string.
+*   **`.addTo(map)`:** Adds the marker to the map. You can chain these methods.
+
+Save and refresh. You should see two markers. Click them to see their popups.
+
+![Map with Markers](/images/times-square.png) *(Conceptual image)*
+
+## Adding Shapes (Circles, Polygons, Polylines)
+
+Leaflet can draw various shapes.
+
+```javascript
+// map.js (Inside the DOMContentLoaded listener)
+
+// Add a Circle around Times Square
+const circle = L.circle(timesSquareCoords, {
+    color: 'red',       // Outline color
+    fillColor: '#f03',   // Fill color
+    fillOpacity: 0.3,  // Fill transparency (0-1)
+    radius: 500        // Radius in meters
+}).addTo(map);
+circle.bindPopup("Approx. 500m radius around Times Square");
+
+// Add a Polyline (line connecting points)
+const linePoints = [
+    timesSquareCoords,  // Start point
+    gradCenterCoords    // End point
+];
+const polyline = L.polyline(linePoints, {
+    color: 'blue'       // Line color
+}).addTo(map);
+polyline.bindPopup("Line from Times Square to Grad Center");
+
+// Add a Polygon (closed shape) - Example: Triangle near GC
+const trianglePoints = [
+    [40.7480, -73.9850],
+    [40.7490, -73.9830],
+    [40.7480, -73.9830],
+    [40.7480, -73.9850] // Close the polygon by repeating the first point
+];
+const polygon = L.polygon(trianglePoints, {
+    color: 'green',
+    fillColor: '#0f0',
+    fillOpacity: 0.4
+}).addTo(map);
+polygon.bindPopup("A sample polygon");
+
+```
+
+*   **`L.circle(centerLatLng, options)`:** Creates a circle.
+*   **`L.polyline(arrayOfLatLngs, options)`:** Creates a line connecting points.
+*   **`L.polygon(arrayOfLatLngs, options)`:** Creates a filled shape. The array of points should form a closed loop (first and last point are the same).
+
+Save and refresh to see the shapes. Click them for their popups.
+
+## Map Events
+
+Leaflet objects fire events in response to user interactions (clicks, zooms, pans) or changes in state. You can listen for these events using the `.on()` method.
+
+```javascript
+// map.js (Inside the DOMContentLoaded listener)
+
+// Example 1: Show coordinates on map click
+map.on('click', function(e) {
+    // 'e' is the event object, e.latlng contains click coordinates
+    const coords = e.latlng;
+    const popupContent = `You clicked at:<br>Lat: ${coords.lat.toFixed(4)}<br>Lng: ${coords.lng.toFixed(4)}`;
+
+    // L.popup() creates a standalone popup
+    L.popup()
+        .setLatLng(coords) // Set its location
+        .setContent(popupContent) // Set its content
+        .openOn(map); // Open it on the map
+    console.log(`Map clicked at: Lat ${coords.lat}, Lng ${coords.lng}`);
 });
-$("#poem").html(line1Text);
 
-// Part 3 - Add the click event to the poem
-$("#poem a").click(function(){
-    let infoText, clickedWord, clickedInfo;
-    clickedWord = $( this ).text();
-    clickedInfo = $( this ).data("info");
-    infoText = clickedInfo;
-    $("#info").html(infoText);
-  });
+// Example 2: Do something when the Times Square marker is clicked
+timesSquareMarker.on('click', function() {
+    // This overrides the default bindPopup action *if* you don't call openPopup
+    alert("You clicked the Times Square marker!");
+    // To still show the original popup, you could call:
+    // this.openPopup(); // 'this' refers to timesSquareMarker here
+});
+
+// Example 3: Log zoom level changes
+map.on('zoomend', function() {
+    console.log("Current map zoom level:", map.getZoom());
+});
 ```
 
-I have deleted all the earlier comments, so just look at the three new ones I've added here. We can see that we have 3 parts to our program:
-- Part 1 - Define the extra information section for the poem
-- Part 2 - Display the first line of the poem and access `info` from the poem object if it exists
-- Part 3 - Add the click event to the poem
+*   **`.on(eventName, handlerFunction)`:** Attaches an event listener.
+*   The `handlerFunction` receives an **event object** (`e`) containing details about the event (like click coordinates in `e.latlng`).
+*   `L.popup()` creates popups that aren't tied to a specific marker/shape.
+*   `.toFixed(4)` formats coordinates to 4 decimal places.
 
-It is clear that we'll need to revamp part 2 to display the full data from the JSON file instead of just the first line we manually inputted. Let's do just that. We'll use the `getJSON` method to retrieve the data from the JSON file. We'll also create a new variable that will store all the text of the poem garnered from the JSON file.
+Save and refresh. Try clicking on the map, clicking the Times Square marker, and zooming in/out while watching the console.
 
-```JavaScript
-//Part 1 - Define the extra information section for the poem
-$("#info").html("<p>Extra info will go here.</p>");
-
-// Part 2 - Display the first line of the poem and access info from the poem object if it exists
-$.getJSON("poem.json", function(data){ // data variable is the JSON object
-  let poemText; // Define a new variable to hold all text
-  poemText = "<blockquote><p>"; // Open the starting tags
-  // Now you can iterate (map) over the data variable’s .lines property:
-  data.lines.map(function(line){ // We get a variable, line
-    // Define a blank lineText.
-    let lineText = "";
-    // Now iterate over each word. This part should be familiar to you from before
-    line.map(function(word){
-      let wordString;
-      wordString = word.text;
-      if (word.info){
-        wordString = "<a href='#' data-info='" + word.info + "'>" + wordString + "</a>";
-      }
-      lineText = lineText + wordString + " "; // Add the word to the lineText variable with spacing
-    });
-    // Add lineText with a line break to the poemText
-    poemText = poemText + lineText + "<br/>";
-  });
-  // Close the poemText tags
-  poemText = poemText + "</p></blockquote>";
-  // Replace the content of #poem
-  $("#poem").html(poemText);
-  // Now that we have the data, we can add the click event to the poem
-  $("#poem a").click(function(){
-    let infoText, clickedWord, clickedInfo;
-    clickedWord = $( this ).text();
-    // .data("info") looks for the data-info HTML attribute
-    clickedInfo = $( this ).data("info");
-    infoText = clickedInfo;
-    $("#info").html(infoText);
-  });
-}); // Close the getJSON method and callback function
-```
-
-There is some new syntax and logic here, so try to follow along with the comments. We're first using a selector and the `getJSON()` method to retrieve the data from the JSON file. `getJSON()` takes two arguments: the source of the JSON file, and what's called a __callback function__. Callback functions are functions that are passed in as arguments to other functions. In this case, we're passing in a function that takes one argument, which is the `data` from the JSON file.
-
-In other words, the essential moves of the code are as follows:
-- Run the `getJSON()` method, passing in the `poem.json` file as the source.
-- Call the callback function, passing in the `data` variable (the JSON object).
-- Create a new variable to hold all the text of the poem.
-- `map()` over the data variable's `lines` property.
-- `map()` over each word in each line.
-- Make elements clickable if they have `info` data.
-- Add each line to the `poemText` variable with a line break, and add the text to the `#poem` element.
-- Run the `click()` method on the `#poem` element, to see if the user clicks on a word.
-
-All together, your program should now look something like this:
-
-```JavaScript
-//Part 1 - Define the extra information section for the poem
-$("#info").html("<p>Extra info will go here.</p>");
-
-// Part 2 - Display the poem and allow for clicking on words
-$.getJSON("poem.json", function(data){ // data variable is the JSON object
-  let poemText; // Define a new variable to hold all text
-  poemText = "<blockquote><p>"; // Open the starting tags
-  // Now you can iterate (map) over the data variable’s .lines property:
-  data.lines.map(function(line){ // We get a variable, line
-    // Define a blank lineText.
-    let lineText = "";
-    // Now iterate over each line. This part should be familiar to you from before
-    line.map(function(word){
-      let wordString;
-      wordString = word.text;
-      if (word.info){
-        wordString = "<a href='#' data-info='" + word.info + "'>" + wordString + "</a>";
-      }
-      lineText = lineText + wordString + " "; // Add the word to the lineText variable with spacing
-    });
-    // Add lineText with a line break to the poemText
-    poemText = poemText + lineText + "<br/>";
-  });
-  // Close the poemText tags
-  poemText = poemText + "</p></blockquote>";
-  // Replace the content of #poem
-  $("#poem").html(poemText);
-  // Now that we have the data, we can add the click event to the poem
-  $("#poem a").click(function(){
-    let infoText, clickedWord, clickedInfo;
-    clickedWord = $( this ).text();
-    // .data("info") looks for the data-info HTML attribute
-    clickedInfo = $( this ).data("info");
-    infoText = clickedInfo;
-    $("#info").html(infoText);
-  });
-}); // Close the getJSON method and callback function
-```
-
-Save and check the page. You should now see the full poem and have a few clickable elements to explore.
-
-Congrats! You now have a workable dataset and some interesting ways to display and interact with it. We've covered quite a lot of new terrain in this lesson, but for the most part, we are still just utilizing the foundational skills and tools you've encountered so far. 
-
-In the next lesson, we'll introduce a brand new tool called Leaflet. We'll learn how to use Leaflet to add interactive maps to our web pages.
-
-But, as major takeaways from this lesson, just keep in mind that:
-- We usually want to break down data into smaller, discrete pieces we can manipulate
-- JSON allows you to store data in a structured way and work with it
-- Data attributes are used to store extra information that you may want to access or display
-- Events are used to trigger actions when something happens
+Leaflet offers a vast API for customization, custom icons, different base maps, plugins for heatmaps, clustering, and much more. Explore the [Leaflet Documentation](https://leafletjs.com/reference.html) and [Tutorials](https://leafletjs.com/examples.html) to discover more.
 
 ## Review Questions
 
-1. True or False - `map()` allows you to iterate over an array, but it doesn't return anything.
+1.  In Leaflet, what is the purpose of a Tile Layer?
+    <Quiz>
+    - To display markers for specific locations.
+    - To draw shapes like circles and polygons.
+    - To provide the underlying base map image (e.g., streets, satellite).*
+    - To handle user click events on the map.
+    </Quiz>
 
-<Quiz>
-- True
-- False*
-</Quiz>
+2.  What is the function `L.map('mapDivId')` used for?
+    <Quiz>
+    - To add a marker to the map.
+    - To define the map's tile layer URL.
+    - To initialize a map instance within the HTML element with the specified ID.*
+    - To set the map's zoom level.
+    </Quiz>
 
-2. True or False - We can import a JSON dataset as an `object` in JavaScript.
+3.  Which method is used to add a layer (like a marker or tile layer) to a Leaflet map instance (e.g., `myMap`)?
+    <Quiz>
+    - `.setView(myMap)`
+    - `.bindPopup(myMap)`
+    - `.on('add', myMap)`
+    - `.addTo(myMap)`*
+    </Quiz>
 
-<Quiz>
-- True*
-- False
-</Quiz>
-
-3. The following code would affect which element?
-
-
-```JavaScript
-$("#poem h3").click(function(){
-    // some action
-});
-```
-
-<Quiz>
-- The paragraph element
-- The header element*
-- The info element
-- The body element
-</Quiz>
+4.  In a Leaflet map click event handler `map.on('click', function(e) { ... })`, how do you typically access the latitude and longitude of the click location?
+    <Quiz>
+    - `e.coords`
+    - `e.location`
+    - `e.latlng`*
+    - `map.getClickCoords()`
+    </Quiz>
 
 ## Challenges
 
-1. Our poem page is quite bland. Spruce it up however you'd like by marshalling your CSS skills.
-
-2. `.map()` is an important method. Get a little practice in by writing a new function that takes an array of integers and, using `.map()`, returns an array of those integers, doubled. So if we give it [1, 2, 3], we receive, in turn, [2, 4, 6]. Display this info in the console.
-
-<CodeEditor language="JavaScript">
-</CodeEditor>
-
-3. `.map()` is similar to another method, `.forEach()`. We haven't covered the latter, but you may encounter it in the wild. Read through [this article](https://codeburst.io/javascript-map-vs-foreach-f38111822c0f) to understand the differences between the two, and to learn a little more about `.map()` specifically.
-
-4. Add a new property to the JSON file that stores a wiki link for a particular literary device (e.g., [here for anaphora](https://en.wikipedia.org/wiki/Anaphora_(rhetoric%29). Create a new data attribute to access this property and add it to the info message that is displayed when clicked. 
+1.  **Add Another Marker:** Find the approximate latitude/longitude coordinates for another NYC landmark (e.g., Statue of Liberty, Brooklyn Bridge) and add a marker with a descriptive popup for it on the map.
+2.  **Change Map View:** Add a button (in `poem.html`) with an ID like `zoomToNYC`. In `map.js`, add a jQuery click handler for this button that uses `map.setView([40.7128, -74.0060], 13);` to reset the map view to the initial NYC view when clicked.
+3.  **Custom Icon (Optional Advanced):** Look at the [Leaflet Custom Icons tutorial](https://leafletjs.com/examples/custom-icons/). Try creating a simple custom icon (you might need a small image file) and use it for one of your markers instead of the default blue one.
+4.  **Commit and Push:** Save all changes and push them to GitHub.
 
 ## Key Terms
 
-Do you recall the meaning of the following terms?
+-   Leaflet.js
+-   Interactive Map
+-   Layer (Base Layer/Tile Layer, Overlay Layer)
+-   `L` (Leaflet main object)
+-   `L.map()`, `.setView()`
+-   `L.tileLayer()`, Attribution
+-   `L.marker()`, `L.circle()`, `L.polygon()`, `L.polyline()`
+-   `.addTo()`
+-   `.bindPopup()`
+-   `.on()` (for events like `click`, `zoomend`)
+-   Event Object (`e`), `e.latlng`
 
-- `.map()`
-- `.join()`
-- `.getJSON()`
-- data attributes
-- events
-- callbacks
+## Download the Project (End of Lesson 11 State)
 
-## Download the Project
+Here are the course files reflecting the state at the end of this lesson:
 
-Here are the course files we created for this lesson if you need a reference:
+<Download files='11_index.html, 11_script.js, 11_styles.css, 11_poem.html, 11_poem.css, 11_poem.js, poem.json, 11_map.js'> <br/>
+
+---
+
+# Working With GeoSpatial Data (GeoJSON)
+
+In the previous lesson, we created a basic Leaflet map. Now, let's integrate real-world geospatial data using the **GeoJSON** format. GeoJSON is a standard format based on JSON for encoding geographic data structures (points, lines, polygons) along with their non-spatial attributes.
+
+We'll use a dataset of New York City neighborhood boundaries to:
+
+1.  Add neighborhood polygons as a layer on our map.
+2.  Style these polygons.
+3.  Add popups displaying neighborhood information.
+4.  Create interactive elements (like a list or buttons) to navigate the map based on the data.
+
+This combines skills from jQuery, JSON handling, and Leaflet.
+
+## The Dataset: NYC Neighborhoods GeoJSON
+
+We'll use a GeoJSON file containing NYC neighborhood boundaries. GeoJSON has a specific structure.
+
+**Key GeoJSON Concepts:**
+
+*   **`type`:** Specifies the GeoJSON object type (e.g., `FeatureCollection`, `Feature`, `Polygon`, `Point`, `LineString`).
+*   **`FeatureCollection`:** A top-level object containing an array of `Feature` objects.
+*   **`Feature`:** Represents a spatially bounded thing. It has:
+    *   `geometry`: An object describing the shape (e.g., `Polygon`, `Point`) and its `coordinates`.
+    *   `properties`: An object containing non-spatial attributes (like name, ID, borough, etc.).
+*   **`geometry`:** Contains `type` (e.g., `"Polygon"`) and `coordinates`.
+    *   For **Polygons**, `coordinates` is an *array of arrays of points*. The outer array defines the main boundary ring, and subsequent inner arrays could define holes (which we don't have here). Each point is an array `[longitude, latitude]`. **Note the order: Longitude first, then Latitude!**
+
+**Get the Data:**
+
+1.  Download the dataset: [nycneighborhoods.json](https://raw.githubusercontent.com/dwillis/nyc-maps/master/neighborhoods.geojson) (Right-click, Save Link As...) or use the button below.
+    <Download files='nycneighborhoods.json'><br />
+2.  Save it in your `javascript_course` project folder.
+
+**Prepare the Data File for Leaflet (`L.geoJSON`):**
+
+Leaflet's `L.geoJSON()` function works best when the GeoJSON data is directly available as a JavaScript variable.
+
+1.  **Rename:** Rename `nycneighborhoods.json` to `nycneighborhoods.js`.
+2.  **Edit `nycneighborhoods.js`:** Open the renamed file in VSCode. Add `const nycNeighborhoods = ` at the very beginning and a semicolon `;` at the very end, effectively wrapping the entire JSON object in a JavaScript variable declaration.
+
+    ```javascript
+    // nycneighborhoods.js
+    const nycNeighborhoods = { // <<< ADD THIS LINE
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+             // ... properties like neighborhood, borough ...
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [ /* Array of [lng, lat] points */ ]
+              // Potentially more rings for holes
+            ]
+          }
+        },
+        // ... more features ...
+      ]
+    }; // <<< ADD THIS SEMICOLON
+    ```
+
+## Setting Up the Page (`nyc-data.html`)
+
+Let's create a dedicated page for this map.
+
+1.  **Create Files:**
+    *   `nyc-data.html`
+    *   `nyc-data.css`
+    *   `nyc-data.js`
+2.  **Link from Index:** Add a link in `index.html`:
+    ```html
+    <!-- In index.html -->
+    <h2><a href="nyc-data.html">NYC Neighborhood Map</a></h2>
+    <hr>
+    ```
+3.  **Basic HTML (`nyc-data.html`):** Include Leaflet CSS/JS, jQuery, *your new data file (`nycneighborhoods.js`)*, and your specific CSS/JS files. Add a div for the map and other elements we'll need later.
+
+    ```html
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NYC Neighborhoods Map</title>
+
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <!-- Your specific CSS -->
+        <link rel="stylesheet" href="nyc-data.css">
+
+        <!-- Leaflet JavaScript -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <!-- Load the Neighborhood Data (BEFORE your script that uses it) -->
+        <script src="nycneighborhoods.js"></script>
+
+      </head>
+      <body>
+        <div class="container">
+          <h1>NYC Neighborhoods</h1>
+          <p>Exploring neighborhood boundaries using Leaflet and GeoJSON.</p>
+          <p>Data source: <a href="https://data.beta.nyc/dataset/pediacities-nyc-neighborhoods/resource/35dd04fb-81b3-479b-a074-a27a37888ce7" target="_blank" rel="noopener noreferrer">NYC Planning - PediaCities Neighborhoods</a></p>
+
+          <div id="controls">
+             <!-- We can add buttons or lists here later -->
+             <button id="pan-to-flatbush" style="display: none;">Pan to Flatbush (Example)</button> <!-- Hidden initially -->
+          </div>
+
+          <div id="map"></div>
+
+          <div id="neighborhood-list-container">
+            <h2>Neighborhoods</h2>
+            <div id="neighborhoods">
+                <!-- List will be populated here -->
+            </div>
+          </div>
+
+        </div> <!-- End container -->
+
+        <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- Include your specific map script -->
+        <script src="nyc-data.js"></script>
+      </body>
+    </html>
+    ```
+    *   Notice `<script src="nycneighborhoods.js"></script>` is included *before* `nyc-data.js` so the `nycNeighborhoods` variable is available when the map script runs.
+
+4.  **Basic CSS (`nyc-data.css`):** Set map dimensions and basic layout styles.
+
+    ```css
+    /* nyc-data.css */
+    body {
+      font-family: sans-serif;
+      line-height: 1.5;
+      margin: 15px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    #map {
+      height: 500px; /* Adjust as needed */
+      width: 100%;
+      border: 1px solid #aaa;
+      margin-bottom: 20px;
+    }
+    #neighborhood-list-container {
+        margin-top: 20px;
+    }
+    #neighborhoods {
+      columns: 150px 4; /* Aim for 4 columns, min width 150px */
+      list-style: none;
+      padding-left: 0;
+    }
+    #neighborhoods li {
+        margin-bottom: 5px;
+    }
+    #neighborhoods a {
+        text-decoration: none;
+        color: #0066cc;
+        cursor: pointer;
+    }
+    #neighborhoods a:hover {
+        text-decoration: underline;
+        color: #004080;
+    }
+    #controls button {
+        margin: 5px;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    ```
+
+5.  **Initialize Map (`nyc-data.js`):** Start with the basic map setup.
+
+    ```javascript
+    // nyc-data.js
+    $(document).ready(function() {
+        console.log("NYC Data page ready.");
+
+        const map = L.map('map').setView([40.7128, -74.0060], 11); // Start slightly more zoomed out
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        console.log("Base map initialized.");
+
+        // --- GeoJSON processing will go here ---
+
+    }); // End document ready
+    ```
+
+Test this setup by opening `nyc-data.html` in your browser. You should see the basic page layout and an empty map centered on NYC.
+
+## Adding and Styling GeoJSON Layer
+
+Now, let's add the neighborhood data using `L.geoJSON()`. This method takes the GeoJSON data object (our `nycNeighborhoods` variable) and an optional `options` object.
+
+```javascript
+// nyc-data.js
+// Inside the $(document).ready()... after map initialization...
+
+// --- GeoJSON processing starts here ---
+
+// Check if the data variable exists (loaded from nycneighborhoods.js)
+if (typeof nycNeighborhoods !== 'undefined') {
+    console.log("nycNeighborhoods data found.");
+
+    // Create the GeoJSON layer with styling and popups
+    const neighborhoodLayer = L.geoJSON(nycNeighborhoods, {
+        // Style function for each feature (polygon)
+        style: function(feature) {
+            return {
+                color: "#007bff",       // Border color (blue)
+                weight: 1,            // Border weight
+                fillColor: "#a8dadc",   // Fill color (light cyan)
+                fillOpacity: 0.4      // Fill opacity
+            };
+        },
+
+        // Function executed for each feature, adding popups
+        onEachFeature: function(feature, layer) {
+            if (feature.properties && feature.properties.neighborhood && feature.properties.borough) {
+                const popupContent = `<h3>${feature.properties.neighborhood}</h3><hr>Borough: ${feature.properties.borough}`;
+                layer.bindPopup(popupContent);
+            }
+            // Optional: Add mouse hover effect
+            layer.on({
+                mouseover: function(e) {
+                    const currentLayer = e.target;
+                    currentLayer.setStyle({
+                        weight: 3,
+                        color: '#ff7800', // Orange highlight
+                        fillOpacity: 0.6
+                    });
+                    // Bring layer to front (doesn't work perfectly with polygons sometimes)
+                   // if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                   //     currentLayer.bringToFront();
+                   // }
+                },
+                mouseout: function(e) {
+                    // Reset style using the layer reference stored during creation
+                     neighborhoodLayer.resetStyle(e.target);
+                }
+                // click: function(e) {
+                //     map.fitBounds(e.target.getBounds()); // Example: Zoom to feature on click
+                // }
+            });
+        }
+
+    }).addTo(map); // Add the processed GeoJSON layer to the map
+
+    console.log("GeoJSON layer added.");
+
+} else {
+    console.error("nycNeighborhoods data not found. Check if nycneighborhoods.js is loaded correctly.");
+    $('#map').html("<p style='color:red; text-align:center;'>Error: Could not load neighborhood data.</p>");
+}
+
+// --- GeoJSON processing ends here ---
+```
+
+**Explanation:**
+
+1.  **`L.geoJSON(dataObject, options)`:** The core function. It iterates through the `features` array in `nycNeighborhoods`.
+2.  **`style: function(feature) { ... }`:** This option defines how each feature's geometry (the polygons) should look. It receives the current `feature` object as an argument (though we don't need it for uniform styling here) and must return an object with Leaflet path style options (`color`, `weight`, `fillColor`, `fillOpacity`, etc.).
+3.  **`onEachFeature: function(feature, layer) { ... }`:** This option defines a function that runs for *every feature* processed.
+    *   `feature`: The current GeoJSON feature object (containing `properties` and `geometry`).
+    *   `layer`: The Leaflet layer object created for this feature (e.g., `L.Polygon`).
+    *   Inside this function, we check if the required properties exist and then use `layer.bindPopup()` to add a popup using data from `feature.properties`.
+    *   We also add `mouseover` and `mouseout` event listeners directly to the `layer` to create a highlight effect. `e.target` refers to the layer the event occurred on. `neighborhoodLayer.resetStyle(e.target)` cleverly resets the style back to what was defined in the main `style` function.
+
+Save and refresh `nyc-data.html`. You should see the styled neighborhood polygons, and clicking on them should reveal popups with their names and boroughs. Hovering should highlight them.
+
+![NYC Neighborhoods Styled](/images/nyc-neighborhoods2.png) *(Conceptual image)*
+
+## Adding Interactive Navigation
+
+Let's populate the `#neighborhoods` div with a clickable list of all neighborhoods.
+
+```javascript
+// nyc-data.js
+// Inside the $(document).ready()... after adding the GeoJSON layer...
+
+// --- Populate Neighborhood List ---
+if (typeof nycNeighborhoods !== 'undefined') {
+
+    // 1. Extract and sort neighborhood names
+    const neighborhoodNames = nycNeighborhoods.features
+        .map(feature => feature.properties.neighborhood) // Get just the name
+        .filter(name => name) // Filter out any null/empty names
+        .sort(); // Sort alphabetically
+
+    // Remove duplicates (optional but good)
+    const uniqueNames = [...new Set(neighborhoodNames)]; // Clever way to get unique values
+
+    console.log(`Found ${uniqueNames.length} unique neighborhoods.`);
+
+    // 2. Add each name to the HTML list
+    const listElement = $("#neighborhoods"); // Get the target div
+    uniqueNames.forEach(name => {
+        // Create a list item with a link inside
+        // Store the name in a data attribute for easy retrieval on click
+        const listItemHtml = `<li><a href="#" data-neighborhood="${name}">${name}</a></li>`;
+        listElement.append(listItemHtml);
+    });
+
+    // 3. Add click listener to the list (using event delegation)
+    listElement.on('click', 'a', function(event) {
+        event.preventDefault(); // Stop link navigation
+
+        const clickedName = $(this).data('neighborhood'); // Get name from data attribute
+
+        // Find the corresponding feature in the GeoJSON data
+        const feature = nycNeighborhoods.features.find(
+            feat => feat.properties.neighborhood === clickedName
+        );
+
+        if (feature) {
+            // Option 1: Fly to the feature's bounds (if polygon)
+             // Find the layer corresponding to this feature (more complex)
+             // A simpler way for now: calculate bounds approx. or pan to first point
+             // Let's pan to the approximate center (or first point)
+
+            // Find the layer (might be slow for large datasets)
+            let targetLayer = null;
+            neighborhoodLayer.eachLayer(function(layer) {
+                if (layer.feature.properties.neighborhood === clickedName) {
+                    targetLayer = layer;
+                }
+            });
+
+             if(targetLayer) {
+                 map.fitBounds(targetLayer.getBounds().pad(0.1)); // Zoom to fit the neighborhood bounds slightly padded
+                 targetLayer.openPopup(); // Open its popup
+             } else {
+                  // Fallback: Pan to the first coordinate if layer not found directly
+                   const coords = feature.geometry.coordinates[0][0]; // [lng, lat]
+                   map.panTo(new L.LatLng(coords[1], coords[0])); // PanTo needs [lat, lng]
+                   map.setZoom(15); // Set appropriate zoom
+             }
 
 
-<Download files='10_index.html, 10_script.js, 10_styles.css, 10_poem.html, 10_poem.css, 10_poem.js, poem.json'> <br/>
+        } else {
+            console.warn("Could not find feature for:", clickedName);
+        }
+    });
 
+} // End of list population block
+// --- End Populate Neighborhood List ---
+```
 
+**Explanation:**
 
+1.  **Extract Names:** We use `.map()` to get an array of just the names, `.filter()` to remove any empty/null names, and `.sort()` to alphabetize.
+2.  **Remove Duplicates:** `new Set(array)` creates a Set object, which automatically stores only unique values. The spread syntax `[... ]` converts the Set back into an array `uniqueNames`.
+3.  **Populate List:** We loop through `uniqueNames` using `forEach`. For each name, we create an `<li>` containing an `<a>` tag. The actual name is stored in a `data-neighborhood` attribute on the link for easy access later. This HTML is appended to the `#neighborhoods` div.
+4.  **Event Listener:** We again use event delegation, attaching one listener to the parent `#neighborhoods` div that listens for clicks on the `<a>` tags inside it.
+5.  **Find Feature:** When a link is clicked, we get the neighborhood name from its `data-neighborhood` attribute. We then use the array `.find()` method on our original `nycNeighborhoods.features` array to locate the full GeoJSON feature object matching that name.
+6.  **Navigate Map:**
+    *   **Finding the Layer:** Getting the *specific Leaflet layer* for a clicked name requires iterating through the layers created by `L.geoJSON`. `neighborhoodLayer.eachLayer(...)` does this. We check if a layer's feature matches the clicked name.
+    *   **Fitting Bounds:** If the layer is found, `targetLayer.getBounds()` gets its bounding box, and `map.fitBounds()` zooms the map to show that area. `.pad(0.1)` adds a small margin.
+    *   **Opening Popup:** `targetLayer.openPopup()` automatically shows the info for that neighborhood.
+    *   **(Fallback):** If finding the layer directly fails (it can be complex), we fall back to just panning to the first coordinate of the polygon using `map.panTo()`, which requires `L.LatLng(latitude, longitude)`. We also set a reasonable zoom level manually.
+
+Save and refresh. You should now see the list of neighborhoods. Clicking a name should pan/zoom the map to that neighborhood and open its popup.
+
+## Review Questions
+
+1.  In GeoJSON, what does a "FeatureCollection" typically contain?
+    <Quiz>
+    - A single point's coordinates.
+    - An array of style properties.
+    - An array of "Feature" objects.*
+    - The map's tile layer URL.
+    </Quiz>
+
+2.  What information is typically stored in the `properties` object of a GeoJSON "Feature"?
+    <Quiz>
+    - The type of geometry (e.g., "Polygon").
+    - The coordinate data for the shape.
+    - Non-spatial attributes like name, ID, or description.*
+    - The map projection system.
+    </Quiz>
+
+3.  In Leaflet's `L.geoJSON(data, { onEachFeature: function(feature, layer) {...} })`, what does the `layer` parameter represent?
+    <Quiz>
+    - The entire GeoJSON dataset.
+    - The specific GeoJSON feature object being processed.
+    - The Leaflet layer (e.g., `L.Polygon`, `L.Marker`) created for the current feature.*
+    - The base tile layer of the map.
+    </Quiz>
+
+4.  What is the primary purpose of using `event.preventDefault()` inside a click handler for an `<a>` tag with `href="#"`?
+    <Quiz>
+    - To trigger the link's navigation.
+    - To stop the browser from jumping to the top of the page or adding `#` to the URL.*
+    - To get the `data-` attributes from the link.
+    - To hide the link after it's clicked.
+    </Quiz>
+
+## Challenges
+
+1.  **Conditional Styling:** Modify the `style` function within `L.geoJSON`. Check the `feature.properties.borough` value. If the borough is "Manhattan" (check the exact value in your data), return a different `fillColor` (e.g., 'red') than for other boroughs.
+2.  **Borough Filter Buttons:** Add buttons to your HTML for each borough (Manhattan, Brooklyn, Queens, Bronx, Staten Island). Add click listeners (using jQuery) so that when a borough button is clicked, the map pans and zooms to show roughly that borough's area. (You'll need to find approximate center coordinates and a suitable zoom level for each borough). *Advanced: Try filtering the displayed GeoJSON layer to *only* show the selected borough's neighborhoods.*
+3.  **Data Source Attribution:** Ensure the link to the data source is clearly visible and functional on your `nyc-data.html` page.
+4.  **Commit and Push:** Save all your work and push it to GitHub.
+
+## Key Terms
+
+-   GeoJSON
+-   `FeatureCollection`, `Feature`
+-   `properties`, `geometry`, `coordinates`
+-   `L.geoJSON()`
+-   `style` function (in `L.geoJSON` options)
+-   `onEachFeature` function (in `L.geoJSON` options)
+-   `.find()` (Array method)
+-   Event Delegation
+-   `map.fitBounds()`, `.getBounds()`
+
+## Download the Project (End of Lesson 12 State)
+
+Here are the course files reflecting the state at the end of this lesson:
+
+<Download files='12_nyc-data.html, 12_nyc-data.js, nycneighborhoods.js'> <br/>
+
+---
+
+# Reading Documentation Effectively
+
+Throughout this course, we've linked to official **documentation** for JavaScript, HTML, CSS, jQuery, and Leaflet. Learning to navigate and understand documentation is a fundamental skill for any programmer, as it's impossible to memorize everything. Documentation is your primary resource for finding out how tools and languages work, what features they offer, and how to use them correctly.
+
+However, documentation can often seem dense, technical, and overwhelming. This lesson provides strategies to approach documentation more effectively.
+
+## What is Documentation?
+
+Documentation is the official explanation of how a piece of software, library, or language works. Good documentation typically includes:
+
+*   **Getting Started Guides/Tutorials:** Step-by-step instructions for basic setup and usage.
+*   **API References:** Detailed descriptions of every function, method, property, class, or feature available (the Application Programming Interface).
+*   **Examples:** Code snippets demonstrating how to use specific features.
+*   **Conceptual Guides:** Explanations of underlying principles or architecture.
+*   **FAQs/Troubleshooting:** Answers to common questions and solutions to problems.
+
+## "Getting Started" vs. "API Reference"
+
+It's crucial to distinguish between tutorial-style guides and detailed references:
+
+1.  **"Getting Started" / Tutorials:** Designed to be read sequentially, guiding you through initial setup and basic tasks. Examples: Leaflet's ["Quick Start" guide](https://leafletjs.com/examples/quick-start/), MDN's [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide). **Start here** when learning a new tool.
+2.  **API References:** Organized like a dictionary or encyclopedia, listing everything available. Designed for lookup when you know *what* you want to do but need specifics on *how*. Examples: [Leaflet Reference](https://leafletjs.com/reference.html), [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference), [jQuery API Documentation](https://api.jquery.com/). **Use these** when you need details on a specific function or property.
+
+## The Art of Skimming and Searching (Referencing, Not Reading)
+
+You rarely "read" API reference documentation cover-to-cover. Instead, you **reference** it:
+
+1.  **Know What You Need:** Have a specific task in mind (e.g., "How do I add a class to an element in jQuery?", "What options does `L.circle` take in Leaflet?", "How does the array `sort` method work in JavaScript?").
+2.  **Use the Search:** Most documentation sites have a search bar. Use relevant keywords.
+3.  **Use the Index/Sidebar:** Navigate the structure if you know the general category (e.g., "Array Methods", "Leaflet Map Options", "jQuery Events").
+4.  **Use Page Search (`Ctrl+F` or `Cmd+F`):** Once on a relevant page, search for specific keywords within that page.
+5.  **Skim for Keywords/Syntax:** Look for function names, parameters, property names, and code examples that match what you need.
+6.  **Focus on Examples:** Code examples are often the quickest way to understand usage. Copy, paste, and adapt them.
+7.  **Understand Parameters and Return Values:** Pay attention to what inputs a function expects (parameters, their types, and if they are optional) and what output it produces (return value and its type).
+
+**Example: Finding CSS `font` properties:**
+
+Go to the [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference). Search for `font`. You'll see results like `font` (the shorthand property), `font-family`, `font-size`, `font-weight`, etc. Clicking `font-family` will give details specifically about setting fonts.
+
+![MDN font search concept](/images/mdn-font.png)
+
+## Key Documentation Resources for This Course:
+
+*   **JavaScript, HTML, CSS:** **Mozilla Developer Network (MDN)** is the gold standard.
+    *   [MDN JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+    *   [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+    *   [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+*   **jQuery:**
+    *   [jQuery API Documentation](https://api.jquery.com/) (Use the search or browse categories)
+*   **Leaflet:**
+    *   [Leaflet Documentation (Reference)](https://leafletjs.com/reference.html) (Organized by classes: Map, Layers, Controls, etc.)
+    *   [Leaflet Tutorials](https://leafletjs.com/examples.html) (Excellent examples)
+*   **JSON:** Often covered within JavaScript resources.
+    *   [MDN JSON Introduction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+
+## Beyond the Official Docs
+
+Sometimes the official docs aren't enough, especially when you're unsure what to search for or encounter complex errors.
+
+### Effective Web Searches
+
+*   **Be Specific:** Include the language/library name (e.g., "javascript array remove element", "leaflet add marker on click", "jquery change css property").
+*   **Use Keywords:** Think about the action ("add", "remove", "change", "find", "loop", "click") and the object ("element", "array", "string", "map", "marker").
+*   **Error Messages:** If you have an error message, copy the *core part* (e.g., `TypeError: Cannot read property '...' of undefined`) into your search, perhaps along with the language/library name. Don't necessarily paste the whole stack trace unless searching for very specific bugs.
+*   **Describe the Goal:** Phrase your search as a question or goal (e.g., "how to center a div css", "get value from input field javascript").
+
+### Stack Overflow
+
+[Stack Overflow](https://stackoverflow.com/) is a massive Q&A site for programmers.
+
+*   **Search First:** Your question has likely been asked and answered. Search using keywords from your problem or error message.
+*   **Evaluate Answers:** Look for answers that are accepted (green checkmark), highly upvoted, and recent (older answers might use outdated techniques). Read the comments.
+*   **Understand, Don't Just Copy:** If you find code that works, try to understand *why* it works before pasting it into your project.
+*   **Asking Questions (Use Sparingly as a Beginner):** If you must ask, provide a **Minimal, Reproducible Example (MRE)** – the smallest possible code snippet that demonstrates your problem, what you expected, and what actually happened (including error messages). Read their guide on [how to ask a good question](https://stackoverflow.com/help/how-to-ask). (Note: The community can sometimes be harsh on poorly asked questions.)
+
+![Stack Overflow Example](/images/stack_overflow_example.png)
+
+### Other Communities
+
+*   **Reddit:** Subreddits like r/learnjavascript, r/webdev, r/css, r/gis (for mapping) can be helpful and often friendlier than Stack Overflow for beginner questions.
+*   **GitHub Issues:** If you suspect a bug in a specific library (like Leaflet), check the "Issues" tab on its GitHub repository. Someone might have reported it already.
+*   **Tutorial Sites:** Sites like javascript.info, CSS-Tricks, Smashing Magazine, freeCodeCamp offer articles and tutorials on specific topics.
+
+## Final Thoughts on Documentation & Learning
+
+*   Reading documentation is a skill that improves with practice. Don't expect to understand everything immediately.
+*   Focus on finding the specific information you need *right now*.
+*   Examples are your best friend.
+*   Don't be afraid to combine official docs with web searches and community resources like Stack Overflow.
+*   Learning *how to find answers* is as important as memorizing syntax.
+
+As you start your final project, make documentation your go-to resource when you need to know how a specific function works or what options are available.
+
+## Review Questions
+
+1.  What is the main difference between a "Getting Started" guide and an "API Reference"?
+    <Quiz>
+    - Getting Started is for experts, API Reference is for beginners.
+    - Getting Started is sequential/tutorial-based, API Reference is a detailed lookup resource.*
+    - Getting Started covers only errors, API Reference covers only features.
+    - Getting Started is online, API Reference is offline.
+    </Quiz>
+
+2.  When using API reference documentation, what is generally the most effective first step?
+    <Quiz>
+    - Reading the entire page from top to bottom.
+    - Searching for specific keywords related to your task or function name.*
+    - Looking only at the introduction section.
+    - Copying the first code example you find.
+    </Quiz>
+
+3.  Which website is considered the primary and most authoritative documentation source for core web technologies like HTML, CSS, and JavaScript?
+    <Quiz>
+    - Stack Overflow
+    - W3Schools
+    - Mozilla Developer Network (MDN)*
+    - jQuery API Documentation
+    </Quiz>
+
+4.  When searching the web for help with a programming error, what is generally recommended?
+    <Quiz>
+    - Copy and paste the entire multi-line error stack trace.
+    - Search only using the error type (e.g., "TypeError").
+    - Include the language/library name and the core part of the error message.*
+    - Avoid mentioning the error message in the search.
+    </Quiz>
+
+## Challenges
+
+*(These challenges require you to find information using the documentation links provided earlier or web searches).*
+
+1.  **CSS Challenge:** Using the MDN CSS Reference or a web search, find out how to apply a `box-shadow` effect to a `<div>`. Write down the basic syntax and what the main values control (e.g., horizontal offset, vertical offset, blur, color).
+2.  **JavaScript Array Challenge:** Using the MDN JavaScript Reference, find the array method that checks if *at least one* element in an array passes a test implemented by a provided function. What is the method called? (Hint: It's similar to `forEach` or `map` but returns a boolean).
+3.  **jQuery Challenge:** Using the jQuery API documentation, find the method used to get the `width` of an element (excluding padding, border, and margin). What is the method name?
+4.  **Leaflet Challenge:** Using the Leaflet reference documentation, find the map option used to *disable* zooming with the mouse scroll wheel. What is the option called?
+
+## Key Terms
+
+-   Documentation
+-   API (Application Programming Interface) Reference
+-   Getting Started Guide / Tutorial
+-   MDN (Mozilla Developer Network)
+-   Stack Overflow
+-   Keyword Search
+-   Parameters, Return Value
+-   Examples
+-   Debugging
+
+---
+
+# Starting Your Final Project
+
+Congratulations on reaching this stage! You've learned the fundamentals of JavaScript, HTML, CSS, and worked with powerful libraries like jQuery and Leaflet. Now it's time to apply these skills to a project of your own design.
+
+The next few weeks are dedicated to developing your final project. This is your chance to explore a topic that interests you, be creative, and solidify the concepts we've covered. Your project will be largely self-directed, but there are some core requirements to demonstrate your understanding.
+
+## Project Requirements
+
+Your final project should showcase the key skills learned in this course. It must include:
+
+1.  **HTML Structure:** At least one well-structured HTML page (`index.html` as the main entry point). Use semantic tags where appropriate.
+2.  **CSS Styling:** An external CSS file (`styles.css` or similar) defining the visual appearance and layout of your project. Aim for a clean, readable, and appropriate style. Consider basic responsiveness if possible (making it look okay on different screen sizes).
+3.  **JavaScript Interactivity:** An external JavaScript file (`script.js` or similar) that adds dynamic behavior. This should involve:
+    *   DOM manipulation (selecting elements, changing content/styles - jQuery is fine here).
+    *   Event handling (responding to user actions like clicks).
+4.  **Data Integration (JSON):** Include and use data stored in at least one JSON file (`.json` or prepared as a `.js` variable). Your JavaScript should fetch/access this data and use it to populate parts of your page dynamically.
+5.  **Leaflet Map:** Integrate an interactive Leaflet map relevant to your project's theme or data. This map should display some data, such as:
+    *   Markers with popups.
+    *   Polylines or polygons.
+    *   Data loaded from your JSON file (e.g., plotting points, showing GeoJSON boundaries).
+6.  **GitHub Repository:** Your entire project (HTML, CSS, JS, JSON files, any images) must be contained within a **public** GitHub repository.
+7.  **Deployment (GitHub Pages):** Your project must be deployed and accessible live on the web using GitHub Pages.
+8.  **Basic Content:** Include a title, a brief description of the project's purpose, clear instructions for interaction (if needed), and attribution for data sources or significant code snippets borrowed.
+
+*The complexity of each component can vary based on your project's focus, but all components must be present and functional.*
+
+## Project Components Checklist
+
+Practically, ensure your project folder contains at least:
+
+*   `index.html` (Your main page)
+*   `styles.css` (or similar name for your main CSS)
+*   `script.js` (or similar name for your main JS)
+*   `your_data.json` (or `your_data.js` if prepared for Leaflet GeoJSON)
+*   Any image files used
+*   (Potentially other HTML/CSS/JS files if you structure it with multiple pages/scripts)
+
+...all managed within a single GitHub repository and deployed via GitHub Pages.
+
+## Project Ideas Brainstorm
+
+Your project topic is up to you! Connect it to your research, hobbies, or interests. Consider:
+
+*   **Data Exploration:** Visualize a dataset related to your field (e.g., historical events map, literary character locations, scientific data points, campus resources).
+*   **Interactive Narrative:** A more advanced Choose Your Own Adventure, a story map, or an annotated text (like our poem example, but with your own content).
+*   **Local Guide/Tour:** Map interesting spots in a neighborhood, a historical walking tour, locations related to a specific theme (e.g., best coffee shops, architectural highlights).
+*   **Issue Awareness:** Map data related to social or environmental issues (e.g., access to parks, pollution data points, historical redlining - be mindful of ethical data representation).
+*   **Personal Interest:** Map your travels, locations from a favorite book/movie, a collection database (e.g., mapping where your vinyl records were recorded).
+
+**Ask Yourself:**
+
+1.  **Topic:** What am I interested in exploring or presenting?
+2.  **Story/Goal:** What is the main message or purpose? What should a user learn or be able to do?
+3.  **Data:** What information do I need? Can I find existing data (JSON, GeoJSON, CSV)? Or do I need to create it myself (e.g., writing descriptions, finding coordinates)?
+4.  **Visualization:** How will the map enhance the project? What should be displayed on it (points, lines, shapes, popups)?
+5.  **Interaction:** How will users interact? Clicking map features? Clicking list items? Buttons? Forms (more advanced)?
+6.  **Structure:** Single page or multiple pages? How will content be organized?
+
+## Finding Data
+
+If using external data:
+
+*   **NYC Specific:** [NYC Open Data](https://opendata.cityofnewyork.us/)
+*   **US Gov:** [Data.gov](https://www.data.gov/)
+*   **Mapping/GIS:** Natural Earth Data, OpenStreetMap (data extracts), USGS
+*   **General:** Kaggle Datasets, Google Dataset Search, Datahub.io, Data.world
+*   **Humanities/Cultural:** Check specific archives, libraries (NYPL Digital Collections), museum APIs.
+
+**Data Format:**
+
+*   **Prefer JSON or GeoJSON.** GeoJSON is ideal for mapping boundaries or points with associated properties.
+*   **CSV:** Common format. You can often convert CSV to JSON using online tools (like [CSVtoJSON](https://csvjson.com/csv2json)) or simple scripts (more advanced). Manually structure smaller datasets directly in JSON.
+*   **Coordinates:** You might need to find latitude/longitude for points yourself using Google Maps, Wikipedia, or dedicated geocoding tools/services.
+
+## Project Scope - Be Realistic!
+
+This is crucial. You have limited time.
+
+*   **Start Small:** Focus on the core requirements first. Get a basic HTML page, a simple map displaying *some* data from your JSON, and one or two interactive elements working.
+*   **Minimum Viable Product (MVP):** What is the absolute simplest version that fulfills the requirements? Aim for that first.
+*   **Prioritize:** List desired features. Implement the essential ones first. Add extras (more complex interactions, fancier styling, more data) *only* if you have time after the core is working and deployed. It's better to have a simple, complete, working project than a complex, broken one.
+
+## Getting Started: Your First Steps
+
+1.  **Define Your Idea:** Write a brief (1-2 paragraph) proposal outlining your project topic, the data you plan to use, the main features/interactions, and how it meets the course requirements. Share this with the instructor/class if requested.
+2.  **Gather/Create Data:** Locate your dataset(s) online or start structuring your own data in JSON format. Find necessary coordinates if applicable.
+3.  **Set Up Repository:** Create a *new, empty* public GitHub repository specifically for this project.
+4.  **Clone Repository:** Clone the empty repository to your computer using VSCode or the command line.
+5.  **Create Basic Files:** Inside your cloned project folder, create the initial `index.html`, `styles.css`, and `script.js` files. You can copy the basic structure from earlier lessons or start fresh. Add your `data.json` (or `.js`) file as well.
+6.  **Initial Commit:** Make your first commit with these basic files (`git add .`, `git commit -m "Initial project setup"`, `git push origin main`).
+
+**Now you have a foundation to start building! Remember to commit and push your changes regularly.**
+
+---
+
+# Putting the Project Together: Strategies
+
+You have your idea, your data, and your repository. Now, how do you assemble the pieces effectively? Here are some strategies:
+
+## Wireframing Your Design
+
+Before diving deep into CSS, sketch out a **wireframe**. This is a simple visual guide, like a blueprint, focusing on the layout and placement of elements, not the visual details.
+
+*   **Purpose:** Helps plan content organization, information hierarchy, and user flow.
+*   **Tools:** Pen and paper, whiteboard, or online tools like [Figma](https://figma.com) (free tier), [Excalidraw](https://excalidraw.com/), or [diagrams.net](https://app.diagrams.net/) (formerly draw.io).
+*   **Focus On:**
+    *   Where will the map go?
+    *   Where will text content reside?
+    *   Where will interactive elements (buttons, lists, info displays) be placed?
+    *   How does a user navigate between different parts (if applicable)?
+
+![Simple Wireframe Example](/images/wireframe_example.png) *(Keep the image reference)*
+
+A wireframe helps you think through the structure *before* getting lost in styling details.
+
+## CSS Layout Strategies: Flexbox and Grid
+
+Getting elements positioned correctly is often challenging. Modern CSS offers powerful layout tools:
+
+*   **Flexbox:** Excellent for arranging items in **one dimension** (either a row or a column). Great for navigation bars, centering items within a container, distributing space along a line, and aligning items vertically or horizontally. We used it briefly for the jokes page. [A Complete Guide to Flexbox (CSS-Tricks)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) is an invaluable resource.
+*   **CSS Grid:** Designed for **two-dimensional** layouts (rows *and* columns). Ideal for overall page layouts, complex grid structures, and aligning items in both dimensions simultaneously. [A Complete Guide to Grid (CSS-Tricks)](https://css-tricks.com/snippets/css/complete-guide-grid/).
+
+**Which to use?** Often a combination! You might use Grid for the main page layout (header, sidebar, main content, footer) and Flexbox *within* those sections (like centering items in the header or laying out buttons in a row).
+
+*   Read about their relationship: [MDN: Relationship of Grid Layout to other layout methods](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+*   Comparison guide: [Flexbox vs. CSS Grid (Tuts+)](https://webdesign.tutsplus.com/articles/flexbox-vs-css-grid-which-should-you-use--cms-30184)
+
+Experiment with these in your `styles.css` to achieve the layout envisioned in your wireframe.
+
+## Styling Interactive Elements
+
+Provide visual feedback to the user. Use CSS pseudo-classes like `:hover`, `:active`, and `:focus` to change styles when users interact with elements (buttons, links, etc.).
+
+**Example (Styling a Button):**
+
+```css
+/* styles.css */
+.action-button {
+  padding: 8px 15px;
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /* Indicate it's clickable */
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth transitions */
+}
+
+.action-button:hover {
+  background-color: darkblue; /* Darker blue on hover */
+}
+
+.action-button:active {
+  background-color: navy; /* Even darker when actively clicked */
+  transform: scale(0.98); /* Slightly shrink when clicked */
+}
+
+.action-button:focus {
+   outline: 2px solid dodgerblue; /* Accessibility: show focus */
+   outline-offset: 2px;
+}
+```
+
+```html
+<!-- index.html -->
+<button id="myBtn" class="action-button">Do Something</button>
+```
+
+This CSS-only approach is generally preferred for simple state changes over using JavaScript/jQuery's `.css()` method for hover/active states, as it keeps styling concerns within CSS.
+
+## Incorporating GeoJSON Data (Recap)
+
+If using GeoJSON data with Leaflet's `L.geoJSON()` method:
+
+1.  **Prepare the File:** Ensure your data is in a `.js` file, assigned to a `const` variable (e.g., `const myGeoData = { ... };`).
+2.  **Link in HTML:** Include the `<script src="your_data.js"></script>` tag in your HTML file's `<head>` or `<body>` *before* the script that uses the data (`script.js` or `map.js`).
+3.  **Use in Leaflet:** Access the variable directly in your Leaflet code: `L.geoJSON(myGeoData, { /* options */ }).addTo(map);`.
+
+This avoids potential issues with asynchronous loading or parsing errors that can occur when trying to load raw `.json` files directly in simpler setups.
+
+## General Advice for Development
+
+*   **Commit Frequently:** Use Git often! Commit small, logical changes with clear messages. Push regularly to GitHub for backup.
+*   **Test Often:** Reload your page frequently after making changes to catch errors early. Use the browser console (`Ctrl+Shift+I` or `Cmd+Option+I`) constantly to check for errors and log values.
+*   **Break Down Problems:** If something isn't working, isolate the issue. Comment out code, test small parts, use `console.log`.
+*   **Read Documentation:** When using a specific function or method (jQuery, Leaflet, JavaScript), look up its documentation to confirm parameters, options, and return values.
+*   **Organize Your Code:** Keep HTML structure clean, group related CSS rules, and use functions in JavaScript to organize logic. Add comments to explain complex parts.
+*   **Ask for Help:** Don't stay stuck for too long. Ask the instructor, classmates, or search online communities (Stack Overflow, Reddit). Clearly describe the problem, what you've tried, and provide relevant code snippets.
+*   **Keep Scope Realistic:** Focus on fulfilling the core requirements first. Add extra features only if time permits. A finished, simple project is better than an unfinished, complex one.
+
+## Challenge: Keep Building!
+
+Continue developing your final project, applying these strategies. Focus on:
+
+1.  Structuring your HTML based on your wireframe.
+2.  Applying CSS for layout (consider Flexbox/Grid) and basic styling.
+3.  Loading your JSON data in your JavaScript file.
+4.  Displaying some initial data on the page or map.
+5.  Implementing one core interactive feature (e.g., a button click that does something, displaying info from a map click).
+6.  Committing your progress to GitHub regularly.
+
+---
+
+# Going Live: Deploying with GitHub Pages
+
+You've built your project, tested it locally, and pushed everything to your GitHub repository. The final step is to make it accessible to anyone on the web. **GitHub Pages** is a free and straightforward way to host static websites (like the ones we've built using HTML, CSS, and client-side JavaScript) directly from your repository.
+
+## Deployment Steps
+
+Follow these steps carefully:
+
+1.  **Final Push:** Ensure all your latest code (HTML, CSS, JS, JSON/data files, images) is committed and pushed to your main branch (`main` or `master`) on GitHub. Your local project folder and the GitHub repository should be in sync.
+
+2.  **Go to Repository Settings:** Open your web browser and navigate to your project's repository page on GitHub.com.
+
+3.  **Access Pages Settings:**
+    *   Click on the **"Settings"** tab (usually near the top right of the repository navigation).
+    *   In the left sidebar menu, click on **"Pages"** (under the "Code and automation" section).
+
+4.  **Configure Source Branch:**
+    *   Under the "Build and deployment" section, find the "Source" setting. It might say "Deploy from a branch".
+    *   In the "Branch" dropdown menu, select your main branch (usually `main` or sometimes `master`).
+    *   Leave the folder dropdown next to it as `/ (root)`.
+    *   Click **"Save"**.
+
+    ![GitHub Pages Branch Selection](https://docs.github.com/assets/cb-113970/images/help/pages/branch-publishing-selection.png) *(Conceptual image from GitHub Docs)*
+
+5.  **Wait and Visit:**
+    *   GitHub Pages will now start building and deploying your site. This might take a minute or two (sometimes longer on the very first deployment).
+    *   Refresh the "Pages" settings page after a minute. You should see a green banner appear at the top saying **"Your site is live at `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME/`"**.
+    *   If you don't see the green banner immediately, wait a bit longer and refresh again. Check the "Actions" tab in your repository for build progress if needed.
+    *   **Important:** The URL will include your GitHub username and the repository name.
+
+6.  **Visit Your Live Site:** Click the URL provided in the green banner. Your project should now be publicly accessible on the web!
+
+    *   **Troubleshooting:**
+        *   *404 Error?* Double-check that your main HTML file is named exactly `index.html` (all lowercase) and is in the *root* directory of your repository. Wait a few more minutes for deployment. Clear your browser cache.
+        *   *Styles/Scripts Not Loading?* Ensure all your file paths in HTML (`href` for CSS, `src` for JS/images) are **relative** (e.g., `styles.css`, `images/logo.png`, `script.js`) and don't start with a `/` unless intended. Check the browser's developer console (Network tab) for loading errors. GitHub Pages URLs are case-sensitive, so make sure filenames in your code match the actual filenames exactly.
+        *   *Data Not Loading?* Ensure your JSON/JS data file path is correct in your script and that the file was pushed to GitHub.
+
+## Sharing Your Work
+
+You can now share the `https://YOUR_USERNAME.github.io/YOUR_REPOSITORY_NAME/` URL with anyone to show them your project.
+
+---
+
+## Final Course Thoughts
+
+**Congratulations!** You've journeyed from the basics of JavaScript syntax to building and deploying interactive, data-driven web pages with maps. This involved understanding:
+
+*   Core programming concepts (variables, types, operators, loops, conditionals, functions, scope).
+*   The fundamentals of web technologies (HTML, CSS, JavaScript, the DOM).
+*   Working with data formats (Arrays, Objects, JSON, GeoJSON).
+*   Utilizing powerful libraries (jQuery, Leaflet).
+*   Essential developer tools (Browser Console, VSCode, Git, GitHub).
+*   Debugging strategies and how to read documentation.
+
+This course aimed to give you a practical foundation. The world of web development and data visualization is vast, but you now have the essential skills and, more importantly, the ability to *learn how to learn* more. You can read documentation, search effectively, debug problems, and build upon this foundation.
+
+Whether you use these skills for research visualization, digital humanities projects, building personal websites, or simply as a stepping stone to further learning, I hope this course has been valuable and empowering. Keep experimenting, keep building, and don't be afraid to tackle new challenges!
+
+**Good luck with your future coding endeavors!**
