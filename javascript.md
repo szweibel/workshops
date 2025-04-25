@@ -6,6 +6,17 @@ readings:
     - "Mozilla Developer Network (MDN) JavaScript Guide: [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)"
     - "Eloquent JavaScript (Online Book): [Eloquent JavaScript](https://eloquentjavascript.net/) - A more in-depth, free resource."
     - "JavaScript Info: [The Modern JavaScript Tutorial](https://javascript.info/) - Comprehensive tutorial site."
+
+long_pages: true
+
+authors:
+    - 'Zach Lloyd'
+    - 'Stephen Zweibel'
+
+editors:
+    - 'Zach Lloyd'
+    - 'Stephen Zweibel'
+
 goals:
     - description: 'In this workshop, you will learn to:'
     - Understand core programming concepts: variables, data types, operators, control flow (conditionals, loops), functions, and scope.
