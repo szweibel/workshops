@@ -1,0 +1,71 @@
+tracks:
+  - name: "Fundamentals"
+    short_name: "fundamentals"
+    description: "For beginners, this track covers essential digital skills and concepts in the humanities, including data literacy, basic programming, and digital research methods."
+    workshops:
+      - "command-line"
+      - "git"
+      - "sql"
+
+  - name: "Python"
+    short_name: "python"
+    description: "This track focuses on Python programming for humanities research, covering data manipulation, analysis, and visualization with libraries like Pandas and Matplotlib."
+    workshops:
+      - "python"
+      - "pandas"
+      - "creating-simulations"
+      - "text-analysis"
+
+  - name: "Web Development"
+    short_name: "web-dev"
+    description: "Learn the basics of HTML, CSS, and JavaScript for building and styling web pages, with an emphasis on digital storytelling."
+    workshops:
+      - "html-css"
+      - "javascript"
+
+  - name: "Data Visualization"
+    short_name: "data-vis"
+    description: "This track teaches data visualization principles, guiding learners in creating visual representations of data using tools like Python and JavaScript."
+    workshops:
+      - "data-literacies"
+      - "mapping-javascript"
+
+  - name: "Simulation and Modeling"
+    short_name: "simulation"
+    description: "Explore simulation and modeling basics for humanities research, with workshops on developing simple simulations using Python."
+    workshops:
+      - "creating-simulations"
+
+  - name: "Advanced Data Analysis"
+    short_name: "adv-data-analysis"
+    description: "For those with a strong Python foundation, this track delves into text analysis, machine learning, and statistical methods."
+    workshops:
+      - "text-analysis"
+
+  - name: "Mapping"
+    short_name: "mapping"
+    description: "This track introduces mapping techniques and tools such as GIS and digital mapping libraries to visualize geographical data for humanities research."
+    workshops:
+      - "mapping"
+      - "mapping-javascript"
+
+  - name: "JavaScript"
+    short_name: "javascript"
+    description: "Learn JavaScript fundamentals and its use in creating dynamic and interactive web applications, with a focus on projects relevant to digital humanities."
+    workshops:
+      - "javascript"
+      - "mapping-javascript"
+
+  - name: "R"
+    short_name: "r"
+    description: "This track covers data analysis and visualization using R, focusing on techniques for processing, analyzing, and visualizing humanities-related datasets."
+    workshops:
+      - "intro_to_R"
+
+  - name: "Data"
+    short_name: "data"
+    description: "The Data track emphasizes data handling skills, including data collection, cleaning, and management techniques essential for digital humanities projects."
+    workshops:
+      - "data-literacies"
+      - "pandas"
+      - "sql"

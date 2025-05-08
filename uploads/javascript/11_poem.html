@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walt Whitman's Broadway</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Your specific CSS -->
+    <link rel="stylesheet" href="11_poem.css">
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1><em>Broadway</em> by Walt Whitman</h1>
+
+      <div id="intro">
+        <p>Click on highlighted words or phrases below to learn more about the literary devices used in the poem.</p>
+         <p><a href="11_index.html">« Back to Main Page</a></p>
+      </div>
+
+      <div id="poem"><p><em>Loading poem...</em></p></div>
+      <hr>
+      <div id="info"><p>Click on a highlighted term above.</p></div>
+      <hr>
+
+      <!-- Map Section -->
+      <h2>Map Context: New York City</h2>
+      <div id="map"></div> <!-- Div for the Leaflet map -->
+      <!-- End Map Section -->
+
+    </div> <!-- End container -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="11_poem.js"></script> <!-- Poem interactivity script -->
+    <script src="11_map.js"></script> <!-- NEW Map script -->
+  </body>
+</html>

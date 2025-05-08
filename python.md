@@ -1,8 +1,9 @@
 ---
 title: Introduction to Python
-excerpt: testing
+cover title: Python
 description: Python is a general-purpose programming language suitable for a wide variety of tasks in the digital humanities. Learning Python fundamentals is a gateway to analyzing data, creating visualizations, composing interactive websites, scraping the internet, and engaging in the distant reading of texts. This workshop first introduces participants to core programming concepts such as data types, variables, and functions. Participants will then learn about basic control flow by writing small programs with loops and conditional statements. They will also learn to problem solve, and practice searching for answers and debugging scripts. The workshop wraps up by exposing participants to intermediate tools for further exploration.
 programming_language: python
+
 learning objectives:
     - Understand what Python is and, in general terms, what it can do.
     - Run Python programs, both by interacting directly with the interpreter and by preparing and running scripts.
@@ -10,10 +11,6 @@ learning objectives:
     - Become familiar with core programming concepts, including variables, loops, and conditionals.
     - Engage with error output and use the internet and documentation to independently research language features.
     - Learn how to find and import code from external sources to solve more complex problems.
-    
-facilitators: 
-    name: 'Stephen Zweibel'
-    description: 'Here is a short bio.'
 
 estimated time:
     - 3 - 4 hours
@@ -25,6 +22,10 @@ prerequisites:
     - data ethics: 
         description: Data Ethics (Recommended) This workshop will give you a basis for thinking through the ethical considerations of your programming projects.
         recommended: true
+
+instructors: 
+    - 'Stephen Zweibel'
+    - 'Leanne Fan'
 
 authors:
     - 'Kalle Westerling'
@@ -45,7 +46,7 @@ readings:
 
 ethical considerations:
     - Python works by reducing data to portable units and presenting them in a way that prioritizes readability. These units are known as "data types" and include strings (words/letters), integers (numbers), booleans (true or false statements), and lists (groups of strings). The python grammar, which dictates how python statements ought to be ordered, values simplicity, efficiency, and concision. You can read more about Python values at [the Zen of Python](https://www.python.org/dev/peps/pep-0020/).
-    - As we learn about the Python data types and grammar, keep in mind that working within any digital format requires making seemingly neutral choices that carry ethical consequences. When using python, be aware of the ways the ways that data is transformed into computable form. What choices are you making about your data? What is being included, and what is left out? What are reductions and assumptions necessary to encode your data? If you are more interested in thinking further about data types and our choices in relation to data, you should have a look at our [Data Literacies workshop](https://www.github.com/DHRI-Curriculum/data-literacies).
+    - As we learn about the Python data types and grammar, keep in mind that working within any digital format requires making seemingly neutral choices that carry ethical consequences. When using Python, be aware of the ways the ways that data is transformed into computable form. What choices are you making about your data? What is being included, and what is left out? What are reductions and assumptions necessary to encode your data? If you are more interested in thinking further about data types and our choices in relation to data, you should have a look at our [Data Literacies workshop](https://www.github.com/DHRI-Curriculum/data-literacies).
 
 projects:
     - The NEH Impact Index:
@@ -148,7 +149,14 @@ What are the characteristics of the REPL? Select all that apply.
 
 Do you remember the glossary terms from this section?
 
-- [REPL](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/REPL.md)
+<Keywords>
+- REPL
+REPL stands for Read, Eval, Print, Loop. It is also known as the Python Interpreter or Interactive Shell, and it refers to a Python environment that processes your code as soon as you press enter. First, it **Reads** your code, then **Evaluates** what you wrote, then **Prints** the result (if there is a result), and finally **Loops** back to the initial prompt, allowing the user to start the loop again. 
+
+The REPL is useful for testing code on the fly, seeing if it works or what will happen. Since the REPL doesn't save your data after each session, though, you need a text editor to write and save longer scripts. Think of the REPL as a sandbox or playpen for exploring Python commands and expressions in the moment. 
+
+To use the REPL, just type `python` into your interpreter. You'll know you're there when you see the three `>>>`. To get out of the REPL, press `control-d` or type `quit()`.
+</Keywords>
 
 # Types
 
@@ -205,6 +213,17 @@ Using the Python REPL, find __1)__ the type of `("12")`, and __2)__ the type of 
 
 These are all valid ways of thinking about functions. We'll be learning more about functions in later sections.
 
+<Keywords>
+- REPL
+The REPL is an interactive environment for writing and running Python code. It stands for Read-Evaluate-Print Loop.
+
+- Function
+Functions are a way of doing something in Python. They can be used to save code for reuse, or to take an input, transform that input, and return an output.
+
+- Method
+Methods are functions that are attached to a specific object. For example, the string method `upper()` is attached to the string `"hello"`, and can be called by writing `"hello".upper()`.
+</Keywords>
+
 ## Challenge
 
 Open your web browser, and google the phrase "python function." Skim through the first few results. What words do you recognize, and which ones look unfamiliar? What do you think the unfamiliar ones mean? Try to rephrase some of this new language, and guess what they mean in your own words.
@@ -212,7 +231,7 @@ Open your web browser, and google the phrase "python function." Skim through the
 ### Solution
 
 <Secret>
-When you google "python function," you may see some phrases that look unfamiliar, like "return value" or "pass parameters." These are advanced terms for inputting and outputting data from a function. It's important to become familiar with the Python's terminology about functions, as it will be helpful later on when you start working with these components.
+When you google "python function," you may see some phrases that look unfamiliar, like "return value" or "pass parameters." These are advanced terms for inputting and outputting data from a function. It's important to become familiar with Python's terminology about functions, as it will be helpful later on when you start working with these components.
 </Secret>
 
 ## Evaluation
@@ -281,10 +300,13 @@ Only one way to find out. Try giving weird names to variables and see if you can
 ### Solution
 
 <Secret>
-There are a few rules regarding the way that you write the variable statement. This is because Python reads everything left to right, and needs things to be in a certain order.
-First, you cannot use any numbers or special characters to start a variable name. So 1_book, 1book, or any variable that contains special characters @, #, $, $, etc, wouldn't be acceptable in Python. You must start the variable with a letter and avoid using special characters.
-You can incorporate numbers after you've started with a letter. So book_1 or b1 is acceptable, though you cannot use special characters at any point in the variable name.
-Second, you might also notice that variable syntax requires you to write the variable name first, followed by an equal sign =, and then the value, or data. You cannot start the variable statement with the data value, because Python always recognizes the first thing written as the thing to be assigned. The thing that comes after the = is the data that becomes attached to the preceding variable.
+When creating variable statements in Python, you have to follow specific rules. Python processes code from left to right, and the order of elements is important.
+
+- Avoid starting a variable name with numbers or special characters. For instance, names like 1_book, 1book, or those with special characters like @, #, $, etc., are not permitted in Python. Always initiate a variable with a letter and refrain from using special characters.
+
+- After starting with a letter, you can include numbers in the variable name, like book_1 or b1. However, the use of special characters at any point in the variable name is not allowed.
+
+- Remember that the syntax for a variable mandates writing the variable name first, followed by an equal sign (=), and then the value or data. Starting the variable statement with the data value is not allowed. Python interprets the first item written as the one to be assigned, and the data after the equal sign is what becomes attached to the preceding variable.
 </Secret>
 
 ## Evaluation
@@ -310,9 +332,15 @@ So far, you've interacted with Python one line at a time in the REPL. This is wh
 
 For the rest of this session, we're going to expand beyond the REPL to write and execute longer programs. To do this, we will begin to work with a code editor, where we write out lengthier Python scripts.
 
+## Copying and Pasting Code
+
+You may be tempted to copy and paste code from this workshop into your code editor. It's important to remember that you will learn more by typing out the code yourself. Typing out the code will help you remember it better, and it will help you learn the syntax of Python. There is a kind of muscle memory that comes with typing out code, and it's important to develop that muscle memory as you learn to program.
+
+In the case of large blocks of code, you may copy and paste, but make sure you understand what the code is doing before you do so.
+
 ## Your First Script
 
-To open the code editor, click the RUN button below. Then, type the following line into the code editor and click the RUN button in the slide-out panel:
+To open the code editor, click the Open Editor button below. Then, type the following line into the code editor and click the RUN button in the slide-out panel:
 
 ```python
 print("Hello World!")
@@ -324,36 +352,6 @@ print("Hello World!")
 You should see the text `Hello World!` appear in the output below the code editor in the shell.
 
 Congratulations! You've written your first script. That's a big deal!
-
-## Running A Script Locally with the Terminal and a Text Editor
-
-While we have provided you with a code editor to work with here in the browser, when programming your own projects you will likely be working with a text editor and the terminal installed locally on your machine. First, let's begin with the text editor. Open your text editor of choice (such as Visual Studio Code) and create a new file with this line:
-
-```python
-print("Hello world!")
-```
-
-Save it with the name `hello.py` to a known location, such as your desktop. Open your terminal and move to the desktop directory:
-
-```console
-$ cd Desktop
-```
-
-Once you're in the folder with your `hello.py` file, move to the terminal. Do *not* enter the Python Interactive Mode (the REPL), which is unnecessary to run python scripts. Instead, lookout for the `$` symbol that lets you know you're in the terminal. (If you find yourself in the Interactive mode (`>>>`), then try exiting it with <kbd>control</kbd> + <kbd>d</kbd>. You should see the `$` symbol, letting you know you're back in the terminal. If you still do not see the `$` symbol, type `exit()` followed by <kbd>enter</kbd> after the Python prompt, `>>>`.)
-
-Now that you're in the terminal, type the following, and press enter:
-
-```console
-$ python hello.py
-```
-
-You should see the text `Hello world!` appear as output in the terminal.
-
-<Info>You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.</Info>
-
-## A Note on Text
-
-Fundamentally, Python programs are just text files. You can write them in any text editor, like Visual Studio Code or Notepad on Windows. When you pass the text file to Python, it runs the code in the file one line at a time. There's nothing special about `.py` files—they're just regular text files. This makes them work well with command line tools like Git. The tools you can learn through the DHRI Curriculum—the command line, Git, markdown, grep—are all designed to work well together, and the medium through which they all work is plain text.
 
 ## Challenge
 
@@ -398,11 +396,120 @@ Do you remember the glossary terms from this section?
 - [Scripts](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/scripts.md)
 - [print()](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/print.md)
 
+
+# Functions
+
+Broadly defined, a function is a block of reusable code that performs a specific task. Often, a function takes an input, transforms the input, and returns an output. Imagine, for instance, a [penny press](https://en.wikipedia.org/wiki/Elongated_coin) at a popular tourist attraction that accepts a penny (the input), flattens and embosses the penny (the transformation), and spits out an elongated coin with a new design, perhaps an image of the Statue of Liberty (the output)! 
+
+### Math!
+
+Or, for those of you who remember high school algebra, the function `f(x) = x + 1` means that given an input `x`, the function will return `x + 1`. For example, if I substituted `2` for `x`, my function would read `f(2) = 2 + 1`, or `f(2) = 3`. In this case, my input was `2`, the transformation was to add `1`, and the output was `3`. Pick the analogy that works best for you, but the important thing to remember is that a function takes an input, performs an operation, and returns an output.
+
+## Writing your first function
+
+Let's write a Python function that prints the output from our algebraic equation `f(x) = x + 1` before. Try writing the code below into the editor, and remember not to copy and paste.
+
+```python
+def add_one(x):
+  print(x + 1) 
+add_one(2)
+```
+
+As output, you should get the number `3`. Let's break this code down to understand how it works.
+
+First, we create a function:
+
+```python
+def add_one(x):
+  print(x + 1)
+```
+ 
+When creating a function:
+- We write `def` (short for `define`) before our chosen function name. 
+- We choose a descriptive function name following [Python naming conventions](https://www.python.org/dev/peps/pep-0008/#function-and-variable-names), such as `add_one` in this case. 
+- We always need a closed parentheses `()` after our function name, indicating the input parameters which in this case we are calling `x`. We can name this parameter whatever we want, as long as we use the same name within the body of the function. 
+- Then, we end the first line with a `:`, and indent by 2 spaces for the body of the function. In this case, we want the function to `print` the result of adding `1` to our input, or `x`. Remember, we need parentheses every time we print something!
+
+Next, if we want to __call__ our function, we will need to actually pass in an argument to see a result. To do so, we write the following line of code below our function (making sure this next line _isn't_ indented):
+
+```python
+add_one(2)
+```
+
+Here, we are calling our function and telling the computer to pass in `2` to see if we get our expected output of `3`.
+
+## Use and Reuse 
+
+To see the magic of the function in action, try adding extra lines of code that call the function with different arguments in the code editor, like the following:
+
+```python
+add_one(155)
+add_one(5)
+add_one(-1)
+```
+
+Do you notice how the function printed the sum of each of these numbers plus one? Writing this function helped us to automate this simple process of addition for each given input! Granted, creating a whole function just to add "one" to something may seem unnecessarily complicated, but once you have learned the basics of function-writing, the possibilities are powerful and limitless!
+
+### Returning
+
+Note that writing a function this way only prints the result, but does not actually `return` it. Read more about the difference between `print` and `return` [here](https://pythonprinciples.com/blog/print-vs-return/). If we wanted our function to actually perform the operation AND print it, we could revise our code as follows:
+
+```python
+def add_one(x):
+  return x + 1
+
+print(add_one(2))
+```
+
+## Writing your second function
+
+Our functions do not have to be "mathematical" in nature. Let's say that I wanted to say a friendly hello, but didn't want to type out a long sentence every time I wanted to do so. We could automate this process with a function. In the code editor, write the following lines:
+
+```python
+def greet():
+    print("Hello! How are you today?")  
+greet()
+```
+
+First we define our `greet()` function, and add a line to print to the screen. Lastly, we call the function so it will run. You might have noticed that this time, we didn't pass in an argument! Note that a function can take zero inputs (or arguments), or it can take several arguments. There is a lot of flexibility involved in writing your own functions, which you can craft carefully to do exactly what you want them to! Read more about some of the many things you can do with functions on the online web tutorial [W3Schools](https://www.w3schools.com/python/python_functions.asp).
+
+## Challenge
+
+How could we change our greeting function to say hello to a specific person? Hint: your print statement will need to use string interpolation. We did this in the "Variables" section when we assigned y to "hello" `y = "hello"`, and then added `y + " and goodbye"`, which yielded the result `"hello and goodbye"`.
+
+<CodeEditor></CodeEditor>
+
+### Solution
+<Secret>
+<CodeEditor>
+def greet(person):
+  print("Hello " + person + "! How are you today?")
+greet("Sarah")
+</CodeEditor>
+</Secret>
+As you can see, the result of calling this function prints `"Hello Sarah! How are you today?"`
+
+## Evaluation
+
+Which of the following are __not__ true about a function?:
+
+<Quiz>
+- A function can be reused
+- A function can take any number of arguments (including no arguments)
+- A function needs to be called in order to run
+- A function can only perform mathematical operations*
+</Quiz>
+
+### Keywords
+- [argument](https://www.w3schools.com/python/python_functions.asp)
+- [parameter](https://www.w3schools.com/python/python_functions.asp) 
+- [function](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/function.md)
+
 # Errors in Python
 
-Our usual response when seeing an error on a computer screen is a stress response. Our heart rate elevates and, if we cannot do what we were asking the computer to do, our frustration mounts. This is because many errors when interacting with programs are not useful or informative, and because we often have no capability to fix the program in front of us.
+Our usual response when seeing an error on a computer screen is a stress response. Our heart rate elevates and our frustration mounts. This is because many error messages are not useful or informative, and because we often have no capability to fix the program in front of us.
 
-In Python, errors are our friends. This might be hard to accept initially, but the errors you see when running Python scripts generally do a good job of pointing you to what's going wrong in your program. When you see an error in Python, therefore, try not to fall into the stress response you may be used to when interacting with your computer normally.
+In Python specifically, and programming in general, errors are our friends. This might be hard to accept initially, but the errors you see when running Python scripts generally do a good job of pointing you to what's going wrong in your program. When you see an error in Python, therefore, rejoice! Errors are a sign that you are learning.
 
 ## Two Kinds of Errors
 
@@ -416,11 +523,11 @@ As an example, type the following in the Python REPL below:
 
 <PythonREPL/>
 
-You should receive an error:  `SyntaxError: EOL while scanning string literal`, which points out that our line has faulty syntax. Note the caret (`^`) underneath the mismatched quote, helpfully pointing out where the error lies. Similarly, if this error happened when running a script, Python would tell us the filename and the line number for the line on which the error occurs.
+You should receive an error:  `SyntaxError: unterminated string literal`, which points out that our line has faulty syntax. Note the caret (`^`) underneath the mismatched quote, helpfully pointing out where the error lies. Similarly, if this error happened when running a script, Python would tell us the filename and the line number for the line on which the error occurs.
 
 **Traceback errors**: These errors occur during the execution of a Python program when the program finds itself in an untenable state and must stop. Traceback errors are often logical inconsistencies in a program that is valid Python code. A common traceback error is referring to a variable that hasn't been defined, as below.
 
-As an example, type the following in the Python REPL below:
+As an example, type the following in the Python REPL:
 
 `print(not_a_variable)`
 
@@ -452,7 +559,6 @@ In the Python REPL below, try to create as many errors as you can in the next fe
 
 ### Solution
 
-TODO: possibly fix up solutions (in terms of display)
 Some examples of **syntax errors** include...
 
 - Starting the variable name with a special character:
@@ -536,121 +642,15 @@ Do you remember the glossary terms from this section?
 - [Syntax Errors](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/syntax_error.md)
 - [Traceback Errors](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/traceback_error.md)
 
-# Functions
-
-Broadly defined, a function is a block of reusable code that performs a specific task. Often, a function takes an input, transforms the input, and returns an output. Imagine, for instance, a [penny press](https://en.wikipedia.org/wiki/Elongated_coin) at a popular tourist attraction that accepts a penny (the input), flattens and embosses the penny (the transformation), and spits out an elongated coin with a new design, perhaps an image of the Statue of Liberty (the output)! Or, for those of you who remember high school algebra, the function `f(x) = x + 1` means that given an input `x`, the function will return `x + 1`. For example, if I substituted `2` for `x`, my function would read `f(2) = 2 + 1`, or `f(2) = 3`. In this case, my input was `2`, the transformation was to add `1`, and the output was `3`. These are the basic concepts that make up a function in Python as well! 
-
-## Writing your first function
-
-Let's write a Python function that prints the output from our algebraic equation `f(x) = x + 1` before. Try running the code in the editor below.
-
-<CodeEditor>
-def add_one(x):
-  print(x + 1) 
-add_one(2)
-</CodeEditor>
-
-As output, you should get the number `3`. Let's break this code down to understand how it works.
-
-First, we create a function:
-
-```python
-def add_one(x):
-  print(x + 1)
-```
- 
-When creating a function, we begin by writing `def` before our chosen function name. The function name is typically descriptive in nature. We named the above function `add_one` following [Python naming conventions](https://www.python.org/dev/peps/pep-0008/#function-and-variable-names), as the function will be ADDING 1 to our inputted integer. We always need a closed parentheses `()` after our function name, which in this case, takes one argument (or input), which we will temporarily call `x` (we can name this parameter whatever we want, as long as we use the same name within the body of the function). Then, we end the first line with a `:`, return, and indent by 2 spaces to write code describing what this function should "do." In this case, we want the function to `print` the result of adding `1` to our input, or `x`. Remember, we need parentheses every time we print something!
-
-Next, if we want to call our function, we will need to actually pass in an argument to see a result. To do so, we write the following line of code below our function (making sure this next line _isn't_ indented):
-
-```python
-add_one(2)
-```
-
-Here, we are telling the computer to pass in `2` to see if we get our expected output of `3`.
-
-### Optional 
-
-To see the magic of the function in action, try adding extra lines of code that call the function with different arguments in the code editor, like the following:
-
-```python
-add_one(155)
-add_one(5)
-add_one(-1)
-```
-
-<CodeEditor>
-def add_one(x):
-  print(x + 1) 
-</CodeEditor>
-
-Do you notice how the function printed the sum of each of these numbers plus one? Writing this function helped us to automate this simple process of addition for each given input! Granted, creating a whole function just to add "one" to something may seem unnecessarily complicated, but once you have learned the basics of function-writing, the possibilities are powerful and limitless!
-
-### Advanced
-Note that writing a function this way only prints the result, but does not actually `return` it. Read more about the difference between `print` and `return` [here](https://pythonprinciples.com/blog/print-vs-return/). If we wanted our function to actually perform the operation AND print it, we could revise our code as follows:
-
-```python
-def add_one(x):
-  return x + 1
-
-print(add_one(2))
-```
-
-## Writing your second function
-
-Our functions do not have to be "mathematical" in nature. Let's say that I wanted to say a friendly hello, but didn't want to type out a long sentence every time I wanted to do so. We could automate this process with a function. In the code editor below, write the following lines:
-
-```python
-def greet():
-    print("Hello! How are you today?")`  
-greet()
-```
-
-<CodeEditor></CodeEditor>
-
-First we define our `greet()` function, and add a line to print to the screen. Lastly, we call the function so it will run. You might have noticed that this time, we didn't pass in an argument! Note that a function doesn't have to take an input (or argument), or it can take several arguments! There is a lot of flexibility involved in writing your own functions, which you can craft carefully to do exactly what you want them to! Read more about some of the many things you can do with functions on the online web tutorial [W3Schools](https://www.w3schools.com/python/python_functions.asp).
-
-## Challenge
-
-How could we change our greeting function to say hello to a specific person? Hint: your print statement will need to use string interpolation. We did this in the "Variables" section when we assigned y to "hello" `y = "hello"`, and then added `y + " and goodbye"`, which yielded the result `"hello and goodbye"`.
-
-<CodeEditor></CodeEditor>
-
-### Solution
-<Secret>
-<CodeEditor>
-def greet(person):
-  print("Hello " + person + "! How are you today?")
-greet("Sarah")
-</CodeEditor>
-</Secret>
-As you can see, the result of calling this function prints `"Hello Sarah! How are you today?"`
-
-## Evaluation
-
-Which of the following are not true about a function?:
-
-<Quiz>
-- A function can be reused
-- A function can take any number of arguments (including no arguments)
-- A function needs to be called in order to run
-- A function can only perform mathematical operations*
-</Quiz>
-
-### Keywords
-- [argument](https://www.w3schools.com/python/python_functions.asp)
-- [parameter](https://www.w3schools.com/python/python_functions.asp) 
-- [function](https://github.com/DHRI-Curriculum/glossary/blob/v2.0/terms/function.md)
-
 # Lists
 
 Remember lists? They look like this:
 
 ```python
-books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
+books = [1, '57', True]
 ```
 
-Let's create a list together and print it out. In the code editor below, write the following lines:
+Let's create a list together and print it out. In the code editor, write the following lines:
 
 ```python
 books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
@@ -686,19 +686,15 @@ Notice that when you run the code above, you don't see the `books` list printed 
 
 ## List Indexing
 
-A useful property of a list is the list index. This allows you to pick out an item from within the list by a number starting from zero:
+A useful property of a list is the list **index**. This allows you to pick out an item from within the list by a number starting from zero:
 
 For instance, add the following lines of code to the program below:
 
 ```python
+books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
 print(books[0]) # Gender Trouble
 print(books[1]) # Cruising Utopia
 ```
-
-<CodeEditor>
-books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
-print(books)
-</CodeEditor>
 
 Indexing lets us get at individual items from a particular list. Note that the first item in the list is `item[0]`. The second item is `item[1]`. That's because counting in Python, and in almost all programming languages, starts from `0`.
 
@@ -717,12 +713,9 @@ There are many things you can do with list indexing, like _slicing_. Slicing con
 The slice syntax consists of square brackets, start point and end point, and a colon to indicate the gap in between. This should print out the first two items of your list.  Go ahead and add the following line to the code below to see slicing in action:
 
 ```python
+books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
 print(books[0:2])
 ```
-
-<CodeEditor>
-books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
-</CodeEditor>
 
 Note a couple of things. First, the start point is *inclusive*, meaning that Python will include the `[0]` item in your range, and the end point is _exclusive_, so Python won't print the `[2]` item. Instead, it will print everything _up until_ that `[2]` item.
 
@@ -744,9 +737,7 @@ With a list that contains three items total, list slicing might not seem very im
 
 ## Challenge
 
-In the REPL below, create a new list of books with at least 5 books in your list. Make sure the total number of books in the list is an **odd** number. How do you get python to print out the book in the middle of the list? What about the three books in the middle? Remember that the first value in a slice is _inclusive_, and the final value is _exclusive_.
-
-<PythonREPL/>
+In the editor, make a list of books with at least 5 books. Make sure the total number of books in the list is an **odd** number. How do you get python to print out the book in the middle of the list? What about the three books in the middle? Remember that the first value in a slice is _inclusive_, and the final value is _exclusive_.
 
 ### Solution
 
@@ -783,16 +774,13 @@ Do you remember the glossary terms from this section?
 
 What if we want to print out each item in the list separately? For that, we'll need something called a _loop_.
 
-Add the following lines of code to the editor below:
+Add the following lines of code to the editor:
 
 ```python
+books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
 for book in books:
     print("My favorite book is " + book)
 ```
-
-<CodeEditor>
-books = ['Gender Trouble', 'Cruising Utopia', 'Living a Feminist Life']
-</CodeEditor>
 
 What's happening here? This kind of loop is called a "for loop", and tells Python: "for each item in the list, do something." Let's break it down:
 
@@ -803,15 +791,13 @@ for <variable name> in <list name>:
 
 Indented code like this is known as a "code block." Python will run the `<do something>` code in the code block once for each item in the list. You can also refer to `<variable name>` in the `<do something>` block.
 
-You can also loop through items within a string. Type the following code into the editor below:
+You can also loop through items within a string. Type the following code into the editor to see the result:
 
 ```python
 for letter in "hello":
     print(letter)
 ```
 
-<CodeEditor></CodeEditor>
- 
 The result should print out each letter of the string `hello`, one by one.
 
 ## A Note on Variable Names
@@ -835,9 +821,9 @@ When variable names accurately reflect what they represent, and are therefore me
 
 1. Here's a list of numbers:
 
-<CodeEditor>
+```python
 prime_numbers = [2, 3, 5, 7, 11]
-</CodeEditor>
+```
 
 Write some code to print out the square of each of these numbers. Remember that the square of a number is that number times itself. The solution is below, but you're not allowed to look at it until you've tried to solve it yourself for 3.5 minutes. (Seriously! That's 210 seconds.)
 
@@ -884,7 +870,7 @@ What are different ways for describing what a "for loop" can do?
 - for each item in a list, multiply it against itself.*
 - print the contents of a list.*
 - add a new item to a list.
-- loop through characters in a string.
+- loop through characters in a string.*
 </Quiz>
 
 ### Keywords
@@ -896,7 +882,7 @@ Do you remember the glossary terms from this section?
 
 # Conditionals
 
-Conditionals allow programs to change their behavior based on whether some statement is true or false. Let's try this out by writing a script that will give different outputs (consisting of book titles) based on the specified field of study. Type the following into the code editor below:
+Conditionals allow programs to change their behavior based on whether some statement is true or false. Let's try this out by writing a script that will give different outputs (book titles) based on a specified field of study. Type the following into the code editor:
 
 ```python
 field = "Media Studies"
@@ -907,19 +893,34 @@ else:
     print("I don't know what field you're talking about! I'm just a little program...")
 ```
 
-<CodeEditor></CodeEditor>
+First, we set a variable field to the string "Media Studies", representing the chosen field of study.
 
-In our first line, we set a variable `field` to the string `"Media Studies"`, representing our chosen field of study. The `if` statement checks whether the field is set to the string "Media Studies". If it is, the code in the block beneath is executed, so the string `"Grammophone, Film, Typewriter"` will be printed.
+Let's break down the `if` statement:
 
-It's important to note at this point the use of the double equals sign `==` in `if` statements. The double equals is an _equality_ operator, and it checks to see if the two values on either side are equivalent. Contrast this with the single equals that you've already seen, `=`, which is an _assignment_ operator, that assigns a value to a variable. In the line `field = "Media Studies"`, you are using the assignment operator `=` to set the variable's value to "Media Studies", (a string) while in the `if` statement, you're using the equality operator `==` to check if the field is equivalent to "Media Studies".
+- Check to see if the variable `field` is equivalent to the string "Media Studies".
+- If true, execute the code block and print the string "Grammophone, Film, Typewriter".
+- If false, print a default message.
+
+### Equality
+
+- It's important to note at this point the use of the double equals sign `==` in `if` statements. The double equals is an _equality_ operator, and it checks to see if the two values on either side are equivalent. 
+- Contrast this with the single equals that you've already seen, `=`, which is an _assignment_ operator, that assigns a value to a variable. 
+
+In the line `field = "Media Studies"`, you are using the assignment operator `=` to set the variable's value to "Media Studies", (a string) while in the `if` statement, you're using the equality operator `==` to check if the field is equivalent to "Media Studies".
+
+### Else
 
 You'll also notice the inclusion of a new line, the `else` statement. The `else` statement handles any inputs that aren't "Media Studies", and the program merely prints out that it doesn't know what you should bring. You can think of `else` like a fail-safe that catches variables not directly accounted for.
 
 Try this script out both with the variable set to "Media studies" and the variable set to some other value, representing another field of study.
 
-What if we want our program to handle more fields of study, giving different messages for each one? Other cases after the first `if` statement are handled with `elif`, which is a shortened version of `else if`. Add the following code into the editor below:
+### Elif
+
+What if we want our program to handle more fields of study, giving different messages for each one? Other cases after the first `if` statement are handled with `elif`, which is a shortened version of `else if`. Add the following code into the editor:
 
 ```python
+field = "Media Studies"
+
 if field == "Media Studies":
     print("Grammophone, Film, Typewriter")
 elif field == "Critical University Studies":
@@ -927,12 +928,8 @@ elif field == "Critical University Studies":
 elif field == "Textual Scholarship":
     print("Radiant Textuality")
 else:
-    print("I don't know what field you're talking about! I'm just a little program...")\
+    print("I don't know what field you're talking about! I'm just a little program...")
 ```
-
-<CodeEditor>
-field = "Media Studies"
-</CodeEditor>
 
 Now, if you were to change the `field` variable, you could run other blocks of code. You can add as many `elif` statements as you need, meaning that conditionals in Python have one `if` statement, any number of `elif` statements, and one `else` statement that catches any input not covered by `if` or `elif`. Over the next sections, we'll work on improving this little application, making it able to handle user input directly.
 
@@ -992,10 +989,6 @@ Do you remember the glossary terms from this section?
 
 # Working With Input
 
-<Info>
-If you're using your terminal and text editor to get through the workshop (instead of the built-in emulator in the browser) and are using Python 2.7, replace all `input()` functions in the code below with `raw_input()`. You can check your version by running `python --version` in the command line.
-</Info>
-
 ### Taking Input
 
 Python allows you to take input directly from the user using the `input()` function.
@@ -1014,34 +1007,24 @@ Next, write `greeting` into the REPL. You should see something like the followin
 
 ```pycon
 >>> greeting = input()
-greeting
+>>> greeting
 hey you!
 ```
 
 Python has saved your input text to the variable `greeting`. When you type in `greeting`, it will print out that input text. Pretty nifty, right?
-
-```pycon
->>> greeting = input()
-hey you!
-
->>> greeting
-'hey you!'
-```
 
 You can play around with `input()` by adding some prompt text within the parenthesis. Whatever you put inside the parenthesis, enclosed by quotes, will prompt the user to type in their text, which is then assigned to the variable set to `input()`. Sounds complicated, so give it some practice with the REPL. 
 
 For instance, if we were to type the following:
 
 ```pycon
->>> feelings = input('How are you feeling today? ')
+>>> feelings = input('How are you feeling today?')
 ```
 
-We can answer with `like a rollercoaster of emotions`. Then, when we type in our variable `feelings` and press enter, we'll get our input printed back at us. Note that there's a little space after the question mark and before the closing quotation mark, which is to improve readability.
+We can answer with `like a rollercoaster of emotions`. Then, when we type in our variable `feelings` and press enter, we'll get our input printed back at us.
 
 ```pycon
->>> feelings = input('How are you feeling today? ')
-How are you feeling today? like a rollercoaster of emotions
-
+>>> feelings = input('How are you feeling today?')
 >>> feelings
 'like a rollercoaster of emotions'
 ```
@@ -1068,7 +1051,7 @@ Now, that we understand a bit about how `input()` works, let's use it to improve
 
 <Secret>
 ```python
-field = input("Which field of study do you want to read about today? ")
+field = input("Which field of study do you want to read about today?")
 
 if field == "Media Studies":
     print("Grammophone, Film, Typewriter")
@@ -1100,15 +1083,13 @@ Do you remember the glossary terms from this section?
 
 # Doing Things to Lists
 
-Okay. Let's make our little book application a little more robust. We are going to create a list of books (remember lists?) that we can then manipulate in all sorts of ways.
+Let's make our little book application a little more robust. We are going to create a list of books (remember lists?) that we can then manipulate in all sorts of ways.
 
 First, create a new list in the code editor with at least three books that are important to your research right now. Shorten the titles to one or two words if need be. Let's call this list our `library`. Remember the proper syntax for creating a list includes square brackets with commas separating the list items. Because the items are strings, they should also be inside quotes. For instance, your code might look something like:
 
 ```python
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 ```
-
-<CodeEditor></CodeEditor>
 
 Next, let's sort our `library` in alphabetical order. There's a handy method called `sort()` for doing just this kind of thing. What's a _method_, you might ask? Well, _methods_ are very similar to _functions_, and you'll remember that functions are ways of doing things, like `print()` and `type()`. Methods are also ways of doing things, but these things are attached to what we call _objects_ in Python. Objects are part of object-oriented-programming, and that's definitely not necessary to learn right now. Suffice it to say that methods are just like functions, that is, they are ways of doing things to your data.
 
@@ -1122,8 +1103,9 @@ print(library)
 What happened here? Let's take it line by line. First, we created a list `library` with three items attached to it. Then, we applied the `sort()` method to the library list. Finally, we printed the `library`, which is now sorted in alphabetical order.
 
 You'll see that we have a couple of new things happening with symbols.
+
 - First, the period `.` which is an _operator_ in Python. The period operator is another part of object-oriented-programming, and it basically means that we are applying a task to whatever precedes the period. In this case, we are applying the `sort()` method to our `library` list. It's kind of like attaching a function to our `library`.
-- Second, we have the parenthesis `()` after `sort`. When you get more comfortable with programming, you'll often use the parentheses to include what we call _arguments_ that allows us to do more complex things to data. Let's see how an argument works with the `append()` method.
+- Second, we have the parenthesis `()` after `sort`. You'll often use the parentheses to include what we call _arguments_ that allow us to do more complex things to data. Let's see how an argument works with the `append()` method.
 
 What if we want to add items to the list? We can use the `append()` method for that. For instance, try the following:
 
@@ -1151,21 +1133,21 @@ The last item that you added to your list should be missing from the `library` w
 
 Remember the `input()` function from the last lesson? This challenge uses that function in combination with what you know about list methods to create a little library app. You will play around with the input button, asking the user what kinds of things they want to do with their library, and writing some code that does those things and prints out the results.
 
-First, create a new file called `library.py`. Save it to your current working folder.
-
-Second, create a list of `library` books, with at least three books (you can use the same ones as before).
+- Create a list of `library` books, with at least three books (you can use the same ones as before).
 
 ```python
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 ```
 
-Then, add an input statement that will save the user's response to a variable, like `response`.
+- Then, add an input statement that will save the user's response to a variable, like `response`.
 
 ```python
-response = input("What do you want to do with your books today? ")
+response = input("What do you want to do with your books today?")
 ```
 
-Now, create a conditional statement that matches the user's response to series of options for doing things to the `library` list. We'll let them sort the library (`sort()`), add new items (`append()`), and remove the last item (`pop()`). I'll do the first one, `sort()`, for you:
+- Now, create a conditional statement that matches the user's response to series of options for doing things to the `library` list. We'll let them sort the library (`sort()`), add new items (`append()`), and remove the last item (`pop()`).
+
+I'll do the first one, `sort()`, for you:
 
 <CodeEditor>
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
@@ -1179,7 +1161,7 @@ else:
 
 See how the order of statements build on each other toward the final product? First, we create a library of books. Then, we set the user's response about what to do with those books. Then, we create a conditional statement that matches the response to specific tasks. The first condition checks to see if the user wants to "sort" the books, then sorts them, then prints the final result.
 
-Next, add `pop()` and `append()` to the program. 
+Next, make your program `pop()` and `append()` in response to user input. 
 
 After adding a few more conditions, test out your code! You should have a little library app that sorts, adds, and removes books from your list.
 
@@ -1188,7 +1170,7 @@ After adding a few more conditions, test out your code! You should have a little
 <Secret>
 ```python
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
-response = input("What do you want to do with your books today? ")
+response = input("What do you want to do with your books today?")
 if response == "sort":
     library.sort()
     print(library)
@@ -1213,8 +1195,6 @@ Select the following statements that truly describe `sort()`, `append()`, and `p
 - `append()` always takes an argument.*
 - `pop()` can be applied to a string.
 </Quiz>
-
-&nbsp;
 
 __Advanced question:__ If you `sort()` the library in between adding and popping a book, you'll end up with a different list than if you didn't run `sort()` in between `append()` and `pop()`. Can you guess why?
 
@@ -1253,9 +1233,7 @@ But this is a lot of work, and it's a pretty ugly solution. If we wanted to add 
 
 Even if you're a super rad Python programmer, you're not going to remember every function name or how to do things you might not have touched in awhile. One thing programmers get very good at is googling for answers. In fact, this is arguably the most important skill in modern-day programming. So, let's use Google to find out how to convert strings to lower case.
 
-Let's try the search term [make string lowercase](http://lmgtfy.com/?q=make+string+lowercase+Python):
-
-![make string lower case Python Google search](/images/python/google_search.png)
+Let's try the search term [make string lowercase](http://lmgtfy.com/?q=make+string+lowercase+Python).
 
 While Google searches change over time, some of your results likely come from a site called Stack Overflow. This is a questions and answers site for programmers that usually has strong answers to questions about Python.
 
@@ -1265,7 +1243,7 @@ On [this _Stack Overflow_ page](https://stackoverflow.com/questions/6797984/how-
 
 ## Implementing Our Answer
 
-According to this answer, we can make a string lowercase by adding `.lower()` to the end of it, like this:
+According to one answer, we can make a string lowercase by adding `.lower()` to the end of it, like this:
 
 ```pycon
 >>> "SORT".lower()
@@ -1276,7 +1254,7 @@ Let's incorporate this transformation into our library app:
 
 <CodeEditor>
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
-response = input("What do you want to do with your books today? ")
+response = input("What do you want to do with your books today?")
 response = response.lower()
 if response == "sort":
     library.sort()
@@ -1311,19 +1289,19 @@ while condition:
 We are going to use `while` loops to get Python to repeat loops over and over again. This involves adding a new variable to use as a condition, and a `while` statement. The code should look like this, and it goes right after the `library` list and before your `input` statement.
 
 ```python
-user_exit = False
-while user_exit == False:
+keep_going = True
+while keep_going == True:
     ...
 ```
 
-Make sure that everything under `while True:` is indented (this creates a "code block," or a group of lines that will be executed together). The `while` loop will keep running until the `user_exit` condition is no longer `False`. Our plan is to make it so that when the user types `exit`, the `user_exit` condition will be `True`, and the loop will stop running.
+Make sure that everything under `while True:` is indented (this creates a "code block," or a group of lines that will be executed together). The `while` loop will keep running while the `keep_going` condition is `True`. Our plan is to make it so that when the user types `exit`, the `keep_going` condition will be `False`, and the loop will stop running.
 
 Give it a shot! Try adding the condition and `while` loop to the program below:
 
 <CodeEditor>
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
 # add a new variable condition and while loop here
-response = input("What do you want to do with your books today? ")
+response = input("What do you want to do with your books today?")
 response = response.lower()
 if response == "sort":
     library.sort()
@@ -1346,10 +1324,11 @@ Once you get the loop to work, you can add more `elif` statements to add more bo
 Here's how you would include a `while` statement in our library application:
 
 <Secret>
+<CodeEditor>
 library = ["Orlando", "Confessions of the Fox", "These Waves of Girls"]
-user_exit = False
-while user_exit == False:
-    response = input("What do you want to do with your books today? ")
+keep_going = True
+while keep_going == True:
+    response = input("What do you want to do with your books today? (sort, add, remove, exit)")
     response = response.lower()
     if response == "sort":
         library.sort()
@@ -1362,9 +1341,12 @@ while user_exit == False:
         print(library)
     elif response == "exit":
         print(library)
-        user_exit = True
+        keep_going = False
     else:
         print("I don't know what you want me to do!")
+</CodeEditor>
+
+Make sure to type "exit" to end the program and view the results of your commands.
 </Secret>
 
 ## Evaluation
@@ -1423,13 +1405,15 @@ First we need to __import__ the module.  In the code editor below, write the fol
 
 `print(random.choice(motivational_phrases))`
 
-<CodeEditor>
+```python
+import random
 motivational_phrases = [
         "Importing modules is easy!",
         "Programming! Yay!",
         "You write lists like a pro!",
     ]
-</CodeEditor>
+print(random.choice(motivational_phrases))
+```
 
 Now, each time you run the code, you should see a different motivational phrase as output. The `random.choice` function chooses a random item from a list and returns it. The `.` syntax indicates that the function is coming from the `random` library.
 
@@ -1437,11 +1421,13 @@ Now, each time you run the code, you should see a different motivational phrase 
 
 The real point of this section is to learn `import`, which is where Python really starts to get interesting. Python comes with many libraries (importable collections of code), written by others that can be pulled into your program, allowing you to use that functionality. In this challenge, do a little research on Python libraries that might solve a problem for you or address a domain that you're interested in.
 
-Think of something you're interested in doing (statistics, text analysis, web scraping, quantitative analysis, processing Excel/PDF/image files) and search google "<_thing you are interested in_> python library". You're almost certain to find some useful results. For example, if you wanted to find Python libraries for dealing with cleaning up HTML files, you might search one of these:
+Think of something you're interested in doing (statistics, text analysis, web scraping, quantitative analysis, processing Excel/PDF/image files) and search google "_thing you are interested in_ python library". You're almost certain to find some useful results. For example, if you wanted to find Python libraries for dealing with cleaning up HTML files, you might search one of these:
 
 > working with html python library
 
 > html parser python library
+
+These libraries are usually installed with a tool called `pip`. You can read more about `pip` [here](https://packaging.python.org/tutorials/installing-packages/).
 
 In your research, you may also want to look at the libraries that come with Python. You can find a list of libraries in these libraries [here](https://docs.python.org/3/py-modindex.html).
 
@@ -1503,7 +1489,7 @@ You should get output like this:
 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 ```
 
-The above output shows some of the methods and attributes for Python strings that can be accessed using the dot (`.`) syntax. Also, be aware that Python doesn't print all the possible methods and attributes, just what it considers to be most important. Also, when using `dir()`, you'll mostly want to ignore the methods and attributes that have underscores around them. They mainly have to do with the internals of the Python language. For now, ignore the information within underscores (like `__add__`) and focus on the stuff surrouned by single quotes (like `startswith`).
+The above output shows some of the methods and attributes for Python strings that can be accessed using the dot (`.`) syntax. Also, be aware that Python doesn't print all the possible methods and attributes, just what it considers to be most important. Also, when using `dir()`, you'll mostly want to ignore the methods and attributes that have underscores around them. They mainly have to do with the internals of the Python language. For now, ignore the information within underscores (like `__add__`) and focus on the stuff surrounded by single quotes (like `startswith`).
 
 You can also use `dir()` to see what functions are available from Python libraries that you import. Try importing the `random` library again and see what you get when you enter `dir(random)` in the REPL.
 
@@ -1528,14 +1514,14 @@ In this final challenge, we will work more with the `random` library. We'll use 
 
 Take a look at the following code:
 
-<CodeEditor>
+```python
 import random
 # create a 'roll' function to return a random # between 1-6
 def roll():
     return random.randint(1, 6)
 # roll the die and print the results
 print(f'You rolled a {roll()}.')
-</CodeEditor>
+```
 
 First, we `import` the random library into our program. Then, we create a `roll` function that returns a random number between 1 and 6. We'll use the `randint` function from the random library to generate a random number. The `randint` function takes two arguments, the minimum and maximum number that can be returned. We'll use `1` and `6` for the minimum and maximum numbers to create a standard die. To get at our result, we `return` the outcome of the function. 
 
@@ -1550,7 +1536,7 @@ Starting with the code above, roll the die twice, storing each result. Using bot
 ### Solution
 
 <Secret>
-<CodeEditor>
+```python
 import random
 # create a 'roll' function to return a random # between 1-6
 def roll():
@@ -1565,7 +1551,7 @@ elif die2 > die1:
     print('Second roll wins!')
 else:
     print('Tie!')
-</CodeEditor>
+```
 </Secret>
 
 # Theory to Practice
@@ -1574,7 +1560,37 @@ Congratulations on completing the Intro to Python workshop! So far, you've learn
 suggested introduction to [Python libraries](https://digitalfellows.commons.gc.cuny.edu/2018/02/13/python_libraries/), or trying some of the tutorials or projects listed below. Maybe you want to learn how to
 clean text with [Regex](https://automatetheboringstuff.com/2e/chapter7/), or want to dig into web scraping with the Python library [`requests`](https://requests.readthedocs.io/en/master/). Or, if you are interested in strengthening your foundational skills, read one of the most suggested (and free!) beginner Python book,  [How to Think Like a Computer Scientist - Python Edition](https://runestone.academy/runestone/books/published/thinkcspy/index.html). See a full list of our suggestions below. 
 
-### Review Your Knowledge: 10 Questions from the Lessons
+## Running A Script Locally with the Terminal and a Text Editor
+
+While we have provided you with a code editor to work with here in the browser, when programming your own projects you will likely be working with a text editor and the terminal installed locally on your machine. First, let's begin with the text editor. Open your text editor of choice (such as Visual Studio Code) and create a new file with this line:
+
+```python
+print("Hello world!")
+```
+
+Save it with the name `hello.py` to a known location, such as your desktop. Open your terminal and move to the desktop directory:
+
+```console
+$ cd Desktop
+```
+
+Once you're in the folder with your `hello.py` file, move to the terminal. Do *not* enter the Python Interactive Mode (the REPL), which is unnecessary to run python scripts. Instead, lookout for the `$` symbol that lets you know you're in the terminal. (If you find yourself in the Interactive mode (`>>>`), then try exiting it with <kbd>control</kbd> + <kbd>d</kbd>. You should see the `$` symbol, letting you know you're back in the terminal. If you still do not see the `$` symbol, type `exit()` followed by <kbd>enter</kbd> after the Python prompt, `>>>`.)
+
+Now that you're in the terminal, type the following, and press enter:
+
+```console
+$ python hello.py
+```
+
+You should see the text `Hello world!` appear as output in the terminal.
+
+<Info>You might have noticed some suggestions pop up when you were typing in the code editor. This is a handy feature called "code completion", which is the computer trying to understand what you are typing and giving you quick suggestions. Many code editors have this feature and it can be useful to save you time and help you understand what a particular function needs as parameters.</Info>
+
+## A Note on Text
+
+Fundamentally, Python programs are just text files. You can write them in any text editor, like Visual Studio Code or Notepad on Windows. When you pass the text file to Python, it runs the code in the file one line at a time. There's nothing special about `.py` files—they're just regular text files. This makes them work well with command line tools like Git. The tools you can learn through the DHRI Curriculum—the command line, Git, markdown, grep—are all designed to work well together, and the medium through which they all work is plain text.
+
+## Review Your Knowledge: 10 Questions from the Lessons
 
 __1. Which of the following is not true about a function? (Select one):__
 
@@ -1585,7 +1601,7 @@ __1. Which of the following is not true about a function? (Select one):__
 - A function needs to be called in order to run.
 </Quiz>
 
-Revisit the [Functions](/workshops/python/?page=7) lesson to learn more.
+Revisit the <Link workshop='python' page='20'>`Functions`</Link> lesson to learn more.
 
 __2. What are the differences between the terminal, REPL, and text editor? Select the correct statement from the options below.__
 
@@ -1596,7 +1612,7 @@ __2. What are the differences between the terminal, REPL, and text editor? Selec
 - The REPL doesn’t allow you to test code on the fly.
 </Quiz>
 
-Revisit the [Running Scripts](/workshops/python/?page=5) lesson to learn more.
+Revisit the <Link workshop='python' page='16'>`Running Scripts`</Link> lesson to learn more.
 
 __3. If we wanted to calculate the length of an input using len(), how would we write that expression? (Select one):__
 
@@ -1607,7 +1623,7 @@ __3. If we wanted to calculate the length of an input using len(), how would we 
 - len(input()) = length_of_response
 </Quiz>
 
-Revisit the [Input](/workshops/python/?page=11) lesson to learn more.
+Revisit the <Link workshop='python' page='42'>`Input`</Link> lesson to learn more.
 
 __4. What is the difference between the double equals (==) and single equals (=)? (Select all that apply):__
 
@@ -1618,7 +1634,7 @@ __4. What is the difference between the double equals (==) and single equals (=)
 - The single equals checks to see if one value is equivalent to the other, as in 2 = 2.
 </Quiz>
 
-Revisit the [Conditionals](/workshops/python/?page=10) lesson to learn more.
+Revisit the <Link workshop='python' page='39'>`Conditionals`</Link> lesson to learn more.
 
 __5. Select all the variable expressions that are allowed in Python. (Select all that apply):__
 
@@ -1629,7 +1645,7 @@ __5. Select all the variable expressions that are allowed in Python. (Select all
 - $$$ = "dollar_signs"
 </Quiz>
 
-Revisit the [Variables](/workshops/python/?page=4) lesson to learn more.
+Revisit the <Link workshop='python' page='13'>`Variables`</Link> lesson to learn more.
 
 __6. Select all the following that accurately describe the data type categories. (Select all that apply):__
 
@@ -1642,7 +1658,7 @@ __6. Select all the following that accurately describe the data type categories.
 - Lists can contain strings, like ['banana', 'coffee', 'eggs'].*
 </Quiz>
 
-Revisit the [Data Types](/workshops/python/?page=3) lesson to learn more.
+Revisit the <Link workshop='python' page='8'>`Data Types`</Link> lesson to learn more.
  
 __7. What are different ways for describing what a “for loop” can do? (Select all that apply):__
 
@@ -1653,7 +1669,7 @@ __7. What are different ways for describing what a “for loop” can do? (Selec
 - loop through characters in a string.*
 </Quiz>
 
-Revisit the [Loops](/workshops/python/?page=9) lesson to learn more.
+Revisit the <Link workshop='python' page='35'>`Loops`</Link> lesson to learn more.
 
 __8. Select the following statements that truly describe sort(), append(), and pop(). (Select all that apply):__
 
@@ -1665,7 +1681,7 @@ __8. Select the following statements that truly describe sort(), append(), and p
 - sort(), append(), and pop() are methods.*
 </Quiz>
 
-Revisit the [Doing Things to Lists](/workshops/python/?page=12) lesson to learn more.
+Revisit the <Link workshop='python' page='45'>`Doing Things to Lists`</Link> lesson to learn more.
 
 __9. What are the characteristics of the REPL? (Select all that apply):__
 
@@ -1676,7 +1692,7 @@ __9. What are the characteristics of the REPL? (Select all that apply):__
 - The REPL and the terminal are the same thing.
 </Quiz>
 
-Revisit the [Interacting With Python](/workshops/python/?page=2) lesson to learn more.
+Revisit the <Link workshop='python' page='2'>`Interacting With Python`</Link> lesson to learn more.
 
 __10. Why would someone use dir()? (Select all that apply):__
 
@@ -1687,13 +1703,13 @@ __10. Why would someone use dir()? (Select all that apply):__
 - to examine a particular method, like sort().
 </Quiz>
 
-Revisit the [Objects in Python](/workshops/python/?page=2) lesson to learn more.
+Revisit the <Link workshop='python' page='56'>`Objects in Python`</Link> lesson to learn more.
 
-## __Suggested Further Readings and Tutorials__
+## Suggested Further Readings and Tutorials
 
-Hannah Aizenman, a former Digital Fellow, wrote up a great blog post introducing python "libraries," or collections of python code, for various project types, from creating a website, to getting, exploring, and visualizing data, and working with images, video, spreadsheets, among other ideas. Check out her suggestions in [How Do I Solve [insert problem here] With Python?](https://digitalfellows.commons.gc.cuny.edu/2018/02/13/python_libraries/) 
+Hannah Aizenman, a former Digital Fellow, wrote up a great blog post introducing python "libraries," or collections of python code, for various project types, from creating a website, to getting, exploring, and visualizing data, and working with images, video, spreadsheets, among other ideas. Check out her suggestions in [How Do I Solve (insert problem here) With Python?](https://digitalfellows.commons.gc.cuny.edu/2018/02/13/python_libraries/) 
 
-### Other Tutorials
+## Other Tutorials
 
 - If you feel like you're ready for more tutorials, you should check out [Google's Python Class](https://developers.google.com/edu/python), a solid introduction that also begins to explore intermediate concepts and modules. 
 - To begin using Python for manipulating and analyzing text based data, check out [Python Programming for the Humanities](https://www.karsdorp.io/python-course/), and jump straight into chapter 2.
@@ -1701,7 +1717,7 @@ Hannah Aizenman, a former Digital Fellow, wrote up a great blog post introducing
 - If you learn best by watching videos, Paul Vierthaler’s recorded and uploaded his DH class, [Hacking the Humanities](https://www.youtube.com/playlist?list=PL6kqrM2i6BPIpEF5yHPNkYhjHm-FYWh17), to Youtube. Includes a general introduction to coding principles, introduction to python, with emphasis on text analysis, data manipulation, and web scraping.
 - If you learn best by copying and practicing, [Learn Python the Hard Way](https://learnpythonthehardway.org/book/), by Zed A. Shaw, is an excellent a hands-on resource. Although the online and print book versions cost money, you can test out a sample for free. 
 
-### Projects or Challenges to Try
+## Projects or Challenges to Try
 
 - [Automate the Boring Stuff](https://automatetheboringstuff.com/) contains many little projects for strengthening beginner and intermediate python skills. You might [play around with *regular expressions*](https://automatetheboringstuff.com/2e/chapter7/) (or *regex*), which is a method for locating and manipulating certain patterns of text (think of it like a high powered `ctrl-F`). Once you feel more comfortable with regex, you might write a program that [organizes or renames the files on your computer](https://automatetheboringstuff.com/2e/chapter10/). Just be sure to practice with a sample folder & files before moving on to your own documents!
 - Interested in web scraping (aka grabbing information from the web)?
