@@ -1620,7 +1620,7 @@ function addStudent(studentArray, name, grades) {
     grades: grades
   };
   studentArray.push(newStudent); // Adds the new object to the original array
-  console.log(`Added student: ${name}`);
+  console.log(\`Added student: ${name}\`);
 }
 ```
 *   Note: This function modifies the original `students` array passed into it.
@@ -1692,7 +1692,7 @@ function printGrades(studentArray) {
   console.log("--- Student Grades ---");
   for (let i = 0; i < studentArray.length; i++) {
     const student = studentArray[i];
-    console.log(`${student.name}: ${student.grades.join(', ')}`);
+    console.log(\`${student.name}: ${student.grades.join(', ')}\`);
   }
   console.log("--------------------");
 }
@@ -1701,7 +1701,7 @@ function printGrades(studentArray) {
 function addStudent(studentArray, name, grades) {
   const newStudent = { name: name, grades: grades };
   studentArray.push(newStudent);
-  console.log(`Added student: ${name}`);
+  console.log(\`Added student: ${name}\`);
 }
 
 // 4. Function to Convert Grades to Letters
@@ -1805,7 +1805,7 @@ console.log(\`Bob's average grade: ${bobsAverage}\`);
 const addStudentArrow = (studentArray, name, grades) => {
   const newStudent = { name: name, grades: grades };
   studentArray.push(newStudent);
-  console.log(`(Arrow Fn) Added student: ${name}`);
+  console.log(\`(Arrow Fn) Added student: ${name}\`);
 };
 
 // Test arrow function version
@@ -1827,9 +1827,9 @@ function removeStudent(studentArray, nameToRemove) {
   // If the student was found (index is not -1)
   if (indexToRemove > -1) {
     studentArray.splice(indexToRemove, 1); // Remove 1 element at indexToRemove
-    console.log(`Removed student: ${nameToRemove}`);
+    console.log(\`Removed student: ${nameToRemove}\`);
   } else {
-    console.log(`Student "${nameToRemove}" not found.`);
+    console.log(\`Student "${nameToRemove}" not found.\`);
   }
 }
 
