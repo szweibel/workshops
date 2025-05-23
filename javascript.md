@@ -21,8 +21,8 @@ editors:
 
 goals:
     - description: 'In this workshop, you will learn to:'
-    - Understand core programming concepts: variables, data types, operators, control flow (conditionals, loops), functions, and scope.
-    - Distinguish among core JavaScript data types: numbers, strings, booleans, arrays, and objects.
+    - "Understand core programming concepts: variables, data types, operators, control flow (conditionals, loops), functions, and scope."
+    - "Distinguish among core JavaScript data types: numbers, strings, booleans, arrays, and objects."
     - Write and run JavaScript code in the browser console and via script files.
     - Understand and interact with the Document Object Model (DOM) to make web pages dynamic, primarily using the jQuery library for simplification.
     - Fetch and work with data using JSON.
