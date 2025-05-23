@@ -351,19 +351,31 @@ When should you primarily use `const` to declare a variable?
 2.  **String Concatenation:** Declare two string variables, `firstName` and `lastName`. Create a third variable `fullName` by concatenating the first name, a space, and the last name. Log the `fullName` to the console.
 3.  **Type Exploration:** Declare variables of different types (number, string, boolean). Use `console.log()` and the `typeof` operator to display both the value and the type of each variable. Example output: "Value: Hello, Type: string".
 
-<CodeEditor language='JavaScript'>
+### Challenge 1: Area Calculation
+<Secret>
+```javascript
 // Challenge 1: Area Calculation
 const length = 10;
 const width = 5;
 const area = length * width;
 console.log("The area is: " + area);
+```
+</Secret>
 
+### Challenge 2: Full Name
+<Secret>
+```javascript
 // Challenge 2: Full Name
 const firstName = "Ada";
 const lastName = "Lovelace";
 const fullName = firstName + " " + lastName;
 console.log(fullName);
+```
+</Secret>
 
+### Challenge 3: Type Exploration
+<Secret>
+```javascript
 // Challenge 3: Type Exploration
 const city = "New York";
 const population = 8500000;
@@ -371,8 +383,8 @@ const isCapital = false;
 console.log("Value: " + city + ", Type: " + typeof city);
 console.log("Value: " + population + ", Type: " + typeof population);
 console.log("Value: " + isCapital + ", Type: " + typeof isCapital);
-
-</CodeEditor>
+```
+</Secret>
 
 ## Key Terms (Review)
 
@@ -745,7 +757,9 @@ Examine this code. What will be logged to the console if `score` is `75`?
 1.  **Even or Odd:** Write a program that prompts the user for a number, converts it to an integer using `parseInt()`, and then uses the modulo operator (`%`) within an `if/else` statement to alert whether the number is "even" or "odd". (Hint: An even number `n` satisfies `n % 2 === 0`).
 2.  **Simple Calculator:** Prompt the user for two numbers and an operator (`+`, `-`, `*`, `/`). Use `if/else if/else` or a `switch` statement to perform the calculation based on the operator and alert the result. Handle potential division by zero.
 
-<CodeEditor language='JavaScript' height='400px'>
+### Challenge 1: Even or Odd
+<Secret>
+```javascript
 // Challenge 1: Even or Odd
 const numString = prompt("Enter a whole number:");
 const num = parseInt(numString);
@@ -757,7 +771,12 @@ if (isNaN(num)) {
 } else {
   alert(num + " is odd.");
 }
+```
+</Secret>
 
+### Challenge 2: Simple Calculator
+<Secret>
+```javascript
 // Challenge 2: Simple Calculator (using if/else if/else)
 const num1String = prompt("Enter the first number:");
 const num2String = prompt("Enter the second number:");
@@ -788,8 +807,8 @@ if (isNaN(num1) || isNaN(num2)) {
 } else {
   alert("Invalid operator.");
 }
-
-</CodeEditor>
+```
+</Secret>
 
 ## Key Terms
 
@@ -900,6 +919,7 @@ Arrays come with built-in properties and methods (functions associated with the 
 *   **`.sort()` Method:** Sorts the elements of an array *in place*.
     *   By default, it sorts alphabetically (converting elements to strings if necessary).
     *   For numbers, this default sort can be unexpected (`[1, 10, 2]` becomes `[1, 10, 2]`). You often need to provide a comparison function for numerical sorting (more advanced topic).
+    
     ```javascript
     const names = ['Charlie', 'Alice', 'Bob'];
     names.sort();
@@ -1251,7 +1271,9 @@ What is the primary risk associated with `while` loops if not coded carefully?
 1.  **Sum of Evens:** Write a `for` loop that iterates from 1 to 20. Inside the loop, use an `if` statement and the modulo operator (`%`) to check if the current number `i` is even. If it is, add it to a running `sum` variable (initialized to 0 before the loop). After the loop, `console.log` the final `sum`.
 2.  **Improved Library Search:** Modify the Library App's search logic. Instead of an exact match, use the string method `.includes()` ([MDN .includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes)) to check if the `bookTitle` *contains* the `searchTerm` (both converted to uppercase or lowercase for case-insensitivity). Alert the user if any matches are found. This allows partial title searches.
 
-<CodeEditor language='JavaScript' height='400px'>
+### Challenge 1: Sum of Evens
+<Secret>
+```javascript
 // Challenge 1: Sum of Evens
 let sumOfEvens = 0;
 for (let i = 1; i <= 20; i++) {
@@ -1260,12 +1282,15 @@ for (let i = 1; i <= 20; i++) {
   }
 }
 console.log("Sum of even numbers from 1 to 20:", sumOfEvens); // Should be 110
+```
+</Secret>
 
-
+### Challenge 2: Improved Library Search
+<Secret>
+```javascript
 // Challenge 2: Improved Library Search (showing only the relevant part)
 // Assume bookTitles array and searchTerm variable exist from the app
 
-/*
 // --- Inside the 'else' block of the Library App's main loop ---
 
 const searchTermUpper = searchTerm.toUpperCase(); // Use existing variable from app
@@ -1287,8 +1312,8 @@ if (foundTitles.length > 0) {
 }
 
 // --- End of relevant part ---
-*/
-</CodeEditor>
+```
+</Secret>
 
 ## Key Terms
 
@@ -1756,6 +1781,7 @@ How do you access the value associated with the key `email` in an object named `
 2.  **Arrow Function Syntax:** Rewrite the `addStudent` function from the example using **arrow function syntax**. Check the [MDN Arrow Functions guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for syntax.
 3.  **Remove Student Function:** Add a function `removeStudent(studentArray, nameToRemove)` to the Student Grades program. This function should find the student object with the matching `nameToRemove` in the `studentArray` and remove it. (Hint: Find the index of the student first, perhaps using a loop or the `.findIndex()` array method, then use the `.splice()` method to remove that student object). Test it by removing "Biff".
 
+<Secret>
 <CodeEditor language='JavaScript' height='400px'>
 // Challenge 1: Average Grade Function
 function calculateAverage(gradesArray) {
@@ -1815,6 +1841,7 @@ removeStudent(students, "NonExistent"); // Test case for student not found
 
 
 </CodeEditor>
+</Secret>
 
 ## Key Terms
 
@@ -2232,7 +2259,6 @@ From now on, the typical process for saving your work will be:
     ![Staged Changes](/images/staged_changes.png)
 3.  **Commit Changes:** Type a descriptive commit message (e.g., "Add heading to index page", "Implement feature X") in the message box and click the Commit (✓) button. This saves the snapshot *locally*.
 4.  **Push Changes:** Click the "Sync Changes" button (often shows arrows or cloud icon) at the bottom-left status bar or in the Source Control view menu (`... > Push`). This uploads your local commits to your GitHub repository.
-    ![Sync Changes Button Area](https://code.visualstudio.com/assets/docs/editor/versioncontrol/sync-changes.png) *(Image concept)*
 
 **Why Commit Often?** Committing frequently with small, logical changes makes it easier to track your progress, understand changes later, and revert specific mistakes if needed.
 
