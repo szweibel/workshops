@@ -1798,7 +1798,7 @@ function calculateAverage(gradesArray) {
 // Assuming 'students' array exists from the example
 const bobsGrades = students[0].grades;
 const bobsAverage = calculateAverage(bobsGrades);
-console.log(`Bob's average grade: ${bobsAverage}`);
+console.log(\`Bob's average grade: ${bobsAverage}\`);
 
 
 // Challenge 2: addStudent as Arrow Function
