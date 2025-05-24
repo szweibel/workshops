@@ -1799,7 +1799,7 @@ function calculateAverage(gradesArray) {
 // Assuming 'students' array exists from the example
 const bobsGrades = students[0].grades;
 const bobsAverage = calculateAverage(bobsGrades);
-console.log(\`Bob's average grade: ${bobsAverage}\`);
+console.log(`Bob's average grade: ${bobsAverage}`);
 ```
 </Secret>
 
@@ -1810,7 +1810,7 @@ console.log(\`Bob's average grade: ${bobsAverage}\`);
 const addStudentArrow = (studentArray, name, grades) => {
   const newStudent = { name: name, grades: grades };
   studentArray.push(newStudent);
-  console.log(\`(Arrow Fn) Added student: ${name}\`);
+  console.log(`(Arrow Fn) Added student: ${name}`);
 };
 
 // Test arrow function version
@@ -1836,9 +1836,9 @@ function removeStudent(studentArray, nameToRemove) {
   // If the student was found (index is not -1)
   if (indexToRemove > -1) {
     studentArray.splice(indexToRemove, 1); // Remove 1 element at indexToRemove
-    console.log(\`Removed student: ${nameToRemove}\`);
+    console.log(`Removed student: ${nameToRemove}`);
   } else {
-    console.log(\`Student "${nameToRemove}" not found.\`);
+    console.log(`Student "${nameToRemove}" not found.`);
   }
 }
 
