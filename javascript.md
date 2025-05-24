@@ -1781,8 +1781,9 @@ How do you access the value associated with the key `email` in an object named `
 2.  **Arrow Function Syntax:** Rewrite the `addStudent` function from the example using **arrow function syntax**. Check the [MDN Arrow Functions guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for syntax.
 3.  **Remove Student Function:** Add a function `removeStudent(studentArray, nameToRemove)` to the Student Grades program. This function should find the student object with the matching `nameToRemove` in the `studentArray` and remove it. (Hint: Find the index of the student first, perhaps using a loop or the `.findIndex()` array method, then use the `.splice()` method to remove that student object). Test it by removing "Biff".
 
+### Challenge 1: Average Grade Function
 <Secret>
-<CodeEditor language='JavaScript' height='400px'>
+```javascript
 // Challenge 1: Average Grade Function
 function calculateAverage(gradesArray) {
   if (gradesArray.length === 0) {
@@ -1799,8 +1800,12 @@ function calculateAverage(gradesArray) {
 const bobsGrades = students[0].grades;
 const bobsAverage = calculateAverage(bobsGrades);
 console.log(\`Bob's average grade: ${bobsAverage}\`);
+```
+</Secret>
 
-
+#### Challenge 2: Add Student as Arrow Function
+<Secret>
+```javascript
 // Challenge 2: addStudent as Arrow Function
 const addStudentArrow = (studentArray, name, grades) => {
   const newStudent = { name: name, grades: grades };
@@ -1811,8 +1816,12 @@ const addStudentArrow = (studentArray, name, grades) => {
 // Test arrow function version
 addStudentArrow(students, "Chloe", [85, 88, 92, 90, 89]);
 console.log(students); // Check if Chloe was added
+```
+</Secret>
 
-
+### Challenge 3: Remove Student Function
+<Secret>
+```javascript
 // Challenge 3: Remove Student Function
 function removeStudent(studentArray, nameToRemove) {
   let indexToRemove = -1;
@@ -1838,9 +1847,7 @@ removeStudent(students, "Biff");
 console.log(students); // Check if Biff was removed
 
 removeStudent(students, "NonExistent"); // Test case for student not found
-
-
-</CodeEditor>
+```
 </Secret>
 
 ## Key Terms
