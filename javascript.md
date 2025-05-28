@@ -2421,20 +2421,23 @@ Let's examine our starting `index.html`:
 *   `<h1>` to `<h6>`: Headings (h1 is most important, h6 least).
 *   `<p>`: Paragraph.
 *   `<a>`: Anchor (creates hyperlinks). Requires `href` attribute.
-    ```html
-    <a href="https://developer.mozilla.org/">Visit MDN</a>
-    ```
+
+```html
+<a href="https://developer.mozilla.org/">Visit MDN</a>
+```
 *   `<img>`: Image. Requires `src` (source URL) and `alt` (alternative text for accessibility/if image fails). Self-closing.
-    ```html
-    <img src="images/logo.png" alt="My Project Logo" />
-    ```
+
+```html
+<img src="images/logo.png" alt="My Project Logo" />
+```
 *   `<ul>`, `<ol>`, `<li>`: Unordered list (`<ul>`, bullet points), ordered list (`<ol>`, numbered), and list item (`<li>`).
-    ```html
-    <ul>
-      <li>First item</li>
-      <li>Second item</li>
-    </ul>
-    ```
+
+```html
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+</ul>
+```
 *   `<div>`: Division. A generic block-level container used to group elements for styling or layout. Doesn't have inherent meaning.
 *   `<section>`: Represents a thematic grouping of content.
 *   `<span>`: A generic inline container, often used to style parts of text.
@@ -2461,9 +2464,10 @@ The best way is using an external stylesheet.
 
 1.  **Create a CSS file:** In VSCode, create a new file named `styles.css` in the same folder as `index.html`.
 2.  **Link it in HTML:** Add the `<link>` tag inside the `<head>` of your `index.html` (we already did this in the template):
-    ```html
-    <link rel="stylesheet" href="styles.css">
-    ```
+
+```html
+<link rel="stylesheet" href="styles.css">
+```
 
 ### CSS Rule Syntax
 
@@ -2509,7 +2513,7 @@ body {
   font-weight: bold;
 }
 ```
-    *(In HTML: `<p class="highlight">Important text.</p>`)*
+    *(In HTML: <p class="highlight">Important text.</p>)*
 
 *   **ID Selector:** Selects the *single* element with a specific ID attribute. Starts with a hash `#`.
 
@@ -2520,7 +2524,7 @@ body {
   padding: 10px;
 }
 ```
-    *(In HTML: `<img src="..." alt="..." id="main-logo">`)*
+    *(In HTML: <img src="..." alt="..." id="main-logo">)*
 
 ### Applying Styles
 
