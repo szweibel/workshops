@@ -2513,7 +2513,10 @@ body {
   font-weight: bold;
 }
 ```
-    *(In HTML: <p class="highlight">Important text.</p>)*
+In HTML:
+```html
+<p class="highlight">Important text.</p>
+```
 
 *   **ID Selector:** Selects the *single* element with a specific ID attribute. Starts with a hash `#`.
 
@@ -2524,7 +2527,10 @@ body {
   padding: 10px;
 }
 ```
-    *(In HTML: <img src="..." alt="..." id="main-logo">)*
+in HTML:
+```html
+<img src="..." alt="..." id="main-logo">
+```
 
 ### Applying Styles
 
