@@ -2486,35 +2486,40 @@ selector {
 ### Basic Selectors
 
 *   **Type Selector:** Selects all elements of a specific type.
-    ```css
-    /* Style all paragraphs */
-    p {
-      color: navy;
-      line-height: 1.6; /* Add space between lines */
-    }
-    /* Style the main body */
-    body {
-      font-family: sans-serif; /* Use a common sans-serif font */
-      background-color: #f0f0f0; /* Light grey background */
-    }
-    ```
+
+```css
+/* Style all paragraphs */
+p {
+  color: navy;
+  line-height: 1.6; /* Add space between lines */
+}
+/* Style the main body */
+body {
+  font-family: sans-serif; /* Use a common sans-serif font */
+  background-color: #f0f0f0; /* Light grey background */
+}
+```
+
 *   **Class Selector:** Selects elements with a specific class attribute. Starts with a dot `.`.
-    ```css
-    /* Style elements with class="highlight" */
-    .highlight {
-      background-color: yellow;
-      font-weight: bold;
-    }
-    ```
+
+```css
+/* Style elements with class="highlight" */
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+```
     *(In HTML: `<p class="highlight">Important text.</p>`)*
+
 *   **ID Selector:** Selects the *single* element with a specific ID attribute. Starts with a hash `#`.
-    ```css
-    /* Style the element with id="main-logo" */
-    #main-logo {
-      border: 2px solid red;
-      padding: 10px;
-    }
-    ```
+
+```css
+/* Style the element with id="main-logo" */
+#main-logo {
+  border: 2px solid red;
+  padding: 10px;
+}
+```
     *(In HTML: `<img src="..." alt="..." id="main-logo">`)*
 
 ### Applying Styles
