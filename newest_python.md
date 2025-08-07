@@ -218,6 +218,7 @@ Create two variables, `first_name` and `last_name`. Assign your own names to the
 </CodeEditor>
 
 ### Solution
+
 <Secret>
 
 ```python
