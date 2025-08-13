@@ -77,11 +77,11 @@ This is where Python comes in. Its clean, readable syntax makes it one of the ea
 This course is a guided, project-oriented path. We will start with the fundamental grammar of Python, and then apply it to a real research task, giving you a tangible outcome and a clearer idea of what you can achieve.
 
 ## Our First Step: A Conversation with the Machine
-As is tradition in the world of programming, our first step is to make the computer say "Hello, World!". This is a simple act, but it is a powerful one. At its core, programming is about giving a computer a set of precise, unambiguous instructions. Unlike human conversation, which is rich with context and implication, a computer takes every instruction literally. The "Hello, World!" exercise is our first successful instruction. It confirms that our environment is working and that we can give the computer a command and see a result.
+As is tradition in the world of programming, our first step is to make the computer say "Hello, World!". At its core, programming is about giving a computer a set of precise, unambiguous instructions. Unlike human conversation, which is rich with context and implication, a computer takes every instruction literally. The "Hello, World!" exercise is our first successful instruction. It confirms that our environment is working and that we can give the computer a command and see a result.
 
 The standard way to display output in Python is with the `print()` function. Think of it as your first command, a way to see the results of your work, check the value of a variable, or leave notes for yourself as your program runs. A **function** in programming is a named block of code that performs a specific task. We "call" a function by writing its name followed by parentheses `()`. The information we give to the function inside the parentheses is called an **argument.** In this case, we are giving the `print()` function one argument: the text we want it to display.
 
-We will start our journey in the Python **REPL (Read-Evaluate-Print Loop)** environment below. You can identify it by the `>>>` prompt. The REPL is our sandbox, a place for immediate, interactive conversation with Python. You type one command, it responds, and you can instantly see the result. It's the perfect place to experiment and learn the rules of the language.
+We will start our journey in the Python **REPL (Read-Evaluate-Print Loop)** environment below. You can identify it by the `>>>` prompt. The REPL is our sandbox, a place for immediate, interactive conversation with Python. You type one command, it responds, and you can instantly see the result.
 
 Type the following command after the prompt and hit <kbd>enter</kbd> or <kbd>return</kbd>.
 
@@ -128,10 +128,10 @@ You can perform all the standard mathematical operations you would expect using 
 <PythonREPL/>
 
 ## Booleans: The Logic of `True` and `False`
-There is one more core data type that is absolutely essential for making programs "smart." The **Boolean (`bool`)** type has only two possible values: `True` or `False`. It is crucial to note that they are always capitalized in Python. They may seem simple, but they are the foundation of all decision-making and logic in code. Think of them as the traffic lights of your program: they tell it whether to go or to stop, to take this path or that one. Every time a program needs to decide whether to filter a dataset, repeat an action, or stop a process, it is checking if a condition is `True` or `False`. For a researcher, a boolean might represent the answer to a question like "Is this manuscript dated before 1900?" (`True`) or "Does this survey response contain the word 'anxious'?" (`False`).
+There is one more core data type that is absolutely essential for making programs "smart." The **Boolean (`bool`)** type has only two possible values: `True` or `False`. It is crucial to note that they are always capitalized in Python. Think of them as the traffic lights of your program: they tell it whether to go or to stop, to take this path or that one. Every time a program needs to decide whether to filter a dataset, repeat an action, or stop a process, it is checking if a condition is `True` or `False`. For a researcher, a boolean might represent the answer to a question like "Is this manuscript dated before 1900?" (`True`) or "Does this survey response contain the word 'anxious'?" (`False`).
 
 ## Knowing Your Type
-If you are ever unsure what kind of data you are looking at, you can use the built-in `type()` function to ask Python. This is an incredibly useful tool for debugging when your code is not behaving as you expect. It's like a label reader for your data ingredients. Just pass the data, or a variable containing it, into the `type()` function.
+If you are ever unsure what kind of data you are looking at, you can use the built-in `type()` function to ask Python. This is a useful tool for debugging when your code is not behaving as you expect. It's like a label reader for your data ingredients. Just pass the data, or a variable containing it, into the `type()` function.
 
 ```pycon
 >>> type("This is a string.")
@@ -168,7 +168,8 @@ You create a variable using a single equals sign `=`, which is known as the **as
 >>> message = "This is my first variable!"
 >>> year = 2025
 >>> pi_approx = 3.14
-```Now, instead of re-typing the data, you can just use the variable's name. The program will substitute the name with the value it holds.
+```
+Now, instead of re-typing the data, you can just use the variable's name. The program will substitute the name with the value it holds.
 
 ```pycon
 >>> print(message)
@@ -511,8 +512,8 @@ The syntax works like this, and it is designed to be readable, almost like an En
 for temporary_variable in collection:
     # Do something with the temporary_variable
 ```
-
-Let's see it in action:```python
+Let's see it in action:
+```python
 books_to_read = [
     "The Hobbit",
     "A Wrinkle in Time",
@@ -521,7 +522,9 @@ books_to_read = [
 
 print("My Reading List:")
 for book in books_to_read:
-    print(f"- {book}")```
+    print(f"- {book}")
+```
+
 <CodeEditor></CodeEditor>
 
 Let's break that down:
@@ -706,7 +709,7 @@ Working on your own machine—what we call working **locally**—unlocks the tru
 -   Build larger, persistent projects that you can save and share.
 -   Integrate with other professional tools like Git and GitHub.
 
-<Info>This chapter is a hands-on setup session. It might feel a bit technical, but do not worry. We will walk through every step together, and this is a one-time setup. Once it is done, you will be ready to do real research.</Info>
+<Info>This chapter is a hands-on setup session. It might feel a bit technical, but do not worry. We will walk through every step together, and this is a one-time setup.</Info>
 
 ## Your New Toolkit
 We need to install three key pieces of software:
@@ -742,7 +745,7 @@ Now that the installation process is finished, let's confirm that everything wor
     `python --version` (On Windows)
 3.  You should see a version number printed back to you, like `Python 3.12.4`. If you see this, congratulations! The engine is installed correctly. If you get an error like "command not found," the most likely cause on Windows is that the "Add to PATH" box was not checked during installation.
 
-You are now set up with the same foundational environment used by professional researchers and developers around the world.
+You are now set up with the same environment used by researchers and developers around the world.
 
 ### Keywords
 - Local Environment
@@ -770,7 +773,7 @@ Let's install the essential libraries we will need for the rest of this course. 
     ```bash
     pip install jupyterlab
     ```
-2.  **Pandas:** This is the single most important library for data manipulation and analysis in Python. It provides the DataFrame, a powerful tool for working with tabular data (like spreadsheets).
+2.  **Pandas:** This is the single most important library for data manipulation and analysis in Python. It provides the DataFrame, a  tool for working with tabular data (like spreadsheets).
     ```bash
     pip install pandas
     ```
@@ -778,7 +781,7 @@ Let's install the essential libraries we will need for the rest of this course. 
     ```bash
     pip install requests
     ```
-4.  **Matplotlib & Seaborn:** Two powerful libraries for data visualization. Matplotlib is the foundational library, and Seaborn is built on top of it to make creating beautiful, statistically-informed plots much easier. We install them together.
+4.  **Matplotlib & Seaborn:** Two libraries for data visualization. Matplotlib is the foundational library, and Seaborn is built on top of it to make creating beautiful, statistically-informed plots much easier. We install them together.
     ```bash
     pip install matplotlib seaborn
     ```
