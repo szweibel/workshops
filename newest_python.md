@@ -68,14 +68,14 @@ goals:
 # Chapter 1: Introduction to Python for Researchers
 Hello! This is *Python for Researchers*, a course designed particularly for those outside of computer science. The course is designed to help you learn the fundamentals of programming and to help you get started on your own research projects. The course is not intended to be a comprehensive introduction to computer science, but rather a step-by-step path to making something useful.
 
-##### Why Learn Python?
+## Why Learn Python?
 Learning a programming language is a lot like learning a human language: it is best done with a clear goal in mind. You wouldn't study French without wanting to one day speak to someone in Paris or read a classic novel. Similarly, learning to code is most rewarding when you have a project you want to build or a problem you want to solve.
 
 Python's clean, readable syntax makes it one of the easiest languages for beginners to learn, but its real power lies in its incredible versatility. It is the dominant language in data analysis, machine learning, and scientific computing. This is thanks to a massive community that has built an ecosystem of powerful, free libraries—collections of pre-written code—that let you analyze huge datasets, create complex charts, and automate repetitive tasks that might otherwise take you weeks.
 
 This course is a guided, project-oriented path. We will start with the fundamental grammar of Python, and then apply it to a real research task, giving you a tangible outcome and a clearer idea of what you can achieve.
 
-##### Our First Step: Saying Hello
+## Our First Step: Saying Hello
 As is tradition in the world of programming, our first step is to make the computer say "Hello, World!". This is a simple act, but it is a powerful one. It confirms that our environment is working and that we can give the computer a command and see a result.
 
 The standard way to display output in Python is with the `print()` function. Think of it as your first command, a way to display messages, variables, or the results of your work. A function in programming is a named block of code that performs a specific task. We "call" a function by writing its name followed by parentheses `()`. The information we give to the function inside the parentheses is called an "argument."
@@ -97,11 +97,10 @@ The REPL will evaluate what you typed and print the result: `Hello, World!`. You
 - Argument
 - REPL (Read-Evaluate-Print Loop)
 
----
 # Chapter 2: Working with Core Data Types
 In the last chapter, we told the computer to print a message. That message, `"Hello, World!"`, is an example of a **string**—Python's way of representing textual data. But programs work with many different kinds of information. These fundamental categories of information are called **data types**. Understanding them is like a chef understanding the difference between solids and liquids, or sweet and savory. Let's explore the most important ones.
 
-##### Numbers: Integers and Floats
+## Numbers: Integers and Floats
 Python, at its heart, is a very powerful calculator. It understands two main types of numbers, and it is important to know the difference:
 *   **Integers (`int`)**: These are whole numbers, both positive and negative, without any decimal part. Examples include `10`, `42`, `-5`, and `0`.
 *   **Floats (`float`)**: These are floating-point numbers, which means they have a decimal point. Examples include `3.14`, `99.0`, `-0.5`, and `2.718`. Even if the decimal part is zero (`99.0`), the presence of the decimal point makes it a float.
@@ -122,10 +121,10 @@ You can perform all the standard mathematical operations you would expect using 
 ```
 <PythonREPL/>
 
-##### Booleans: The Logic of `True` and `False`
+## Booleans: The Logic of `True` and `False`
 There is one more core data type that is absolutely essential for making programs "smart." The **Boolean (`bool`)** type has only two possible values: `True` or `False`. It is crucial to note that they are always capitalized in Python. They may seem simple, but they are the foundation of all decision-making and logic in code. Every time a program needs to decide whether to do Path A or Path B, it is checking if a condition is `True` or `False`. We will see this in action when we discuss control flow.
 
-##### Knowing Your Type
+## Knowing Your Type
 If you are ever unsure what kind of data you are looking at, you can use the built-in `type()` function to ask Python. This is an incredibly useful tool for debugging when your code is not behaving as you expect. Just pass the data or a variable containing it into the `type()` function.
 
 ```pycon
@@ -174,7 +173,7 @@ This is my first variable!
 ```
 <PythonREPL/>
 
-##### Formatting Strings with f-strings
+## Formatting Strings with f-strings
 A very common task is to combine strings with the values stored in variables. While you can use the `+` operator to join them (a process called **concatenation**), a much cleaner and more powerful way is with an **f-string** (formatted string literal).
 
 To create an f-string, just put an `f` right before the opening quotation mark. Then, inside the string, you can place any variable name inside curly braces `{}`. Python will automatically replace the `{variable}` with its value.
@@ -195,7 +194,7 @@ My favorite book is Moby Dick by Herman Melville, published in 1851.
 <PythonREPL/>
 Notice that with concatenation, we had to manually add spaces and convert the number `year_published` to a string using `str()`. F-strings handle all of that for us, making the code far more readable.
 
-##### String Methods
+## String Methods
 Strings come with their own set of built-in functions, called **methods**, that you can access with a dot (`.`) after the string or variable. These let you perform common operations easily.
 
 ```pycon
@@ -220,7 +219,6 @@ Create two variables, `first_name` and `last_name`. Assign your own names to the
 ### Solution
 
 <Secret>
-
 ```python
 first_name = "Ada"
 last_name = "Lovelace"
@@ -230,7 +228,6 @@ greeting_message = f"Hello, {full_name}! Welcome to Python."
 # Use the .upper() method to make the whole greeting uppercase
 print(greeting_message.upper())
 ```
-
 </Secret>
 
 ### Keywords
@@ -257,7 +254,7 @@ A list is an ordered, mutable (meaning changeable) collection of items. You can 
 >>> mixed_bag = [42, "hello", True, 3.14]
 ```
 
-##### Accessing Items with an Index
+## Accessing Items with an Index
 To get an item out of a list, you use its **index**—its position in the list. This is where programming often differs from human counting: **indexing starts at 0!** The first item is at index 0, the second at index 1, and so on. To access an item, you use square brackets after the list's name with the index number inside.
 
 ```pycon
@@ -282,7 +279,7 @@ You can also count from the end of the list using negative numbers. `[-1]` is al
 ```
 <PythonREPL/>
 
-##### Slicing a List
+## Slicing a List
 You can also select a range of items, which is called **slicing**. The syntax `my_list[start:end]` grabs items from the `start` index up to, but **not including**, the `end` index. This is another common point of confusion, so remember: the slice goes up to but does not include the `end`.
 
 ```pycon
@@ -302,7 +299,7 @@ You can also select a range of items, which is called **slicing**. The syntax `m
 ```
 <PythonREPL/>
 
-##### Modifying Lists
+## Modifying Lists
 Because lists are **mutable**, we can change them after they are created. We can change individual items, add new ones, or remove them. Two of the most common list methods are `.append()` to add an item to the end, and `.pop()` to remove an item.
 
 ```pycon
@@ -433,7 +430,7 @@ Dictionaries are created with curly braces `{}`.
 ```
 Here, `"name"`, `"major"`, `"birth_year"`, and `"is_enrolled"` are the **keys**. Keys must be unique and are almost always strings. The pieces of data on the right of the colons are the **values**. Values can be any data type: a string, a number, a boolean, a list, or even another dictionary!
 
-##### Accessing and Modifying Data
+## Accessing and Modifying Data
 Instead of using a numeric index like in lists, you access values in a dictionary using their key, again inside square brackets.
 
 ```pycon
@@ -464,7 +461,7 @@ Because dictionaries are mutable, you can easily add new key-value pairs or modi
 ```
 <PythonREPL/>
 
-##### Lists of Dictionaries
+## Lists of Dictionaries
 Dictionaries are incredibly useful for organizing complex, related information. A very common and powerful pattern in data-driven programming is to have a **list of dictionaries**. This structure allows you to represent a collection of similar "objects." For example, if you had data for a whole class of students, you could structure it like this:
 
 ```python
@@ -489,7 +486,7 @@ This pattern—a list of dictionaries—is the fundamental way that structured d
 # Chapter 7: Repeating Actions - The Power of Loops
 Imagine you have a list of 100 student records and you want to print each student's name. You could write 100 `print()` statements, but that would be tedious, inefficient, and impossible to maintain. A core principle of programming is "Don't Repeat Yourself" (DRY). The programmer's way to handle repetitive tasks is to use a **loop**. A loop lets you execute the same block of code over and over again.
 
-##### The `for` Loop: Iterating Over a Collection
+## The `for` Loop: Iterating Over a Collection
 The most common and versatile loop in Python is the **`for` loop**. It is perfect for when you want to do something **for every single item in a collection** (like a list or a dictionary).
 
 The syntax works like this:
@@ -528,7 +525,7 @@ for key in student:
 ```
 <CodeEditor></CodeEditor>
 
-##### Looping a Specific Number of Times with `range()`
+## Looping a Specific Number of Times with `range()`
 What if you don't have a collection to loop over, but you just want to do something a specific number of times? For that, we use the built-in **`range()`** function.
 *   `range(5)` generates a sequence of numbers starting from 0 up to (but not including) 5: `0, 1, 2, 3, 4`.
 *   `range(2, 6)` generates a sequence from a start to an end: `2, 3, 4, 5`.
@@ -582,7 +579,7 @@ say_hello()
 ```
 <CodeEditor></CodeEditor>
 
-##### Passing Information with Parameters
+## Passing Information with Parameters
 Functions become truly powerful when you can give them input to work with. We do this with **parameters**, which are placeholder variables you define inside the parentheses of the function definition. When you call the function, you provide an **argument** (a real value) for each parameter.
 
 ```python
@@ -596,7 +593,7 @@ greet("Bob")
 ```
 <CodeEditor></CodeEditor>
 
-##### Getting a Value Back with `return`
+## Getting a Value Back with `return`
 Functions can also perform a calculation or a task and send a value back to the main program. This is done with the **`return`** statement. When a `return` statement is hit, the function immediately stops and the function call itself becomes equal to the returned value. This allows you to store the result of a function in a variable.
 
 ```python
@@ -687,7 +684,7 @@ main()
 # Chapter 9: Setting Up Your Professional Environment
 Congratulations! You have spent the last several chapters learning the fundamental grammar of Python. You can work with variables, lists, dictionaries, loops, and functions. Now, it is time to take the next, most exciting step in your journey. We are going to move from our simple, embedded online tools to a true, professional research environment on your own computer.
 
-##### The "Why" of Working Locally
+## The "Why" of Working Locally
 Working on your own machine—what we call working **locally**—unlocks the true power of programming for a researcher. It is like moving from a classroom's pre-packaged science kit to having the keys to a real research lab. The online REPL is great for learning syntax, but it is isolated. When you work locally, you can:
 -   Work with your own files on your computer.
 -   Install powerful specialized libraries for data science, visualization, and more.
@@ -696,20 +693,20 @@ Working on your own machine—what we call working **locally**—unlocks the tru
 
 <Info>This chapter is a hands-on setup session. It might feel a bit technical, but do not worry. We will walk through every step together, and this is a one-time setup. Once it is done, you will be ready to do real research.</Info>
 
-##### Your New Toolkit
+## Your New Toolkit
 We need to install three key pieces of software:
 1.  **The Terminal (Your Control Panel):** Your direct, text-based line of communication with your computer. This is where you will run commands to install software and execute scripts.
 2.  **Python 3 (The Engine):** The Python interpreter itself. This is the core software that understands and runs `.py` files.
 3.  **Visual Studio Code (Your Workbench):** A powerful, free, and hugely popular code editor that helps you write, organize, and debug your code.
 
-##### Step 1: The Control Panel - Your Terminal
+## Step 1: The Control Panel - Your Terminal
 Every operating system comes with a command-line interface. You do not need to install anything for this step, just learn how to open it.
 *   **On macOS:** Open the **Terminal** app. You can find it in `Applications/Utilities`, or just search for "Terminal" using Spotlight (<kbd>Cmd</kbd> + <kbd>Space</kbd>).
 *   **On Windows:** We recommend using **PowerShell**. Search for "PowerShell" in the Start Menu and open it. Avoid the old "Command Prompt" if possible.
 *   **On Linux:** You likely already know where your **Terminal** is!
 Go ahead and open it now. You will see a prompt, waiting for you to type commands. This is where we will do the rest of our setup.
 
-##### Step 2: The Engine - Installing Python 3
+## Step 2: The Engine - Installing Python 3
 Now, let's install the Python interpreter itself.
 1.  Open your web browser and navigate to the official Python download page: **[python.org/downloads/](https://www.python.org/downloads/)**
 2.  The site should automatically detect your operating system and show a prominent button to download the latest version of Python. Click it.
@@ -717,12 +714,12 @@ Now, let's install the Python interpreter itself.
     *   **This is the most critical step for Windows users:** At the very beginning of the installation process, you will see a window with several options. **You MUST check the box that says "Add Python to PATH"** or "Add python.exe to PATH". This small step makes Python accessible from the terminal, which is essential. Do not skip it!
     *   **On macOS and Windows:** For the rest of the installation, you can simply accept the default settings by clicking "Continue" or "Next" until it is finished.
 
-##### Step 3: The Workbench - Installing Visual Studio Code
+## Step 3: The Workbench - Installing Visual Studio Code
 1.  Go to the official VS Code website: **[code.visualstudio.com](https://code.visualstudio.com/)**
 2.  It should also auto-detect your OS. Click the big blue button to download the application.
 3.  Run the installer, accepting all the default settings.
 
-##### Verifying Your Installation (Everyone)
+## Verifying Your Installation (Everyone)
 Now that the installation process is finished, let's confirm that everything worked correctly.
 1.  Open a **new** terminal window (or close and re-open your existing one, to make sure it recognizes the new installations).
 2.  To check if Python is installed correctly, type the following command and press <kbd>Enter</kbd>:

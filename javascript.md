@@ -2537,7 +2537,7 @@ Save and reload the page, and you should see the same result as before. What, th
 
 This is a particularly powerful feature of classes.
 
-##### ID
+## ID
 
 In contrast to classes, IDs are unique. They are used to identify a _single_ element in the HTML file rather than many. This is useful when you want to style a single element, but you don't want to style every element with the same properties.
 
