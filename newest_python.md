@@ -65,7 +65,6 @@ goals:
     - Frame your programming skills in the context of modern AI-assisted development.
 ---
 
-
 # Chapter 1: Introduction to Python for Researchers
 Hello! This is *Python for Researchers*, a course designed particularly for those outside of computer science. The course is designed to help you learn the fundamentals of programming and to help you get started on your own research projects. The course is not intended to be a comprehensive introduction to computer science, but rather a step-by-step path to making something useful.
 
@@ -79,9 +78,9 @@ This course is a guided, project-oriented path. We will start with the fundament
 ## Our First Step: Saying Hello
 As is tradition in the world of programming, our first step is to make the computer say "Hello, World!". This is a simple act, but it is a powerful one. It confirms that our environment is working and that we can give the computer a command and see a result.
 
-The standard way to display output in Python is with the `print()` function. Think of it as your first command, a way to display messages, variables, or the results of your work. A function in programming is a named block of code that performs a specific task. We "call" a function by writing its name followed by parentheses `()`. The information we give to the function inside the parentheses is called an "argument."
+The standard way to display output in Python is with the `print()` function. Think of it as your first command, a way to display messages, variables, or the results of your work. A **function** in programming is a named block of code that performs a specific task. We "call" a function by writing its name followed by parentheses `()`. The information we give to the function inside the parentheses is called an **argument.**
 
-In the Python REPL (Read-Evaluate-Print Loop) environment below, which you can identify by the `>>>` prompt, type the following command and hit <kbd>enter</kbd> or <kbd>return</kbd>.
+In the Python **REPL (Read-Evaluate-Print Loop)** environment below, which you can identify by the `>>>` prompt, type the following command and hit <kbd>enter</kbd> or <kbd>return</kbd>. The REPL is our sandbox, a place to try out small snippets of code and see what happens immediately.
 
 ```pycon
 >>> print("Hello, World!")
@@ -99,14 +98,14 @@ The REPL will evaluate what you typed and print the result: `Hello, World!`. You
 - REPL (Read-Evaluate-Print Loop)
 
 # Chapter 2: Working with Core Data Types
-In the last chapter, we told the computer to print a message. That message, `"Hello, World!"`, is an example of a **string**—Python's way of representing textual data. But programs work with many different kinds of information. These fundamental categories of information are called **data types**. Understanding them is like a chef understanding the difference between solids and liquids, or sweet and savory. Let's explore the most important ones.
+In the last chapter, we told the computer to print a message. That message, `"Hello, World!"`, is an example of a **string**—Python's way of representing textual data. But programs work with many different kinds of information. These fundamental categories of information are called **data types**. Understanding them is like a chef understanding the difference between solids and liquids, or sweet and savory. Each type has its own properties and can be used in different ways. Let's explore the most important ones.
 
 ## Numbers: Integers and Floats
 Python, at its heart, is a very powerful calculator. It understands two main types of numbers, and it is important to know the difference:
-*   **Integers (`int`)**: These are whole numbers, both positive and negative, without any decimal part. Examples include `10`, `42`, `-5`, and `0`.
-*   **Floats (`float`)**: These are floating-point numbers, which means they have a decimal point. Examples include `3.14`, `99.0`, `-0.5`, and `2.718`. Even if the decimal part is zero (`99.0`), the presence of the decimal point makes it a float.
+*   **Integers (`int`)**: These are whole numbers, both positive and negative, without any decimal part. You would use an integer to count things, like the number of books on a shelf (`42`) or the year a text was published (`1851`).
+*   **Floats (`float`)**: These are floating-point numbers, which means they have a decimal point. They are used for measurements that can have fractional parts, like a temperature (`98.6`), a price (`19.99`), or a mathematical constant like Pi (`3.14159`). Even if the decimal part is zero (`99.0`), the presence of the decimal point makes it a float.
 
-You can perform all the standard mathematical operations you would expect using familiar operators. Try them out in the REPL. Notice how dividing two integers, like `10 / 4`, results in a float.
+You can perform all the standard mathematical operations you would expect using familiar operators. Try them out in the REPL. Notice how dividing two integers, like `10 / 4`, results in a float, because division can often produce fractional results.
 
 ```pycon
 >>> 10 + 5
@@ -123,10 +122,10 @@ You can perform all the standard mathematical operations you would expect using 
 <PythonREPL/>
 
 ## Booleans: The Logic of `True` and `False`
-There is one more core data type that is absolutely essential for making programs "smart." The **Boolean (`bool`)** type has only two possible values: `True` or `False`. It is crucial to note that they are always capitalized in Python. They may seem simple, but they are the foundation of all decision-making and logic in code. Every time a program needs to decide whether to do Path A or Path B, it is checking if a condition is `True` or `False`. We will see this in action when we discuss control flow.
+There is one more core data type that is absolutely essential for making programs "smart." The **Boolean (`bool`)** type has only two possible values: `True` or `False`. It is crucial to note that they are always capitalized in Python. They may seem simple, but they are the foundation of all decision-making and logic in code. Think of them as the traffic lights of your program: they tell it whether to go or to stop, to take this path or that one. Every time a program needs to decide whether to do something, it is checking if a condition is `True` or `False`. We will see this in action when we discuss control flow.
 
 ## Knowing Your Type
-If you are ever unsure what kind of data you are looking at, you can use the built-in `type()` function to ask Python. This is an incredibly useful tool for debugging when your code is not behaving as you expect. Just pass the data or a variable containing it into the `type()` function.
+If you are ever unsure what kind of data you are looking at, you can use the built-in `type()` function to ask Python. This is an incredibly useful tool for debugging when your code is not behaving as you expect. It's like a label reader for your data ingredients. Just pass the data, or a variable containing it, into the `type()` function.
 
 ```pycon
 >>> type("This is a string.")
@@ -155,7 +154,7 @@ The output `<class 'str'>` tells you that the data is of the "string" class. Thi
 # Chapter 3: Variables and Strings
 It is not very useful if our data disappears right after we calculate or define it. We need a way to store and label information so we can refer to it and use it later. In programming, we use **variables**.
 
-A variable is just a name that refers to a value. Think of it like a labeled box. You can put something in the box and then, whenever you need what is inside, you can just refer to the box by its label.
+A variable is just a name that refers to a value. Think of it like a labeled box. You can put something in the box and then, whenever you need what is inside, you can just refer to the box by its label. The name of the variable is for you, the human, to remember what it's for; the value is what the computer will use in its calculations.
 
 You create a variable using a single equals sign `=`, which is known as the **assignment operator**. You put the name of the variable on the left and the value you want to store on the right.
 
@@ -175,28 +174,30 @@ This is my first variable!
 <PythonREPL/>
 
 ## Formatting Strings with f-strings
-A very common task is to combine strings with the values stored in variables. While you can use the `+` operator to join them (a process called **concatenation**), a much cleaner and more powerful way is with an **f-string** (formatted string literal).
+A very common task is to combine strings with the values stored in variables. While you can use the `+` operator to join them (a process called **concatenation**), this can get clumsy quickly. Imagine trying to build a complex sentence by gluing lots of small phrases and numbers together.
 
-To create an f-string, just put an `f` right before the opening quotation mark. Then, inside the string, you can place any variable name inside curly braces `{}`. Python will automatically replace the `{variable}` with its value.
+A much cleaner and more powerful way is with an **f-string** (formatted string literal). F-strings are a modern Python feature that makes this process elegant and readable.
+
+To create an f-string, just put an `f` right before the opening quotation mark. Then, inside the string, you can place any variable name inside curly braces `{}`. Python will automatically replace the `{variable}` with its value, converting it to a string if necessary.
 
 ```pycon
 >>> book_title = "Moby Dick"
 >>> author = "Herman Melville"
 >>> year_published = 1851
 >>>
->>> # Using an f-string
+>>> # The elegant, modern way: an f-string
 >>> print(f"My favorite book is {book_title} by {author}, published in {year_published}.")
 My favorite book is Moby Dick by Herman Melville, published in 1851.
 >>>
->>> # For comparison, using concatenation (more cumbersome)
+>>> # For comparison, the old way: concatenation (more cumbersome)
 >>> print("My favorite book is " + book_title + " by " + author + ", published in " + str(year_published) + ".")
 My favorite book is Moby Dick by Herman Melville, published in 1851.
 ```
 <PythonREPL/>
-Notice that with concatenation, we had to manually add spaces and convert the number `year_published` to a string using `str()`. F-strings handle all of that for us, making the code far more readable.
+Notice that with concatenation, we had to manually add spaces inside the quotes and convert the number `year_published` to a string using `str()`. F-strings handle all of that for us, making the code far more readable and less prone to errors.
 
 ## String Methods
-Strings come with their own set of built-in functions, called **methods**, that you can access with a dot (`.`) after the string or variable. These let you perform common operations easily.
+Strings are more than just passive text; they come with their own set of built-in functions, called **methods**, that you can use to manipulate them. A method is an action that a particular type of data "knows how to do." You access these methods with a dot (`.`) after the string or variable. The dot is how you *ask* the data to perform one of its built-in actions.
 
 ```pycon
 >>> a_loud_statement = "I AM WHISPERING."
@@ -208,7 +209,7 @@ Strings come with their own set of built-in functions, called **methods**, that 
 'Hello, world!'
 ```
 <PythonREPL/>
-Calling a method like `.lower()` does not change the original `a_loud_statement` variable. It returns a *new* string with the changes applied.
+It's important to know that strings are **immutable**, which means they cannot be changed. Calling a method like `.lower()` does not change the original `a_loud_statement` variable. It returns a *new* string with the changes applied. If you want to keep the changes, you must assign the result to a new variable (or overwrite the old one).
 
 ### Challenge
 
@@ -242,7 +243,7 @@ print(greeting_message.upper())
 # Chapter 4: Structuring Data with Lists
 So far, each variable has held just one piece of information—one number or one string. But what if you want to work with a collection of items, like all the books on your reading list or a series of measurements from an experiment? For that, we use a **list**.
 
-A list is an ordered, mutable (meaning changeable) collection of items. You can think of it as a numbered sequence of boxes, where each box can hold a different value. Lists are defined with square brackets `[]`, with the items inside separated by commas.
+A list is an ordered, mutable (meaning changeable) collection of items. You can think of it as a numbered sequence of boxes, or a single shelf where you can place items in a specific order. Lists are defined with square brackets `[]`, with the items inside separated by commas.
 
 ```pycon
 >>> # A list of strings
@@ -256,7 +257,7 @@ A list is an ordered, mutable (meaning changeable) collection of items. You can 
 ```
 
 ## Accessing Items with an Index
-To get an item out of a list, you use its **index**—its position in the list. This is where programming often differs from human counting: **indexing starts at 0!** The first item is at index 0, the second at index 1, and so on. To access an item, you use square brackets after the list's name with the index number inside.
+To get an item out of a list, you use its **index**—its position in the list. This is where programming often differs from human counting, and it is a crucial concept to master: **indexing starts at 0!** The first item is at index 0, the second at index 1, and so on. This is a convention from the history of computing, and while it might feel strange at first, it will become second nature. To access an item, you use square brackets after the list's name with the index number inside.
 
 ```pycon
 >>> shopping_list = ["apples", "bread", "coffee"]
@@ -267,8 +268,7 @@ To get an item out of a list, you use its **index**—its position in the list. 
 >>>
 >>> # Get the third item (at index 2)
 >>> shopping_list[2]
-'coffee'
-```
+'coffee'```
 You can also count from the end of the list using negative numbers. `[-1]` is always the last item, `[-2]` is the second-to-last, and so on. This is extremely useful when you want the last item but don't know how long the list is.
 
 ```pycon
@@ -281,7 +281,7 @@ You can also count from the end of the list using negative numbers. `[-1]` is al
 <PythonREPL/>
 
 ## Slicing a List
-You can also select a range of items, which is called **slicing**. The syntax `my_list[start:end]` grabs items from the `start` index up to, but **not including**, the `end` index. This is another common point of confusion, so remember: the slice goes up to but does not include the `end`.
+You can also select a range of items, which is called **slicing**. The syntax `my_list[start:end]` grabs items from the `start` index up to, but **not including**, the `end` index. This is another common point of confusion, so remember: the slice goes up to but does not include the `end`. Think of it as slicing a loaf of bread: if you slice at positions 1 and 4, you get the pieces *between* those cuts.
 
 ```pycon
 >>> letters = ['a', 'b', 'c', 'd', 'e', 'f']
@@ -301,7 +301,7 @@ You can also select a range of items, which is called **slicing**. The syntax `m
 <PythonREPL/>
 
 ## Modifying Lists
-Because lists are **mutable**, we can change them after they are created. We can change individual items, add new ones, or remove them. Two of the most common list methods are `.append()` to add an item to the end, and `.pop()` to remove an item.
+Because lists are **mutable**, we can change them after they are created. This is a key difference from strings, which are immutable. Two of the most common list methods are `.append()` to add an item to the end, and `.pop()` to remove an item from the end. These methods change the list *in-place*.
 
 ```pycon
 >>> my_books = ["Dune", "Foundation"]
@@ -322,7 +322,7 @@ List after pop: ['Dune', 'Foundation']
 ```
 
 <PythonREPL/>
-Unlike the string methods we saw earlier, methods like `.append()` and `.pop()` modify the list directly, or *in-place*.
+Unlike the string methods we saw earlier, methods like `.append()` and `.pop()` modify the list directly. The original `my_books` list has been permanently altered.
 
 ### Keywords
 - List
@@ -334,9 +334,9 @@ Unlike the string methods we saw earlier, methods like `.append()` and `.pop()` 
 
 
 # Chapter 5: Control Flow - Making Decisions
-So far, our programs have been like a straight road, executing one line after another from top to bottom. But powerful programs need to be able to choose their path based on the situation. They need to be able to react differently to different inputs. This is called **control flow**.
+So far, our programs have been like a straight road, executing one line after another from top to bottom. But powerful programs need to be able to choose their path based on the situation. They need to be able to react differently to different inputs. This is called **control flow**. A program that can't make decisions is just a simple calculator; a program that can is on its way to becoming intelligent.
 
-The most fundamental tool for controlling the flow of a program is **conditional logic**, using the keywords `if`, `elif` (short for "else if"), and `else`. This structure is like a series of questions a program asks to decide what to do next.
+The most fundamental tool for controlling the flow of a program is **conditional logic**, using the keywords `if`, `elif` (short for "else if"), and `else`. This structure is like a series of questions a program asks to decide what to do next, similar to a flowchart or a decision tree.
 
 The basic structure lets your program make a decision:
 ```python
@@ -346,8 +346,7 @@ elif another_condition_is_true:
     # If the first condition was false, check this one.
     # If it's true, do this block of code.
 else:
-    # If none of the above conditions were true, do this block.
-```
+    # If none of the above conditions were true, do this block.```
 The "conditions" are expressions that evaluate to a Boolean (`True` or `False`). We create these conditions using **comparison operators**.
 
 | Operator | Meaning                  | Example          |
@@ -359,13 +358,13 @@ The "conditions" are expressions that evaluate to a Boolean (`True` or `False`).
 | `>=`     | Greater than or equal to | `score >= 90`    |
 | `<=`     | Less than or equal to    | `price <= 50.0`  |
 
-<Info>A very common beginner mistake is to use a single equals sign (`=`) for comparison. Remember, `=` is for *assignment* (putting a value in a variable), while `==` is for *comparison* (checking if two values are equal).</Info>
+<Info>A very common beginner mistake is to use a single equals sign (`=`) for comparison. Remember, `=` is for *assignment* (putting a value in a variable), while `==` is for *comparison* (peeking in two boxes to see if their contents are the same).</Info>
 
-Notice the colon `:` at the end of the `if`, `elif`, and `else` lines, and the **indentation** of the code below them. This indentation is not just for style; it is crucial and mandatory. It is how Python knows which code belongs to which condition.
+Notice the colon `:` at the end of the `if`, `elif`, and `else` lines, and the **indentation** of the code below them. This indentation is not just for style; it is crucial and mandatory. It is how Python knows which code belongs to which condition. It creates a logical "paragraph" of code that is executed together.
 
-Let's make our programs interactive! The `input()` function pauses the program, waits for the user to type something, and returns what they typed as a string.
+Let's make our programs interactive! The `input()` function pauses the program, displays a message (called a prompt), waits for the user to type something, and returns what they typed as a string.
 
-<Info>Remember, `input()` always gives you a string! If you need a number for a comparison, you have to convert it first using `int()` or `float()`, like this: `age = int(input("How old are you? "))`.</Info>
+<Info>Remember, `input()` always gives you a string! If you need a number for a comparison, you have to convert it first using `int()` or `float()`. This is called **type casting**. For example: `age = int(input("How old are you? "))`.</Info>
 
 ### Challenge: The "Choose Your Own Adventure" Game
 Let's build a tiny interactive story. This is a classic way to see control flow in action. Your program will present a situation and two choices, and then the story will branch based on the user's input.
@@ -413,9 +412,9 @@ else:
 
 
 # Chapter 6: Structuring Data with Dictionaries
-We have seen that lists are great for ordered sequences of items, like a to-do list where the order matters. But what if our data isn't just a sequence? What if it has structure and labels? For instance, a person's contact information isn't just `["Ada Lovelace", "ada@example.com", "123-456-7890"]`. It is a collection of labeled data: a name, an email, a phone number.
+We have seen that lists are great for ordered sequences of items, like a to-do list where the order matters. But what if our data isn't just a sequence? What if it has structure and labels? For instance, a person's contact information isn't just `["Ada Lovelace", "ada@example.com", "123-456-7890"]`. It is a collection of labeled data: a name, an email, a phone number. The order is less important than the labels themselves.
 
-For this kind of structured data, Python gives us the **dictionary (`dict`)**. A dictionary is a mutable collection that stores data not as an ordered list, but as **key-value pairs**. Think of it like a real-world dictionary: you look up a word (the **key**) to find its definition (the **value**).
+For this kind of structured data, Python gives us the **dictionary (`dict`)**. A dictionary is a mutable collection that stores data not as an ordered list, but as **key-value pairs**. Think of it like a real-world dictionary: you look up a word (the **key**) to find its definition (the **value**). Or think of it like an ID card: "Name" is a key, and "Ada Lovelace" is its value.
 
 Dictionaries are created with curly braces `{}`.
 
@@ -428,7 +427,7 @@ Dictionaries are created with curly braces `{}`.
 ...     "is_enrolled": True
 ... }
 ```
-Here, `"name"`, `"major"`, `"birth_year"`, and `"is_enrolled"` are the **keys**. Keys must be unique and are almost always strings. The pieces of data on the right of the colons are the **values**. Values can be any data type: a string, a number, a boolean, a list, or even another dictionary!
+Here, `"name"`, `"major"`, `"birth_year"`, and `"is_enrolled"` are the **keys**. Keys must be unique and are almost always strings. The pieces of data on the right of the colons are the **values**. Values can be any data type: a string, a number, a boolean, a list, or even another dictionary! This flexibility is what makes them so powerful.
 
 ## Accessing and Modifying Data
 Instead of using a numeric index like in lists, you access values in a dictionary using their key, again inside square brackets.
@@ -442,7 +441,7 @@ The student was born in 1815.
 ```
 <PythonREPL/>
 
-Because dictionaries are mutable, you can easily add new key-value pairs or modify existing ones just by assigning a value to a key.
+Because dictionaries are mutable, you can easily add new key-value pairs or modify existing ones just by assigning a value to a key. If the key already exists, its value is updated. If the key doesn't exist, it's created.
 
 ```pycon
 # Add a new key-value pair for the student's country
@@ -462,7 +461,7 @@ Because dictionaries are mutable, you can easily add new key-value pairs or modi
 <PythonREPL/>
 
 ## Lists of Dictionaries
-Dictionaries are incredibly useful for organizing complex, related information. A very common and powerful pattern in data-driven programming is to have a **list of dictionaries**. This structure allows you to represent a collection of similar "objects." For example, if you had data for a whole class of students, you could structure it like this:
+Dictionaries are incredibly useful for organizing complex, related information. A very common and powerful pattern in data-driven programming is to have a **list of dictionaries**. This structure allows you to represent a collection of similar "objects," where each object has the same set of properties. For example, if you had data for a whole class of students, you could structure it like this:
 
 ```python
 all_students = [
@@ -472,9 +471,15 @@ all_students = [
 ]
 
 # To get the second student's name:
-print(all_students[1]["name"]) # Prints 'Charles Babbage'
+# First, use a list index to get the dictionary for the second student.
+second_student_dict = all_students[1]
+# Then, use a dictionary key to get the name from that dictionary.
+print(second_student_dict["name"]) # Prints 'Charles Babbage'
+
+# You can also chain them together:
+print(all_students[1]["name"])
 ```
-This pattern—a list of dictionaries—is the fundamental way that structured data, like the kind you would find in a spreadsheet or a database table, is often represented in Python. We will be using it extensively.
+This pattern—a list of dictionaries—is the fundamental way that structured data, like the kind you would find in a spreadsheet or a database table, is often represented in Python. We will be using it extensively when we start working with real datasets.
 
 ### Keywords
 - Dictionary (`dict`)
@@ -484,10 +489,10 @@ This pattern—a list of dictionaries—is the fundamental way that structured d
 
 
 # Chapter 7: Repeating Actions - The Power of Loops
-Imagine you have a list of 100 student records and you want to print each student's name. You could write 100 `print()` statements, but that would be tedious, inefficient, and impossible to maintain. A core principle of programming is "Don't Repeat Yourself" (DRY). The programmer's way to handle repetitive tasks is to use a **loop**. A loop lets you execute the same block of code over and over again.
+Imagine you have a list of 100 student records and you want to print each student's name. You could write 100 `print()` statements, but that would be tedious, inefficient, and impossible to maintain. A core principle of programming is "Don't Repeat Yourself" (DRY). The programmer's way to handle repetitive tasks is to use a **loop**. A loop lets you execute the same block of code over and over again, saving you from endless copying and pasting. It's the engine of automation.
 
 ## The `for` Loop: Iterating Over a Collection
-The most common and versatile loop in Python is the **`for` loop**. It is perfect for when you want to do something **for every single item in a collection** (like a list or a dictionary).
+The most common and versatile loop in Python is the **`for` loop**. It is perfect for when you want to do something **for every single item in a collection** (like a list or a dictionary). You can think of it as an assembly line: each item from your collection comes down the line, and you perform the same operation on it.
 
 The syntax works like this:
 ```python
@@ -495,8 +500,7 @@ for temporary_variable in collection:
     # Do something with the temporary_variable
 ```
 
-Let's see it in action:
-```python
+Let's see it in action:```python
 books_to_read = [
     "The Hobbit",
     "A Wrinkle in Time",
@@ -505,13 +509,12 @@ books_to_read = [
 
 print("My Reading List:")
 for book in books_to_read:
-    print(f"- {book}")
-```
+    print(f"- {book}")```
 <CodeEditor></CodeEditor>
 
 Let's break that down:
 *   `for book in books_to_read:`: This line can be read like a sentence: "For each item in the `books_to_read` list, temporarily assign that item to the variable `book` and then execute the indented code block below."
-*   The name `book` is a temporary variable that you choose. It only exists for the duration of the loop. It is a good practice to choose a descriptive name.
+*   The name `book` is a temporary variable that you choose. It only exists for the duration of the loop. It is a good practice to choose a descriptive, singular name that relates to the plural collection (e.g., `book` for `books_to_read`, `student` for `all_students`).
 
 You can also loop through the keys of a dictionary.
 ```python
@@ -526,12 +529,12 @@ for key in student:
 <CodeEditor></CodeEditor>
 
 ## Looping a Specific Number of Times with `range()`
-What if you don't have a collection to loop over, but you just want to do something a specific number of times? For that, we use the built-in **`range()`** function.
+What if you don't have a collection to loop over, but you just want to do something a specific number of times? For that, we use the built-in **`range()`** function. `range()` generates a sequence of numbers that you can loop over.
 *   `range(5)` generates a sequence of numbers starting from 0 up to (but not including) 5: `0, 1, 2, 3, 4`.
 *   `range(2, 6)` generates a sequence from a start to an end: `2, 3, 4, 5`.
 *   `range(0, 10, 2)` generates a sequence with a "step": `0, 2, 4, 6, 8`.
 
-`range()` is perfect for using in a `for` loop.
+`range()` is perfect for using in a `for` loop when you need to control the repetition count precisely.
 ```python
 # Loop 5 times
 print("Counting to 4:")
@@ -546,7 +549,7 @@ print("Blast off!")
 ```
 <CodeEditor></CodeEditor>
 
-Loops are a foundational concept that unlocks the automating power of programming. They are the tool that lets you scale an operation from one item to one million items.
+Loops are a foundational concept that unlocks the automating power of programming. They are the tool that lets you scale an operation from one item to one million items with the same three lines of code.
 
 ### Keywords
 - Loop
@@ -556,7 +559,9 @@ Loops are a foundational concept that unlocks the automating power of programmin
 - DRY (Don't Repeat Yourself)
 
 # Chapter 8: Reusable Code - Building with Functions
-As our programs get longer, we often find ourselves writing the same chunk of code in multiple places. A better way is to package that code into a **function**. A function is a named, reusable block of code that performs a single, specific task. Using functions is the most important principle of organization in programming. It makes your code more readable, easier to debug, and less repetitive (remember DRY!).
+As our programs get longer, we often find ourselves writing the same chunk of code in multiple places. If we find a bug in that code, we have to fix it everywhere. This violates the "Don't Repeat Yourself" principle and makes our code brittle and hard to manage. A better way is to package that code into a **function**. A function is a named, reusable block of code that performs a single, specific task.
+
+Using functions is the most important principle of organization in programming. Think of them as custom tools you build for your workshop. Instead of assembling a wrench from scratch every time you need one, you build it once, put it in your toolbox, and then just grab it by name whenever you need it. This makes your code more readable, easier to debug, and less repetitive.
 
 You define a function using the `def` keyword, followed by the function's name and a set of parentheses. To run the code inside, you must **call** the function by using its name followed by parentheses `()`.
 
@@ -568,7 +573,8 @@ def say_hello():
     print("How are you today?")
     print("--------------------")
 
-# Defining the function doesn't run it. You have to *call* it.
+# Defining the function is like writing down a recipe. It doesn't cook anything yet.
+# You have to *call* the function to execute it.
 print("Calling the function for the first time:")
 say_hello()
 
@@ -580,21 +586,21 @@ say_hello()
 <CodeEditor></CodeEditor>
 
 ## Passing Information with Parameters
-Functions become truly powerful when you can give them input to work with. We do this with **parameters**, which are placeholder variables you define inside the parentheses of the function definition. When you call the function, you provide an **argument** (a real value) for each parameter.
+Functions become truly powerful when you can give them input to work with, like giving a recipe different ingredients. We do this with **parameters**, which are placeholder variables you define inside the parentheses of the function definition. When you call the function, you provide an **argument** (a real value) for each parameter.
 
 ```python
-# 'name' is a parameter
+# 'name' is the parameter (the placeholder in the recipe)
 def greet(name):
     print(f"Hello, {name}!")
 
-# "Alice" and "Bob" are arguments
+# "Alice" and "Bob" are the arguments (the actual ingredients)
 greet("Alice")
 greet("Bob")
 ```
 <CodeEditor></CodeEditor>
 
 ## Getting a Value Back with `return`
-Functions can also perform a calculation or a task and send a value back to the main program. This is done with the **`return`** statement. When a `return` statement is hit, the function immediately stops and the function call itself becomes equal to the returned value. This allows you to store the result of a function in a variable.
+Some functions just perform an action, like `print()`. But often, we want a function to perform a calculation or a task and send a value back to the main program. This is done with the **`return`** statement. When a `return` statement is hit, the function immediately stops and the function call itself becomes equal to the returned value. This allows you to store the result of a function in a variable, as if the function call itself were a value.
 
 ```python
 # This function calculates the area and returns the result
@@ -602,11 +608,12 @@ def calculate_area(width, height):
     area = width * height
     return area
 
-# Call the function and store the returned value
+# Call the function and store the returned value in a variable
 rectangle_1_area = calculate_area(10, 5)
 print(f"The area of the first rectangle is {rectangle_1_area}.")
 
-# You can also use the function call directly where you need the value
+# You can also use the function call directly where you need the value,
+# because it evaluates to the returned number.
 print(f"The area of a 3x7 rectangle is {calculate_area(3, 7)}.")
 ```
 <CodeEditor></CodeEditor>
@@ -650,7 +657,7 @@ students = [
 # 1. Define the calculate_average function
 def calculate_average(grades_list):
     """Calculates the average of a list of numbers."""
-    if not grades_list: # Handle the case of an empty list
+    if not grades_list: # Handle the case of an empty list to avoid division by zero
         return 0
     total = sum(grades_list)
     return total / len(grades_list)
@@ -662,7 +669,7 @@ def main():
     for student in students:
         # Call our other function to get the average
         average = calculate_average(student["grades"])
-        # The :.2f formats the float to have only 2 decimal places
+        # The :.2f inside the f-string formats the float to have only 2 decimal places
         print(f"{student['name']}'s average grade is {average:.2f}")
 
 # 3. Call the main function to run the program
@@ -676,9 +683,6 @@ main()
 - Call (a function)
 - Parameter, Argument
 - Scope
-
-
-### Part 2: The Researcher's Toolkit
 
 # Chapter 9: Setting Up Your Professional Environment
 Congratulations! You have spent the last several chapters learning the fundamental grammar of Python. You can work with variables, lists, dictionaries, loops, and functions. Now, it is time to take the next, most exciting step in your journey. We are going to move from our simple, embedded online tools to a true, professional research environment on your own computer.
@@ -1096,7 +1100,9 @@ print(median_time_by_type.head(10))
 
 print("\n--- Top 10 FASTEST Complaint Types (Median Hours to Resolution) ---")
 print(median_time_by_type.tail(10))
-```This is a fantastic insight! We can clearly see that infrastructure complaints like "Sewer" or "Water System" take hundreds of hours on average, likely requiring physical inspection and repair crews. In contrast, enforcement issues like "Illegal Parking" or "Noise" are often resolved in just a few hours. We are using data to understand the operational rhythms of a city.
+```
+
+We can clearly see that infrastructure complaints like "Sewer" or "Water System" take hundreds of hours on average, likely requiring physical inspection and repair crews. In contrast, enforcement issues like "Illegal Parking" or "Noise" are often resolved in just a few hours.
 
 #### Research Question 3: Which boroughs are the most active, and which agencies handle their complaints?
 
@@ -1117,13 +1123,14 @@ df_brooklyn = df[df['borough'] == 'BROOKLYN']
 print("\n--- Top 5 Busiest Agencies in Brooklyn ---")
 print(df_brooklyn['agency'].value_counts().head(5))
 ```
-This two-step analysis—filtering and then summarizing—gives us a much more specific insight. We've moved from a general overview to a focused finding: in Brooklyn, the NYPD is by far the most frequently contacted agency for 311 complaints.
+
+In Brooklyn, the NYPD is by far the most frequently contacted agency for 311 complaints.
 
 ***
 
 ### **New Chapter 16: Project Part D - Data Visualization**
 
-Our exploratory analysis has revealed several key insights. Now, we must communicate them. **Data visualization** is the most powerful tool for this. A well-designed plot can convey a pattern or insight far more effectively than a table of numbers. We will use **Seaborn** and **Matplotlib**, which work together to create beautiful and informative graphics.
+Our exploratory analysis has revealed several ky insights. Now, we must communicate them. **Data visualization** is the most powerful tool for this. A well-designed plot can convey a pattern or insight far more effectively than a table of numbers. We will use **Seaborn** and **Matplotlib**, which work together to create beautiful and informative graphics.
 
 #### Visualization 1: The Distribution of Resolution Times
 
@@ -1176,7 +1183,8 @@ plt.title('Median Resolution Time for Fastest and Slowest Complaint Types', font
 plt.xlabel('Median Hours to Resolution', fontsize=12)
 plt.ylabel('Complaint Type', fontsize=12)
 plt.show()
-```This single, powerful visualization tells a compelling story. It starkly contrasts the rapid resolution of parking and noise issues with the lengthy process required for infrastructure problems.
+```
+This visualization contrasts the rapid resolution of parking and noise issues with the lengthy process required for infrastructure problems.
 
 #### Visualization 3: Complaints by Borough
 
