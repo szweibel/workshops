@@ -1,5 +1,6 @@
 ---
 title: 'Python for Researchers'
+long_pages: true
 description: This course guides students from the first principles of Python programming to building a complete data research project. We begin in a simple, browser-based environment to master the fundamentals, then transition to a professional local setup to collect data from web APIs, perform analysis with the Pandas library, create visualizations with Matplotlib/Seaborn, and finally, frame these skills in the context of modern, AI-assisted development workflows.
 programming_language: python
 learning_objectives:
