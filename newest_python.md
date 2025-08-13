@@ -379,8 +379,8 @@ Let's build a tiny interactive story. This is a classic way to see control flow 
 </CodeEditor>
 
 ### Solution
-<Secret>
 
+<Secret>
 ```python
 player_name = input("What is your name, adventurer? ")
 print(f"Welcome, {player_name}!")
@@ -399,7 +399,6 @@ else:
     print(f"'{direction}' is not a valid choice. A dragon swoops down and eats you for your indecisiveness.")
     print("Game Over.")
 ```
-
 </Secret>
 
 ### Keywords
@@ -638,8 +637,8 @@ students = [
 </CodeEditor>
 
 ### Solution
-<Secret>
 
+<Secret>
 ```python
 students = [
     {"name": "Alice", "grades": [100, 95, 92]},
@@ -668,7 +667,6 @@ def main():
 # 3. Call the main function to run the program
 main()
 ```
-
 </Secret>
 
 ### Keywords
