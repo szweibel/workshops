@@ -67,14 +67,14 @@ goals:
 
 
 # Chapter 1: Introduction to Python for Researchers
-Hello! This is *Python for Researchers*, a course designed particularly for those outside of computer science. The course is designed to help you learn the fundamentals of programming and to help you get started on your own research projects. The course is not intended to be a comprehensive introduction to computer science, but rather a step-by-step path to making something useful.
+Hello! Welcome to Python for Researchers. This course is made especially for those who aren’t computer science majors. We’re here to teach you programming fundamentals and get you building things you can use in your own research. Think of this course not as a deep dive into theory, but as a guided path to making something useful.
 
 ## Why Learn Python?
-Learning a programming language is a lot like learning a human language: it is best done with a clear goal in mind. You wouldn't study French without wanting to one day speak to someone in Paris or read a classic novel. Similarly, learning to code is most rewarding when you have a project you want to build or a problem you want to solve. For researchers, these problems are often about scale and repetition. Perhaps you need to analyze thousands of historical documents, process survey results from hundreds of participants, or create dozens of charts from a complex dataset. These are tasks that are tedious, error-prone, or simply impossible to do by hand.
+earning to code is a lot like learning a new language – it’s more rewarding when you have a goal in mind. You wouldn’t learn French without wanting to someday have a conversation in Paris or read a French novel. In the same way, learning Python is most satisfying when you have a project or problem to solve. For researchers, those problems often involve scale and repetition. Imagine trying to read thousands of historical documents by hand, or tally survey responses from hundreds of participants, or draw dozens of charts one by one. Tedious, right? That’s exactly where Python shines.
 
-This is where Python comes in. Its clean, readable syntax makes it one of the easiest languages for beginners to learn, but its real power lies in its incredible versatility. It is the dominant language in data analysis, machine learning, and scientific computing. This is thanks to a massive community that has built an ecosystem of powerful, free libraries—collections of pre-written code—that let you analyze huge datasets, create complex charts, and automate those repetitive tasks that might otherwise take you weeks.
+Python’s syntax is clean and readable – like clear instructions in a recipe – which makes it friendly for beginners. But beyond being easy to pick up, Python is incredibly powerful and versatile. It’s the dominant language for data analysis, machine learning, and scientific computing. Thanks to a massive community, there are countless free libraries and tools (pre-written code) that let you analyze huge datasets, create complex charts, and automate repetitive tasks that might otherwise take you weeks.
+This course will be project-driven. We’ll start with the basic grammar of Python and then apply it to a real research task. By the end, you’ll have something tangible – a mini project or analysis – that shows what you can accomplish with Python.
 
-This course is a guided, project-oriented path. We will start with the fundamental grammar of Python, and then apply it to a real research task, giving you a tangible outcome and a clearer idea of what you can achieve.
 
 ## Our First Step: A Conversation with the Machine
 As is tradition in the world of programming, our first step is to make the computer say "Hello, World!". At its core, programming is about giving a computer a set of precise, unambiguous instructions. Unlike human conversation, which is rich with context and implication, a computer takes every instruction literally. The "Hello, World!" exercise is our first successful instruction. It confirms that our environment is working and that we can give the computer a command and see a result.
@@ -106,7 +106,7 @@ In the last chapter, we told the computer to print a message. That message, `"He
 Let's explore the most important data types that form the building blocks of all Python programs.
 
 ## Numbers: Integers and Floats
-Python, at its heart, is a very powerful calculator. It understands two main types of numbers, and it is important to know the difference because some research contexts demand precision.
+Python, at its heart, is a powerful calculator. It understands two main types of numbers, and it is important to know the difference.
 
 *   **Integers (`int`)**: These are whole numbers, both positive and negative, without any decimal part. You would use an integer to count things where fractions don't make sense: the number of times a word appears in a text (`152`), the number of participants in a study (`50`), or the year a text was published (`1851`).
 *   **Floats (`float`)**: These are floating-point numbers, which means they have a decimal point. They are used for measurements that can have fractional parts. In research, you'll use floats for statistical results like averages (`87.5`), p-values (`0.049`), or any measurement on a continuous scale. Even if the decimal part is zero (`99.0`), the presence of the decimal point makes it a float, and Python will treat it as such.
@@ -128,9 +128,13 @@ You can perform all the standard mathematical operations you would expect using 
 <PythonREPL/>
 
 ## Booleans: The Logic of `True` and `False`
-There is one more core data type that is absolutely essential for making programs "smart." The **Boolean (`bool`)** type has only two possible values: `True` or `False`. It is crucial to note that they are always capitalized in Python. Think of them as the traffic lights of your program: they tell it whether to go or to stop, to take this path or that one. Every time a program needs to decide whether to filter a dataset, repeat an action, or stop a process, it is checking if a condition is `True` or `False`. For a researcher, a boolean might represent the answer to a question like "Is this manuscript dated before 1900?" (`True`) or "Does this survey response contain the word 'anxious'?" (`False`).
+
+Another fundamental data type is the Boolean (bool). A Boolean can only be True or False (always capitalized in Python). Think of them as switches or traffic lights in your program: they tell it whether to go or stop, yes or no. Whenever your code needs to make a decision or check a condition, it will use booleans. For example, a Boolean might answer a yes/no question in your research, like “Is this manuscript dated before 1900?” (True or False), or “Does this survey response contain the word ‘anxious’?” (True or False).
+Booleans typically come from comparisons or logical checks (we’ll learn how to make these soon), but just remember that True and False are their own data type in Python.
+
 
 ## Knowing Your Type
+
 If you are ever unsure what kind of data you are looking at, you can use the built-in `type()` function to ask Python. This is a useful tool for debugging when your code is not behaving as you expect. It's like a label reader for your data ingredients. Just pass the data, or a variable containing it, into the `type()` function.
 
 ```pycon
@@ -147,6 +151,15 @@ If you are ever unsure what kind of data you are looking at, you can use the bui
 
 The output `<class 'str'>` tells you that the data is of the "string" class. This distinction between `int` and `float` will become important later when some libraries or functions require one type specifically. Knowing how to check the type of your data is a fundamental debugging skill.
 
+The data type of 99 in Python is:
+
+<Quiz> 
+- int* 
+- str 
+- float
+- bool 
+</Quiz>
+
 ### Keywords
 - Data Type
 - String (`str`)
@@ -156,9 +169,9 @@ The output `<class 'str'>` tells you that the data is of the "string" class. Thi
 - `type()`
 - Operator
 
----
+
 # Chapter 3: Variables and Strings
-It is not very useful if our data disappears right after we calculate or define it. We need a way to store and label information so we can refer to it and use it later. In programming, we use **variables**.
+So far, every value we typed showed up once and then disappeared. That’s because we weren’t storing anything. To keep data around, we use variables.
 
 A variable is just a name that refers to a value. Think of it like a labeled box or a sticky note you put on a piece of data. You can put something in the box (the value) and then, whenever you need what is inside, you can just refer to the box by its label (the variable name). The name of the variable is for you, the human, to remember what it's for; the value is what the computer will use in its calculations. As a researcher, you should choose your variable names with the same care you would choose the headings in a paper. A variable named `x` is meaningless, but a variable named `average_publication_year` is self-documenting.
 
@@ -414,6 +427,15 @@ else:
 ```
 </Secret>
 
+
+Which statements are true?
+<Quiz> 
+- The == operator checks if two values are equal.*
+- The != operator checks if two values are not equal.*
+- The = operator checks if two values are equal.
+- The : operator checks if two values are equal. 
+</Quiz>
+
 ### Keywords
 - Control Flow
 - Conditional
@@ -493,6 +515,15 @@ print(second_student_dict["name"]) # Prints 'Charles Babbage'
 print(all_students[1]["name"])
 ```
 This pattern—a list of dictionaries—is the fundamental way that structured data is often represented in Python. Mastering it is key to moving from basic programming to real data analysis.
+
+How can you access the name of the first student in the list all_students?
+<Quiz> 
+- Use a numeric index, e.g. all_students[0]
+- all_students[0]['name']*
+- all_students[0].name
+- all_students[0].get('Ada Lovelace')
+</Quiz>
+
 
 ### Keywords
 - Dictionary (`dict`)
