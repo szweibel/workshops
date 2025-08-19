@@ -1141,9 +1141,8 @@ print(df_brooklyn['agency'].value_counts().head(5))
 
 In Brooklyn, the NYPD is by far the most frequently contacted agency for 311 complaints.
 
-***
 
-### **New Chapter 16: Project Part D - Data Visualization**
+# New Chapter 16: Project Part D - Data Visualization
 
 Our exploratory analysis has revealed several insights. Now, we must communicate them. **Data visualization** is the most powerful tool for this. A well-designed plot can convey a pattern or insight far more effectively than a table of numbers. We will use **Seaborn** and **Matplotlib**, which work together to create beautiful and informative graphics.
 
