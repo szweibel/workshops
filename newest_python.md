@@ -217,7 +217,7 @@ Strings are more than just passive text; they come with their own set of built-i
 <PythonREPL/>
 It's important to know that strings are **immutable**, which means they cannot be changed. Calling a method like `.lower()` does not change the original `a_loud_statement` variable. It returns a *new* string with the changes applied. If you want to keep the changes, you must assign the result to a new variable (or overwrite the old one).
 
-### Challenge
+## Challenge
 
 Create two variables, `first_name` and `last_name`. Assign your own names to them. Then, create a third variable `full_name` by combining them with a space in between. Finally, print a friendly, all-caps greeting using your `full_name` variable in an f-string and a string method.
 
@@ -378,7 +378,7 @@ Let's make our programs interactive! The `input()` function pauses the program, 
 
 <Info>Remember, `input()` always gives you a string! If you need a number for a comparison, you have to convert it first using `int()` or `float()`. This is called **type casting**. For example: `age = int(input("How old are you? "))`.</Info>
 
-### Challenge: The "Choose Your Own Adventure" Game
+## Challenge: The "Choose Your Own Adventure" Game
 Let's build a tiny interactive story. This is a classic way to see control flow in action. Your program will present a situation and two choices, and then the story will branch based on the user's input.
 
 <CodeEditor>
@@ -633,7 +633,7 @@ print(f"The area of a 3x7 rectangle is {calculate_area(3, 7)}.")
 ```
 <CodeEditor></CodeEditor>
 
-### Challenge: The "Student Grades" Program
+## Challenge: The "Student Grades" Program
 Let's build a small, organized program using what we have learned. You have a list of student dictionaries. Write functions to perform specific tasks.
 1.  Write a function `calculate_average(grades_list)` that takes a list of numbers (like `[100, 95, 92]`) and returns their average. Python's built-in `sum()` and `len()` functions will be very helpful here.
 2.  Write a `main()` function. This is a common practice to make code more organized. This function will loop through your list of students. Inside the loop, for each student, it should call your `calculate_average()` function on their grades and then print their name and their calculated average grade.
@@ -805,14 +805,14 @@ You now have a workshop full of high-tech tools like Pandas and Matplotlib. But 
 
 No one, not even the most experienced programmer, has all the functions and their options memorized. They just get very good at looking them up.
 
-### What is Documentation?
+## What is Documentation?
 Documentation is the official explanation of how a library or language works, written by its creators. It is the ultimate source of truth. The key to not being overwhelmed is knowing that there are different *types* of documentation for different needs.
 
 1.  **Tutorials / User Guides:** These are meant to be read like a story or a textbook chapter. They guide you through a common workflow from beginning to end. When you are new to a library, **always start here**. The Pandas "10 Minutes to pandas" guide is a perfect example.
 2.  **API References:** This is an encyclopedia or a dictionary. It exhaustively lists every single function, every class, and every parameter. You do not *read* an API reference; you **search** or **refer** to it when you have a specific question, like "What are all the options for the `pandas.read_csv` function?" or "What colors can I use in a Matplotlib plot?"
 3.  **Galleries / Cookbooks:** Many visualization libraries (like Matplotlib and Seaborn) have galleries of examples. These are invaluable for seeing what is possible and finding a template for a chart you want to create.
 
-### The Practical Workflow: How to Find Answers
+## The Practical Workflow: How to Find Answers
 Nobody "reads" the API reference from start to finish. You *interrogate* it with a specific goal. Here is the practical workflow that programmers use every day:
 
 1.  **Have a Goal:** Start with a clear question in plain English.
@@ -846,7 +846,7 @@ This process of **Goal -> Search -> Skim for Examples -> Check Parameters** is t
 # Chapter 12: The Digital Lab Bench - Introduction to Jupyter and Pandas
 Now that our environment is fully set up with all the necessary tools, we are going to introduce you to the two most important tools in the daily life of a data researcher: the **Jupyter Notebook** and the **Pandas** library. This combination is the digital equivalent of a laboratory workbench, where you can experiment with, analyze, and document your findings all in one place.
 
-### The Jupyter Notebook: An Interactive Lab
+## The Jupyter Notebook: An Interactive Lab
 A notebook is an interactive document that lets you combine live, executable code, the output of that code, explanatory text, and data visualizations all in one place. Unlike a plain Python script that runs from top to bottom, a notebook is organized into **cells**. This interactive, narrative format makes it perfect for exploratory research, as you can run small chunks of code, inspect the results, and then decide what to do next.
 
 To start the JupyterLab environment, open your Terminal (or PowerShell), navigate to the folder where you want to store your projects (using the command `cd your_folder_path`), and run the command:
@@ -857,7 +857,7 @@ Your default web browser will open with the JupyterLab interface. From here, you
 
 The notebook is made of **cells**. You can change a cell's type between **Code** (for Python) and **Markdown** (for formatted text). To run a cell and see its output, you press <kbd>Shift</kbd> + <kbd>Enter</kbd>.
 
-### Our First Look at Pandas: The DataFrame
+## Our First Look at Pandas: The DataFrame
 Pandas is the most important library for data analysis in Python. Its core object, the workhorse of data science, is the **DataFrame**. A DataFrame is basically a powerful, programmable version of a spreadsheet or a database table. It has rows and columns, and you can use Pandas functions to load, clean, filter, group, and analyze the data within it.
 
 Let's load our first real dataset. In a new code cell in your Jupyter notebook, the standard practice is to `import` pandas and give it a shorter alias, `pd`, to make it easier to type. Then we can use its functions.
@@ -905,7 +905,7 @@ For our main project, we will investigate the civic life of a city by analyzing 
 
 Our tool for this is the **API (Application Programming Interface)**. We will use the `requests` library to ask the NYC Open Data servers for a slice of this data. The specific dataset we are using is located at this **endpoint**: `https://data.cityofnewyork.us/resource/erm2-nwe9.json`
 
-#### The Challenge of Big Data: Pagination
+## The Challenge of Big Data: Pagination
 
 Let's try to fetch some data to see what it looks like. When you look at the first record from the API, you'll see it's a Python dictionary with many keys.
 
@@ -982,7 +982,7 @@ df.info()
 ```
 The `.info()` output is our diagnostic report. It shows over 40 columns! Look closely at the "Non-Null Count" column. Many columns have missing values. For instance, `closed_date` has fewer than 5,000 non-null values. This is because many of the complaints in our dataset are still open. Most importantly, all the date columns are listed as `object` (text), not as dates, which means we cannot perform time-based calculations on them yet.
 
-#### Step 1: Handling Dates and Missing Data
+## Step 1: Handling Dates and Missing Data
 
 Our first task is to convert the date columns into a proper `datetime` format. This will allow us to calculate durations. But what about the cases that have no `closed_date`? We must tell Pandas how to handle these errors gracefully.
 
@@ -1002,7 +1002,7 @@ df[['created_date', 'closed_date']].info()
 ```
 The `Dtype` for these columns has now correctly changed to `datetime64[ns, UTC]`. We have successfully converted them, building a robust process that won't break if the data is incomplete.
 
-#### Step 2: Feature Engineering - Creating New Knowledge from Raw Data
+## Step 2: Feature Engineering - Creating New Knowledge from Raw Data
 
 Our dataset tells us *when* a complaint was opened and *when* it was closed. But a more interesting research question is: **"How long did it take to resolve the complaint?"** This value does not exist in the raw data; we have to create it. This process of creating new columns from existing ones is called **feature engineering**, and it is where you begin to add your own analytical value to a dataset.
 
@@ -1029,7 +1029,7 @@ df['resolution_hours'] = df['resolution_time'].dt.total_seconds() / 3600
 print(df[['resolution_time', 'resolution_hours']].head())
 ```
 
-#### Step 3: Final Cleaning and Column Selection
+## Step 3: Final Cleaning and Column Selection
 
 Our `resolution_hours` column will have missing values (`NaN`) for any case that is still open (where `closed_date` was `NaT`). For an analysis focused on *completed* cases, these rows are not useful. We will use `.dropna()` to remove them.
 
@@ -1083,7 +1083,7 @@ import pandas as pd
 df = pd.read_csv('nyc_311_clean.csv', parse_dates=['created_date', 'closed_date'])
 ```
 
-#### Research Question 1: What is a "typical" resolution time for a 311 complaint?
+## Research Question 1: What is a "typical" resolution time for a 311 complaint?
 
 The `.describe()` method is a powerful first step for any numerical column. It gives us a statistical summary, which can often reveal more than you'd expect.
 
@@ -1095,7 +1095,7 @@ This summary is packed with insights. The `mean` (average) resolution time is ab
 
 In situations like this, the `50%` value, also known as the **median**, is a much more robust measure. The median is the true middle value: 50% of complaints were resolved faster than this, and 50% slower. Here, the median is only about 17 hours. This tells a story: while most complaints are handled relatively quickly, a few extreme cases take an exceptionally long time.
 
-#### Research Question 2: Which complaints take the longest to resolve?
+## Research Question 2: Which complaints take the longest to resolve?
 
 This is a more nuanced question. It requires us to **group** our data by the `complaint_type` and then calculate a summary statistic (like the median we just discussed) for each group. This is the perfect job for the `.groupby()` method, one of the most powerful and common operations in data analysis.
 
@@ -1119,7 +1119,7 @@ print(median_time_by_type.tail(10))
 
 We can clearly see that infrastructure complaints like "Sewer" or "Water System" take hundreds of hours on average, likely requiring physical inspection and repair crews. In contrast, enforcement issues like "Illegal Parking" or "Noise" are often resolved in just a few hours.
 
-#### Research Question 3: Which boroughs are the most active, and which agencies handle their complaints?
+## Research Question 3: Which boroughs are the most active, and which agencies handle their complaints?
 
 We can use `.value_counts()` to see which boroughs generate the most 311 calls. But we can take it a step further: let's look at the busiest agency *within* the busiest borough.
 
@@ -1142,11 +1142,11 @@ print(df_brooklyn['agency'].value_counts().head(5))
 In Brooklyn, the NYPD is by far the most frequently contacted agency for 311 complaints.
 
 
-# New Chapter 16: Project Part D - Data Visualization
+# Chapter 16: Project Part D - Data Visualization
 
 Our exploratory analysis has revealed several insights. Now, we must communicate them. **Data visualization** is the most powerful tool for this. A well-designed plot can convey a pattern or insight far more effectively than a table of numbers. We will use **Seaborn** and **Matplotlib**, which work together to create beautiful and informative graphics.
 
-#### Visualization 1: The Distribution of Resolution Times
+## Visualization 1: The Distribution of Resolution Times
 
 Our first key finding was that the resolution times have a "long tail" of very slow cases. A **histogram** is the perfect plot to show this distribution.
 
@@ -1175,7 +1175,7 @@ plt.show()
 ```
 This plot visually confirms our statistical finding. The vast majority of complaints are clustered on the far left (resolved quickly), while the distribution stretches far to the right. The red dashed line clearly marks the median, showing the audience where the true "center" of the typical citizen experience lies, separate from the influence of extreme outliers.
 
-#### Visualization 2: Resolution Times by Complaint Type
+## Visualization 2: Resolution Times by Complaint Type
 
 A **horizontal bar chart** is the best way to visualize our `.groupby()` result, as it gives plenty of space for the long complaint type names. Let's create a single chart that shows the 5 slowest and 5 fastest complaint types to tell a story of contrast.
 
@@ -1200,7 +1200,7 @@ plt.show()
 ```
 This visualization contrasts the rapid resolution of parking and noise issues with the lengthy process required for infrastructure problems.
 
-#### Visualization 3: Complaints by Borough
+## Visualization 3: Complaints by Borough
 
 Finally, let's visualize the number of complaints per borough to show the geographic distribution in our dataset. A simple bar chart is perfect for this.
 
@@ -1228,14 +1228,14 @@ Congratulations on building a complete data project from scratch! You have learn
 
 This is not to say that the skills you have learned are obsolete. On the contrary, they are more important than ever. But how you *apply* them is evolving.
 
-### From Writer to Editor: The New Workflow
+## From Writer to Editor: The New Workflow
 In the traditional model, you have a problem, and you meticulously write every line of code to solve it. The new workflow is a conversation, a partnership. You describe your goal in plain English to an AI assistant (like ChatGPT, Gemini, or integrated tools like GitHub Copilot), and it generates a block of code. Your job then transforms into that of a critical, knowledgeable editor. You must:
 -   **Review** the code for correctness.
 -   **Check** it for logical errors and subtle bugs.
 -   **Debug** it when it does not work.
 -   **Refine** it to better fit your specific needs.
 
-### The Workflow Loop: Your New Process
+## The Workflow Loop: A New Process
 This new process can be thought of as a loop that looks like this:
 
 1.  **Decompose:** Break a large research goal ("Analyze this dataset") into a small, concrete, programmable task ("Load the CSV file `data.csv` into a Pandas DataFrame and display the first 5 rows"). This is the most important human skill in the loop.
@@ -1243,7 +1243,7 @@ This new process can be thought of as a loop that looks like this:
 3.  **Review:** Use your fundamental knowledge of Python, Pandas, and programming logic to *critically read* the code the AI proposes. Does it use the correct functions? Does the logic make sense? Does it handle potential errors? Is it efficient?
 4.  **Refine & Integrate:** Approve the code and integrate it into your project, or provide feedback for the next iteration. Your feedback might be, "That is good, but now can you also handle the case where the file does not exist?" or "Can you rewrite this using a `for` loop instead?"
 
-### Why The Last Few Chapters Mattered
+## Why The Last Few Chapters Mattered
 You might be thinking, "Why did I just learn to write a Matplotlib bar chart from scratch if an AI can generate it for me?" The answer lies in the **Review** step.
 
 Without the fundamental knowledge you have gained, you cannot perform this crucial step. You would be blindly trusting the AI's output, unable to spot its (frequent) mistakes, debug its errors, or guide it effectively toward a correct and robust solution. You wouldn't know if the chart it made was actually representing the data correctly.
@@ -1260,7 +1260,7 @@ The fundamentals you have learned are not obsolete; they have become the prerequ
 # Chapter 18: Sharing Your Research - Reproducibility and GitHub
 The final step of any research project is not the analysis itself, but sharing it. In computational research, "sharing" means more than just showing a finished chart or a final paper. To be credible and useful, your work must be understandable, trustworthy, and, most importantly, **reproducible**. Someone else should be able to take your code and data and get the exact same results.
 
-### Reproducibility: The `requirements.txt` file
+## Reproducibility: The `requirements.txt` file
 If a colleague wants to re-run your Jupyter Notebook, they need to have the exact same libraries (Pandas, Seaborn, etc.) installed, preferably at the same versions you used. Manually listing these is tedious and error-prone. Instead, we can automatically generate a file that lists all your project's dependencies.
 
 In your terminal, navigate to your project folder and run this command:
@@ -1273,7 +1273,7 @@ This command does two things:
 
 This creates a `requirements.txt` file in your folder. Now, another researcher can download your project, create a fresh Python environment, and run `pip install -r requirements.txt` to install the exact same dependencies. This is a cornerstone of reproducible computational science.
 
-### Sharing on GitHub
+## Sharing on GitHub
 **GitHub** is the standard platform for sharing code, collaborating on projects, and tracking the history of your work using the **Git** version control system. It is a place to store your project publicly and create a portfolio of your work.
 
 1.  **Create a GitHub Account and Repository:** If you don't have one, sign up at [github.com](https://github.com). Then, create a new public repository for your project. Give it a descriptive name, like `python-art-analysis-project`.
@@ -1289,7 +1289,7 @@ This creates a `requirements.txt` file in your folder. Now, another researcher c
 
 <Info>Good news! GitHub has built-in support for automatically rendering Jupyter Notebooks. This means that visitors to your repository can see your code, your formatted notes, your outputs, and your plots directly in their browser without needing to download or run anything. This makes it an excellent platform for sharing your findings.</Info>
 
-### The Path Forward
+## The Path Forward
 Congratulations! You have completed a significant journey. You have learned the fundamentals of a powerful programming language, built a complete project from data collection to visualization, and learned how to share your work in a professional and reproducible manner. You are now equipped with the foundational skills to continue learning on your own and to apply these powerful techniques to your own research. Good luck!
 
 ### Keywords
