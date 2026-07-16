@@ -1556,7 +1556,6 @@ print("Have a nice day!")  # This always runs
 These operators create boolean values for our conditions:
 
 :::codeeditor{language="python"}
-```python
 x = 10
 y = 5
 
@@ -1570,7 +1569,6 @@ print(f"x <= y: {x <= y}")   # Less than or equal to
 # String comparisons work alphabetically
 print(f"'apple' < 'banana': {'apple' < 'banana'}")
 print(f"'Zoo' < 'ant': {'Zoo' < 'ant'}")  # Capital letters come before lowercase!
-```
 :::
 
 **Common mistake:** Using `=` instead of `==`
@@ -2200,7 +2198,7 @@ This isolation is a feature, not a bug! It prevents functions from accidentally 
 
 Without functions, you repeat code:
 
-```python
+:::codeeditor{language="python"}
 # Bad: Repetitive code
 student1_grades = [85, 92, 88, 90, 87]
 total1 = sum(student1_grades)
@@ -2222,13 +2220,13 @@ print(f"Student 1 average: {calculate_average(student1_grades):.1f}")
 
 student2_grades = [78, 85, 82, 88, 84]
 print(f"Student 2 average: {calculate_average(student2_grades):.1f}")
-```
+:::
 
 ### 2. Organization
 
 Functions make code readable and organized:
 
-```python
+:::codeeditor{language="python"}
 def load_data(filename):
     """Load data from a file."""
     # Code to load data
@@ -2254,13 +2252,13 @@ raw_data = load_data("survey_results.csv")
 cleaned_data = clean_data(raw_data)
 results = analyze_data(cleaned_data)
 create_report(results)
-```
+:::
 
 ### 3. Testing and Debugging
 
 Functions can be tested independently:
 
-```python
+:::codeeditor{language="python"}
 def is_valid_email(email):
     """Check if an email address is valid."""
     if "@" not in email:
@@ -2279,7 +2277,7 @@ print(is_valid_email("user@example.com"))  # True
 print(is_valid_email("invalid.email"))     # False
 print(is_valid_email("@example.com"))      # False
 print(is_valid_email("user@"))             # False
-```
+:::
 
 ## Common Function Patterns
 
@@ -2288,7 +2286,6 @@ print(is_valid_email("user@"))             # False
 Functions that check if something is valid:
 
 :::codeeditor{language="python"}
-```python
 def is_positive(number):
     """Check if a number is positive."""
     return number > 0
@@ -2330,7 +2327,6 @@ print(f"Is -5 positive? {is_positive(-5)}")
 print(f"Is 25 a valid age? {is_valid_age(25)}")
 print(f"Is 'Password123' strong? {is_strong_password('Password123')}")
 print(f"Is 'weak' strong? {is_strong_password('weak')}")
-```
 :::
 
 ### Transformation Functions
