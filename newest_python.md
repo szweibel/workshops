@@ -14,9 +14,11 @@ long_pages: true
 
 authors:
     - 'Stephen Zweibel'
+    - 'Lisa Marie Rhody'
 
 editors:
     - 'Stephen Zweibel'
+    - 'Lisa Marie Rhody'
 
 goals:
     - description: 'In this workshop, you will learn to:'
